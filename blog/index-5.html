@@ -9,8 +9,8 @@
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="https://qiwulun.github.io/blog/index-5.html">
-<link rel="prev" href="index-6.html" type="text/html">
-<link rel="next" href="index-4.html" type="text/html">
+<link rel="prev" href="index-4.html" type="text/html">
+<link rel="next" href="index-6.html" type="text/html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="../mycss/tweak.css" rel="stylesheet" type="text/css">
 <base target="_parent">
@@ -66,166 +66,1020 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html" class="u-url">Ubuntu 16.04 安装纪录二 ── Chrome, xx-Net, IPv6</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/xie-ge-ru-jia-de-gu-shi-zhi-er.html" class="u-url">写个儒家的故事之二</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
             </span></p>
-            <p class="dateline"><a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-10T19:21:39+08:00" title="2016-11-10 19:21">2016-11-10 19:21</time></a></p>
+            <p class="dateline"><a href="../posts/xie-ge-ru-jia-de-gu-shi-zhi-er.html" rel="bookmark"><time class="published dt-published" datetime="2013-08-16T12:44:00+08:00" title="2013-08-16 12:44">2013-08-16 12:44</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
+    <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li>
-<a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html#sec-1">安装</a>
-<ul>
-<li><a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html#sec-1-1">总结</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html#sec-2">翻墙软件 xx-Net</a>
-<ul>
-<li><a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html#sec-2-1">手动导入证书</a></li>
-</ul>
-</li>
+<li><a href="../posts/xie-ge-ru-jia-de-gu-shi-zhi-er.html#sec-1">评论</a></li>
 </ul>
 </div>
 </div>
-<p class="more"><a href="../posts/ubuntu-1604-an-zhuang-ji-lu-er-chrome.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/git-shi-yong-ji-qiao.html" class="u-url">git 使用技巧</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/git-shi-yong-ji-qiao.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-10T18:01:24+08:00" title="2016-11-10 18:01">2016-11-10 18:01</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+<blockquote>
+<p>
+我播下的是龙种，收获的却是跳蚤 
+</p>
+<p align="right"> ——海涅 </p>
+</blockquote>
+
+<p>
+这种没人看的日志，吐槽就可以更恶毒一点。
+</p>
+
+<p>
+上一篇讲被世俗化的宗教，这一篇用儒家的“忠”做例子，讲讲被大一统政治阉割过的学术。
+</p>
+
+<p>
+小时候看《宰相刘罗锅》，印象极深刻的一句话就是“君叫臣死，臣不得不死，父叫子亡，子不得不亡。”据说这就是儒家的忠孝二字。
+</p>
+
+<p>
+大一点儿了，就读到“忠臣不事二君，烈女不更二夫”等等理学名言。
+</p>
+
 <hr>
 <p>
-近几天在Ubuntu系统中使用Netbeans做为开发环境并使用Git作为代码管理的时候，提示代码都被标记为已修改状态，但是进行仔细比较的时候，却发现并没有修改。。
+等到读书的时候发现，嗯…为啥孔孟的书里找不到这些东西
 </p>
 
 <p>
-看了以下文章后，根据自身的实际情况对比了下，发现原来我在代码克隆下来的时候，有意的对整个项目目录执行过 chmod 777 ,所以才产生了我现在所遇到的问题！
+先说”贰臣“这件事情。
 </p>
 
-<p class="more"><a href="../posts/git-shi-yong-ji-qiao.html">更多…</a></p>
+<p>
+孟子游说魏、齐、滕、宋诸国，（孔子周游列国其实也差不多）见了君主都是极力宣传尊礼行仁，一扫天下的主张。特别是孟子，全然一幅”只要你恢复礼乐，力行仁政，我就帮你扫平天下“，这里面被扫平的呢，包括他的旧日老板，也包括孟子的”祖国“╮(╯<sub>╰</sub>)╭（真排起来，邹国和鲁国才是他的父母之邦）
+</p>
+
+<p>
+举个直接点儿的文本，《孟子·梁惠王下》：
+</p>
+
+<blockquote>
+<p>
+齐宣王问曰："人皆谓我毁明堂。毁诸？已乎？" 
+</p>
+
+<p>
+孟子对曰："夫明堂者，王者之堂也。王欲行王政，则勿毁之矣。" 
+</p>
+</blockquote>
+
+<p>
+齐宣王说，周天子东巡接见诸侯时留下的明堂，在我这儿占地方，别人都劝我拆了，孟先生你怎么看？
+</p>
+
+<p>
+孟子说，明堂是天下王者之堂，如果王能行王政，那就别拆了。
+</p>
+
+<p>
+换言之，你就留下自己用呗。搁在大一统时代，这就是公然鼓吹谋朝篡位。
+</p>
+
+
+
+<p>
+孟子的逻辑比后世那些专心搞权谋的伪儒实在太多了：推仁心，行王政，不管你什么血统什么政权，你当天子我都支持。
+</p>
+
+<p>
+很可爱的逻辑，但在后世，这话就没听起来这么顺畅了。
+</p>
+
+<p>
+假设宋金交战，现在金主真心行仁政，宋朝儒生去给金主出谋划策，宋朝子民箪食壶浆以迎王师…
+</p>
+
+<p>
+这事儿，总有点儿无法想象。
+</p>
+
+<hr>
+<p>
+再谈谈”君叫臣死“。
+</p>
+
+<p>
+举个很多人知道的例子，安史之乱，张巡和许远守睢阳，孤城粮绝，食人三万。
+</p>
+
+<p>
+大文豪韩愈，文起八代之衰的韩子韩圣人，写《张中丞传后序》，说当时内无粮草、外无救兵，"所欲忠者，国与主耳"，吃人也是应该的。
+</p>
+
+<p>
+我不知道孟子对此事会怎么看，但我知道孟子讲”率兽食人“，愤恨之色，英气逼人
+</p>
+<blockquote>
+<p>
+庖有肥肉，廄有肥马，民有饥色，野有饿莩，此率兽而食人也，兽相食，且人恶之，为民父母行政，不免于率兽而食人，恶在其为民父母也？
+</p>
+<p align="right"> ——《孟子·梁惠王上》 </p>
+</blockquote>
+
+<p>
+那么，直接吃人的，是些什么玩意儿？
+</p>
+
+<hr>
+<p>
+说了忠，不妨说说孝，《二十四孝》还是很有名的吧，郭巨埋儿也应该有很多人听说过：
+</p>
+
+<blockquote>
+<p>
+郭巨，家贫。有子三岁，母尝减食与之。巨谓妻曰：“贫乏不能供母，子又分母之食，盍埋此子？儿可再有，母不可复得。”妻不敢违。巨遂掘坑三尺余，忽见黄金一釜，上云：“天赐孝子郭巨，官不得取，民不得夺。” 
+</p>
+</blockquote>
+
+<p>
+这应该是个喜剧结尾吧？但大概所有人都会想到一个问题，如果没有那釜金子，剧情的走向会是？
+</p>
+
+<hr>
+<p>
+在这两个故事里，忠要吃人，孝要杀人，这里没什么使用任何比喻夸张的修辞手法。
+</p>
+
+
+<p>
+（一个有”意思“的事情是，在忠孝这些道德标准如此拔高的同时，中国的汉奸数量也是出人意料的多。
+</p>
+
+<p>
+《明朝那些事儿》讲过明代的倭寇之患，在“倭寇”人员的构成上，倒是汉人占到了相当大的比例。
+</p>
+
+<p>
+再比如清军屠杀的“扬州十日”，
+</p>
+<blockquote>
+<p>
+在通常概而述之的历史记载里，攻打扬州的是豫王多铎所统率的清军，而事实上，仅仅在多铎向扬州进军的路上，就有大批的汉人军队前来投靠，降军总兵力接近十四万，若加上之前投靠多铎的汉人军队，这个数字则更惊人地接近了二十四万，远远超过了满人军队的数量总和。这其中，有些军队本应是响应史可法的招募而驻守在扬州前线的。 
+</p>
+
+<p>
+……（《扬州十日记》的作者）杨秀楚一行人被押解到一处大宅的时候，他看到一名扬州女人衣着光鲜地在清军面前挑选被掳掠来的衣物，一副欣然自得的样子。每看到值钱的物品，她就向清军曲意逢迎，媚态乞取，毫无羞耻之色。杨秀楚听满州士兵后来曾对人说：“我们当年征服高丽的时候，曾掳掠高丽妇女数万人回满洲，其受尽屈辱而无一人投敌变节，何以堂堂中国，竟然无耻至此？”
+</p>
+
+<p align="right"> ——《扬州：选择与遗忘》  </p>
+</blockquote>
+
+<p>
+投靠异族，屠杀同胞。那些在庙堂之上被激烈争吵的内容，比如”国家“、”民族“对于他们是否有真正的意义？
+</p>
+
+<p>
+标准与现实的反差，让人想到了类似的场景：
+</p>
+
+<p>
+一群想当和珅的儒生，却在言谈中把海瑞作为清官的标准。
+）
+</p>
+
+
+<hr>
+<p>
+而这些变态的要求，我没有在孟子的文章里见过，孔子的也没有。       
+</p>
+
+<p>
+但有句话，我是见过的：
+</p>
+
+<blockquote>
+<p>
+君之视臣如土芥，则臣视君如寇仇。
+</p>
+<p align="right"> ——《孟子•离娄篇下》  </p>
+</blockquote>
+
+<p>
+韩圣人似乎没见过，哈哈。 
+</p>
+<hr>
+<p>
+知道这些，也不能如何。充其量，看到孟老夫子尚且如此，当我们种下龙种，却收获跳蚤之时，不必太过愤恨罢了。（这里可以有双关） 
+</p>
+<hr>
+<p>
+（上一篇儒家的故事是组建读书会的倡议日志第二部分，这一篇是儒家故事之二，全系列之四）
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">评论</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+崔迅铭2013-08-16 13:10
+我觉得文章里所讲的问题不是由于后世儒家堕落才导致的，而是一开始就困扰着儒家道德体系的，忠是好的，可是不是应该为了忠而吃人，孝是好的，可是应不应该为了孝而埋儿，这些问题，本质上与饿死事小失节事大都是同构的。说白了，这些其实都是基于儒家伦理的基本原则（忠孝守节），对某一规范做出的强势肯定，跟孔子讲的杀身成仁，孟子讲的以身殉道，没有本质区别。我们现在觉得难以接受，更多的是因为现代人身处不同道德体系内部，处于统摄地位的伦理原则发生改变的缘故。
+
+崔迅铭2013-08-16 13:13
+其实孟子自己也面临过类似的问题，任人有问屋卢子的礼与食孰重，就具有类似的性质。
+
+崔迅铭2013-08-16 13:24
+我觉得文章里所讲的＂为忠吃人，为孝杀人＂的问题不是由于后世儒家堕落才导致的，而是一开始就存在于儒家道德体系中的，忠是好的，可是不是应该为了忠而吃人，孝是好的，可是应不应该为了孝而埋儿，这些问题，本质上与饿死事小失节事大都是同构的。说白了，这些其实都是基于儒家伦理的基本原则（忠孝守节），对某一规范做出的强势肯定，跟孔子讲的杀身成仁，孟子讲的以身殉道，没有本质区别。我们现在觉得难以接受，更多的是因为现代人身处不同道德体系内部，处于统摄地位的伦理原则发生改变的缘故。其实孟子自己也面临过类似的问题，任人有问屋卢子的礼与食孰重，就具有类似的性质。
+
+赵骥2013-08-16 14:00
+回复崔迅铭:先感谢崔会长这么认真的回复谄笑。首先我很同意＂为忠吃人，为孝杀人＂出现的可能性是一开始就存在于儒家道德体系中的。既然孔子讲杀身成仁，孟子讲以身殉道，他们应该也会说”为忠可不可以杀人，为孝可不可以杀人？“的问题时候，说”可以“。这个问题的理解，有些像劝齐伐燕一节，“沈同问‘燕可伐与’，吾应之曰：‘可’。彼然而伐之也。彼如曰：‘孰可以伐之？’则将应之曰：‘为天吏，则可以伐之。’”，为忠孝可以不可以死节，可以，但要问是什么样的忠和孝。对不爱臣民的天子的忠，值不值得这种代价。其实正如屋卢子一段中“不揣其本，而齐其末，方寸之木可使高于岑楼“的比喻，我不是说为忠绝对不可以死，为孝绝对不可以死，这个问题的本质，是后世对于忠与孝的权重太高了，而这种过度拔高，在“民为贵，社稷次之，君为轻”和“君子不以其所以养人者害人”的孟子那里，还不存在。 
+
+崔迅铭2013-08-16 15:07
+回复赵骥: 这好不太一样，伐燕是一种行为，当这种行为符合道德原则时可取，违背道德原则时不可取。但忠孝节是伦理原则，很难做出像你所说的那种权衡和让步。在什么样的情况下应该忠，在什么样的情况下可以不忠，在什么样的情况下应该守节，在什么样的情况下可以不受节，这样的权衡与让步，会为不忠不孝不守节提供太多的借口，除非有明确的上位道德原则统摄，否则在一个道德体系内部容纳这样的权衡与让步是很难想像的。在儒家体系内问什么情况下可以不忠不孝，大概就相当于问一个现代人什么情况下可以罔顾人权，什么情况下可以侵害无辜者的生命，是很难获得在道德上没有争议的答案的。
+
+赵骥2013-08-16 15:52
+回复崔迅铭:其实孟子本人在道德体系里很是允许权衡变通的，同样有例子，比如“嫂溺援之以手”一节：淳于髡曰：“男女授受不亲，礼与？”孟子曰：“礼也。”
+曰：“嫂溺，则援之以手乎？”曰：“嫂溺不援，是豺狼也。男女授受不亲，礼也；嫂溺，援 之以手者，权也。”曰：“今天下溺矣，夫子之不援，何也？” 曰：“天下溺，援之以道；嫂溺，援之以手——子欲手援天下乎？“
+男女授受不亲同样是礼法要求，是儒家重要原则，原则之间矛盾，必然有权衡有例外。
+诚如你所说，这样的道德体系会造成太大的自由度，但对“爱民”与“忠君”的矛盾，孟子已经用“民为贵，社稷次之，君为轻”给出了上位道德原则。所以，后世的行为，不是亚圣本意。
+另外，孟子对于什么情况下不忠，还是说的了几个很清楚的情况的，君主不仁可以不忠“君之视臣如土芥，则臣视君如寇仇”，不食君之禄可以不忠”我无官守，我无言责也，则吾进退，岂不绰绰然有余裕哉“，这个话题，倒也不是全然的禁区。
+
+牛学森Andrew2014-01-10 09:43
+回复赵骥:就因为这些言论，孟子各种被阉割
+
+赵骥2014-01-10 09:44
+回复牛学森Andrew：比如说朱重八就看着这些巨不爽~那感觉应该就像老毛看鲁迅的文章一样~
+
+牛学森Andrew2014-01-10 09:46
+回复赵骥：应该是，孟子的言论算是比较激进了，其实我觉得孔子是恢复周礼，整个的世界观是向后的。孟子在这一点上恐怕有本质不同
+
+赵骥2014-01-10 09:49
+回复牛学森Andrew：可能是战国的氛围导致的吧，各家的演变都是走向偏激，你看庄子相对于老子也偏激尖刻得多~老子讲小国寡民，也是复古，庄子的目标就是打破某些东西了
+
+牛学森Andrew2014-01-10 09:51
+回复赵骥：有可能，战国后期太不和谐了，动不动就死个上万人。处在这个环境，改变世界的愿望是很强烈的。法家脱胎于道家，这本身就很奇葩啊
+
+赵骥2014-01-10 13:02
+回复牛学森Andrew:所以我觉得战国的书比春秋时写的书好看，情感充沛~法家这事儿吧，代表人物是荀子的弟子本身也很奇葩。道家留下可阐释的空间太大了，比如说把《老子》解释称大人之学，治国之术什么的，最奇葩的我记得有人说老子是兵书╮(╯_╰)╭。
+
+牛学森Andrew2014-01-10 13:08
+回复赵骥:比起说老子的阴阳是零和一，然后认为他开辟了现代计算机理论的人来说，已经是正常的了……
+
+赵骥2014-01-10 19:32
+回复牛学森Andrew:╮(╯_╰)╭，还有人说二进制创始人是伏羲，这话跟，宇宙创始人是思密达，听起来差不多… 
+
+牛学森Andrew2014-01-10 19:37
+回复赵骥：哈哈，是有一拼！
+</pre>
+</div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html" class="u-url">在 Geforce 1080 上搭建 TensorFlow GPU 版本</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/xie-ge-fo-jia-de-gu-shi.html" class="u-url">写个佛家的故事</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
             </span></p>
-            <p class="dateline"><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-10T17:39:02+08:00" title="2016-11-10 17:39">2016-11-10 17:39</time></a></p>
+            <p class="dateline"><a href="../posts/xie-ge-fo-jia-de-gu-shi.html" rel="bookmark"><time class="published dt-published" datetime="2013-08-14T00:07:00+08:00" title="2013-08-14 00:07">2013-08-14 00:07</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
+    <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-1">安装 TensorFlow</a>
-<ul>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-1-1">CPU 版</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-1-1-1">Demo</a></li>
-</ul>
-</li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-1-2">GPU 版</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-1-3">tensorlayer 把API进行了一些包装</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2">linux</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-1">安装 Anaconda</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-2">安装显卡驱动</a></li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-3">安装 cuda toolbox</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-3-1">测试</a></li>
-</ul>
-</li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-4">安装 cuDNN</a></li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-5">从源文件安装 TensorFlow</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-5-1">Clone the TensorFlow repository</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-5-2">安装 Bazel</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-5-3">python 的依赖</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-2-5-4">编译安装TensorFlow:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-3">修补图像</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-3-1">OpenFace Docker</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4">基本知识</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-1">变量与运算 Variables and ops</a></li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-2">两种作用域：变量作用域 variable<sub>scope</sub> 与命名作用域 name<sub>scope</sub></a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-2-1">变量作用域目标是为了影响变量 variable ，对于其它的运算 op 同样也会影响</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-2-2">而 name<sub>scope</sub> 不一定改变 Variable 的名字</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-2-3">两者的核心区别： tf.get<sub>variable，</sub> 用于共享变量</a></li>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-4-2-4">切换方法</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-5">版本</a>
-<ul>
-<li><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html#sec-5-1">Batch Norm 巨慢</a></li>
-</ul>
-</li>
+<li><a href="../posts/xie-ge-fo-jia-de-gu-shi.html#sec-1">评论</a></li>
 </ul>
 </div>
 </div>
+<pre class="example">
+有人说：任何被大众长期传播、广泛接受的宗教，几乎只有一种样子。
+</pre>
+<p align="right"> ——题记 </p>
+<p>
+据说（这次不是瞎说了，见《杂阿含经》）：
+</p>
+<blockquote>
+<p>
+曾经有一面“阿能诃鼓”，音韵悠扬，声闻四十里。
+</p>
+
+<p>
+累年敲打，鼓皮破败，鼓手用了一块新牛皮，修好了他。
+</p>
+
+<p>
+经年累月，如是者数十次……每个部件都被换过一次的时候，
+</p>
+
+<p>
+我们仍把这面鼓叫做阿能诃鼓，但，这还是当初的那面阿能诃鼓么？ 
+</p>
+</blockquote>
+
+<p>
+这是个寓言，但在佛教史上有真实的对应（出于《付法藏因缘传》）：
+</p>
+<blockquote>
+<p>
+佛陀最知名的几位弟子之一的阿难，在佛陀去世没多久之后便遇上这样一件事情： 
+</p>
+
+<p>
+阿难走入一篇竹林，听到有比丘在念诵佛法偈语： 
+</p>
+<p class="verse">
+若人生百岁，不见水老鹤。<br>
+不如生一日，而得睹见之。<br></p>
+
+<p>
+阿难听过之后“惨然而叹”，连忙打断了那位比丘，对他说：你念错了，真正的佛谒是这样的： 
+</p>
+
+<p class="verse">
+若人生百岁，不解生灭法。<br>
+不如生一日，而得解了之。<br></p>
+
+<p>
+这位比丘听了阿难的佛偈，回去以后就说给自己的师父听。师父却说：“阿难老朽，脑子不灵光了，说话总是说错，不要信他的，以前我教你怎么念的你还接着怎么念去！” 
+</p>
+
+<p>
+这位比丘听了老师的话，又继续念他的“不见水老鹤”去了。 
+</p>
+</blockquote>
+<p>
+佛法难闻，不是么？
+</p>
+
+<p>
+这是个很普遍的寓言，完全不限于佛教。就如我在组建读书会的倡议日志中引过的那样
+</p>
+<blockquote>
+<p>
+那些所谓儒家思想、孔子真义，其实和孔子本人并没有太大关系…真正发生巨大影响的却是何休版孔子、杜预版孔子、郑玄版孔子、孔颖达版孔子、朱熹版孔子、王阳明版孔子… 
+</p>
+</blockquote>
+
+<p>
+那么当我们谈儒家思想的时候，究竟是孔孟本意，还是经学衍变？
+</p>
+
+<p>
+那些坚信是儒家是传统文化主体的重要来源之一，至今日仍影响中国人性格的人们，不会喜欢第一种定义。而后者，无论哪一种思想、文化、学说，在大一统的政治体制下面都会被阉割，然后变成相似的面貌，（这个结论，容后再讲个故事阐释）。如果这也可以叫儒家，那么，其实他也可以叫法家，叫阴阳家，叫社会活动家╮(╯<sub>╰</sub>)╭。它可以是任何东西，所以它什么都不是。
+</p>
+
+<p>
+由于这笔乱帐，我一直觉得那些动辄称儒家文化如何如何的人…很牛逼。
+</p>
+
 <hr>
-<p class="more"><a href="../posts/zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben.html">更多…</a></p>
+<p>
+那么，在中国的历史上，什么是佛教？
+</p>
+
+<p>
+佛传佛法，传的是“了生死，出三界“看破之法，众人礼佛，求的是世间的荣华富贵；
+</p>
+
+<p>
+佛传四法印，“诸行无常。诸法无我。涅槃寂静。有漏皆苦”。
+</p>
+
+<p>
+众人九叩首，心心念念间有一恒常之我，斋戒敬奉，为“我”求个，现世富贵，来世荣华。
+</p>
+
+<p>
+佛讲因果，是有果必有因，是客观规律
+</p>
+
+<p>
+人讲因果，是行善得善报，是道德交易。
+</p>
+
+<br><p>
+根本区别是，佛传的是智慧，人拜的是神通。
+</p>
+
+<p>
+佛门是不支持造像的，"诸行无常，诸法无我"，你用泥塑木雕，留住表象声色，又算怎么个意思？
+</p>
+
+<p>
+再讲个故事作例证吧，《景德传灯录》里就说：
+</p>
+
+<blockquote>
+<p>
+达摩祖师传法东土，一苇渡江之前，在南京见梁武帝
+</p>
+
+<p>
+梁武帝说：我广修佛寺，刻布经书，勤宣佛法，僧员日益，大师你看我有多大的功德？
+</p>
+
+<p>
+达摩：没有功德。
+</p>
+
+<p>
+梁武帝说:啥？
+</p>
+
+<p>
+达摩：人天小果，有漏之因，如影随形，虽有非实。 
+</p>
+
+<p>
+梁武帝再问："那真正的功德呢？" 
+</p>
+
+<p>
+达摩回答说："净智妙圆，体自空寂，如是功德，不以世求。"
+</p>
+</blockquote>
+
+<p>
+这段对话发生后，嗯，我猜达摩是被“南朝四百八十寺”气的去渡长江的…佛陀再一次地输给了人性。
+</p>
+
+<br><p>
+相类似的，基督教的初期也是反对造像的，不仅反对，而且严禁。
+</p>
+
+<p>
+后来？我们看到了大量的雕像绘画，不仅有耶稣的，还有圣母的，还有圣徒的。
+</p>
+
+<p>
+我们只能表示哈哈。
+</p>
+
+<br><p>
+人需要一个具体的形象，来寄托，来祈祷，来匍匐于它的脚下寻求安慰，人其实不太需要对现世的解脱智慧，但很需要高高在上的神灵。（三大宗教，貌似也就伊斯兰教目前还保持着对图像化穆罕默德的禁令，嗯，加油）
+</p>
+
+<hr>
+<p>
+不幸的是，上面的恶意揣测在历史中一次又一次被证实，于是，我们似乎不得不悲哀地同意下面这两句话：
+</p>
+
+<blockquote>
+<p>
+无论古今中外，任何在大众被广泛传播的思想，只要长时间地发展下去，最后的样子都会差不多——都会形成2点共性，一是神灵保佑，一是偶像崇拜。
+</p>
+
+<p>
+哪怕某种思想最初甚至是明确反对神灵保佑和偶像崇拜的，最后一样也会落到这个套路中去。 
+</p>
+</blockquote>
+
+<hr>
+<p>
+结尾还是要有正能量的。当佛陀的思想都被流传异化如斯的时候，当你意识到也许理解的代价是被误解的时候
+</p>
+
+<p>
+没人读你的文章，听你说话，其实，也没那么惨。
+</p>
+
+<p>
+被有意或无意的错误解读，会更让人不愿接受。
+</p>
+
+<p>
+这种告诉你所有选择都不怎么样的思路，很佛家，不是么？
+</p>
+
+<p>
+有情皆苦，所以宽恕，嗯╮(╯<sub>╰</sub>)╭
+</p>
+
+<hr>
+<p>
+看完本文，如对这个问题有兴致，推荐去读熊逸的《八戒说禅》，嫌长的话，可以改读《人间佛国》。
+</p>
+
+<hr>
+<p>
+后记：
+</p>
+
+<p>
+今天回顾了一下，上篇征婚的日志阅读量 <code>1560</code>
+</p>
+
+<p>
+而上上篇日志《读书，自娱自乐的系列4》的阅读量—— <code>16</code>
+</p>
+
+<p>
+我向你们保证，就算我把上图中的“我操操…”发成日志，阅读量也肯定是这个数的两倍…╮(╯<sub>╰</sub>)╭
+</p>
+
+<p>
+这些东西是没人看的，大家用脚投票表示，更喜欢看我吐槽、耍贱、四处黑。
+</p>
+
+<p>
+于是，我决定今后一篇读书日志搭配着一篇传记发…算作捆绑销售。
+</p>
+
+<p>
+讲个法家的故事是第一篇，组建读书会的倡议日志第二部分算是讲了一个儒家的故事，那么，这一篇是故事系列之三。
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">评论</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+李铮【怨念】2013-08-14 01:22
+阅。
+
+牛学森Andrew2013-08-14 11:44
+特修斯之船无处不在，真理总有一定程度的普适性
+
+赵骥2013-08-14 11:52
+回复牛学森Andrew:还是牛局懂我~谄笑我一开始想找个本土化的故事来着，想了半天发现好像中国古人没谈过这个问题~
+
+牛学森Andrew2013-08-14 13:50
+回复赵骥:想了想，好像真的没人谈过。不过易经里持的观点就是事物不断变化。因此我觉得这说明我国古人是这么想的：船本来就需要换零件，这个事实本身就是“船”这个概念的一部分，船能开不就行了，不要自我蛋疼嘛
+
+赵骥2013-08-14 14:11
+回复牛学森Andrew:这也就是李泽厚总结中国人的特点“实用理性”~有道理赞，特修斯之船、阿能诃鼓，说的都是名词辨析，概念定义的问题。而最有可能提出来这个思想的是名家，但“坚白论“”白马非马“因为不实用，所以没有发展起来。
+
+牛学森Andrew2013-08-14 14:13
+回复赵骥：公孙龙有点生不逢时，兵荒马乱的春秋战国，他的理论市场不大。要搁在魏晋时代，估计有机会名垂青史
+
+赵骥2013-08-14 14:18
+回复牛学森Andrew：估计比王弼的名气大
+
+牛学森Andrew2013-08-14 14:19
+回复赵骥：王弼主要是解周易，公孙龙基本是自己原创，目测更胜一筹
+
+赵骥2013-08-14 14:21删除 赞
+回复牛学森Andrew：没准儿能发展出一套和西方逻辑学，印度因明学三足鼎立的名家学说谄笑可惜人们只有在吃饱了的时候才有空闲思考这些问题啊~
+
+牛学森Andrew2013-08-14 14:23
+回复赵骥：嗯，对的啊
+</pre>
+</div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/cong-xue-sheng-dao-zhi-chang.html" class="u-url">从学生到职场</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/di-er-jie-xiang-yu-zheng-hun-bei-yu-yan-feng-cai-da-sai-can-sai-zuo-pin.html" class="u-url">第二届“翔宇征婚”杯语言风采大赛参赛作品</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
             </span></p>
-            <p class="dateline"><a href="../posts/cong-xue-sheng-dao-zhi-chang.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-24T21:19:45+08:00" title="2016-10-24 21:19">2016-10-24 21:19</time></a></p>
+            <p class="dateline"><a href="../posts/di-er-jie-xiang-yu-zheng-hun-bei-yu-yan-feng-cai-da-sai-can-sai-zuo-pin.html" rel="bookmark"><time class="published dt-published" datetime="2013-08-09T02:41:00+08:00" title="2013-08-09 02:41">2013-08-09 02:41</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div>
+    <p>
+<i>（2013年8月9日12：06修改：杨女神说要有图，于是有了图）</i>
+</p>
+
 <p>
-抛弃典型的「学生思维」，你会成长更快
+<i>（2013年8月9日15：12第二次修改：翔宇女神亲自修订了一下标准）</i>
+</p>
+
+<blockquote>
+<p>
+清华辩论队的传统：如果你撒下通知没人理你，这活儿你就得自己干。<br></p>
+<p align="right"> ——题记 </p>
+</blockquote>
+
+<p>
+这是一篇严肃的给翔宇女神征男友的帖子，就像跟《非诚勿扰》有密切合作关系的珍爱、百合、世纪佳缘所宣称的那样严肃。虽然话说我似乎从来没见过不严肃的婚恋网站，就像我没见过说自己用户排名第二的视频门户一样。
+</p>
+
+<p>
+在参考了辩手最喜欢的百度百科之后，我决定像一切严肃文学一样，把写作的目的定为对人性的思考和对世界的认知，出于一种发自本能的好奇：得多牛逼的人物才能搞得定她。
+</p>
+
+<p>
+165cm左右、专业排名第一、社科学院优良毕业生翔宇女神不算高的标准如下“比我高10cm以上，比我成绩好，身材至少六块腹肌”。
+</p>
+
+<p>
+（女神同学亲自审阅过这篇文章之后，给了官方修订版的标准如下： 
+</p>
+
+
+<div class="figure">
+<p><img src="../images/%E9%83%91%E7%BF%94%E5%AE%87%E7%9A%84%E8%A6%81%E6%B1%82.jpg" alt="郑翔宇的要求.jpg"></p>
+</div>
+
+<p>
+文章的其他部分我决定维持原样）
+</p>
+
+<p>
+我一直对这个世界上满足条件的人测度是否大于0表示疑惑。如果翔神哪天真找到了，我还要让那位男同胞解答一下我另一个疑惑：你丫这条件，为毛之前还能是单身。
+</p>
+
+<p>
+鉴于这种单身高帅智基本上属于和龙一样，听说过没见过的品种，本文只能猜猜他们的口味╮(╯<sub>╰</sub>) ╭。基于对”人性本贱“这一客观真理的认识，我相信他们需要富于挑战性的女朋友，一个激励他们不断向上的动力：
+</p>
+
+<p>
+1、她是打辩论的，而且是四辩——所以争吵的时候她不仅会骂你是傻逼，还会向你论证你是傻逼，更可怕的是她最后还会告诉你，你是傻逼是好的，有价值的，有益于人民的。
+</p>
+
+<p>
+总之作为男人，你在理性和感性上都干不过她——不过，男人嘛，说不过女性很正常，所以我们才管自己第一门语言叫”母语“╮(╯<sub>╰</sub>) ╭
+</p>
+
+<p>
+2、作为一个亲妈路线的学姐，她兼任人文社科工业工程辩论队的教练。
+</p>
+
+<p>
+翻译一下，如果你不是文科男，那她大学护过的妹子比你见过的都多。
+</p>
+
+<p>
+3、如果前两条不足以让你有挫败感，那么…
+</p>
+
+<p>
+这姑娘在北京有房~
+</p>
+
+
+<div class="figure">
+<p><img src="../images/%E5%A7%9A%E6%98%8E%E8%84%B8.jpg" alt="姚明脸.jpg"></p>
+</div>
+
+
+<p>
+综上所述，有这样一个妹子，你们就可以提前学会清华北大的最基础课程——心态要好。
+</p>
+
+
+
+<p>
+不过呢，如果真有那么一个心态学满分的”社会底层受过较高教育“的人，我相信他会看到 <br>
+辩手惯性背后，对无理取闹的不屑；<br>
+事儿妈风范背后，体贴宽容的品行；<br>
+家庭宽裕背后，对经济条件的看轻。<br>
+咳咳，虽然笔者为了保证销量，写到了“动情处”，但还是请大家千万保持严肃。
+</p>
+
+
+
+<p>
+最后上图， @郑翔宇Amadeus(295584448)
+</p>
+
+
+<div class="figure">
+<p><img src="../images/%E9%83%91%E7%BF%94%E5%AE%87.jpg" alt="郑翔宇.jpg"></p>
+</div>
+
+<p>
+这姑娘在灵魂深处的美丽和寂寞。总需要一个人来读懂。嗯。
+</p>
+
+
+
+
+<p>
+后记：
+</p>
+
+<p>
+打个广告，替本文主角占点喜气，今天本人的基友兼舍友 @陈羽(255505777) 同学和西瓜 @陈颖茜(249793642) 同学领证了，请鼓掌五分钟，并作喜大普奔，满天撒花的表情~
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/lun-si-zhi-er.html" class="u-url">论死之二</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/lun-si-zhi-er.html" rel="bookmark"><time class="published dt-published" datetime="2013-06-19T12:14:00+08:00" title="2013-06-19 12:14">2013-06-19 12:14</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <p>
+（最近决定把烂尾的序列收拾收拾。这个系列的一，已经是若干年前了。重读发现，冗长且华而不实，这一篇试着短一点，争取能有内容）
+</p>
+
+<p>
+死亡是终极的评判仪式。
+</p>
+
+<hr>
+<p>
+一生功罪，千秋评说。我们终将被抽象成一个个片面的符号。
+</p>
+
+<p>
+其实这是件好事，为死者讳的传统，使得你的追求可以独立于你的缺点而为人所知，你的影响必将胜于你将死之时。
+</p>
+
+<p>
+我感激这个过程，正如我上篇文章感激的那种种误会，都使得别人只根据你的追求对你评价成为可能。
+</p>
+
+<p>
+怅望千秋一洒泪，萧条异代不同时
+</p>
+
+<hr>
+<p>
+<b>何知仁义，已享其利者为有德。</b>   
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ge-xing-hao-xiang-ye-shi-ge-pian-ju.html" class="u-url">个性，好像也是个骗局</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ge-xing-hao-xiang-ye-shi-ge-pian-ju.html" rel="bookmark"><time class="published dt-published" datetime="2011-10-08T22:15:00+08:00" title="2011-10-08 22:15">2011-10-08 22:15</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <p>
+“一生负气成今日,四海无人对夕阳。”
+</p>
+
+<p>
+孤傲和交友稀少，究竟谁是谁的原因。
+</p>
+
+<p>
+交友（甚至社会生活的各个方面），伴随着个性的磨合与让步，而不社交的人呢？
+</p>
+
+<p>
+穴居深山的人，根本没有个性可言，甚至丧失对“我”这个语词的认识。
+</p>
+
+<p>
+好吧，那么，“做你自己”这句被用烂的话的意义是什么？
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/wo-de-qing-feng-ming-bian-fan-si-lu-3-bian-feng-he-li-lun-zhi-li-lun.html" class="u-url">我的清锋明辩反思录（3） ——辩风和立论之立论</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/wo-de-qing-feng-ming-bian-fan-si-lu-3-bian-feng-he-li-lun-zhi-li-lun.html" rel="bookmark"><time class="published dt-published" datetime="2010-01-31T02:27:00+08:00" title="2010-01-31 02:27">2010-01-31 02:27</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <p>
+第二章 辩风和立论(2)——立论
+</p>
+<hr>
+<p>
+立论的好多的问题，从风格里就有答案了，优点是我们的立论重攻防重实用，重内在逻辑自恰（不自恰就被拆），但缺点是可能太“难听”，比如说我们的立论里对价值的论述可能会很少，没有看问题的高度。此外，还有一个缺点，我们立论有很多是散点，为补洞加进来的，使得有些立论体系性不强。
+</p>
+
+<p>
+我想强调的是，我认为最重要的东西，是我们立论的时候一直要求的出新点，出新思路，而且是出人意料的惊艳之新。我结辩的最后一部分，其实也一直是这样的东西，全场的比赛的最后，提出一个没人提过想过的东西，这不是升华，但很有效果。
+</p>
+
+<p>
+因为我在想，观众来看辩论的目的是什么？很多人不是关心输赢。而且显然和在街上看泼妇吵架的心态肯定不一样，他们希望看到的是台上的人对辩题的理解与思路的交锋，看到一些引起他们思考的东西，他们希望看到对自己有用的东西。辩手追求的是什么的，输赢之外，是说服，说服评委与观众，说服观众，辩手的目的在于让他们产生共鸣。需要的是独特深刻的思考。所以我在想在辩论场上，真正评判的标准是什么？辩论场上不可能有一方打白旗，也很少会有比赛一方有压倒性优势。当没有压倒性优势时，评委看什么，我们看什么来决定胜负，是对这个辩题的思考双方谁更深入，观察角度更高，更何况思维的高度决定你语言的高度，压制性局面背后也常常是思维的差距。（当然泼妇悍夫把淑女文人骂哭的可能性不是没有，但太少了，清华更不可能会有）
+</p>
+
+<p>
+所以在立论里、在结辩最后，给出一个独特新颖的思考就是展示给其他人我的思考比对方深入，我的思维高度在对方之上，或者说境界在对方之上。（自王国维后境界有太多含义了，呵呵）
+</p>
+
+<p>
+我一直认为，辩论是君子之争，在输赢之外，还有更高的东西，不然不会有这么多人为之痴狂，太功利化会毁了某些东西，比如灵性。双方追求的应是思维的高度，评判只是这个较量的客观衡量者。
+</p>
+
+<p>
+如果这个理解没问题，我们就会发现，重攻防绝对不是一支队伍的终级目的，如果以层次分，攻防层次应该是最低的，当然很重要，它是思维高度较量的体现者，但也只是体现，然后是立论层次，这是对辩题的理解，是思维高度的依附者，这应该是一支队伍的重点，我不是为赢而攻防，为攻防而作立论；而为守卫思维而立论，而攻防。（予岂好辩哉，余不得已也，呵呵）。在立论层次以上感觉应该还有一层，但我不知道是什么。
+</p>
+
+<hr>
+<p>
+听着感觉对实际不会有太大影响，是不是？我们到实际应用里看看吧，看看立论思路会不会太大不同。（以下全是我闭门造车造出来的，不成熟，还希望有人补充）
+</p>
+
+<p>
+清华打的辩题绝大多数是价值型辩题，我们五场比赛，除第二场是政策性辩题，其它全是价值型辩题。就我所看的比赛，除人文的半决赛算是事实辩题，其它也全是价值型辩题。我们不妨从价值型辩题入手。
+</p>
+
+<p>
+价值性辩题有效词汇可以分为三个层次，攻防层次、立论层次、境界层次（又故弄玄虚了）。“重要”，“利弊”，攻防全是围绕这些词汇展开的，但这些词汇本身没什么好玩的地方。立论层次，正反辩题中不同的部分，立论阐明的东西全都围绕这个中心词汇。境界层次，双方辩题相同部分里的一些名词，这些名词，有些很明显，不用说，有些则容易被我们认为成自明的，不用解释，然而就是在这些潜意识的定义中，高下立判。
+</p>
+
+<p>
+比如说01年国辩“信息传播发展会打击本土文化”里的“打击”与否表现的还是价值，是损是益，这就是攻防层次，信息传播发展是立论的基石，是立论层次，而文化就是境界层次，马来亚大学讲“文化的核心是一种价值观”虽然在辩势上没有太大影响，但在逻辑体系上讲很重要。当然这个辩题不打文化基本上是脑残，
+</p>
+
+<p>
+然而，以我们自己的决赛辩题为例“人的自我实现过程比结果更重要”，重要肯定是攻防层次名词，过程与结果，或者说“自我实现过程”和“自我实现结果”是立论层次名词，而“人”是境界名词。
+</p>
+
+<p>
+为了证明这个名词是被不可饶恕地忽略了的，我问大家三个问题：
 </p>
 <ol class="org-ol">
-<li>范式思维
+<li>人的定义是什么？或者说什么是人？
+</li>
+<li>人的自我实现的目标是什么？
+</li>
+<li>人的自我实现的评价体系是什么？
 </li>
 </ol>
-<p class="more"><a href="../posts/cong-xue-sheng-dao-zhi-chang.html">更多…</a></p>
-</div>
+<p>
+这三个问题，2由1的答案决定，人的自我实现，是实现人的定义所规定的特征，3由2决定，评价体系好坏在于能否正确判断人的自我实现的目标完成程度。而问题3就包括我们的辩题，（当然还包括评价视角，是个人本位还是社会本位，那个等以后再说）
+</p>
+
+<p>
+人文给出了答案，人是理性人（他们的论证中属于工具理性人），自我实现，人与社会价值的统一，评价体系，社会+结果。
+</p>
+
+<p>
+而我们因为境界的问题，立论是散点主要应付攻防，思维高度上有弱点，所以只能苍白的用“人之为人的价值”反驳，可人之为人的价值是什么，我们也不知道。为什么在场上一直梳理不出自己的理论体系，一直感觉控场特别乱，就是因为我们理论推演的基础是这样的空。
+</p>
+
+<p>
+像这样的想下去，另一套立论思路基本上快出来了，但为了给第七章留点儿素材先不写了。我打完决赛认为输在经验上，后来认为输在立论上，现在认为输在境界上，七分境界，二分立论，一分经验吧。
+</p>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ming-yan.html" class="u-url">名言</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/wo-de-qing-feng-ming-bian-fan-si-lu-2-bian-feng-he-li-lun-zhi-bian-feng-tai-chang-liao-fen-liang-pian-fa.html" class="u-url">我的清锋明辩反思录（2）——辩风和立论之辩风（太长了，分两篇发）</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
             </span></p>
-            <p class="dateline"><a href="../posts/ming-yan.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-24T17:32:51+08:00" title="2016-10-24 17:32">2016-10-24 17:32</time></a></p>
+            <p class="dateline"><a href="../posts/wo-de-qing-feng-ming-bian-fan-si-lu-2-bian-feng-he-li-lun-zhi-bian-feng-tai-chang-liao-fen-liang-pian-fa.html" rel="bookmark"><time class="published dt-published" datetime="2010-01-31T02:24:17+08:00" title="2010-01-31 02:24">2010-01-31 02:24</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <p>
+第二章 辩风和立论(1)——辩风
+</p>
+<hr>
+<p>
+上一篇是纯废话贴，这一篇开始压缩精简，。
+</p>
+
+<p>
+这篇文章题目提的挺大，但其实凡是在五场比赛，尤其是后三场比赛“吾道一以贯之”的东西，基本上全会在这一章出现，与下一章的区别只是，这一章是写全队的特点，下一章是具体每个人的特点。
+</p>
+
+<p>
+工物的风格是什么？这是组队之初困扰所有人的问题，后来达成一个共识，我们的特点是重防守，轻进攻。因为除了盘问阶段，我们基本上不会主动换战场，主动提问题，也就基本不会有主动进攻，一般而言，我们是以防守反击为主，而现场反应相对而言要少一点儿。
+</p>
+
+<p>
+但从决赛来看，我们好像不那么重防守，立论冲的稀里哗啦的（决赛的立论，问题多多，容日后再说）。我们的重点与其说在于防守，毋宁说在于纠缠——在某一个战场上与对手在细节上死缠滥打的能力。
+</p>
+<hr>
+<p>
+纠缠，在人员上的保障是四辩手的搭配（这里主要说许佳鹏，余韵寒，焦鹏飞，我的四人配置，鑫儒上二号位以后，我们依然是重纠缠，但有所削弱，加了些其他东西，那是另一种风格了，以后说）。
+</p>
+
+<p>
+从一辩许佳鹏的立论开始，进攻性比较明显的，她的气场虽然大体温文尔雅，但从一开始就有逼问的锋芒在，“绵里藏针”。
+</p>
+
+<p>
+然后，二辩余韵寒的盘问是一般尽可能一套问题追到底，在一个战场上，根据对方的回答追问，目标不在于广泛把立论的点展开，也不在于攻击对方的点，而在于把立论中的一个点做实，立争冲掉对方，一般情况下是把这个点打充分，后面自由直接全员由这个点开始拼刺刀。三辩焦鹏飞，“场控”型辩手，立论的主要负责人，肯定是自由中补立论的主力，而补立论的工作也大多由纠缠完成，半决赛自由中的长时间陈词只是个小BUG。
+</p>
+
+<p>
+四辩，我，自由里我好像是个稳定DPS，但结辩中，我的攻的比例是偏高的那种，加上常是正四，导致我们的纠缠风格贯穿全场，强度不是最大，但纠缠队员比其他队伍多，是好事儿吗？不好说。
+</p>
+
+<p>
+在立论上的保障，是攻防为主的指导理念。我可能要负主要责任，每次讨论的时候，焦氏立论出来以后，我都会争取先冲掉他的理论，在修补过程中，就明显有实用主义倾向，攻防上好不好用。焦鹏飞反驳佳鹏的时候也说“你这么说很容易被打垮了”，我们头脑都是攻防是第一位的。
+</p>
+
+<hr>
+<p>
+纠缠是说不上防守型还是进攻型的，就像善于巷战的话既不能说是善攻，也不能说是善守。它只是一个风格。不管怎么说，纠缠是我们一路打下来的主要手段，毕竟体现了工物辩手现场反应的迅速这一优势（这里面有靠天吃饭的成分）。
+</p>
+
+<p>
+不过，纠缠并非我们独有，这其实是新辩手一贯的特点，比如盘问风格，清华队伍基本上全是一追到底（虽然国辩盘问没见过这么干的，但清华主体风格喜欢尽早进入短兵相接）。而且是强中自有强中手，比纯纠缠的话，八字班里就有比工物强的队。随便举个例子，有些人打起来是可以不要立论的，工物的对立论的依赖比较强，没干过不按套路出牌的事儿，人家路子比你宽，有些时候就很可能吃亏，当然只是可能。
+</p>
+
+<p>
+纠缠的主要作用在于，你可以把对手拉到一个水平上对话，把你和对方本来有所差距的陈述能力的差距淡化，像我们这样的新辩手，不在于我们想不明白，主要是我们在场上短时间说不明白。老辩手他一句话能说清楚，我需要三句话，但我和他缠了三个回合，我也把自己的立论说明白了。大家就会认为，啊，两个人都说清楚了，平手。
+</p>
+
+<p>
+但新辩手重用纠缠，还有一个原因，理念，大家都认为辩论嘛，吵架嘛，当然要寸步不让了。纠缠很多时候不在于有多强的战术意图，或是扬长避短，有时候是“人争一口气，佛争一柱香”的行为，这就有点儿非理性了。上届比赛，我们打过，也看过几场比赛，靠纠缠吃饭，打比赛只见一点、不见其余的的辩手有而且不少。
+</p>
+
+<p>
+这其实是纠缠固有的坏处，常规的纠缠的时候，你是顺着交锋补立论，如果不刻意保持清醒，不知道什么程度把这个问题说清楚了，于是就一直说。这个缺点就是工物不善于转战场的战术层面上的原因。
+</p>
+
+<hr>
+<p>
+风格里还有什么呢？重场控，我前面留了个小伏笔，焦鹏飞的控场手上的引号，“纯纠缠”的提法。我现在感觉，场控的要义不在于你控制全队乃至全场的方向与节奏，而在于你对场上交锋重点的把握，在这一点上工物每个人都是有很强意识的，因为我们过半的时间在讨论立论上纠结，于是在场上看到哪个点都能很快反应到这个点落到讨论的哪个范围，适用于哪个立论项，这种能力是很多八字班辩手所不具备的。
+</p>
+
+<p>
+当然，这也有可能有坏处，比如扣立论会让回应有时很干瘪，而脱离立论，靠场上纯攻的东西因为更有灵感可能更出彩，比如决赛回答追女生问题的时候的那种可称“华丽”的回应。灵感是我们应该在队内鼓励的，那可能更符合辩论美学要求，扣立论也不是说你要把立论拿出来念。而不要立论，虽然有出彩的，但泼妇吵架也没有立论稿啊，有人想听吗？不要立论的辩手，有很多例子，但好像没有成功的。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/feng-yu-yi-tong-zhou-wo-de-qing-feng-ming-bian-fan-si-lu-1.html" class="u-url">风雨忆同舟——我的清锋明辩反思录（1）</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/feng-yu-yi-tong-zhou-wo-de-qing-feng-ming-bian-fan-si-lu-1.html" rel="bookmark"><time class="published dt-published" datetime="2010-01-27T02:32:18+08:00" title="2010-01-27 02:32">2010-01-27 02:32</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <hr>
+<p>
+第一章    缘起
+</p>
+
+<hr>
+<p>
+这是一个巨陈旧的话题，快一年了，九字班的清锋明辩都要开始打了，写这个东西，太炒冷饭了吧。
+</p>
+
+<p>
+然而，我感觉这个东西还是有记录下来的必要。因为我一直相信：一支队伍的成长，或者一个事物的发展，从自发到自觉的转变，是它迅猛成熟的前提。我又开始卖弄晦涩名词了,这是个很大的毛病，但一时没有更好的词，只好写上再解释一下吧，班门弄斧喽。
+</p>
+
+<hr>
+<p>
+自鲁迅先生开始，中国学术界很多人认为，“曹丕的一个时代”即魏晋时代了，是“文学的自觉时代”，之前是文学的自发时代，合乐而歌，诗经啊什么的，我不认为我在文学创作，我不过是自己舒服就唱，采风的官吏是把这个当政绩考查，民意调查什么的，也不把它当文学。文学依附着一大堆东西，乐舞啊，史料啊，什么的，反正不知道自己是文学，可以独立门户。到了魏晋，文人开始自发意识，我这个是文学创作，以西方语言来说，所谓为艺术而艺术的文人诞生了。
+</p>
+
+<p>
+而魏晋之后，隋朝来的快走的也快，很快的就是唐朝，唐诗宋词，还有我们后辈模仿不已的唐宋文章，全是在这个时候。
+</p>
+
+<p>
+有人这么说魏晋时代：“一个事物的发展由自发到自觉，由模糊混沌、朦胧无知到认识自己、反省自己，是一个质的飞跃，在事物的发展过程中具有非凡意义。”
+</p>
+
+<p>
+扯了半天，不光是两个名词，顺便吹一下现在写的这个东西有多重要，呵呵。其实呢，自发到自觉确实是一个很重要的事，但是这篇日志能不能做到这一点呢，就不好说了。
+</p>
+
+<hr>
+<p>
+做这个东西，主要是考虑了队伍和我个人的原因。
+</p>
+
+<p>
+队伍，自发到自觉这个东西已经说了。另外，虽然全队每个人基本都写了总结日志，但是有很多的东西没有写出来，大家主要是凝聚太多感情了吧，技巧就靠后放了。现在也许有必要把这些东西总结总结，收个尾，也让后面知道一下，我们是怎么走过来的，少走些弯路。最重要，也是它最可能发挥作用的方式，是当个靶子，让九字班有个攻击的目标，革命的对象，从而提升自己的能力。
+</p>
+
+<p>
+从我个人而言，首先是进了校队，被老大培训过后，又多打了两场比赛，再加上对几场关键比赛（尤其四分之一和决赛）的思考，对有些东西有了些想法，纪录一下，希望对八字班其他人和九字班有用。走出工物，走入校队，你才能意识到过去的队伍团队意识多么强，自己的队友的强大的执行力，典范的淑女气质和儒雅风格，也才能知道曾经引以为豪的比赛中有多少不足，有多少不利于发展的东西。
+</p>
+
+<p>
+其次，焦队为锻炼我组织能力让我当总教练，被我拒绝了；后让我带攻防，我再次拒绝了，现在焦鹏飞同学已经在做赛制了，我总得为队里做点儿事，于是开始写这个东西。其实为什么拒绝，我的经验没有一条可以放心教给九字班的，把孩子带坏的可能性太高，齐白石“学我者生，似我者死”，我的有些东西可能是“学我者死”，都太不成熟，而且个人痕迹太重。所以我感觉我更适合一个靶子的角色。我是一个靶子与标杆，虽然不是一个灯塔，不能明确告诉大家怎么走，但我在系内作为一个老辩手，我是一个参照系，九字班灭我的过程中，会有能力的提升，而灭了我之后，他们会知道自己的能力在哪里，对自己有一个清醒的认识。
+</p>
+
+<p>
+第三，我太清楚自已可能会走下坡路了。我在很多东西上，和我比较推崇的先秦学派一样，早熟而且早衰，如果我在八字班辩手里现在还算不错的话，可能后劲不足。所以，可能我现在不写出来，以后就写不出来了，呵呵。
+</p>
+
+<hr>
+<p>
+这是个什么东西呢？八字班队史，不算，太多的主观判断，而且不是官方主修，焦队钦点，只是我自己的判断；回忆录，又不只是给八字班看的；教材，更不是了，很多东西根本就是头脑一个闪念，谁知道对不对，怎么能算教材呢？
+</p>
+
+<p>
+总之，就是一点纪录，一点反思，一点经验，一点希望，杂糅出来的东西.
+</p>
+
+<p>
+况且，焦鹏飞说，他不想让九字班受太多条条框框的束缚，会把一个队伍的特点磨掉。这话也对，于是我决定把这个东西放到网上来，九字班想看可以看两眼，不要受这个里面的经验之类的束缚。现在放上来，也主要是考虑九字班一开学就要打比赛了，要抢在之前写完。人家组了队开始打比赛了，你在这儿八字班八字班的不停，总给人一种借古讽今的意味：“你们过去打的怎么样怎么样，是不是嫌我们打的不好？”^_^
+</p>
+
+<hr>
+<p>
+在这个系列里，我想写一下，在我的理解中，我们队伍的风格，“重纠缠，重控场”，与我们每次用六成以上的时间在讨论的立论思路的沿袭习惯“攻防为上，”与优劣，以及我对辩题分析的想法（第二章）；在队内我们在互相扶持同时是如何彼此塑造的，是工物辩论队形成了我们各自的风格，每个辩位的战术作用、每个辩手的个人风格，以及要传递下去的东西（第三章）；以及对全系列五场比赛的回顾与讨论（第四到七章）；然后，写一点儿像这篇一样扯淡的话
+</p>
+
+<ul class="org-ul">
+<li>第二章   立论与辩风
+</li>
+<li>第三章   辩位与辩手 
+</li>
+<li>第四章   分场分析之对电机与软院
+</li>
+<li>第五章   分场分析之对法学
+</li>
+<li>第六章   分场分析之对医学院
+</li>
+<li>第七章   分场分析之对人文
+</li>
+<li>第八章   总结
+</li>
+</ul>
+<hr>
+<p>
+虽然，这是一篇酝酿了很久的日志，思路有过很大的更改，很多想法都是推倒重来的，但是现在仍然只是一个草稿，我承认并且相信，现在而且将来一定会有人提出很多批评与改进。比如我希望队伍后面能够把更多的精力放在才气上，放在聪明上，不要过分强调杀伤力那些东西，也许九字班的人到我这个时候就会写“我被聪明误一生”，要走另外一条路。这其实是我的愿望，有比照有路标，人们才会知道自己正在走的是什么样的路。而这篇日志，而且我希望，最后有人能把这个东西完全推倒，重新立起一个更完整的体系来。那才是真正的自觉的过程。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/jiu-shi-zhong-ti-dui-yu-dang-nian-dui-zhen-fa-xue-yuan-er-dui-de-fen-xi.html" class="u-url">旧事重提，对于当年对阵法学院二队的分析</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/jiu-shi-zhong-ti-dui-yu-dang-nian-dui-zhen-fa-xue-yuan-er-dui-de-fen-xi.html" rel="bookmark"><time class="published dt-published" datetime="2009-08-08T01:35:25+08:00" title="2009-08-08 01:35">2009-08-08 01:35</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
     <div>
@@ -233,166 +1087,149 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="../posts/ming-yan.html#sec-1">关于做人：</a></li>
-<li><a href="../posts/ming-yan.html#sec-2">关于生活：</a></li>
-<li><a href="../posts/ming-yan.html#sec-3">关于对自我与世界的认知：</a></li>
-<li><a href="../posts/ming-yan.html#sec-4">关于学习和工作：</a></li>
-<li><a href="../posts/ming-yan.html#sec-5">关于编程、设计、产品开发：</a></li>
-<li><a href="../posts/ming-yan.html#sec-6">战争</a></li>
+<li><a href="../posts/jiu-shi-zhong-ti-dui-yu-dang-nian-dui-zhen-fa-xue-yuan-er-dui-de-fen-xi.html#sec-1">评论</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<p>
+（本来是给老大的新日志的回复，一看长度，都可以成一篇新日志了，还是发出来吧，字大点儿，看起来省劲儿）
+</p>
+
+<p>
+下面的立论及其他主要思路由焦鹏飞同学准备比赛时提出，本人只负责回忆整理
+</p>
+
+<p>
+背景资料
+</p>
+<ul class="org-ul">
+<li>正方（工物系）大学教育应该更重视科学精神
+</li>
+<li>反方（法学院二队）大学教育应该更重视人文精神
+</li>
+</ul>
+<p class="more"><a href="../posts/jiu-shi-zhong-ti-dui-yu-dang-nian-dui-zhen-fa-xue-yuan-er-dui-de-fen-xi.html">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/li-ci-cun-zhao-zhe-yi-jie-duan-zui-hou-yi-pian-you-guan-bian-lun-wen-zhang.html" class="u-url">立此存照（这一阶段最后一篇有关辩论文章）</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/li-ci-cun-zhao-zhe-yi-jie-duan-zui-hou-yi-pian-you-guan-bian-lun-wen-zhang.html" rel="bookmark"><time class="published dt-published" datetime="2009-05-21T01:22:46+08:00" title="2009-05-21 01:22">2009-05-21 01:22</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/li-ci-cun-zhao-zhe-yi-jie-duan-zui-hou-yi-pian-you-guan-bian-lun-wen-zhang.html#sec-1">评论</a></li>
 </ul>
 </div>
 </div>
 <p>
-If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.
-——Quotation by Von-Neumann 
+因为缺乏创意，只好从鲁迅先生那里借来这个标题，写一点儿真正最终的总结性文字。
 </p>
 
 <p>
-如果有人不相信数学是简单的，那是因为他们没有意识到人生有多复杂。
-——冯・诺伊曼
+因为想找一点儿不足，所以一直想找一点儿他人对比赛的评价，用百度搜了一下，只看到了
+某个博客对决赛一句有意义的话,（校学生会的东西几乎没任何意义，鄙视一下）。在校内
+四处游荡了两天，学到了不少东西，不过也估计踩得几位学长学姐都烦了。决定自己写点儿
+东西，整理一下思路。
 </p>
 
-<p class="more"><a href="../posts/ming-yan.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/github-de-shi-yong-ji-qiao.html" class="u-url">GitHub 的使用技巧</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/github-de-shi-yong-ji-qiao.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-24T14:57:45+08:00" title="2016-10-24 14:57">2016-10-24 14:57</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="../posts/github-de-shi-yong-ji-qiao.html#sec-1">GitHub Pages</a></li>
-<li><a href="../posts/github-de-shi-yong-ji-qiao.html#sec-2">Repository</a></li>
-<li><a href="../posts/github-de-shi-yong-ji-qiao.html#sec-3">Gist</a></li>
-<li><a href="../posts/github-de-shi-yong-ji-qiao.html#sec-4">Wiki和评论</a></li>
-</ul>
-</div>
-</div>
-<hr>
-<p class="more"><a href="../posts/github-de-shi-yong-ji-qiao.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/shen-du-xue-xi-de-xiang-guan-nei-rong.html" class="u-url">深度学习的相关内容</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/shen-du-xue-xi-de-xiang-guan-nei-rong.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-24T14:09:16+08:00" title="2016-10-24 14:09">2016-10-24 14:09</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<hr>
-<p class="more"><a href="../posts/shen-du-xue-xi-de-xiang-guan-nei-rong.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/python-xiang-guan-de-nei-rong.html" class="u-url">Python 相关的内容</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/python-xiang-guan-de-nei-rong.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-23T14:37:52+08:00" title="2016-10-23 14:37">2016-10-23 14:37</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/python-xiang-guan-de-nei-rong.html#sec-1">动态类型语言的缺点</a>
-<ul>
-<li><a href="../posts/python-xiang-guan-de-nei-rong.html#sec-1-1">开发策略</a></li>
-<li><a href="../posts/python-xiang-guan-de-nei-rong.html#sec-1-2">程序分析工具（可能与编译器集成）</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/python-xiang-guan-de-nei-rong.html#sec-2">Python 3.5 的新变化</a>
-<ul>
-<li><a href="../posts/python-xiang-guan-de-nei-rong.html#sec-2-1">矩阵乘法操作符 @</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<hr>
+<p>
+还是从决赛说起吧，我认为，这是一场对我们的提高水平最有作用的一战。
+</p>
+
+<p>
+那篇博客说“ <b>场上的唇枪舌剑,针锋相对.不过感觉整个辩论过程中少了一点深度. 他们花了
+大量的时间讨论关于结果,预期结果等的区别</b> ”。评委貌似也说过类似的话。这条评论有道
+理吗？有。有意义吗？对我们意义不大。也许我们就是因为这一点输的，但是，这个点太没
+有普遍性了，工物绝不是一个没有立论深度的队伍，虽然也许比人文会差一些，（这一点在
+决赛中没能比出来，感觉人文的师兄师姐们因为只需要用浅的理论就够了，所以他们的深度
+也不是很明显），但是我们也绝不是只在决赛现场表现出来的那点儿深度，至少在准备中我
+们有很多的更深一层的东西没有表现出来。这是我们自己的问题，可也是人文师兄师姐张开
+的一张八卦阵的精髓，那正是“并敌一向，千里杀将”（《孙子·九地》）。我们被师兄师
+姐不知有意还是无意的抛出的一个破绽“预期结果”穷追猛打，而学长学姐们也乐于在此纠
+缠，于是我们自已的立论没有得到任何拱卫，在王斌范学长的陈词下几乎不堪一击。当然，
+还有一方面责任是我那个水到不能再水的、纯念稿的四辩陈词，没有起到应有的作用，如果
+能背一下，也许会比念好很多，当然，与空手陈词的杀伤力相差不知几个正无穷了。
+</p>
+
+<p>
+换言之，对于决赛这个例子，抛开技术层面，我们是不是从来没想过打法的思路，如何布阵
+不应只是攻防，还应有战略上的东西吧，或者说工物系没有风格，恐怕也就是如此，我们知
+道要寸土必争，可具体怎么争，我们没有太成体系的东西。许佳鹏同学说过“乌合之众”恐
+怕也是考虑到这一方面。
+</p>
+
+<p>
+决赛就写这么多吧，下面开始全面的回顾了。
+</p>
+
+<p>
+主要写人吧，除我以外的六名辩手。因为不只是表达感激，所以有可能会提一点儿小缺点，
+希望大家以眼还眼以牙还牙，也说说我的缺点。（除老焦外，排名主要以上场次数为准，大
+家应该都同意吧）
+</p>
+
+<p>
+从老焦开始吧，文静沉稳，典型的儒辩风范。场上的表现有目共睹，四两拨千斤的功力，让
+我这种纯刁蛮之人很是汗颜，但却只是冰山一角，场下的作用方显一代不凡风骨。每次讨论，
+学识渊博、眼光独到的特点都表露无疑。很多次，我说最佳辩手不应该是我拿，正是因为老
+焦，（又要开始大段引用了，文思枯竭的表现）“见胜不不过众人之所知，非善之善者也；
+战胜而天下曰善，非善之善者也。故举秋毫不为多力，见日月不为明目，闻雷霆不为聪耳。
+古之所谓善战者，胜于易胜者也。故善战者之胜也，无智名，无勇功。故其战胜不忒。不忒
+者，其所措必胜，胜已败者也。”（《孙子·势篇》）开战之前，已形成之“势”极有利于
+我，极不利于敌，对比悬殊，故其场上的作用如见日闻雷，人不称其善，只认为被战胜一方
+本不堪一击。因此老焦“无智名，无勇功”，但我们知道，什么才是王者之风。
+</p>
+
+<p>
+然后，两位一辩同学许佳鹏，陈偲。还是要说气质真的很重要，也许这两个人在语言或逻辑上与老焦比有一定差距，但是这两个人在场上的作用从来不可取代，因为没有其他人来取代他们这种比较亲和，比较能让台下观众接受已方观点的台风（无论是不是装的，呵呵）。两个人，陈偲比较适合守立论，许佳鹏比较适合进攻，（用你自已的话说“冲出去扔雷”，呵呵）但是还是因为全队没有明确的风格，其实导致你们两人的风格都没能最大发挥。（当然这不是某一个人的责任，老焦，你千万别再说因为你设计的打法导致的这种情况之类的话啊，那我可就有罪了）
+</p>
+
+<p>
+两位二辩，余韵寒和陈鑫儒。余同学的优点被评委夸过了，我也就没什么需要多说的了。而鑫儒是语调很柔很快，很像太极，但又有出其不意，剑走偏锋的特点。两人其实也是不同风格，余韵寒是思路很正统，但提出问题的速度极快，一个问题扔出去，无论对方如何回答，总会有接连不断，绵延不绝的问题冲出去。而鑫儒的问题以诡异为主，一时之间，对方难以回应，尤其是类比归谬运用的很独特，很有杀伤力。
+</p>
+
+<p>
+还剩下我们强有力的系决赛的核八一四辩了，因为刘勇的好多方面和我一样，太多进攻，却急于进攻时容易让自已的思路有些错乱，辞不达意，一时语塞都会有，所以，当局者迷，我说不出太多中肯的意见。
+</p>
+
+<p>
+次要的，写一下自已的几场四辩陈词的总结。自认为，最好的一次四辩陈词在于第三场打法学院，主要得益于，以牙还牙，用法学队长常用的“辩论不是为辩而辩，在这里我想分享一下我们对这个辩题的思考”的句式，把最后一支箭射了出去。然后，极其惭愧的是第二好的是第一场打电机，虽然不入流，虽然连升华抒情都没有，但是，至少是现场攻击做的不错，立的方面是临场的反应，不是念稿。排第三的是半决赛与决赛，念稿成为了最后的常态，驳完了以后，就成了纯朗诵……尤其是半决赛，语速太快，以至于没人能听懂，我汗死……在任仕廷与王斌范两位学长的强大反衬下，我的陈词几乎什么都不是……至于打软院的那场，我就什么都不说了，四辩陈词烂到不行了。
+</p>
+
+<p>
+所有的东西，也算有了一个收尾，今后我可能不会再这么用心去想这些东西。再打开这篇日志，回忆这种心情，可能就是明年送给九字班孩子们的一份礼物了。
+</p>
+
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">动态类型语言的缺点</h2>
+<h2 id="sec-1">评论</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">开发策略</h3>
-<div class="outline-text-3" id="text-1-1">
-<p>
-测试，最大化覆盖，最大化自动化。。；
-设计模式：设计模式不只是”弥补语言表达式的不足“，也是为了不滥用它的表达力。
-其他工程经验。
-</p>
+<pre class="example">
+王斌范2009-05-21 08:42删除 赞 回复
+最近演出和艺术团其他事务太忙，日志创作放缓，到写到后面的时候我会提出对你们队的印象，以及对三年来我见过的比较突出的辩手的评价，其中肯定也有你……
+你给我印象最深的确是对潘文韬的那个结辩，当中看到了很多即兴的因素，而且说理很是清晰。潘文韬不是太好的结辩，只不过经验丰富一点而已，但是我本以为工物如果不能在结辩前拿下比赛，最后还是会很危险。听完两个结辩之后，我感觉你们大概能赢了～可以好好回忆一下那场的感觉，离空手可能还有距离，但是已经挺不错了～
+另外，不要再用“我想分享一下我们对这个辩题的思考”这句话了……这句话是我在去年清锋明辩开幕赛上首次使用的，至今认为重复用这句话的人都没有理解当初我这样说话的涵义……以你的水平，还是应该去创造只有你能说出来的话，不必对前人的东西亦步亦趋～（当然当时你不知道这个典故了，亦步亦趋的是对方）
 
-<p class="more"><a href="../posts/python-xiang-guan-de-nei-rong.html">更多…</a></p>
-</div>
-</div>
-</div>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-nikola-zai-github-shang-xie-bo-ke.html" class="u-url">用 Nikola 在 GitHub 上写博客</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yong-nikola-zai-github-shang-xie-bo-ke.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-21T22:36:11+08:00" title="2016-10-21 22:36">2016-10-21 22:36</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<hr>
-<p>
-使用 Jekyll, Hexo 等框架在 GitHub Pages 上搭建静态个人博客越来越流行。
-</p>
+杨一凡2009-05-21 10:52
+........
 
-<p>
-而我选用 Nikola 框架的原因是他原生支持 org-mode 文件的解析。此外，它是用 python 写成的，对于我这种不会 Ruby 的人，更为有亲和力。
-</p>
+闫盛枫2009-05-21 12:19
+这届的清锋明辩我看了除了第一场小组赛以外的所有比赛，除了人文一队的同学们，对你的印象最深，思维很敏捷，常常让人拍案叫绝，也正是你们这些辩手一直吸引我看完清锋明辩每一场比赛，你想听建议，O(∩_∩)O~我倒是有点，觉得你在辩论技巧和辩论系统性的训练上和他们还有差距，应该是是八字班的原因吧，如果你要继续辩论的路的话，我觉得在这方面稍微努力下的话你就perfect了~O(∩_∩)O~个人拙见~
 
-<p class="more"><a href="../posts/yong-nikola-zai-github-shang-xie-bo-ke.html">更多…</a></p>
+赵骥2009-05-22 10:44
+回复王斌范:真是相当期待最新日志啊……
+对潘文韬学长的那一场，因为我在攻辩和自由辩论时表现都不好，自由辩论最后一分钟我就几乎放弃了，准备在总结陈词时好好表现，可能是因为准备的比较用心吧，结辩相较其他四场做的要好一些。能力所限，总是厚此薄彼，自由辩论做好了，陈词就没有太多现场感了。做为新辩手，我还是很欠火候。
+
+赵骥2009-05-25 00:09
+回复闫菜菜:我也是这种感觉，自已很业余、很山寨。以后如果有机会与校会厚颜混迹的话，可能会变的专业点儿……现在是纯不按套路出牌
+</pre>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/first-post.html" class="u-url">Linux 软件整理</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/first-post.html" rel="bookmark"><time class="published dt-published" datetime="2016-10-21T22:17:12+08:00" title="2016-10-21 22:17">2016-10-21 22:17</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="../posts/first-post.html#sec-1">编程编辑</a></li>
-<li><a href="../posts/first-post.html#sec-2">浏览器</a></li>
-<li><a href="../posts/first-post.html#sec-3">虚拟机</a></li>
-<li><a href="../posts/first-post.html#sec-4">聊天工具</a></li>
-<li><a href="../posts/first-post.html#sec-5">词典工具</a></li>
-<li><a href="../posts/first-post.html#sec-6">截图工具</a></li>
-<li><a href="../posts/first-post.html#sec-7">ftp上传工具</a></li>
-<li><a href="../posts/first-post.html#sec-8">文本比对工具</a></li>
-<li><a href="../posts/first-post.html#sec-9">图片处理工具</a></li>
-<li><a href="../posts/first-post.html#sec-10">画图工具</a></li>
-<li><a href="../posts/first-post.html#sec-11">网络分析工具</a></li>
-<li><a href="../posts/first-post.html#sec-12">邮件客户端</a></li>
-<li><a href="../posts/first-post.html#sec-13">办公软件</a></li>
-<li><a href="../posts/first-post.html#sec-14">科学上网</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/first-post.html">更多…</a></p>
 </div>
     </div>
     </article>
@@ -400,14 +1237,12 @@ If people do not believe that mathematics is simple, it is only because they do 
 
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
-                <a href="index-6.html" rel="prev">新一篇</a>
+                <a href="index-4.html" rel="prev">新一篇</a>
             </li>
             <li class="next">
-                <a href="index-4.html" rel="next">旧一篇</a>
+                <a href="index-6.html" rel="next">旧一篇</a>
             </li>
-        </ul></nav><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-            </script>
+        </ul></nav>
 </div>
         <!--End of body content-->
 
