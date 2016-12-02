@@ -1,0 +1,92 @@
+#+BEGIN_COMMENT
+.. title: 关于我
+#+END_COMMENT
+#+OPTIONS: toc:nil
+* 我看过的
+#+BEGIN_HTML
+    <script type="text/javascript" src="http://www.douban.com/service/badge/34162139/?selection=latest&amp;picsize=medium&amp;show=collection&amp;n=20&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=10"></script>
+#+END_HTML
+
+* 我到过的
+# 参考 http://jcf94.com/2016/05/01/2016-05-01-jvectormap/
+
+#+BEGIN_HTML
+<link href="/assets/css/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css">
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script src="/assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="/assets/js/jquery-jvectormap-cn-merc-cn.js"></script>
+<script src="/assets/js/jquery-jvectormap-world-mill.js"></script>
+
+<div class="row">
+<div class="col-md-6">
+<div id="china-map" style="height:400px;background:url('http://7xjh3j.com1.z0.glb.clouddn.com/map/map-bg.jpg" class="full-image)"></div>
+  <script>
+   var markdata = [
+        {latLng: [39.92, 116.46], name: '北京'},
+        {latLng: [32.04, 118.78], name: '南京'},
+        {latLng: [34.27, 108.95], name: '西安 - 2012~2016'},
+    ];
+
+    var regdata = {
+        "CN-11": 0, // 北京
+        "CN-32": 0, // 江苏
+        "CN-61": 0, // 陕西
+    };
+    $('#china-map').vectorMap({
+        map: 'cn_merc_en',
+        backgroundColor: 'transparent',
+        scaleColors: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial',
+        hoverOpacity: 0.7,
+        hoverColor: false, 
+
+        //--- 标记
+        markerStyle: {
+            initial: {
+                fill: '#fd8888',
+                stroke: '#fff'
+            }
+        },
+        markers: markdata,
+        //--- 改变地区颜色
+        series: {
+            regions: [{
+                values: regdata,
+                scale: ['#FFDD00','#87CEEB'],
+                //scale: ['#FFDD00'],
+                normalizeFunction: 'polynomial'
+            }]
+        },
+        <!-- //--- 改变标签 -->
+        <!-- onRegionTipShow: function(e, el, code){ -->
+        <!--     $.each(eventdata, function(i, items){ -->
+        <!--         if ((items.id == code) && (items.event != '')){ -->
+        <!--             el.html(el.html() + ' - ' + items.event); -->
+        <!--         } -->
+        <!--     }) -->
+        <!-- }, -->
+        <!-- //--- 打开页面 -->
+        <!-- onRegionClick: function(event, code){ -->
+        <!--     $.each(eventdata, function(i, items){ -->
+        <!--         if ((items.id == code) && (items.url != '')){ -->
+        <!--             if (confirm('是否打开链接？')) window.open(items.url); -->
+        <!--         } -->
+        <!--     }); -->
+        <!-- }, -->
+    }); 
+  </script>
+</div>
+<div class="col-md-6">
+<div id="world-map" style="height:400px;background:url('http://7xjh3j.com1.z0.glb.clouddn.com/map/map-bg.jpg" class="full-image)"></div>
+  <script>
+    $('#world-map').vectorMap({
+        map: 'world_mill',
+        backgroundColor: 'transparent',
+        scaleColors: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial',
+        hoverOpacity: 0.7,
+        hoverColor: false, 
+    }); 
+  </script>
+</div>
+#+END_HTML

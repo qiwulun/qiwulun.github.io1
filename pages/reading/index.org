@@ -6,7 +6,34 @@
 
 #+TAGS: { 想看(t) 借过(j) 下载(d) 已买(b) } { 有笔记(n) 待总结(c) }
 #+SEQ_TODO: TODO(t!) BUY(b!) BORROW(j!) DOWNLOAD(l!) READING(r!) | DONE(d!)
-
+* 推荐的书
+#+BEGIN_HTML
+<div class="book-figure">
+        <div class="book-figure-media">
+            <a class="book-figure-image" href="https://book.douban.com/subject/6900570/" target="_blank">
+                <img src="https://img3.doubanio.com/lpic/s8480394.jpg" alt="诗的时光书" />
+            </a>
+        </div>
+        <div class="book-figure-content">
+            <a class="book-figure-title" href="http://getnikola.com/" target="_blank">诗的时光书</a>
+            <p class="book-figure-author">by <a href="http://ralsina.me/" target="_blank">苏缨</a></p>
+            <table class="book-figure-book-number">
+                <tbody>
+                    <tr><th>出版社</th> <td>湖南文艺出版社</td> </tr>
+                    <tr><th>副标题</th> <td>深情品鉴西方经典诗歌之美</td></tr> 
+                    <tr><th>出版年</th> <td>2011-11-1</td></tr> 
+                    <tr><th>页数</th> <td> 272</td></tr> 
+                    <tr><th>定价</th> <td> 32.80元</td></tr> 
+                    <tr><th>装帧</th> <td> 精装</td></tr> 
+                    <th>ISBN-13</th><td>9787540451462</td></tr>
+                </tbody>
+            </table>
+            <div class="book-figure-review">
+                <p>Your review.</p>
+            </div>
+        </div>
+    </div>
+#+END_HTML
 * 买了的书
 - [ ] 史记
 - [ ] 老子

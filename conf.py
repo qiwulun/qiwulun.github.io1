@@ -192,7 +192,6 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/index.org", "", "story.tmpl"),
     ("pages/*.rst", "pages", "story.tmpl"),
     ("pages/*.txt", "pages", "story.tmpl"),
     ("pages/*.html", "pages", "story.tmpl"),
@@ -253,7 +252,7 @@ TIMEZONE = "UTC+8"
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 
-FILES_FOLDERS = {'mycss': 'mycss'}
+FILES_FOLDERS = {'files':'', 'mycss': 'mycss'}
 
 EXTRA_HEAD_DATA = """
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -760,6 +759,8 @@ IMAGE_FOLDERS = {'images': 'images'}
 # and index-n.html the oldest posts. When this is active, old posts can be moved
 # to other index pages when new posts are added.
 # INDEXES_STATIC = True
+INDEXES_STATIC = False
+
 #
 # (translatable) If PRETTY_URLS is set to True, this setting will be used to create
 # prettier URLs for index pages, such as page/2/index.html instead of index-2.html.
@@ -1275,5 +1276,7 @@ COMPILERS["orgmode"] = ('.org',)
 
 # Add org files to your POSTS, PAGES
 POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("pages/*.org", "pages", "story.tmpl"),)
+PAGES = PAGES + (("pages/*.org", "pages", "story.tmpl"),
+                 ("rootpath/*.org", "", "story.tmpl"),
+                )
 
