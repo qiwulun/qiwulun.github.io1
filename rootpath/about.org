@@ -4,7 +4,7 @@
 #+OPTIONS: toc:nil
 * 我看过的
 #+BEGIN_HTML
-    <script type="text/javascript" src="http://www.douban.com/service/badge/34162139/?selection=latest&amp;picsize=medium&amp;show=collection&amp;n=20&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=10"></script>
+    <script type="text/javascript" src="//www.douban.com/service/badge/34162139/?selection=latest&amp;picsize=medium&amp;show=collection&amp;n=20&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=10"></script>
 #+END_HTML
 
 * 我到过的
