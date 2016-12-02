@@ -1,0 +1,32 @@
+#+BEGIN_COMMENT
+.. title: 2016年工物人文电子新生表演赛：发现自己是备胎应不应该放弃
+.. slug: 2016nian-gong-wu-ren-wen-dian-zi-xin-sheng-biao-yan-sai
+.. date: 2016-11-15 21:36:11 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+#+HTML: <!--TEASER_END-->
+
+* 宣传
+[[../images/2016年人文工物电子表演赛/宣传1.jpg]]
+
+[[../images/2016年人文工物电子表演赛/宣传2.jpg]]
+* 讨论
+
+[[../images/2016年人文工物电子表演赛/讨论1.jpg]]
+
+[[../images/2016年人文工物电子表演赛/讨论2.jpg]]
+* 立论
+
+[[../images/2016年人文工物电子表演赛/立论.jpg]]
+
+* 现场笔记
+[[../images/2016年人文工物电子表演赛/现场笔记1.jpg]]
+
+[[../images/2016年人文工物电子表演赛/现场笔记2.jpg]]
+

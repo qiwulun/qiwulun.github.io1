@@ -1,0 +1,19 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 抑苦之殇
+.. slug: yi-ku-zhi-shang
+.. date: 2008-06-28 19:28 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+BEGIN_VERSE
+还我河山路未通，雾锁风悚待引弓。
+肠断未得桨击水，愁煎犹见胆悬空。
+傲骨瘦马效徐氏，白发浊涛似伍公。
+鬼蜮伏路敢纵马，霜锋出鞘战域中。 
+#+END_VERSE
+

@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: 狂沙叹
+.. slug: kuang-sha-tan
+.. date: 2008-11-24 14:07:05 UTC+08:00
+.. tags: 顺口溜, 人人网
+.. category: 顺口溜
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+BEGIN_QUOTE
+半世科考误此生，一生功业空逐风。
+
+愁眼但观风尘起，心忧那堪孤灯青。
+
+征战寻常乌雎落，行吟惯入联冢中。
+
+莫叹大漠风沙暗，此身何妨苍茫行。
+#+END_QUOTE

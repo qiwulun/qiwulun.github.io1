@@ -1,0 +1,6 @@
+#+BEGIN_COMMENT
+.. title: 辩论
+.. slug: index
+#+END_COMMENT
+
+一些有关辩论的 [[/categories/cat_bian-lun.html][日志]]

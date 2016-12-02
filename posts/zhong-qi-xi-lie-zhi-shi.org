@@ -1,0 +1,15 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 重启系列之始
+.. slug: zhong-qi-xi-lie-zhi-shi
+.. date: 2014-07-28 15:43:00 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: micro
+#+END_COMMENT
+
+
+
+最是人间留不住，朱颜辞镜花辞树~也好，这样所有的不可理喻终会淡出所有人的 记忆~会被记住的，仍是那些裸辩能赢，裸考能过的年代

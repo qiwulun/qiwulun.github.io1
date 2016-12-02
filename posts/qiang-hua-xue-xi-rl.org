@@ -1,0 +1,24 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 强化学习 RL
+.. slug: qiang-hua-xue-xi-rl
+.. date: 2016-11-30 17:17:25 UTC+08:00
+.. tags: 
+.. category: 
+.. section: reviews
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+HTML: <!--TEASER_END-->
+
+#+DOWNLOADED: https://pic2.zhimg.com/v2-d2c53ce1531cacf9936677abb1b386c5_r.jpg @ 2016-11-30 17:18:40
+[[file:../images/v2-d2c53ce1531cacf9936677abb1b386c5_r_2016-11-30_17-18-40.jpg]]
+
+#+DOWNLOADED: https://pic4.zhimg.com/ef4eb6ea148d4cc41093f122547ca19b_b.png @ 2016-11-30 17:26:34
+[[file:../images/ef4eb6ea148d4cc41093f122547ca19b_b_2016-11-30_17-26-34.png]]
+
+
+#+DOWNLOADED: https://pic3.zhimg.com/2b985ce07e481da7b9a4f904338a300e_b.png @ 2016-11-30 17:26:55
+[[file:../images/2b985ce07e481da7b9a4f904338a300e_b_2016-11-30_17-26-55.png]]

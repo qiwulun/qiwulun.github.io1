@@ -1,0 +1,8 @@
+#+BEGIN_COMMENT
+.. title: 关于我
+#+END_COMMENT
+#+OPTIONS: toc:nil
+* 我看过的
+#+BEGIN_HTML
+    <script type="text/javascript" src="http://www.douban.com/service/badge/34162139/?selection=random&amp;picsize=medium&amp;show=collection&amp;n=10&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=10"></script>
+#+END_HTML

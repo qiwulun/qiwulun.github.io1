@@ -1,0 +1,59 @@
+#+BEGIN_COMMENT
+.. title: Python 相关的内容
+.. slug: python-xiang-guan-de-nei-rong
+.. date: 2016-10-23 14:37:52 UTC+08:00
+.. tags: 
+.. link: 
+.. category: python
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE:     Python 相关的内容
+#+AUTHOR:    赵骥
+#+EMAIL:     zhaoji-001@163.com.cn
+#+DATE:      2016-10-23
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  zh_CN
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LATEX_CLASS: ctexart
+-----------------
+
+* 动态类型语言的缺点
+** 开发策略
+ 测试，最大化覆盖，最大化自动化。。；
+ 设计模式：设计模式不只是”弥补语言表达式的不足“，也是为了不滥用它的表达力。
+ 其他工程经验。
+
+#+BEGIN_HTML
+<!-- TEASER_END --> 
+#+END_HTML
+
+
+** 程序分析工具（可能与编译器集成）
+ 开发支持工具：
+
+     - 模块的依赖分析；
+
+     - 类型错误检查，如pychecker、pylint；
+
+     - 内存泄露监测；
+
+     - 代码风格检查；
+     - 。。。
+
+ - 编译优化工具：
+
+     - 类型分析。比如为了做type guided optimization，Spidermonkey 对JavaScript进行类型推导[1]。
+
+     - 指向分析。动态类型也加大了指向分析的难度，D.Jang[7]开发了一个对JavaScript程序的指向分析，并用之来优化JavaScript程序的执行，但是精度有限。
+     - 。。。
+
+* Python 3.5 的新变化
+
+** 矩阵乘法操作符 @
+将操作符@作为矩阵运算的标准语法,代码将变得更加易读紧凑.而即将发布的NumPy release
+版本中的快速矩阵乘法功能也将会促进@的使用.
+

@@ -1,0 +1,38 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: org mode 常用技巧
+.. slug: org-mode-chang-yong-ji-qiao
+.. date: 2016-11-30 16:13:58 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+HTML: <!--TEASER_END-->
+* 截图 =SPC m i s=
+
+设置截图保存路径
+
+https://github.com/abo-abo/org-download
+
+They are: org-download-method:
+
+    -*- mode: Org; org-download-image-dir: "~/Pictures/foo"; -*-
+
+To set it for all files at once, use this:
+
+    (setq-default org-download-image-dir "~/Pictures/foo")
+second part is:
+
+org-download-heading-lvl is nil => ""
+org-download-heading-lvl is n => the name of current heading with level n.
+
+Level count starts with 0, i.e. * is 0, ** is 1, *** is 2 etc. org-download-heading-lvl becomes buffer-local when set, so each file can customize this value, e.g with:
+
+    -*- mode: Org; org-download-heading-lvl: nil; -*-
+org-download-timestamp: optionally add a timestamp to the file name.
+
+Customize org-download-backend to choose between url-retrieve (the default) or wget or curl.
+* 粘贴图片 =SPC m i y=

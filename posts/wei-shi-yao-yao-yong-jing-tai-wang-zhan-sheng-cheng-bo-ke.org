@@ -1,0 +1,13 @@
+#+BEGIN_COMMENT
+.. title: 为什么要用静态网站生成博客
+.. slug: wei-shi-yao-yao-yong-jing-tai-wang-zhan-sheng-cheng-bo-ke
+.. date: 2016-11-10 21:32:44 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+Write your post here.

@@ -1,0 +1,21 @@
+#+BEGIN_COMMENT
+.. title: 歧路叹
+.. slug: qi-lu-tan
+.. date: 2008-11-24 14:07:37 UTC+08:00
+.. tags: 顺口溜, 人人网
+.. category: 顺口溜
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+#+BEGIN_QUOTE
+科场浮沉度此生，万丈豪气付西风。
+
+可叹日迷灵幻景，复入夜梦江湖中。
+
+枰纹横阻少年志，情网柔困宝剑锋。
+
+唯愿笔底兵刃起，且借碧血洗长空。
+#+END_QUOTE

@@ -1,0 +1,80 @@
+#+BEGIN_COMMENT
+.. title: Ubuntu 16.04 安装纪录二 ── Chrome, xx-Net, IPv6
+.. slug: ubuntu-1604-an-zhuang-ji-lu-er-chrome
+.. date: 2016-11-10 19:21:39 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+#+BEGIN_HTML
+<!-- TEASER_END-->
+#+END_HTML
+
+Ubuntu 16.04 LTS 默认安装的是 Firefox ，但是我还是习惯使用 Google Chrome ，下面
+就简单介绍下如何在 Ubuntu 16.04 LTS 上安装 Google Chrome 。
+
+* 安装
+
+下载地址 http://www.chromeliulanqi.com/
+
+因为直接打开或者下载后双击运行，安装总是失败。我们通过终端安装，
+
+输入命令 =sudo dpkg -i google-chrome-stable_current_amd64.deb= 
+
+
+有可能出现错误
+#+BEGIN_EXAMPLE
+ dpkg: 依赖关系问题使得 google-chrome-stable 的配置工作不能继续：
+ google-chrome-stable 依赖于 libappindicator1；
+ 然而：  未安装软件包 libappindicator1。 
+#+END_EXAMPLE
+
+ 遇到上述问题，输入命令 =sudo apt install -f= 补齐依赖即可。输入 y 即可完成
+ Google Chrome 的安装。
+
+** 总结
+      deb文件是需要下载的；
+      安装需要通过命令行，并且需要补齐依赖；
+      安装完毕，可通过 Dash 查找并启动；
+      如不想每次都通过 Dash 启动，可在 锁定到启动器 ；
+* 翻墙软件 xx-Net
+https://github.com/XX-net/XX-Net/wiki/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3
+
+1. 安装
+  打开XX-Net/SwitchyOmega文件夹；打开浏览器的扩展程序页面 chrome://extensions 。
+  把SwitchyOmega.crx文件拖放到浏览器扩展程序页面安装。如图
+
+2. 跳过教程
+
+3. 导入bak文件
+
+4. 点击从备份文件中恢复后，
+   找到XX-Net/SwitchyOmega/OmegaOptions.bak文件，点击打开 bak文件
+
+5. 点击情景模式中的 XX-Net自动切换
+
+6. 下拉点击“立即更新情景模式”
+
+7. 点击SwitchyOmega，切换成“XX-Net自动切换”，
+   如果使用的是X-Tunnel或SS，请点击“X-Tunnel自动切换”。 切换代理
+
+8. 到此，浏览器端设置代理也就完成了，还需最后一步，
+
+ 把XX-Net切换为“取消全局代理”，就可以畅游网络了。
+** 手动导入证书
+
+正常情况下，Chrome的证书都是自动导入的。手动导入证书，只是非正常情况下才会用到，比如遇到“您打开的链接不是私密连接”，这个时候就需要手动导入证书了。
+
+点击浏览器 菜单-设置-下翻点击“显示高级设置”-点击“管理证书” 管理证书
+
+选择“受信任的根证书颁发机构”这一栏，然后点击导入 导入证书 下一步
+
+点击浏览，然后定位到xx-net/data/gae_proxy文件夹，点击CA.crt文件，打开 浏览 导入CA
+
+将证书存放在“受信任的根证书颁发机构”，点击下一步，完成 存放 完成
+
+到此手动导入证书也就完成了。

@@ -1,0 +1,20 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 弹剑吟
+.. slug: dan-jian-yin
+.. date: 2008-06-30 16:07 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+BEGIN_VERSE
+纵横科场十余春，
+锋镝丛中几生存。
+自信生来有傲骨，
+不向人前矮三分。 
+#+END_VERSE
+
+

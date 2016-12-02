@@ -1,0 +1,32 @@
+#+BEGIN_COMMENT
+.. title: Ubuntu 安装之字体
+.. slug: ubuntu-an-zhuang-zhi-zi-ti
+.. date: 2016-11-27 15:10:59 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+I assume you have mounted the =C:/Windows= partition at =/Windowsdrive= directory in linux.
+
+Now, link the fonts location to your Linux system’s fonts folder as shown below.
+
+#+BEGIN_SRC bash
+ln -s /Windowsdrive/Windows/Fonts /usr/share/fonts/WindowsFonts
+# After linking the fonts folder, regenerate the fontconfig cache using command:
+fc-cache
+#+END_SRC
+
+Alternatively, copy all Windows fonts to /usr/share/fonts directory and install the fonts using the following commands:
+
+#+BEGIN_SRC bash
+mkdir /usr/share/fonts/WindowsFonts
+cp /Windowsdrive/Windows/Fonts/* /usr/share/fonts/WindowsFonts
+chmod 755 /usr/share/fonts/WindowsFonts/*
+#Finally, regenerate the fontconfig cache using command:
+fc-cache
+#+END_SRC
+

@@ -1,0 +1,18 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: Reading Index
+.. slug: index
+#+END_COMMENT
+
+#+TAGS: { 想看(t) 借过(j) 下载(d) 已买(b) } { 有笔记(n) 待总结(c) }
+#+SEQ_TODO: TODO(t!) BUY(b!) BORROW(j!) DOWNLOAD(l!) READING(r!) | DONE(d!)
+
+* 买了的书
+- [ ] 史记
+- [ ] 老子
+- [ ] 追风筝的人
+- [ ] 安娜 卡列尼娜
+- [ ] 我们为什么离正义越来越远 作者：熊逸 出版社： 湖南文艺出版社 ISBN：9787540452117
+- [ ] 春秋大义 作者：熊逸 出版社： 陕西师范大学出版社 ISBN：9787561340868
+- [ ] 春秋大义2：隐公元年 作者：熊逸 出版社： 广西师范大学出版社 ISBN：9787563377015
+- [ ] 诗的时光书 作者：苏缨，毛晓雯 出版社： 湖南文艺出版社 ISBN：9787540451462

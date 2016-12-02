@@ -1,0 +1,18 @@
+#+BEGIN_COMMENT
+.. title: 狱外杂感
+.. slug: yu-wai-za-gan
+.. date: 2008-11-24 14:06:34 UTC+08:00
+.. tags: 顺口溜, 人人网
+.. category: 顺口溜
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+BEGIN_VERSE
+三年天霜三年秋，少年壮志羞言愁。
+闲把素卷作战表，逸将秃笔比吴钩。
+鸣金收兵军争散，盖棺定论科场休。
+回看三年却只是，留得豪情作楚囚。 
+#+END_VERSE
+
