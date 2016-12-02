@@ -1,0 +1,4 @@
+Sitemap: https://qiwulun.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: qiwulun.github.io
