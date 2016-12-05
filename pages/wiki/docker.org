@@ -3,5 +3,5 @@
 .. title: docker
 .. slug: docker
 #+END_COMMENT
-
-[[file:~/git/qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
+* 启动服务
+- [[../../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
