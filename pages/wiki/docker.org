@@ -1,0 +1,7 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: docker
+.. slug: docker
+#+END_COMMENT
+
+[[file:~/git/qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]

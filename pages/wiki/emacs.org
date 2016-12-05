@@ -1,0 +1,7 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: emacs
+.. slug: emacs
+#+END_COMMENT
+
+[[file:~/git/qiwulun.github.io/posts/emacs-shi-yong-ssh.org][emacs 使用 ssh]]

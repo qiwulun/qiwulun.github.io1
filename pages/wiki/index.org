@@ -2,7 +2,7 @@
 .. title: 维基入口
 .. slug: index
 #+END_COMMENT
+#+OPTION: toc:nil
 * 计算机技术
-** Linux
-
-** Docker
+- [[file:emacs.org][emacs]] 
+- [[file:docker.org][Docker]] 

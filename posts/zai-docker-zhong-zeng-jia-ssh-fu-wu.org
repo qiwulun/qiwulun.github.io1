@@ -3,7 +3,7 @@
 .. title: 在 docker 中增加 ssh 服务
 .. slug: zai-docker-zhong-zeng-jia-ssh-fu-wu
 .. date: 2016-12-05 14:00:31 UTC+08:00
-.. tags: 
+.. tags: docker, ssh
 .. category: 
 .. link: 
 .. description: 
