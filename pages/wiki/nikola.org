@@ -1,0 +1,8 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: Nikola
+.. slug: nikola
+#+END_COMMENT
+
+
+[[file:~/git/qiwulun.github.io/posts/yong-nikola-zai-github-shang-xie-bo-ke.org][用 Nikola 写博客]]

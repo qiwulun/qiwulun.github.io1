@@ -1278,7 +1278,7 @@ COMPILERS["orgmode"] = ('.org',)
 
 # Add org files to your POSTS, PAGES
 POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("pages/*.org", "pages", "story.tmpl"),
+PAGES = PAGES + (("pages/*.org", "pages", "post.tmpl"),
                  ("rootpath/*.org", "", "story.tmpl"),
                 )
 
