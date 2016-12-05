@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 05 Dec 2016 07:17:23 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>emacs 使用 ssh</title><link>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" href="https://qiwulun.github.io/rss.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 05 Dec 2016 09:07:53 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>emacs 使用 ssh</title><link>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 参考这一篇
 &lt;a href="http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html"&gt;http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html&lt;/a&gt;
 &lt;/p&gt;
@@ -69,7 +69,7 @@ docker高级应用之赋予容器独立外网ip
 &lt;a href="http://dl528888.blog.51cto.com/2382721/1604167"&gt;http://dl528888.blog.51cto.com/2382721/1604167&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</guid><pubDate>Mon, 05 Dec 2016 06:00:31 GMT</pubDate></item><item><title>日知录－－好的编译器与好的读者</title><link>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+&lt;/div&gt;</description><category>docker</category><category>ssh</category><guid>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</guid><pubDate>Mon, 05 Dec 2016 06:00:31 GMT</pubDate></item><item><title>日知录－－好的编译器与好的读者</title><link>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 每个写过 C 语言的人，恐怕都至少有过过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。
 &lt;/p&gt;
 
