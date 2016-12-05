@@ -65,7 +65,182 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/qiang-hua-xue-xi-rl.html" class="u-url">强化学习 RL</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/emacs-shi-yong-ssh.html" class="u-url">emacs 使用 ssh</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/emacs-shi-yong-ssh.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T14:38:02+08:00" title="2016-12-05 14:38">2016-12-05 14:38</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/emacs-shi-yong-ssh.html#disqus_thread" data-disqus-identifier="cache/posts/emacs-shi-yong-ssh.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+参考这一篇
+<a href="http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html">http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html</a>
+</p>
+
+<p>
+C-x C-f /ssh: [username]@[host-ip]#[port]:path/to/file
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html" class="u-url">在 docker 中增加 ssh 服务</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T14:00:31+08:00" title="2016-12-05 14:00">2016-12-05 14:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html#disqus_thread" data-disqus-identifier="cache/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+参考 <a href="http://www.linuxdiyf.com/linux/15472.html">http://www.linuxdiyf.com/linux/15472.html</a>
+</p>
+
+<div class="highlight"><pre><span></span># 1 先在宿主机上运行一个已有的镜像 
+docker run -it ubuntu bash
+# 如果已经有其它的基础镜像也可以代替上面的ubuntu
+
+# 2 在container上运行下列命令
+# 2.1 安装ssh服务
+apt-get update #更新源
+apt-get install ssh
+
+# 2.2 配置密码
+# 使用 passwd 来配置 ssh 登录时需要的密码
+passwd
+# 按提示进行修改
+
+# 2.3 修改sshd_config配置文件
+vi /etc/ssh/sshd_config
+# 将PermitRootLogin 改为 yes，将UsePAM 改为 no。
+
+# 2.4 退出 container
+exit
+
+# 3. [可选] 在宿主机上把此镜像保存一下：
+# 3.1 把容器保存成镜像
+docker commit [container-id] [image-id]
+# 3.2 把刚刚的容器干掉：
+docker stop [container-id] #停用
+docker rm [container-id]   #删除
+
+# 4 在宿主机上启动container 并挂载端口：
+docker run --name [container-name] -i -t -p 50001:22 [image-id]
+# 把 ssh 默认端口22 挂载到宿主机的 50001 端口上
+
+# 5 在container上启动ssh服务：
+/etc/init.d/ssh start
+# C-p C-q 组合键退出会话，不关闭container
+
+# 6 在其他电脑上使用ssh登录即可
+ssh [rootname]@[hostip] -p 50001
+# 输入 rootpasscode
+</pre></div>
+
+<p>
+想要以后台方式启动的话，要写一个自启动 ssh 的脚本
+<code>docker run -d -p 22:22 -t centos6.5:sshd /root/run.sh</code>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">
+<span class="todo TODO">TODO</span> 其它的设置</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Docker网络管理及容器跨主机通信（四）
+<a href="http://lizhenliang.blog.51cto.com/7876557/1731898">http://lizhenliang.blog.51cto.com/7876557/1731898</a>
+</p>
+
+<p>
+docker高级应用之赋予容器独立外网ip
+<a href="http://dl528888.blog.51cto.com/2382721/1604167">http://dl528888.blog.51cto.com/2382721/1604167</a>
+</p>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" class="u-url">日知录－－好的编译器与好的读者</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-04T16:51:59+08:00" title="2016-12-04 16:51">2016-12-04 16:51</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html#disqus_thread" data-disqus-identifier="cache/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+每个写过 C 语言的人，恐怕都至少有过过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。
+</p>
+
+<p>
+有些人被编译器 f*ck 多了，就会产生思考 <a href="https://www.zhihu.com/question/20298345/answer/14670020">https://www.zhihu.com/question/20298345/answer/14670020</a>
+</p>
+<blockquote>
+<p>
+实际上，不少人（包括我）认为，c-style的分号本来就是多余的。 为什么这么说？因为明确的EOS只是给编译器的提示而已。
+</p>
+
+<p>
+<b>如果漏了分号，编译器会报错。</b>
+</p>
+
+<p>
+<b>既然它都报错了，显然它知道这里应该有EOS 。</b>
+</p>
+
+<p>
+<b>既然它知道，那么干嘛还要我写？</b> 
+</p>
+</blockquote>
+
+<p>
+当年，C的爹们是遵循着 worse is better ，非常强调实现简单──一个明确的分号来标志语句结束，对于编译器来说绝对是简单的。
+</p>
+
+<p>
+本来可以没有的分号，这个冗余信息，让解读变的简单了起来。
+</p>
+
+<p>
+但是打起来太累，于是人生苦短，我用python。
+</p>
+<hr>
+<p>
+compiling 是让编译器懂你在说什么， reading 是让读者懂你在说什么。二者有很多相似点。
+</p>
+
+<p>
+所以很多人会觉得，10万+微信平台文总是，标题党+几个案例+两句鸡汤，翻来覆去那几句，有什么意思？──但是它好懂。 
+</p>
+
+<p>
+如果想要省掉冗余信息，就要编译器（或者读者）根据上下文去理解，引申与填充。
+</p>
+
+<hr>
+<p>
+这要求太高了。
+</p>
+
+<p>
+我们举个简单的例子──《金刚经》。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/qiang-hua-xue-xi-rl.html" class="u-url">强化学习 RL</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -291,114 +466,6 @@ fc-cache
 </div>
 </div>
 <p class="more"><a href="../posts/ji-jie-jian-pan.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/an-zhuang-mxnet.html" class="u-url">安装 mxnet</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/an-zhuang-mxnet.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-21T14:22:53+08:00" title="2016-11-21 14:22">2016-11-21 14:22</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/an-zhuang-mxnet.html#disqus_thread" data-disqus-identifier="cache/posts/an-zhuang-mxnet.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-使用 gcc 4.9 会编译不通过
-</p>
-
-<pre class="example">
-/tmp/ccl4BojP.o：在函数‘main’中：
-im2rec.cc:(.text.startup+0x2b24)：对‘cv::imencode(std::string const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)’未定义的引用
-collect2: error: ld returned 1 exit status
-Makefile:233: recipe for target 'bin/im2rec' failed
-make: *** [bin/im2rec] Error 1
-</pre>
-
-
-<p>
-把 gcc 和 g++ 设成 5
-</p>
-
-<div class="highlight"><pre><span></span>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 20
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 10
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 20
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10
-</pre></div>
-
-<p>
-编译支持GPU的MXnet
-MXnet需要打开一个编译和链接选项来支持CUDA。在前一步git clone得到的mxnet/目录里找到mxnet/make/子目录，把该目录下的config.mk复制到mxnet/目录，用文本编辑器打开，找到并修改以下几行：
-</p>
-
-<p>
-USE<sub>CUDA</sub> = 1
-USE<sub>CUDA</sub><sub>PATH</sub> = /usr/local/cuda
-其中第二行是CUDA的安装目录。如果选择默认安装方式，它会在/usr/local/cuda或者是类似/usr/local/cuda-7.5这样的原始安装目录，如果是自定义目录的安装，请自行修改本条。
-</p>
-
-<p>
-如果用户选择安装atlas或者openblas等其他BLAS的实现，需要额外的修改。如果ubuntu的atlas实现（sudo apt-get install libatlas-base-dev或者sudo apt-get install libopenblas-dev），需要修改为：
-</p>
-
-<p>
-USE<sub>BLAS</sub> = atlas 或者 openblas
-修改之后，在mxnet/目录下编译（-j4是可选参数表示用4线程编译）：
-</p>
-
-<p>
-make -j4
-注意：如果没有CUDA支持的显卡（比如Intel的Iris显卡或者AMD的R系列显卡）或者没有显卡，安装和编译GPU版本的mxnet会出错。解决方法是，把USE<sub>CUDA</sub> = 1改回USE<sub>CUDA</sub> = 0，并确保USE<sub>OPENMP</sub> = 1，mxnet会自动编译CPU版本并使用OpenMP进行多核CPU计算。根据问题的不同，GPU版本对比CPU版一般会有20-30倍左右的加速。
-</p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yue-xia-chan.html" class="u-url">月下蝉</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yue-xia-chan.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-18T21:08:19+08:00" title="2016-11-18 21:08">2016-11-18 21:08</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yue-xia-chan.html#disqus_thread" data-disqus-identifier="cache/posts/yue-xia-chan.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>
-网易云地址 <a href="http://music.163.com/#/song?id=432430697">http://music.163.com/#/song?id=432430697</a>
-</p>
-
-<p class="more"><a href="../posts/yue-xia-chan.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/nikola-zi-ding-yi-css.html" class="u-url">nikola 自定义 css</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/nikola-zi-ding-yi-css.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-16T17:42:53+08:00" title="2016-11-16 17:42">2016-11-16 17:42</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/nikola-zi-ding-yi-css.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-zi-ding-yi-css.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>
-如果希望 zero 文件转换而成的网页能够美观一些，并且希望代码片段能够高亮显示，那么
-需要对 zero 站点的 css 文件进行一些定制。在 zero 目录中创建 mycss 目录，将我制作
-的一份 css 文件 tweak.css 放入该目录：
-</p>
-
-<p class="more"><a href="../posts/nikola-zi-ding-yi-css.html">更多…</a></p>
 </div>
     </div>
     </article>
