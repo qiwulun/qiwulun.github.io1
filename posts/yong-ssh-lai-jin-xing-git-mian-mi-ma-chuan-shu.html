@@ -3,27 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>用 sox 改变 wav 文件的音量 | 赵骥's Site</title>
+<title>用 ssh 来进行 git 免密码传输 | 赵骥's Site</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html">
+<link rel="canonical" href="https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="../mycss/tweak.css" rel="stylesheet" type="text/css">
 <base target="_parent">
 <meta name="author" content="Zhao JI">
-<link rel="prev" href="yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" title="欲得官，杀人放火受招安。" type="text/html">
-<link rel="next" href="yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" title="用 ssh 来进行 git 免密码传输" type="text/html">
+<link rel="prev" href="yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" title="用 sox 改变 wav 文件的音量" type="text/html">
+<link rel="next" href="git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" title="git 在每次 Push 时不用重复输入密码" type="text/html">
 <meta property="og:site_name" content="赵骥's Site">
-<meta property="og:title" content="用 sox 改变 wav 文件的音量">
-<meta property="og:url" content="https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html">
-<meta property="og:description" content="sox -v .3 input.wav output.wav
+<meta property="og:title" content="用 ssh 来进行 git 免密码传输">
+<meta property="og:url" content="https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">
+<meta property="og:description" content="SSH keys
 
 
 
--v 表示改变音量 .3 表示变为原始音量的0.3倍">
+SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
+
+cat ~/.ssh/id_rsa.pub
+
+
+
+如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
+提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-12-06T13:30:03+08:00">
+<meta property="article:published_time" content="2016-12-06T20:23:26+08:00">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="ssh">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -73,16 +82,16 @@
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T13:30:03+08:00" itemprop="datePublished" title="2016-12-06 13:30">2016-12-06 13:30</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:23:26+08:00" itemprop="datePublished" title="2016-12-06 20:23">2016-12-06 20:23</time></a></p>
                 <p class="commentline">
         
-    <a href="yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html#disqus_thread" data-disqus-identifier="cache/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html">Comments</a>
+    <a href="yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html#disqus_thread" data-disqus-identifier="cache/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">Comments</a>
 
 
             
@@ -92,19 +101,41 @@
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div class="highlight"><pre><span></span>sox -v .3 input.wav output.wav
+    <p>
+SSH keys
+</p>
+
+<p>
+SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
+</p>
+<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub
 </pre></div>
 
 <p>
-<code>-v</code> 表示改变音量 <code>.3</code> 表示变为原始音量的0.3倍
+如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
+提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
+你可以按如下命令来生成ssh key：
+</p>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa -C "someone@email.com"
+</pre></div>
+
+<p>
+这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
+用以下命令获取你生成的公钥：
+cat ~/.ssh/id<sub>rsa</sub>.pub
+复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
 </p>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/git.html" rel="tag">git</a></li>
+            <li><a class="tag p-category" href="../categories/ssh.html" rel="tag">ssh</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" rel="prev" title="欲得官，杀人放火受招安。">前一篇</a>
+                <a href="yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" rel="prev" title="用 sox 改变 wav 文件的音量">前一篇</a>
             </li>
             <li class="next">
-                <a href="yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" rel="next" title="用 ssh 来进行 git 免密码传输">后一篇</a>
+                <a href="git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" rel="next" title="git 在每次 Push 时不用重复输入密码">后一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         
@@ -112,9 +143,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="qiwulun-github-io",
-            disqus_url="https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html",
-        disqus_title="\u7528 sox \u6539\u53d8 wav \u6587\u4ef6\u7684\u97f3\u91cf",
-        disqus_identifier="cache/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html",
+            disqus_url="https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html",
+        disqus_title="\u7528 ssh \u6765\u8fdb\u884c git \u514d\u5bc6\u7801\u4f20\u8f93",
+        disqus_identifier="cache/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html",
         disqus_config = function () {
             this.language = "zh_cn";
         };

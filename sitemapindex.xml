@@ -58,6 +58,14 @@
   <lastmod>2016-12-02T13:35:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://qiwulun.github.io/categories/git-ssh.xml</loc>
+  <lastmod>2016-12-06T12:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://qiwulun.github.io/categories/git.xml</loc>
+  <lastmod>2016-12-06T12:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://qiwulun.github.io/categories/gu-shi.xml</loc>
   <lastmod>2016-12-02T13:35:00Z</lastmod>
  </sitemap>
@@ -91,7 +99,7 @@
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/categories/ssh.xml</loc>
-  <lastmod>2016-12-05T09:07:00Z</lastmod>
+  <lastmod>2016-12-06T12:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/categories/zai-jian-ruo-you-yuan.xml</loc>
@@ -115,10 +123,10 @@
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/rss.xml</loc>
-  <lastmod>2016-12-06T07:30:00Z</lastmod>
+  <lastmod>2016-12-06T12:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/sitemap.xml</loc>
-  <lastmod>2016-12-06T07:30:00Z</lastmod>
+  <lastmod>2016-12-06T12:39:00Z</lastmod>
  </sitemap>
 </sitemapindex>

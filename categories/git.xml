@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site (git)</title><link>https://qiwulun.github.io/</link><description></description><atom:link href="https://qiwulun.github.io/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 06 Dec 2016 12:39:13 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用 ssh 来进行 git 免密码传输</title><link>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+SSH keys
+&lt;/p&gt;
+
+&lt;p&gt;
+SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat ~/.ssh/id_rsa.pub
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
+提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
+你可以按如下命令来生成ssh key：
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh-keygen -t rsa -C "someone@email.com"
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
+用以下命令获取你生成的公钥：
+cat ~/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub
+复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
+&lt;/p&gt;</description><category>git</category><category>ssh</category><guid>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</guid><pubDate>Tue, 06 Dec 2016 12:23:26 GMT</pubDate></item></channel></rss>
