@@ -4,5 +4,18 @@
 .. slug: nikola
 #+END_COMMENT
 
+- 支持LaTeX数学公式(via MathJax)
+
+- 原生支持多种文档类型, 包括:
+    - reStructuredText (.rst, .txt, 此为默认格式, 故 .txt 文件也是以reStructuredText格式来读取的)
+    - markdown (.md)
+    - Jupyter/IPython Notebook (.ipynb)
+    - HTML (.html)
+    - PHP (.php)
+    - Pandoc支持的格式, 如Textile, LaTeX, Emacs Org-Mode, MS Word等 (Pandoc需要手动开启支持, 默认关闭因可能会与已有格式冲突)
+
+- 能过插件支持更多类型文档, 例如 Emacs Org-Mode, reST with HTML 5 output 等
+
+除此之外, 它还有很多其它特点, 比如提供image gallery, image slideshow 模板, 以及个性化的输出路径定制等.
 
 [[file:~/git/qiwulun.github.io/posts/yong-nikola-zai-github-shang-xie-bo-ke.org][用 Nikola 写博客]]

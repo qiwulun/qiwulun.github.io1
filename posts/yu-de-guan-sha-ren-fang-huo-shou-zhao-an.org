@@ -1,0 +1,14 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 欲得官，杀人放火受招安。
+.. slug: yu-de-guan-sha-ren-fang-huo-shou-zhao-an
+.. date: 2016-12-05 22:27:01 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: micro
+#+END_COMMENT
+
+欲得官，杀人放火受招安。
+
