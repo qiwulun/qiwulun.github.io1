@@ -47,7 +47,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/archive.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/</loc>
@@ -55,31 +55,31 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-1.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-2.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-3.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-4.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-5.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-6.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-7.html</loc>
-  <lastmod>2016-12-05T07:17:00Z</lastmod>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/categories/</loc>
@@ -211,11 +211,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/</loc>
-  <lastmod>2016-12-05T09:28:00Z</lastmod>
- </url>
- <url>
-  <loc>https://qiwulun.github.io/pages/wiki/Nikola.html</loc>
-  <lastmod>2016-12-05T09:27:00Z</lastmod>
+  <lastmod>2016-12-05T10:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/docker.html</loc>
@@ -231,7 +227,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/nikola.html</loc>
-  <lastmod>2016-12-05T09:50:00Z</lastmod>
+  <lastmod>2016-12-05T14:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/2016nian-gong-wu-ren-wen-dian-zi-xin-sheng-biao-yan-sai.html</loc>
@@ -283,7 +279,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</loc>
-  <lastmod>2016-12-05T09:37:00Z</lastmod>
+  <lastmod>2016-12-05T14:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/fan-zheng-mei-shi-yao-ren-yong-xiao-nei-liao-wo-ke-yi-xie-yi-xia-wu-luo-ji-qie-fan-she-hui-de-wen-zi-liao.html</loc>
@@ -391,7 +387,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</loc>
-  <lastmod>2016-12-05T09:37:00Z</lastmod>
+  <lastmod>2016-12-06T07:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/shen-du-xue-xi-de-xiang-guan-nei-rong.html</loc>
@@ -436,6 +432,10 @@
  <url>
   <loc>https://qiwulun.github.io/posts/ubuntu-zhong-zhuang-ji-lu.html</loc>
   <lastmod>2016-12-05T09:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/posts/wei-shi-yao-yao-xie-zuo.html</loc>
+  <lastmod>2016-12-05T14:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/wei-shi-yao-yao-yong-jing-tai-wang-zhan-sheng-cheng-bo-ke.html</loc>
@@ -500,6 +500,14 @@
  <url>
   <loc>https://qiwulun.github.io/posts/yong-nikola-zai-github-shang-xie-bo-ke.html</loc>
   <lastmod>2016-12-05T09:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html</loc>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html</loc>
+  <lastmod>2016-12-06T05:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/yu-jun-ren-shi-tui-pai-jiu-bai-fa-wu-xu-tan-wei-gong.html</loc>

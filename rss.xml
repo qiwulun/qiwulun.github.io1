@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 05 Dec 2016 09:50:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>emacs 使用 ssh</title><link>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" type="application/rss+xml" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 06 Dec 2016 07:30:25 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用 sox 改变 wav 文件的音量</title><link>https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sox -v .3 input.wav output.wav
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+&lt;code&gt;-v&lt;/code&gt; 表示改变音量 &lt;code&gt;.3&lt;/code&gt; 表示变为原始音量的0.3倍
+&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html</guid><pubDate>Tue, 06 Dec 2016 05:30:03 GMT</pubDate></item><item><title>欲得官，杀人放火受招安。</title><link>https://qiwulun.github.io/posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+欲得官，杀人放火受招安。
+&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html</guid><pubDate>Mon, 05 Dec 2016 14:27:01 GMT</pubDate></item><item><title>为什么要写作</title><link>https://qiwulun.github.io/posts/wei-shi-yao-yao-xie-zuo.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+生命如此短暂，为什么总要将青春浪费在不断的选择之中呢？罚你，回头阅读心理学家施瓦茨（Barry Schwartz）的TED演讲：选择之困惑——为何多即是少，1百遍啊1百遍。请记住施瓦茨的演讲要点：
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;更多的选择不代表更多的自由；
+&lt;/li&gt;
+
+&lt;li&gt;更多的选择导致决策的延迟和降低的满意感；
+&lt;/li&gt;
+
+&lt;li&gt;快乐之秘诀，在于降低自己的期望值。
+&lt;/li&gt;
+&lt;/ul&gt;</description><guid>https://qiwulun.github.io/posts/wei-shi-yao-yao-xie-zuo.html</guid><pubDate>Mon, 05 Dec 2016 14:17:04 GMT</pubDate></item><item><title>emacs 使用 ssh</title><link>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 参考这一篇
 &lt;a href="http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html"&gt;http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html&lt;/a&gt;
 &lt;/p&gt;
@@ -70,12 +90,13 @@ docker高级应用之赋予容器独立外网ip
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description><category>docker</category><category>ssh</category><guid>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</guid><pubDate>Mon, 05 Dec 2016 06:00:31 GMT</pubDate></item><item><title>日知录－－好的编译器与好的读者</title><link>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-每个写过 C 语言的人，恐怕都至少有过过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。
+每个写过 C 语言的人，恐怕都至少有过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。
 &lt;/p&gt;
 
 &lt;p&gt;
 有些人被编译器 f*ck 多了，就会产生思考 &lt;a href="https://www.zhihu.com/question/20298345/answer/14670020"&gt;https://www.zhihu.com/question/20298345/answer/14670020&lt;/a&gt;
 &lt;/p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;
 实际上，不少人（包括我）认为，c-style的分号本来就是多余的。 为什么这么说？因为明确的EOS只是给编译器的提示而已。
@@ -99,7 +120,7 @@ docker高级应用之赋予容器独立外网ip
 &lt;/p&gt;
 
 &lt;p&gt;
-本来可以没有的分号，这个冗余信息，让解读变的简单了起来。
+本来可以没有的分号，作为冗余信息，让解读变的简单了起来。
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -121,11 +142,140 @@ compiling 是让编译器懂你在说什么， reading 是让读者懂你在说�
 
 &lt;hr&gt;
 &lt;p&gt;
-这要求太高了。
+做个主动的读者，你眼前的世界是完全不一样的。
 &lt;/p&gt;
 
 &lt;p&gt;
 我们举个简单的例子──《金刚经》。
+&lt;/p&gt;
+
+&lt;p&gt;
+把《金刚经》当成《论语》一样的名言集锦来读是很惬意的。比如
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+一切有为法，如梦幻泡影，如雾亦如电，应做如是观。
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+──多典型的佛教，“赤条条来去无牵挂”，“白茫茫大地真干净”的大彻大悟感。
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+若以色见我，以音声求我，是人行邪道，不能见如来。
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+──“学我者生，似我者死”的佛教版
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心， &lt;b&gt;应无所住而生其心。&lt;/b&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+──像不像《逍遥游》“若夫乘天地之正，而御六气之辩，以游无穷者，彼且恶乎待哉？”
+&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;
+但如果不满足于单句，试图贯通全文，那就有困惑在──
+&lt;/p&gt;
+
+&lt;p&gt;
+你看，我们前面引的几句其实都是在讲一件事──“不住于相”。也就是在《金刚经》中反
+复出现的“无我相，无人相，无众生相，无寿者相”
+&lt;/p&gt;
+
+&lt;p&gt;
+这是符合佛教精神的──佛传四法印也说“诸法无我”。
+&lt;/p&gt;
+
+&lt;p&gt;
+但它带来的问题是，既然无我，那么是什么东西在“轮回”？
+&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;
+最集中出现这个矛盾的，是下面这句经文──
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+如我昔为歌利王割截身体，我于尔时，无我相、无人相、无众生相、无寿者相。
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+《金刚经》中，如来讲“我昔为歌利王割截身体”，“又念过去于五百世作忍辱仙人”，
+“我念过去无量阿僧祗劫，于然灯佛前，得值八百四千万亿那由他诸佛”。
+&lt;/p&gt;
+
+&lt;p&gt;
+──如果无我，如来又怎么判定那些经历是“我”？
+&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p&gt;
+于是就有了下面这两句经文。
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+如来说有我者，则非有我，而凡夫之人以为有我。 
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+语言歧义性与不精确，是表达佛教等复杂思想的最大障碍。因为语言基于常识，而佛学的假设本就反常识，
+  ──比如说“无我”。
+  ──没你，谁在和我说话。
+  ──这个我不是你说的那个我……唉呀，讲不清楚。
+&lt;/p&gt;
+
+&lt;p&gt;
+佛陀给了我们一种解决的方法：
+&lt;/p&gt;
+
+&lt;p&gt;
+“般若”不可说，就给你一套测试题──
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;当你证到般若智慧，你就能理解这些看起来自相矛盾的语言。
+&lt;/li&gt;
+&lt;li&gt;接下来，就是你自己要怎么去填充，弥合，贯通？ 
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+&lt;p&gt;
+还记得哥德尔不完备定理么？
+&lt;/p&gt;
+
+&lt;p&gt;
+用 &lt;b&gt;自指&lt;/b&gt; 带来的矛盾揭示了体系的不完备。
+&lt;/p&gt;
+
+&lt;p&gt;
+──挺好的，在那样的世界总有空白等着我们去填充：）
+&lt;/p&gt;
+
+&lt;p&gt;
+PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来点拨我一下
 &lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</guid><pubDate>Sun, 04 Dec 2016 08:51:59 GMT</pubDate></item><item><title>强化学习 RL</title><link>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</guid><pubDate>Wed, 30 Nov 2016 09:17:25 GMT</pubDate></item><item><title>org mode 常用技巧</title><link>https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
@@ -178,55 +328,4 @@ compiling 是让编译器懂你在说什么， reading 是让读者懂你在说�
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-zhong-zhuang-ji-lu.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/ubuntu-zhong-zhuang-ji-lu.html</guid><pubDate>Tue, 29 Nov 2016 05:57:04 GMT</pubDate></item><item><title>2017年人文工物新生赛淘汰赛──“科技发展应不应该有伦理界限”</title><link>https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html#sec-1"&gt;场上局势&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html#sec-2"&gt;破题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html#sec-3"&gt;附录&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-今天去听索拉带的小朋友的比赛，题目叫做“科技发展应不应该有伦理界限”。02年的辩题，14年前就被讨论是不是持方不公，现在还在打，也实在是醉。
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/2017nian-ren-wen-gong-wu-xin-sheng-sai-tao-tai-sai-ke-ji-fa-zhan-ying-bu-ying-gai-you-lun-li-jie-xian.html</guid><pubDate>Sun, 27 Nov 2016 13:21:51 GMT</pubDate></item><item><title>Ubuntu 安装之字体</title><link>https://qiwulun.github.io/posts/ubuntu-an-zhuang-zhi-zi-ti.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-I assume you have mounted the &lt;code&gt;C:/Windows&lt;/code&gt; partition at &lt;code&gt;/Windowsdrive&lt;/code&gt; directory in linux.
-&lt;/p&gt;
-
-&lt;p&gt;
-Now, link the fonts location to your Linux system’s fonts folder as shown below.
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ln -s /Windowsdrive/Windows/Fonts /usr/share/fonts/WindowsFonts
-# After linking the fonts folder, regenerate the fontconfig cache using command:
-fc-cache
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;
-Alternatively, copy all Windows fonts to /usr/share/fonts directory and install the fonts using the following commands:
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir /usr/share/fonts/WindowsFonts
-cp /Windowsdrive/Windows/Fonts/* /usr/share/fonts/WindowsFonts
-chmod 755 /usr/share/fonts/WindowsFonts/*
-#Finally, regenerate the fontconfig cache using command:
-fc-cache
-&lt;/pre&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/ubuntu-an-zhuang-zhi-zi-ti.html</guid><pubDate>Sun, 27 Nov 2016 07:10:59 GMT</pubDate></item><item><title>机械键盘</title><link>https://qiwulun.github.io/posts/ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-1"&gt;轴&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-2"&gt;键帽&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-3"&gt;xx 无冲&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-4"&gt;正刻、同刻、侧刻、无刻&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-5"&gt;钢板&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-6"&gt;104、87、84、82&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-7"&gt;手托&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html#sec-8"&gt;MX-BOARD 2.0C G80-3802机械键盘 黑色 青轴 键帽 ABS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/ji-jie-jian-pan.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/ji-jie-jian-pan.html</guid><pubDate>Wed, 23 Nov 2016 05:23:59 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-zhong-zhuang-ji-lu.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/ubuntu-zhong-zhuang-ji-lu.html</guid><pubDate>Tue, 29 Nov 2016 05:57:04 GMT</pubDate></item></channel></rss>
