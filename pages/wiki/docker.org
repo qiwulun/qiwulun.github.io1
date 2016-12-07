@@ -5,3 +5,17 @@
 #+END_COMMENT
 * 启动服务
 - [[../../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
+* 报错
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+要把用户加到group中
+
+#+BEGIN_SRC bash
+ sudo usermod -aG docker <username>
+#+END_SRC
+
+操作顺序: 
+1. sudo cat /etc/group | grep docker 
+2. 如果不存在docker组，可以添加sudo groupadd docker 
+3. 添加当前用户到docker组，sudo gpasswd -a ${USER} docker
+4. ssh 登出，再重新登录即可
