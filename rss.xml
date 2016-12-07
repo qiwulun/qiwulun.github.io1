@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 06 Dec 2016 12:46:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>git 在每次 Push 时不用重复输入密码</title><link>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Wed, 07 Dec 2016 10:01:22 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>git 在每次 Push 时不用重复输入密码</title><link>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
 &lt;li&gt;使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
 &lt;/li&gt;
 
@@ -83,7 +83,14 @@ cat ~/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub
 
 &lt;p&gt;
 C-x C-f /ssh: [username]@[host-ip]#[port]:path/to/file
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</guid><pubDate>Mon, 05 Dec 2016 06:38:02 GMT</pubDate></item><item><title>在 docker 中增加 ssh 服务</title><link>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+远程复制文件
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scp ./cudnn-8.0-linux-x64-v5.1.tgz username@hostip:/path/to/file
+&lt;/pre&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</guid><pubDate>Mon, 05 Dec 2016 06:38:02 GMT</pubDate></item><item><title>在 docker 中增加 ssh 服务</title><link>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 参考 &lt;a href="http://www.linuxdiyf.com/linux/15472.html"&gt;http://www.linuxdiyf.com/linux/15472.html&lt;/a&gt;
 &lt;/p&gt;
 
@@ -339,6 +346,7 @@ PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来�
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-1"&gt;截图 &lt;code&gt;SPC m i s&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-2"&gt;粘贴图片 &lt;code&gt;SPC m i y&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-3"&gt;跳回原点 &lt;code&gt;C－o&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
