@@ -36,3 +36,5 @@ org-download-timestamp: optionally add a timestamp to the file name.
 
 Customize org-download-backend to choose between url-retrieve (the default) or wget or curl.
 * 粘贴图片 =SPC m i y=
+* 跳回原点 =C－o=
+  If you are using evil then C-o should always get you back to your last position.
