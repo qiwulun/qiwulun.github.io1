@@ -330,6 +330,35 @@ docker高级应用之赋予容器独立外网ip
 </p>
 </div>
 </div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">报错</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+</p>
+
+<p>
+要把用户加到group中
+</p>
+
+<div class="highlight"><pre><span></span>sudo usermod -aG docker &lt;username&gt;
+</pre></div>
+
+<p>
+操作顺序: 
+</p>
+<ol class="org-ol">
+<li>sudo cat /etc/group | grep docker 
+</li>
+<li>如果不存在docker组，可以添加sudo groupadd docker 
+</li>
+<li>添加当前用户到docker组，sudo gpasswd -a ${USER} docker
+</li>
+<li>ssh 登出，再重新登录即可
+</li>
+</ol>
+</div>
+</div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" class="u-url">日知录－－好的编译器与好的读者</a></h1>
         <div class="metadata">
