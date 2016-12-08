@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site (ubuntu)</title><link>https://qiwulun.github.io/</link><description></description><atom:link rel="self" href="https://qiwulun.github.io/categories/ubuntu.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 08 Dec 2016 13:59:05 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ubuntu 下强制结束程序</title><link>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+ubuntu下强制结束程序 
+&lt;/p&gt;
+
+&lt;p&gt;
+（1）ctrl+alt+t，调出终端，输入 top，显示的全是现在系统的进程，按占用资源从多到
+少排列的──找到要关掉的进程，记下该进程第一列的PID编号，然后输入q，退回终端
+&lt;/p&gt;
+
+&lt;p&gt;
+（2）输入sudo kill pid即可
+&lt;/p&gt;</description><category>ubuntu</category><guid>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</guid><pubDate>Thu, 08 Dec 2016 13:58:21 GMT</pubDate></item></channel></rss>

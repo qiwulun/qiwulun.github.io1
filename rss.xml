@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 08 Dec 2016 13:41:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>git 在每次 Push 时不用重复输入密码</title><link>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 08 Dec 2016 13:59:05 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ubuntu 下强制结束程序</title><link>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+ubuntu下强制结束程序 
+&lt;/p&gt;
+
+&lt;p&gt;
+（1）ctrl+alt+t，调出终端，输入 top，显示的全是现在系统的进程，按占用资源从多到
+少排列的──找到要关掉的进程，记下该进程第一列的PID编号，然后输入q，退回终端
+&lt;/p&gt;
+
+&lt;p&gt;
+（2）输入sudo kill pid即可
+&lt;/p&gt;</description><category>ubuntu</category><guid>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</guid><pubDate>Thu, 08 Dec 2016 13:58:21 GMT</pubDate></item><item><title>git 在每次 Push 时不用重复输入密码</title><link>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
 &lt;li&gt;使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
 &lt;/li&gt;
 
@@ -369,21 +380,4 @@ compiling 是让编译器懂你在说什么， reading 是让读者懂你在说�
 
 &lt;p&gt;
 PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来点拨我一下
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</guid><pubDate>Sun, 04 Dec 2016 08:51:59 GMT</pubDate></item><item><title>强化学习 RL</title><link>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</guid><pubDate>Wed, 30 Nov 2016 09:17:25 GMT</pubDate></item><item><title>org mode 常用技巧</title><link>https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-1"&gt;截图 &lt;code&gt;SPC m i s&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-2"&gt;粘贴图片 &lt;code&gt;SPC m i y&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-3"&gt;跳回原点 &lt;code&gt;C－o&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-4"&gt;latex&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-4-1"&gt;输出时，只要\begin{document} \end{document}&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-5"&gt;增加 file-local variables (through SPC f v f).&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html#sec-6"&gt;如何能够 make -j4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/org-mode-chang-yong-ji-qiao.html</guid><pubDate>Wed, 30 Nov 2016 08:13:58 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html</guid><pubDate>Sun, 04 Dec 2016 08:51:59 GMT</pubDate></item><item><title>强化学习 RL</title><link>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;&lt;a href="https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/qiang-hua-xue-xi-rl.html</guid><pubDate>Wed, 30 Nov 2016 09:17:25 GMT</pubDate></item></channel></rss>
