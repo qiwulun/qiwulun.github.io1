@@ -23,6 +23,13 @@
 截图 SPC m i s
 粘贴图片 SPC m i y
 跳回原点 C－o
+latex
+
+输出时，只要\begin{document} \end{document}
+
+
+增加 file-local variables (through SPC f v f).
+如何能够 make -j4
 
 
 
@@ -35,15 +42,7 @@
 
 
 
-https://github.com/abo-abo/org-download
-
-
-
-They are: org-download-method:
-
-
-
--*- mode: Org; org-download-image-">
+https">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-11-30T16:13:58+08:00">
 </head>
@@ -121,6 +120,14 @@ They are: org-download-method:
 <li><a href="org-mode-chang-yong-ji-qiao.html#sec-1">截图 <code>SPC m i s</code></a></li>
 <li><a href="org-mode-chang-yong-ji-qiao.html#sec-2">粘贴图片 <code>SPC m i y</code></a></li>
 <li><a href="org-mode-chang-yong-ji-qiao.html#sec-3">跳回原点 <code>C－o</code></a></li>
+<li>
+<a href="org-mode-chang-yong-ji-qiao.html#sec-4">latex</a>
+<ul>
+<li><a href="org-mode-chang-yong-ji-qiao.html#sec-4-1">输出时，只要\begin{document} \end{document}</a></li>
+</ul>
+</li>
+<li><a href="org-mode-chang-yong-ji-qiao.html#sec-5">增加 file-local variables (through SPC f v f).</a></li>
+<li><a href="org-mode-chang-yong-ji-qiao.html#sec-6">如何能够 make -j4</a></li>
 </ul>
 </div>
 </div>
@@ -183,6 +190,30 @@ Customize org-download-backend to choose between url-retrieve (the default) or w
 <div class="outline-text-2" id="text-3">
 <p>
 If you are using evil then C-o should always get you back to your last position.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">latex</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">输出时，只要\begin{document} \end{document}</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+使用 body only 命令  <code>SPC m e C-b</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">增加 file-local variables (through SPC f v f).</h2>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">如何能够 make -j4</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<code>C-u 4 SPC c c</code>
 </p>
 </div>
 </div>
