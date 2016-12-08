@@ -44,3 +44,14 @@ Customize org-download-backend to choose between url-retrieve (the default) or w
 * 增加 file-local variables (through SPC f v f).
 * 如何能够 make -j4 
 =C-u 4 SPC c c=
+* local Variable
+#+BEGIN_SRC org
+# Local variables:
+# mode: Org; 
+# org-download-image-dir: "../../figures"; 
+# org-download-heading-lvl: nil;
+# eval: (defun zhaoji/org-save-and-export ()  (interactive) (if (eq major-mode 'org-mode) (org-latex-export-to-latex nil nil nil t))); 
+# eval: (add-hook 'after-save-hook 'zhaoji/org-save-and-export nil t);
+如果没有这个 最后的 nil 和 t 那就会是全局的设定了
+# end: 
+#+END_SRC

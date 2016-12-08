@@ -1,0 +1,19 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Ubuntu 下强制结束程序
+.. slug: ubuntu-xia-qiang-zhi-jie-shu-cheng-xu
+.. date: 2016-12-08 21:58:21 UTC+08:00
+.. tags: ubuntu
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+ubuntu下强制结束程序 
+
+（1）ctrl+alt+t，调出终端，输入 top，显示的全是现在系统的进程，按占用资源从多到
+少排列的──找到要关掉的进程，记下该进程第一列的PID编号，然后输入q，退回终端
+
+（2）输入sudo kill pid即可
