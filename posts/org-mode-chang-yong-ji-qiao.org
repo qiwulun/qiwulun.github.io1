@@ -38,3 +38,9 @@ Customize org-download-backend to choose between url-retrieve (the default) or w
 * 粘贴图片 =SPC m i y=
 * 跳回原点 =C－o=
   If you are using evil then C-o should always get you back to your last position.
+* latex 
+** 输出时，只要\begin{document} \end{document}
+ 使用 body only 命令  =SPC m e C-b=
+* 增加 file-local variables (through SPC f v f).
+* 如何能够 make -j4 
+=C-u 4 SPC c c=
