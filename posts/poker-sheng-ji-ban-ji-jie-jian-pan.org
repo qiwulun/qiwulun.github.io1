@@ -62,6 +62,9 @@ Poker 升级版似乎不支持 FN 组合键的直接绑定， 绑的都是 PN+FN
 #+DOWNLOADED: /tmp/screenshot.png @ 2016-12-13 16:24:19
 [[file:../images/screenshot_2016-12-13_16-24-19.png]]
 * 我的知乎回答
+
+https://www.zhihu.com/question/24453206/answer/135706176
+
  #+BEGIN_EXAMPLE
       
 入手的 poker 升级版,还是很值得入的. 介绍两个觉得很好玩的地方
