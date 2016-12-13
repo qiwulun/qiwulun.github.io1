@@ -1,0 +1,113 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Ubuntu Texlive 2016 安装 asymptote
+.. slug: ubuntu-texlive-2016-an-zhuang-asymptote
+.. date: 2016-12-10 09:56:50 UTC+08:00
+.. tags: ubuntu
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+** Ubuntu texlive 2016
+** 还有一些依赖包
+ - 特别地,我们需要freeglut这个基于OpenGL的库,
+   - sudo apt-get install freeglut3 freeglut3-dev
+ - sudo apt-get install libreadline-gplv2-dev
+ - sudo rm /usr/bin/kpsewhich 
+# 不然kpsewhich会捣乱
+** DVIPS 
+
+#+BEGIN_EXAMPLE
+$ asy 2.asy 
+dvips: warning: no config file for `download35'
+dvips: ! Couldn't find header file: tex.pro
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1
+中断
+#+END_EXAMPLE
+
+是 dvips 的事吗？还真是
+#+BEGIN_EXAMPLE 
+$ dvips
+This is dvips(k) 5.995 Copyright 2015 Radical Eye Software (www.radicaleye.com)
+dvips: ! Couldn't find header file: tex.pro 
+#+END_EXAMPLE
+
+那我们看看是不是用的 texlive 2016 的 dvips
+
+#+BEGIN_EXAMPLE
+qiwulun@qiwulun-All-Series:~$ which dvips
+/usr/bin/dvips
+
+$ whereis dvips
+dvips: /usr/bin/dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips /usr/share/man/man1/dvips.1.gz /usr/share/info/dvips.info.gz
+
+$ /usr/local/texlive/2016/bin/x86_64-linux/dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information. 
+#+END_EXAMPLE
+
+Texlive 2016 的dvips还挺好的，那把 /usr/bin/dvips 干掉吧
+
+#+BEGIN_EXAMPLE
+$ sudo apt remove dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvips 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 使用 /usr/local/texlive/2016/bin/x86_64-linux/dvips 来在自动模式中提供 /usr/bin/dvips (dvips)
+update-alternatives: 警告: 将不会把 /usr/bin/dvips 替换为链接
+
+$ sudo apt install dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+没有可用的软件包 dvips，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 dvips 没有可安装候选
+$ sudo apt remove dvipsk-ja
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvipsk-ja 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+$ sudo apt remove dvipsk
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 dvipsk
+
+#+END_EXAMPLE
+
+那就强行删除吧…
+
+#+BEGIN_EXAMPLE
+$ sudo rm /usr/bin/dvips 
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 警告: 链接组 dvips 已损坏，故强制重新安装候选项 /usr/local/texlive/2016/bin/x86_64-linux/dvips
+
+$ dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information. 
+#+END_EXAMPLE
+
+* FAQ
+** 出现图片是黑的怎么办
+ 加上 =-render 3=
+
+  #+BEGIN_SRC org
+     ,#+BEGIN_SRC asymptote :file [name].png :cmdline -noView -render 3 :exports results
+  #+END_SRC
+** 如何来展示一个3D可旋转的
+   不加file
+   #+BEGIN_SRC org
+      ,#+BEGIN_SRC asymptote 
+   #+END_SRC
+
