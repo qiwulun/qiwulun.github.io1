@@ -1,5 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site (ubuntu)</title><link>https://qiwulun.github.io/</link><description></description><atom:link rel="self" href="https://qiwulun.github.io/categories/ubuntu.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 08 Dec 2016 13:59:05 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ubuntu 下强制结束程序</title><link>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site (ubuntu)</title><link>https://qiwulun.github.io/</link><description></description><atom:link rel="self" type="application/rss+xml" href="https://qiwulun.github.io/categories/ubuntu.xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 13 Dec 2016 08:16:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ubuntu Texlive 2016 安装 asymptote</title><link>https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-1"&gt;Ubuntu texlive 2016&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-2"&gt;还有一些依赖包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-3"&gt;DVIPS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1"&gt;FAQ&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-1"&gt;出现图片是黑的怎么办&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-2"&gt;如何来展示一个3D可旋转的&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-0-1" class="outline-3"&gt;
+&lt;h3 id="sec-0-1"&gt;Ubuntu texlive 2016&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-0-2" class="outline-3"&gt;
+&lt;h3 id="sec-0-2"&gt;还有一些依赖包&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-0-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;特别地,我们需要freeglut这个基于OpenGL的库,
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;sudo apt-get install freeglut3 freeglut3-dev
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;sudo apt-get install libreadline-gplv2-dev
+&lt;/li&gt;
+&lt;li&gt;sudo rm /usr/bin/kpsewhich 
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-0-3" class="outline-3"&gt;
+&lt;h3 id="sec-0-3"&gt;DVIPS&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-0-3"&gt;
+&lt;pre class="example"&gt;
+$ asy 2.asy 
+dvips: warning: no config file for `download35'
+dvips: ! Couldn't find header file: tex.pro
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1
+中断
+&lt;/pre&gt;
+
+&lt;p&gt;
+是 dvips 的事吗？还真是
+&lt;/p&gt;
+&lt;pre class="example"&gt;
+$ dvips
+This is dvips(k) 5.995 Copyright 2015 Radical Eye Software (www.radicaleye.com)
+dvips: ! Couldn't find header file: tex.pro
+&lt;/pre&gt;
+
+&lt;p&gt;
+那我们看看是不是用的 texlive 2016 的 dvips
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+qiwulun@qiwulun-All-Series:~$ which dvips
+/usr/bin/dvips
+
+$ whereis dvips
+dvips: /usr/bin/dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips /usr/share/man/man1/dvips.1.gz /usr/share/info/dvips.info.gz
+
+$ /usr/local/texlive/2016/bin/x86_64-linux/dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+&lt;/pre&gt;
+
+&lt;p&gt;
+Texlive 2016 的dvips还挺好的，那把 /usr/bin/dvips 干掉吧
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+$ sudo apt remove dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvips 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 使用 /usr/local/texlive/2016/bin/x86_64-linux/dvips 来在自动模式中提供 /usr/bin/dvips (dvips)
+update-alternatives: 警告: 将不会把 /usr/bin/dvips 替换为链接
+
+$ sudo apt install dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+没有可用的软件包 dvips，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 dvips 没有可安装候选
+$ sudo apt remove dvipsk-ja
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvipsk-ja 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+$ sudo apt remove dvipsk
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 dvipsk
+&lt;/pre&gt;
+
+&lt;p&gt;
+那就强行删除吧…
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+$ sudo rm /usr/bin/dvips 
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 警告: 链接组 dvips 已损坏，故强制重新安装候选项 /usr/local/texlive/2016/bin/x86_64-linux/dvips
+
+$ dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;FAQ&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-1-1" class="outline-3"&gt;
+&lt;h3 id="sec-1-1"&gt;出现图片是黑的怎么办&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-1"&gt;
+&lt;p&gt;
+加上 &lt;code&gt;-render 3&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+BEGIN_SRC asymptote :file [name].png :cmdline -noView -render 3 :exports results
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-1-2" class="outline-3"&gt;
+&lt;h3 id="sec-1-2"&gt;如何来展示一个3D可旋转的&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-2"&gt;
+&lt;p&gt;
+不加file
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+BEGIN_SRC asymptote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>ubuntu</category><guid>https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html</guid><pubDate>Sat, 10 Dec 2016 01:56:50 GMT</pubDate></item><item><title>Ubuntu 下强制结束程序</title><link>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 ubuntu下强制结束程序 
 &lt;/p&gt;
 

@@ -66,7 +66,222 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/org-mode-chang-yong-ji-qiao.html" class="u-url">org mode 常用技巧</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" class="u-url">日知录－－好的编译器与好的读者</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-04T16:51:59+08:00" title="2016-12-04 16:51">2016-12-04 16:51</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html#disqus_thread" data-disqus-identifier="cache/posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+每个写过 C 语言的人，恐怕都至少有过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。
+</p>
+
+<p>
+有些人被编译器 f*ck 多了，就会产生思考 <a href="https://www.zhihu.com/question/20298345/answer/14670020">https://www.zhihu.com/question/20298345/answer/14670020</a>
+</p>
+
+<blockquote>
+<p>
+实际上，不少人（包括我）认为，c-style的分号本来就是多余的。 为什么这么说？因为明确的EOS只是给编译器的提示而已。
+</p>
+
+<p>
+<b>如果漏了分号，编译器会报错。</b>
+</p>
+
+<p>
+<b>既然它都报错了，显然它知道这里应该有EOS 。</b>
+</p>
+
+<p>
+<b>既然它知道，那么干嘛还要我写？</b> 
+</p>
+</blockquote>
+
+<p>
+当年，C的爹们是遵循着 worse is better ，非常强调实现简单──一个明确的分号来标志语句结束，对于编译器来说绝对是简单的。
+</p>
+
+<p>
+本来可以没有的分号，作为冗余信息，让解读变的简单了起来。
+</p>
+
+<p>
+但是打起来太累，于是人生苦短，我用python。
+</p>
+<hr>
+<p>
+compiling 是让编译器懂你在说什么， reading 是让读者懂你在说什么。二者有很多相似点。
+</p>
+
+<p>
+所以很多人会觉得，10万+微信平台文总是，标题党+几个案例+两句鸡汤，翻来覆去那几句，有什么意思？──但是它好懂。 
+</p>
+
+<p>
+如果想要省掉冗余信息，就要编译器（或者读者）根据上下文去理解，引申与填充。
+</p>
+
+<hr>
+<p>
+做个主动的读者，你眼前的世界是完全不一样的。
+</p>
+
+<p>
+我们举个简单的例子──《金刚经》。
+</p>
+
+<p>
+把《金刚经》当成《论语》一样的名言集锦来读是很惬意的。比如
+</p>
+
+<blockquote>
+<p>
+一切有为法，如梦幻泡影，如雾亦如电，应做如是观。
+</p>
+</blockquote>
+
+<p>
+──多典型的佛教，“赤条条来去无牵挂”，“白茫茫大地真干净”的大彻大悟感。
+</p>
+
+<blockquote>
+<p>
+若以色见我，以音声求我，是人行邪道，不能见如来。
+</p>
+</blockquote>
+
+<p>
+──“学我者生，似我者死”的佛教版
+</p>
+
+<blockquote>
+<p>
+诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心， <b>应无所住而生其心。</b>
+</p>
+</blockquote>
+
+<p>
+──像不像《逍遥游》“若夫乘天地之正，而御六气之辩，以游无穷者，彼且恶乎待哉？”
+</p>
+
+<hr>
+<p>
+但如果不满足于单句，试图贯通全文，那就有困惑在──
+</p>
+
+<p>
+你看，我们前面引的几句其实都是在讲一件事──“不住于相”。也就是在《金刚经》中反
+复出现的“无我相，无人相，无众生相，无寿者相”
+</p>
+
+<p>
+这是符合佛教精神的──佛传四法印也说“诸法无我”。
+</p>
+
+<p>
+但它带来的问题是，既然无我，那么是什么东西在“轮回”？
+</p>
+
+<hr>
+<p>
+最集中出现这个矛盾的，是下面这句经文──
+</p>
+<blockquote>
+<p>
+如我昔为歌利王割截身体，我于尔时，无我相、无人相、无众生相、无寿者相。
+</p>
+</blockquote>
+
+<p>
+《金刚经》中，如来讲“我昔为歌利王割截身体”，“又念过去于五百世作忍辱仙人”，
+“我念过去无量阿僧祗劫，于然灯佛前，得值八百四千万亿那由他诸佛”。
+</p>
+
+<p>
+──如果无我，如来又怎么判定那些经历是“我”？
+</p>
+
+<hr>
+<p>
+于是就有了下面这两句经文。
+</p>
+
+<blockquote>
+<p>
+如来说有我者，则非有我，而凡夫之人以为有我。 
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
+</p>
+</blockquote>
+
+<p>
+语言歧义性与不精确，是表达佛教等复杂思想的最大障碍。因为语言基于常识，而佛学的假设本就反常识，
+  ──比如说“无我”。
+  ──没你，谁在和我说话。
+  ──这个我不是你说的那个我……唉呀，讲不清楚。
+</p>
+
+<p>
+佛陀给了我们一种解决的方法：
+</p>
+
+<p>
+“般若”不可说，就给你一套测试题──
+</p>
+
+<ul class="org-ul">
+<li>当你证到般若智慧，你就能理解这些看起来自相矛盾的语言。
+</li>
+<li>接下来，就是你自己要怎么去填充，弥合，贯通？ 
+</li>
+</ul>
+<hr>
+<p>
+还记得哥德尔不完备定理么？
+</p>
+
+<p>
+用 <b>自指</b> 带来的矛盾揭示了体系的不完备。
+</p>
+
+<p>
+──挺好的，在那样的世界总有空白等着我们去填充：）
+</p>
+
+<p>
+PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来点拨我一下
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/qiang-hua-xue-xi-rl.html" class="u-url">强化学习 RL</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/qiang-hua-xue-xi-rl.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T17:17:25+08:00" title="2016-11-30 17:17">2016-11-30 17:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/qiang-hua-xue-xi-rl.html#disqus_thread" data-disqus-identifier="cache/posts/qiang-hua-xue-xi-rl.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p class="more"><a href="../posts/qiang-hua-xue-xi-rl.html">更多…</a></p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/org-mode-chang-yong-ji-qiao.html" class="u-url">org mode 常用技巧</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -179,6 +394,7 @@
 <li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-8">chrome</a></li>
 <li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-9">tensorflow</a></li>
 <li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-10">mxnet</a></li>
+<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-11">视频软件 gnome-mplayer</a></li>
 </ul>
 </div>
 </div>
@@ -370,53 +586,6 @@ make -j4
 </p>
 
 <p class="more"><a href="../posts/yue-xia-chan.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/nikola-zi-ding-yi-css.html" class="u-url">nikola 自定义 css</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/nikola-zi-ding-yi-css.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-16T17:42:53+08:00" title="2016-11-16 17:42">2016-11-16 17:42</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/nikola-zi-ding-yi-css.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-zi-ding-yi-css.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>
-如果希望 zero 文件转换而成的网页能够美观一些，并且希望代码片段能够高亮显示，那么
-需要对 zero 站点的 css 文件进行一些定制。在 zero 目录中创建 mycss 目录，将我制作
-的一份 css 文件 tweak.css 放入该目录：
-</p>
-
-<p class="more"><a href="../posts/nikola-zi-ding-yi-css.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-an-zhuang-teamviewer.html" class="u-url">Ubuntu 安装 TeamViewer</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/ubuntu-an-zhuang-teamviewer.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-16T17:27:06+08:00" title="2016-11-16 17:27">2016-11-16 17:27</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/ubuntu-an-zhuang-teamviewer.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-an-zhuang-teamviewer.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>
-Ubuntu 16.04 要安装 32-bit 的teamviewer，在这里下载
-<a href="https://www.teamviewer.com/zhcn/download/linux/">https://www.teamviewer.com/zhcn/download/linux/</a>
-</p>
-
-<p class="more"><a href="../posts/ubuntu-an-zhuang-teamviewer.html">更多…</a></p>
 </div>
     </div>
     </article>
