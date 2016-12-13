@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 13 Dec 2016 14:01:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Poker 升级版机械键盘</title><link>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 13 Dec 2016 14:03:16 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Poker 升级版机械键盘</title><link>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -92,6 +92,13 @@ Poker 升级版似乎不支持 FN 组合键的直接绑定， 绑的都是 PN+FN
 
 &lt;col class="left"&gt;
 &lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col" class="left"&gt;组合键&lt;/th&gt;
+&lt;th scope="col" class="left"&gt;绑定内容&lt;/th&gt;
+&lt;th scope="col" class="left"&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td class="left"&gt;pn + h,j,k,l&lt;/td&gt;
