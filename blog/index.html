@@ -86,9 +86,14 @@
 <li><a href="../posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-1">标准模式</a></li>
 <li><a href="../posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-2">指拨开关</a></li>
 <li><a href="../posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-3">自定义</a></li>
+<li><a href="../posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-4">说明书</a></li>
 </ul>
 </div>
 </div>
+<p>
+先说一句，红轴打起来好舒服，白色看起来好漂亮
+</p>
+
 <div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1">标准模式</h2>
 <div class="outline-text-2" id="text-1">
@@ -145,28 +150,105 @@ ctrl+左右方向键,移动单词.
 <div id="outline-container-sec-3" class="outline-2">
 <h2 id="sec-3">自定义</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Poker 升级版似乎不支持 FN 组合键的直接绑定， 绑的都是 PN+FN，那么绑定FN+A = HOME 
+这种 emacs 绑定似乎就不太合适了
+</p>
+
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <colgroup>
+<col class="left">
 <col class="left">
 <col class="left">
 </colgroup>
 <tbody>
 <tr>
-<td class="left">pn+h,j,k,l</td>
+<td class="left">pn + h,j,k,l</td>
 <td class="left">四个方向键</td>
+<td class="left">光标移动</td>
 </tr>
 <tr>
-<td class="left">PN + SPC</td>
+<td class="left">PN + ESC</td>
 <td class="left">Win 键</td>
+<td class="left">Win</td>
+</tr>
+<tr>
+<td class="left">PN + 0</td>
+<td class="left">Home 键</td>
+<td class="left">行首</td>
+</tr>
+<tr>
+<td class="left">PN + 4</td>
+<td class="left">End 键</td>
+<td class="left">行尾</td>
+</tr>
+<tr>
+<td class="left">PN + d</td>
+<td class="left">Del 键</td>
+<td class="left">删除</td>
+</tr>
+<tr>
+<td class="left">PN + w</td>
+<td class="left">Ctrl + -&gt;</td>
+<td class="left">按词前进</td>
+</tr>
+<tr>
+<td class="left">PN + b</td>
+<td class="left">Ctrl + &lt;-</td>
+<td class="left">按词后退</td>
+</tr>
+<tr>
+<td class="left">PN + x</td>
+<td class="left">Ctrl + x</td>
+<td class="left">剪切</td>
+</tr>
+<tr>
+<td class="left">PN + p</td>
+<td class="left">Ctrl + v</td>
+<td class="left">粘贴</td>
+</tr>
+<tr>
+<td class="left">PN + u</td>
+<td class="left">Ctrl + z</td>
+<td class="left">撤消</td>
+</tr>
+<tr>
+<td class="left">PN + r</td>
+<td class="left">Ctrl + y</td>
+<td class="left">重做</td>
+</tr>
+<tr>
+<td class="left">PN + v</td>
+<td class="left">FN + z</td>
+<td class="left">（伪）Visual 模式（要配合Shift）</td>
 </tr>
 </tbody>
 </table>
+<p>
+这就实现了 Toggle 模式下的简单的 Vim 模式
+</p>
+
 <dl class="org-dl">
 <dt> Toggle 模式 </dt>
 <dd>
 <code>Fn 右 Shift</code> 进入 <code>Toggle</code> 模式，这个时候可以不用按 PN 键了
 </dd>
 </dl>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">说明书</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="../images/screenshot_2016-12-13_16-24-05.png" alt="screenshot_2016-12-13_16-24-05.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../images/screenshot_2016-12-13_16-24-19.png" alt="screenshot_2016-12-13_16-24-19.png"></p>
+</div>
 </div>
 </div>
     </div>
