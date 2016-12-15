@@ -1,5 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 13 Dec 2016 14:19:58 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Poker 升级版机械键盘</title><link>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 15 Dec 2016 04:42:27 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github 学生礼包之 Digital Ocean</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-1"&gt;初次登录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2"&gt;Shadowsocks&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1"&gt;服务端配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-2"&gt;Ubuntu 客户端设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3"&gt;chrome 设置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3-1"&gt;自动切换&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-4"&gt;后台启动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5"&gt;使用proxychains-ng实现终端代理&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-1"&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-2"&gt;测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-3"&gt;优化 alias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;初次登录&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;pre class="example"&gt;
+ssh root@SERVER_IP_ADDRESS
+&lt;/pre&gt;
+
+&lt;p&gt;
+如果在创建的时候把公钥放上去了，那么就可以直接登录了
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Shadowsocks&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;服务端配置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;pre class="example"&gt;
+sudo apt-get install python-pip
+sudo pip install shadowsocks
+&lt;/pre&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+"server":"0.0.0.0",
+"server_port":5080,
+"local_address": "127.0.0.1",
+"local_port":5080,
+"password":"password",
+"timeout":600,
+"method":"aes-256-cfb",
+"fast_open": true
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+启动ss服务：
+&lt;code&gt;ssserver -c /etc/shadowsocks.json -d start&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+配置ss服务随系统启动：
+$ sudo vim /etc/rc.local
+在exit 0前加入一行：
+ss-server -c /etc/config.json
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Ubuntu 客户端设置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;pre class="example"&gt;
+sudo apt-get install python-pip
+sudo pip install shadowsocks
+&lt;/pre&gt;
+
+&lt;p&gt;
+比如 sslocal -s 11.22.33.44 -p 50003 -k "123456" -l 1080 -t 600 -m aes-256-cfb
+&lt;/p&gt;
+
+&lt;p&gt;
+-s表示服务IP, -p指的是服务端的端口，-l是本地端口默认是1080, -k 是密码（要加""）, -t超时默认300,-m是加密方法默认aes-256-cfb，
+&lt;/p&gt;
+
+&lt;p&gt;
+为了方便我推荐直接用sslcoal -c 配置文件路径 这样的方式，简单好用。
+&lt;/p&gt;
+
+&lt;p&gt;
+我们可以在/home/mudao/ 下新建个文件shadowsocks.json  (mudao是我在我电脑上的用户名，这里路径你自己看你的)。内容是这样：
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+"server": "11.22.33.44",
+"server_port":5080,
+"local_port":5080,
+"password":"password",
+"timeout":600,
+"method":"aes-256-cfb"
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;
+server  你服务端的IP，服务端可以写成0.0.0.0
+servier&lt;sub&gt;port&lt;/sub&gt;  你服务端的端口
+local&lt;sub&gt;port&lt;/sub&gt;  本地端口，一般默认1080
+passwd  ss服务端设置的密码
+timeout  超时设置 和服务端一样
+method  加密方法 和服务端一样
+&lt;/p&gt;
+
+&lt;p&gt;
+确定上面的配置文件没有问题，然后我们就可以在终端输入
+&lt;code&gt;sslocal -c /path/to/shadowsocks.json&lt;/code&gt; 回车运行。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
+&lt;h3 id="sec-2-3"&gt;chrome 设置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-3"&gt;
+&lt;p&gt;
+Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:socks 5 地址 127.0.0.1 端口
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-3-1" class="outline-4"&gt;
+&lt;h4 id="sec-2-3-1"&gt;自动切换&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-3-1"&gt;
+&lt;p&gt;
+规则列表规则 Shadowsocks
+&lt;/p&gt;
+
+&lt;p&gt;
+规则列表地址 &lt;a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"&gt;https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-4" class="outline-3"&gt;
+&lt;h3 id="sec-2-4"&gt;后台启动&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-4"&gt;
+&lt;p&gt;
+如果你上面可以代理上网了可以进行这一步，之前我让你不要关掉终端，因为关掉终端的时候代理就随着关闭了，之后你每次开机或者关掉终端之后，下次你再想用代理就要重新在终端输入这样的命令 sslocal  -c /home/mudao/shadowsocks.json ，挺麻烦是不？
+&lt;/p&gt;
+
+&lt;p&gt;
+我们现在可以在你的ubuntu上安装一个叫做supervisor的程序来管理你的sslocal启动。关于supervisor更多点击这
+&lt;/p&gt;
+
+&lt;p&gt;
+sudo apt-get install supervisor
+&lt;/p&gt;
+
+&lt;p&gt;
+安装好后我们可以在/etc/supervisor/目录下找到supervisor.conf配置文件，我们可以用以下命令来编辑
+&lt;/p&gt;
+
+&lt;p&gt;
+sudo gedit /etc/supervisor/supervisor.conf
+&lt;/p&gt;
+
+&lt;p&gt;
+在这个文件的最后加上以下内容
+&lt;/p&gt;
+
+&lt;p&gt;
+[program:shadowsocks]
+command=sslocal -c /home/mudao/shadowsocks.json
+autostart=true
+autorestart=true
+user=root
+log&lt;sub&gt;stderr&lt;/sub&gt;=true
+logfile=/var/log/shadowsocks.log
+&lt;/p&gt;
+
+&lt;p&gt;
+当然在16.04里你可以直接在/etc/supervisor/conf.d/下新建个文件比如ss.conf然后加入上面内容。
+&lt;/p&gt;
+
+&lt;p&gt;
+command = 这里json文件的路径根据你的文件路径来填写。确认无误后记得保存。sslocal 和ssserver这两个命令是被存在 /usr/local/bin/下面的，我们要拷贝一份命令文件到/bin
+&lt;/p&gt;
+
+&lt;p&gt;
+sudo cp /usr/local/bin/sslocal /bin  (注意空格)
+&lt;/p&gt;
+
+&lt;p&gt;
+注意：16.04 命令在 /usr/bin/下所以就用
+&lt;/p&gt;
+
+&lt;p&gt;
+sudo cp /usr/bin/sslocal /bin  (注意空格)
+&lt;/p&gt;
+
+&lt;p&gt;
+现在关掉你之前运行sslocal命令的终端，再打开终端输入sudo service supervisor restart 然后去打开浏览器看看可不可以继续代理上网。你也可以用ps -ef|grep sslocal命令查看sslocal是否在运行。
+&lt;/p&gt;
+
+&lt;p&gt;
+这个时候我们需要在/etc下编辑一个叫rc.local的文件 ，让supervisor开机启动。
+&lt;/p&gt;
+
+&lt;p&gt;
+sudo gedit /etc/rc.local 
+&lt;/p&gt;
+
+&lt;p&gt;
+在这个配置文件的exit 0前面一行加上 service supervisor start 保存。看你是否配置成功你可以在现在关机重启之后直接打开浏览器看是否代理成功。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-5" class="outline-3"&gt;
+&lt;h3 id="sec-2-5"&gt;使用proxychains-ng实现终端代理&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-5"&gt;
+&lt;p&gt;
+&lt;code&gt;sudo apt install proxychains&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-5-1" class="outline-4"&gt;
+&lt;h4 id="sec-2-5-1"&gt;配置&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-5-1"&gt;
+&lt;p&gt;
+编辑配置文件 vim /etc/proxychains.conf
+&lt;/p&gt;
+
+&lt;p&gt;
+在 [ProxyList] 下面（也就是末尾）加入代理类型，代理地址和端口
+&lt;/p&gt;
+
+&lt;p&gt;
+例如使用 TOR 代理，注释掉原来的代理并添加 &lt;code&gt;socks5 127.0.0.1 1080&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-5-2" class="outline-4"&gt;
+&lt;h4 id="sec-2-5-2"&gt;测试&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-5-2"&gt;
+&lt;p&gt;
+proxychains4 curl google.com
+&lt;/p&gt;
+
+&lt;p&gt;
+注意：proxychains支持的是socks，http, https协议.它们以tcp或者udp协议为基础, ping命令用的是 ICMP 协议， proxychains 不支持;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-5-3" class="outline-4"&gt;
+&lt;h4 id="sec-2-5-3"&gt;优化 alias&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-5-3"&gt;
+&lt;p&gt;
+alias pc="proxychains4"
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-5-4" class="outline-4"&gt;
+&lt;h4 id="sec-2-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-5-4"&gt;
+&lt;p&gt;
+这样在下面就可以使用 google translate 了
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</guid><pubDate>Thu, 15 Dec 2016 02:55:07 GMT</pubDate></item><item><title>github 学生礼包</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
+&lt;li&gt;&lt;a href="https://github.com/settings/emails"&gt;https://github.com/settings/emails&lt;/a&gt; 里面设上学校的邮箱
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://education.github.com/"&gt;https://education.github.com/&lt;/a&gt; 开始申请
+&lt;/li&gt;
+&lt;li&gt;福利如下：
+&lt;dl class="org-dl"&gt;
+&lt;dt&gt; We've upgraded you to a plan with unlimited free private repositories &lt;/dt&gt;&lt;dd&gt;        which will be free for the next two years. After that, you'll get an
+email saying that your coupon is expiring. You can reapply for another
+coupon if you still have academic status. We don't have any
+collaboration limits, so any group projects you may encounter can be
+hosted via your account.
+&lt;/dd&gt;
+&lt;dt&gt; Student Developer Pack &lt;/dt&gt;&lt;dd&gt;        available at: &lt;a href="https://education.github.com/pack"&gt;https://education.github.com/pack&lt;/a&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><guid>https://qiwulun.github.io/posts/github-xue-sheng-li-bao.html</guid><pubDate>Wed, 14 Dec 2016 09:55:18 GMT</pubDate></item><item><title>Poker 升级版机械键盘</title><link>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -491,110 +786,4 @@ cat ~/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub
 
 &lt;li&gt;快乐之秘诀，在于降低自己的期望值。
 &lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://qiwulun.github.io/posts/wei-shi-yao-yao-xie-zuo.html</guid><pubDate>Mon, 05 Dec 2016 14:17:04 GMT</pubDate></item><item><title>emacs 使用 ssh</title><link>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-参考这一篇
-&lt;a href="http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html"&gt;http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-C-x C-f /ssh: [username]@[host-ip]#[port]:path/to/file
-&lt;/p&gt;
-
-&lt;p&gt;
-远程复制文件
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scp ./cudnn-8.0-linux-x64-v5.1.tgz username@hostip:/path/to/file
-&lt;/pre&gt;&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/emacs-shi-yong-ssh.html</guid><pubDate>Mon, 05 Dec 2016 06:38:02 GMT</pubDate></item><item><title>在 docker 中增加 ssh 服务</title><link>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-参考 &lt;a href="http://www.linuxdiyf.com/linux/15472.html"&gt;http://www.linuxdiyf.com/linux/15472.html&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# 1 先在宿主机上运行一个已有的镜像 
-docker run -it ubuntu bash
-# 如果已经有其它的基础镜像也可以代替上面的ubuntu
-
-# 2 在container上运行下列命令
-# 2.1 安装ssh服务
-apt-get update #更新源
-apt-get install ssh
-
-# 2.2 配置密码
-# 使用 passwd 来配置 ssh 登录时需要的密码
-passwd
-# 按提示进行修改
-
-# 2.3 修改sshd_config配置文件
-vi /etc/ssh/sshd_config
-# 将PermitRootLogin 改为 yes，将UsePAM 改为 no。
-
-# 2.4 退出 container
-exit
-
-# 3. [可选] 在宿主机上把此镜像保存一下：
-# 3.1 把容器保存成镜像
-docker commit [container-id] [image-id]
-# 3.2 把刚刚的容器干掉：
-docker stop [container-id] #停用
-docker rm [container-id]   #删除
-
-# 4 在宿主机上启动container 并挂载端口：
-docker run --name [container-name] -i -t -p 50001:22 [image-id]
-# 把 ssh 默认端口22 挂载到宿主机的 50001 端口上
-
-# 5 在container上启动ssh服务：
-/etc/init.d/ssh start
-# C-p C-q 组合键退出会话，不关闭container
-
-# 6 在其他电脑上使用ssh登录即可
-ssh [rootname]@[hostip] -p 50001
-# 输入 rootpasscode
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;
-想要以后台方式启动的话，要写一个自启动 ssh 的脚本
-&lt;code&gt;docker run -d -p 22:22 -t centos6.5:sshd /root/run.sh&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;div id="outline-container-sec-1" class="outline-2"&gt;
-&lt;h2 id="sec-1"&gt;&lt;span class="todo TODO"&gt;TODO&lt;/span&gt; 其它的设置&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-1"&gt;
-&lt;p&gt;
-Docker网络管理及容器跨主机通信（四）
-&lt;a href="http://lizhenliang.blog.51cto.com/7876557/1731898"&gt;http://lizhenliang.blog.51cto.com/7876557/1731898&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-docker高级应用之赋予容器独立外网ip
-&lt;a href="http://dl528888.blog.51cto.com/2382721/1604167"&gt;http://dl528888.blog.51cto.com/2382721/1604167&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-2" class="outline-2"&gt;
-&lt;h2 id="sec-2"&gt;报错&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-2"&gt;
-&lt;p&gt;
-Cannot connect to the Docker daemon. Is the docker daemon running on this host?
-&lt;/p&gt;
-
-&lt;p&gt;
-要把用户加到group中
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo usermod -aG docker &amp;lt;username&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;
-操作顺序: 
-&lt;/p&gt;
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;sudo cat /etc/group | grep docker 
-&lt;/li&gt;
-&lt;li&gt;如果不存在docker组，可以添加sudo groupadd docker 
-&lt;/li&gt;
-&lt;li&gt;添加当前用户到docker组，sudo gpasswd -a ${USER} docker
-&lt;/li&gt;
-&lt;li&gt;ssh 登出，再重新登录即可
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description><category>docker</category><category>ssh</category><guid>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</guid><pubDate>Mon, 05 Dec 2016 06:00:31 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><guid>https://qiwulun.github.io/posts/wei-shi-yao-yao-xie-zuo.html</guid><pubDate>Mon, 05 Dec 2016 14:17:04 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site (ssh)</title><link>https://qiwulun.github.io/</link><description></description><atom:link href="https://qiwulun.github.io/categories/ssh.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Wed, 07 Dec 2016 12:04:00 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用 ssh 来进行 git 免密码传输</title><link>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site (ssh)</title><link>https://qiwulun.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/categories/ssh.xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 15 Dec 2016 04:42:27 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用 ssh 来进行 git 免密码传输</title><link>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 SSH keys
 &lt;/p&gt;
 
@@ -23,6 +23,10 @@ SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密�
 cat ~/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub
 复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
 &lt;/p&gt;</description><category>git</category><category>ssh</category><guid>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</guid><pubDate>Tue, 06 Dec 2016 12:23:26 GMT</pubDate></item><item><title>在 docker 中增加 ssh 服务</title><link>https://qiwulun.github.io/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+安装 docker
+&lt;/p&gt;
+
+&lt;p&gt;
 参考 &lt;a href="http://www.linuxdiyf.com/linux/15472.html"&gt;http://www.linuxdiyf.com/linux/15472.html&lt;/a&gt;
 &lt;/p&gt;
 
