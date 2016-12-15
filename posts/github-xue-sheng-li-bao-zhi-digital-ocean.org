@@ -1,0 +1,147 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Github 学生礼包之 Digital Ocean
+.. slug: github-xue-sheng-li-bao-zhi-digital-ocean
+.. date: 2016-12-15 10:55:07 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+* 初次登录
+#+BEGIN_EXAMPLE
+ssh root@SERVER_IP_ADDRESS 
+#+END_EXAMPLE
+
+如果在创建的时候把公钥放上去了，那么就可以直接登录了
+* Shadowsocks 
+** 服务端配置
+#+BEGIN_EXAMPLE
+sudo apt-get install python-pip
+sudo pip install shadowsocks
+#+END_EXAMPLE
+
+#+BEGIN_SRC javascript
+{
+"server":"0.0.0.0",
+"server_port":5080,
+"local_address": "127.0.0.1",
+"local_port":5080,
+"password":"password",
+"timeout":600,
+"method":"aes-256-cfb",
+"fast_open": true
+}
+#+END_SRC
+启动ss服务：
+=ssserver -c /etc/shadowsocks.json -d start=
+
+配置ss服务随系统启动：
+$ sudo vim /etc/rc.local
+在exit 0前加入一行：
+ss-server -c /etc/config.json
+
+
+
+** Ubuntu 客户端设置
+#+BEGIN_EXAMPLE
+sudo apt-get install python-pip
+sudo pip install shadowsocks
+#+END_EXAMPLE
+
+比如 sslocal -s 11.22.33.44 -p 50003 -k "123456" -l 1080 -t 600 -m aes-256-cfb
+
+-s表示服务IP, -p指的是服务端的端口，-l是本地端口默认是1080, -k 是密码（要加""）, -t超时默认300,-m是加密方法默认aes-256-cfb，
+
+为了方便我推荐直接用sslcoal -c 配置文件路径 这样的方式，简单好用。
+
+我们可以在/home/mudao/ 下新建个文件shadowsocks.json  (mudao是我在我电脑上的用户名，这里路径你自己看你的)。内容是这样：
+
+#+BEGIN_SRC javascript
+{
+"server": "11.22.33.44",
+"server_port":5080,
+"local_port":5080,
+"password":"password",
+"timeout":600,
+"method":"aes-256-cfb"
+}
+#+END_SRC
+
+
+server  你服务端的IP，服务端可以写成0.0.0.0
+servier_port  你服务端的端口
+local_port  本地端口，一般默认1080
+passwd  ss服务端设置的密码
+timeout  超时设置 和服务端一样
+method  加密方法 和服务端一样
+
+确定上面的配置文件没有问题，然后我们就可以在终端输入
+=sslocal -c /path/to/shadowsocks.json= 回车运行。
+
+** chrome 设置
+Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:socks 5 地址 127.0.0.1 端口
+
+*** 自动切换
+规则列表规则 Shadowsocks
+
+规则列表地址 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+** 后台启动
+
+如果你上面可以代理上网了可以进行这一步，之前我让你不要关掉终端，因为关掉终端的时候代理就随着关闭了，之后你每次开机或者关掉终端之后，下次你再想用代理就要重新在终端输入这样的命令 sslocal  -c /home/mudao/shadowsocks.json ，挺麻烦是不？
+
+我们现在可以在你的ubuntu上安装一个叫做supervisor的程序来管理你的sslocal启动。关于supervisor更多点击这
+
+sudo apt-get install supervisor
+
+安装好后我们可以在/etc/supervisor/目录下找到supervisor.conf配置文件，我们可以用以下命令来编辑
+
+sudo gedit /etc/supervisor/supervisor.conf
+
+在这个文件的最后加上以下内容
+
+[program:shadowsocks]
+command=sslocal -c /home/mudao/shadowsocks.json
+autostart=true
+autorestart=true
+user=root
+log_stderr=true
+logfile=/var/log/shadowsocks.log
+
+当然在16.04里你可以直接在/etc/supervisor/conf.d/下新建个文件比如ss.conf然后加入上面内容。
+
+command = 这里json文件的路径根据你的文件路径来填写。确认无误后记得保存。sslocal 和ssserver这两个命令是被存在 /usr/local/bin/下面的，我们要拷贝一份命令文件到/bin
+
+ sudo cp /usr/local/bin/sslocal /bin  (注意空格)
+
+注意：16.04 命令在 /usr/bin/下所以就用
+
+sudo cp /usr/bin/sslocal /bin  (注意空格)
+
+现在关掉你之前运行sslocal命令的终端，再打开终端输入sudo service supervisor restart 然后去打开浏览器看看可不可以继续代理上网。你也可以用ps -ef|grep sslocal命令查看sslocal是否在运行。
+
+这个时候我们需要在/etc下编辑一个叫rc.local的文件 ，让supervisor开机启动。
+
+sudo gedit /etc/rc.local 
+
+在这个配置文件的exit 0前面一行加上 service supervisor start 保存。看你是否配置成功你可以在现在关机重启之后直接打开浏览器看是否代理成功。
+** 使用proxychains-ng实现终端代理
+=sudo apt install proxychains=
+*** 配置
+ 编辑配置文件 vim /etc/proxychains.conf
+
+ 在 [ProxyList] 下面（也就是末尾）加入代理类型，代理地址和端口
+
+ 例如使用 TOR 代理，注释掉原来的代理并添加 =socks5 127.0.0.1 1080=
+*** 测试
+ proxychains4 curl google.com
+
+ 注意：proxychains支持的是socks，http, https协议.它们以tcp或者udp协议为基础, ping命令用的是 ICMP 协议， proxychains 不支持;
+*** 优化 alias
+
+ alias pc="proxychains4"
+*** 使用 =proxychains emacs=
+     这样在下面就可以使用 google translate 了

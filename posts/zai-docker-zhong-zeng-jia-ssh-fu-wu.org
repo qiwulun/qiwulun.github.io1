@@ -10,6 +10,8 @@
 .. type: text
 #+END_COMMENT
 #+OPTIONS: toc:nil
+安装 docker
+
 参考 http://www.linuxdiyf.com/linux/15472.html
 
 #+BEGIN_SRC bash
