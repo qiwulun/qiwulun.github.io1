@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 16 Dec 2016 14:25:08 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github 学生礼包之 Digital Ocean</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 16 Dec 2016 14:42:07 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github 学生礼包之 Digital Ocean</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -12,6 +12,7 @@
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1-2"&gt;Running Seafile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-2"&gt;安装 Shadowsocks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3"&gt;Shadowsocks&lt;/a&gt;
@@ -178,6 +179,44 @@ Workaround for Seafile issue #478
 If used in FastCGI mode, like recommended when proxying WebDAV, seafdav only listens on localhost:8080; with consequence that it cannot be exposed. The image has a workaround built-in, which uses socat listening on 0.0.0.0:8080, forwarding to localhost:8081. To use it, modify /opt/seafile/conf/seafdav.conf and change the port to 8081, and restart the container enabling the workaround using -e workaround478=true.
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;安装 Shadowsocks&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;p&gt;
+拉取docker-shadowsocks镜像
+拉取docker-shadowsocks镜像镜像安装，从 Docker Hub 仓库拉取命令如下（笔者未使用）
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker pull oddrationale/docker-shadowsocks
+
+# 配置docker-shadowsocks
+docker run --name shadowsocks -d -p 1080:1080 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1080 -k yourpasswd -m aes-256-cfb
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+输入如下命令：
+&lt;/p&gt;
+
+&lt;p&gt;
+其中，
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;-d&lt;/code&gt; ——容器启动后会进入后台
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; （第一个）——指定要映射的端口，使用的格式是hostPort:containerPort，即本地的 54285 端口映射到容器的 54285 端口
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-s&lt;/code&gt; ——服务器IP
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; （第二个）——代理端口
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yourpasswd&lt;/code&gt; ——你的密码
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-m&lt;/code&gt; ——加密方式
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
