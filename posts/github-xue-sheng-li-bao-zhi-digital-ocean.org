@@ -17,11 +17,94 @@ ssh root@SERVER_IP_ADDRESS
 #+END_EXAMPLE
 
 如果在创建的时候把公钥放上去了，那么就可以直接登录了
+* docker 
+** seafile
+https://hub.docker.com/r/jenserat/seafile/
+
+
+This Dockerfile does not really package Seafile 5 for Docker, but provides an environment for running it including startup scripts, including all dependencies for both a SQLite or MySQL (requires external MySQL database, for example in another container) setup.
+*** Setup
+ The image only prepares the base system and provides some support during installation. Read through the setup manual before setting up Seafile.
+
+ Run the image in a container, exposing ports as needed and making /opt/seafile permanent. For setting seafile up, maintaining its configuration or performing updates, make sure to start a shell. As the image builds on phusion/baseimage, do so by attaching -- /bin/bash as parameter.
+
+ For example, you could use
+#+BEGIN_SRC bash
+$ mkdir seafile
+$ docker run -t -i \
+   -p 10001:10001 \
+   -p 12001:12001 \
+   -p 8000:8000 \
+   -p 8080:8080 \
+   -p 8082:8082 \
+   -v /seafile:/opt/seafile \
+   jenserat/seafile -- /bin/bash
+
+#+END_SRC
+ Consider using a reverse proxy for using HTTPs.
+
+ After the container is started, run
+#+BEGIN_SRC bash
+ $ download-seafile 
+#+END_SRC 
+to download Seafile and prepare setting it up.
+
+ Once downloaded, run
+#+BEGIN_SRC bash
+ /opt/seafile/seafile-server-5.*/setup-seafile.sh
+#+END_SRC
+, and go through the setup assistant. Do not change the port and storage location defaults, but change the run command appropriately.
+
+#+BEGIN_SRC bash
+ /opt/seafile/seafile-server-latest/seafile.sh
+#+END_SRC
+ start to start the seafile controller process.
+
+#+BEGIN_SRC bash
+/opt/seafile/seafile-server-latest/seahub.sh
+#+END_SRC
+ start for configuring the web UI.
+
+ If you want, do more configuration of Seafile. You can also already try it out.
+ Setting up Seafile is finished, exit the container.
+
+ In case you want to use memcached instead of /tmp/seahub_cache/ add the following to your seahub_settings.py
+#+BEGIN_SRC python
+ CACHES = {
+   'default': {
+     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+     'LOCATION': 'memcached:11211',
+   }
+ } 
+#+END_SRC
+
+ Link your memcached instance to your seafile container by adding --link memcached_container:memcached to your docker run statement.
+*** Running Seafile
+ Run the image again, this time you probably want to give it a name for using some startup scripts. You will not need an interactive shell for normal operation. The image will autostart the seafile and seahub processes if the environment variable autostart=true is set. A reasonable docker command is
+
+#+BEGIN_SRC bash
+ docker run -d \
+   --name seafile \
+   -p 10001:10001 \
+   -p 12001:12001 \
+   -p 8000:8000 \
+   -p 8080:8080 \
+   -p 8082:8082 \
+   -v seafile:/opt/seafile \
+   -e autostart=true \
+   jenserat/seafile 
+#+END_SRC
+ For proxying Seafile using nginx, enable FastCGI by adding -e fastcgi=true.
+
+ Updates and Maintenance
+ The Seafile binaries are stored in the permanent volume /opt/seafile. To update the base system, just stop and drop the container, update the image using docker pull jenserat/seafile and run it again. To update Seafile, follow the normal upgrade process described in the Seafile upgrade manual. download-seafile might help you with the first steps if already updated to the newest version.
+
+ Workaround for Seafile issue #478
+ If used in FastCGI mode, like recommended when proxying WebDAV, seafdav only listens on localhost:8080; with consequence that it cannot be exposed. The image has a workaround built-in, which uses socat listening on 0.0.0.0:8080, forwarding to localhost:8081. To use it, modify /opt/seafile/conf/seafdav.conf and change the port to 8081, and restart the container enabling the workaround using -e workaround478=true.
 * Shadowsocks 
 ** 服务端配置
 #+BEGIN_EXAMPLE
-sudo apt-get install python-pip
-sudo pip install shadowsocks
+sudo apt install shadowsocks
 #+END_EXAMPLE
 
 #+BEGIN_SRC javascript
@@ -37,7 +120,7 @@ sudo pip install shadowsocks
 }
 #+END_SRC
 启动ss服务：
-=ssserver -c /etc/shadowsocks.json -d start=
+=ssserver -c /etc/shadowsocks.json=
 
 配置ss服务随系统启动：
 $ sudo vim /etc/rc.local
@@ -145,3 +228,5 @@ sudo gedit /etc/rc.local
  alias pc="proxychains4"
 *** 使用 =proxychains emacs=
      这样在下面就可以使用 google translate 了
+* seafile
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps
