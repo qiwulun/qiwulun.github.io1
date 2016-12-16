@@ -85,28 +85,41 @@
 <ul>
 <li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-1">初次登录</a></li>
 <li>
-<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2">Shadowsocks</a>
+<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2">docker</a>
 <ul>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1">服务端配置</a></li>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-2">Ubuntu 客户端设置</a></li>
 <li>
-<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3">chrome 设置</a>
+<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1">seafile</a>
 <ul>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3-1">自动切换</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1-1">Setup</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1-2">Running Seafile</a></li>
 </ul>
 </li>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-4">后台启动</a></li>
+</ul>
+</li>
 <li>
-<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5">使用proxychains-ng实现终端代理</a>
+<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3">Shadowsocks</a>
 <ul>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-1">配置</a></li>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-2">测试</a></li>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-3">优化 alias</a></li>
-<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-4">使用 <code>proxychains emacs</code></a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-1">服务端配置</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-2">Ubuntu 客户端设置</a></li>
+<li>
+<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-3">chrome 设置</a>
+<ul>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-3-1">自动切换</a></li>
+</ul>
+</li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-4">后台启动</a></li>
+<li>
+<a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5">使用proxychains-ng实现终端代理</a>
+<ul>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-1">配置</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-2">测试</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-3">优化 alias</a></li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-4">使用 <code>proxychains emacs</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-4">seafile</a></li>
 </ul>
 </div>
 </div>
@@ -125,15 +138,144 @@ ssh root@SERVER_IP_ADDRESS
 </div>
 </div>
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Shadowsocks</h2>
+<h2 id="sec-2">docker</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">服务端配置</h3>
+<h3 id="sec-2-1">seafile</h3>
 <div class="outline-text-3" id="text-2-1">
+<p>
+<a href="https://hub.docker.com/r/jenserat/seafile/">https://hub.docker.com/r/jenserat/seafile/</a>
+</p>
+
+
+<p>
+This Dockerfile does not really package Seafile 5 for Docker, but provides an environment for running it including startup scripts, including all dependencies for both a SQLite or MySQL (requires external MySQL database, for example in another container) setup.
+</p>
+</div>
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">Setup</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+The image only prepares the base system and provides some support during installation. Read through the setup manual before setting up Seafile.
+</p>
+
+<p>
+Run the image in a container, exposing ports as needed and making /opt/seafile permanent. For setting seafile up, maintaining its configuration or performing updates, make sure to start a shell. As the image builds on phusion/baseimage, do so by attaching – /bin/bash as parameter.
+</p>
+
+<p>
+For example, you could use
+</p>
+<div class="highlight"><pre><span></span>$ mkdir seafile
+$ docker run -t -i \
+   -p 10001:10001 \
+   -p 12001:12001 \
+   -p 8000:8000 \
+   -p 8080:8080 \
+   -p 8082:8082 \
+   -v /seafile:/opt/seafile \
+   jenserat/seafile -- /bin/bash
+</pre></div>
+<p>
+Consider using a reverse proxy for using HTTPs.
+</p>
+
+<p>
+After the container is started, run
+</p>
+<div class="highlight"><pre><span></span>$ download-seafile
+</pre></div>
+<p>
+to download Seafile and prepare setting it up.
+</p>
+
+<p>
+Once downloaded, run
+</p>
+<div class="highlight"><pre><span></span>/opt/seafile/seafile-server-5.*/setup-seafile.sh
+</pre></div>
+<p>
+, and go through the setup assistant. Do not change the port and storage location defaults, but change the run command appropriately.
+</p>
+
+<div class="highlight"><pre><span></span>/opt/seafile/seafile-server-latest/seafile.sh
+</pre></div>
+<p>
+start to start the seafile controller process.
+</p>
+
+<div class="highlight"><pre><span></span>/opt/seafile/seafile-server-latest/seahub.sh
+</pre></div>
+<p>
+start for configuring the web UI.
+</p>
+
+<p>
+If you want, do more configuration of Seafile. You can also already try it out.
+Setting up Seafile is finished, exit the container.
+</p>
+
+<p>
+In case you want to use memcached instead of <i>tmp/seahub<sub>cache</sub></i> add the following to your seahub<sub>settings</sub>.py
+</p>
+<div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">'BACKEND'</span><span class="p">:</span> <span class="s1">'django.core.cache.backends.memcached.MemcachedCache'</span><span class="p">,</span>
+    <span class="s1">'LOCATION'</span><span class="p">:</span> <span class="s1">'memcached:11211'</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>
+Link your memcached instance to your seafile container by adding –link memcached<sub>container</sub>:memcached to your docker run statement.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2">Running Seafile</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Run the image again, this time you probably want to give it a name for using some startup scripts. You will not need an interactive shell for normal operation. The image will autostart the seafile and seahub processes if the environment variable autostart=true is set. A reasonable docker command is
+</p>
+
+<div class="highlight"><pre><span></span>docker run -d \
+  --name seafile \
+  -p 10001:10001 \
+  -p 12001:12001 \
+  -p 8000:8000 \
+  -p 8080:8080 \
+  -p 8082:8082 \
+  -v seafile:/opt/seafile \
+  -e autostart=true \
+  jenserat/seafile
+</pre></div>
+<p>
+For proxying Seafile using nginx, enable FastCGI by adding -e fastcgi=true.
+</p>
+
+<p>
+Updates and Maintenance
+The Seafile binaries are stored in the permanent volume /opt/seafile. To update the base system, just stop and drop the container, update the image using docker pull jenserat/seafile and run it again. To update Seafile, follow the normal upgrade process described in the Seafile upgrade manual. download-seafile might help you with the first steps if already updated to the newest version.
+</p>
+
+<p>
+Workaround for Seafile issue #478
+If used in FastCGI mode, like recommended when proxying WebDAV, seafdav only listens on localhost:8080; with consequence that it cannot be exposed. The image has a workaround built-in, which uses socat listening on 0.0.0.0:8080, forwarding to localhost:8081. To use it, modify /opt/seafile/conf/seafdav.conf and change the port to 8081, and restart the container enabling the workaround using -e workaround478=true.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Shadowsocks</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">服务端配置</h3>
+<div class="outline-text-3" id="text-3-1">
 <pre class="example">
-sudo apt-get install python-pip
-sudo pip install shadowsocks
+sudo apt install shadowsocks
 </pre>
 
 <div class="highlight"><pre><span></span>{
@@ -149,7 +291,7 @@ sudo pip install shadowsocks
 </pre></div>
 <p>
 启动ss服务：
-<code>ssserver -c /etc/shadowsocks.json -d start</code>
+<code>ssserver -c /etc/shadowsocks.json</code>
 </p>
 
 <p>
@@ -163,9 +305,9 @@ ss-server -c /etc/config.json
 
 
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">Ubuntu 客户端设置</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Ubuntu 客户端设置</h3>
+<div class="outline-text-3" id="text-3-2">
 <pre class="example">
 sudo apt-get install python-pip
 sudo pip install shadowsocks
@@ -214,17 +356,17 @@ method  加密方法 和服务端一样
 </div>
 </div>
 
-<div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3">chrome 设置</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">chrome 设置</h3>
+<div class="outline-text-3" id="text-3-3">
 <p>
 Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:socks 5 地址 127.0.0.1 端口
 </p>
 </div>
 
-<div id="outline-container-sec-2-3-1" class="outline-4">
-<h4 id="sec-2-3-1">自动切换</h4>
-<div class="outline-text-4" id="text-2-3-1">
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1">自动切换</h4>
+<div class="outline-text-4" id="text-3-3-1">
 <p>
 规则列表规则 Shadowsocks
 </p>
@@ -235,9 +377,9 @@ Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:so
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2-4" class="outline-3">
-<h3 id="sec-2-4">后台启动</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4">后台启动</h3>
+<div class="outline-text-3" id="text-3-4">
 <p>
 如果你上面可以代理上网了可以进行这一步，之前我让你不要关掉终端，因为关掉终端的时候代理就随着关闭了，之后你每次开机或者关掉终端之后，下次你再想用代理就要重新在终端输入这样的命令 sslocal  -c /home/mudao/shadowsocks.json ，挺麻烦是不？
 </p>
@@ -309,16 +451,16 @@ sudo gedit /etc/rc.local
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2-5" class="outline-3">
-<h3 id="sec-2-5">使用proxychains-ng实现终端代理</h3>
-<div class="outline-text-3" id="text-2-5">
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5">使用proxychains-ng实现终端代理</h3>
+<div class="outline-text-3" id="text-3-5">
 <p>
 <code>sudo apt install proxychains</code>
 </p>
 </div>
-<div id="outline-container-sec-2-5-1" class="outline-4">
-<h4 id="sec-2-5-1">配置</h4>
-<div class="outline-text-4" id="text-2-5-1">
+<div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1">配置</h4>
+<div class="outline-text-4" id="text-3-5-1">
 <p>
 编辑配置文件 vim /etc/proxychains.conf
 </p>
@@ -332,9 +474,9 @@ sudo gedit /etc/rc.local
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2-5-2" class="outline-4">
-<h4 id="sec-2-5-2">测试</h4>
-<div class="outline-text-4" id="text-2-5-2">
+<div id="outline-container-sec-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2">测试</h4>
+<div class="outline-text-4" id="text-3-5-2">
 <p>
 proxychains4 curl google.com
 </p>
@@ -344,23 +486,31 @@ proxychains4 curl google.com
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2-5-3" class="outline-4">
-<h4 id="sec-2-5-3">优化 alias</h4>
-<div class="outline-text-4" id="text-2-5-3">
+<div id="outline-container-sec-3-5-3" class="outline-4">
+<h4 id="sec-3-5-3">优化 alias</h4>
+<div class="outline-text-4" id="text-3-5-3">
 <p>
 alias pc="proxychains4"
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2-5-4" class="outline-4">
-<h4 id="sec-2-5-4">使用 <code>proxychains emacs</code>
+<div id="outline-container-sec-3-5-4" class="outline-4">
+<h4 id="sec-3-5-4">使用 <code>proxychains emacs</code>
 </h4>
-<div class="outline-text-4" id="text-2-5-4">
+<div class="outline-text-4" id="text-3-5-4">
 <p>
 这样在下面就可以使用 google translate 了
 </p>
 </div>
 </div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">seafile</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps">https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps</a>
+</p>
 </div>
 </div>
     </div>

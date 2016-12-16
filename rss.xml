@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 15 Dec 2016 04:42:27 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github 学生礼包之 Digital Ocean</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 16 Dec 2016 14:25:08 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github 学生礼包之 Digital Ocean</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-1"&gt;初次登录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2"&gt;Shadowsocks&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2"&gt;docker&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1"&gt;服务端配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-2"&gt;Ubuntu 客户端设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3"&gt;chrome 设置&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1"&gt;seafile&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-3-1"&gt;自动切换&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-4"&gt;后台启动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5"&gt;使用proxychains-ng实现终端代理&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-1"&gt;配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-2"&gt;测试&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-3"&gt;优化 alias&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1-1"&gt;Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-2-1-2"&gt;Running Seafile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3"&gt;Shadowsocks&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-1"&gt;服务端配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-2"&gt;Ubuntu 客户端设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-3"&gt;chrome 设置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-3-1"&gt;自动切换&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-4"&gt;后台启动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5"&gt;使用proxychains-ng实现终端代理&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-1"&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-2"&gt;测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-3"&gt;优化 alias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-3-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html#sec-4"&gt;seafile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -42,14 +53,142 @@ ssh root@SERVER_IP_ADDRESS
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id="outline-container-sec-2" class="outline-2"&gt;
-&lt;h2 id="sec-2"&gt;Shadowsocks&lt;/h2&gt;
+&lt;h2 id="sec-2"&gt;docker&lt;/h2&gt;
 &lt;div class="outline-text-2" id="text-2"&gt;
 &lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
-&lt;h3 id="sec-2-1"&gt;服务端配置&lt;/h3&gt;
+&lt;h3 id="sec-2-1"&gt;seafile&lt;/h3&gt;
 &lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;p&gt;
+&lt;a href="https://hub.docker.com/r/jenserat/seafile/"&gt;https://hub.docker.com/r/jenserat/seafile/&lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;
+This Dockerfile does not really package Seafile 5 for Docker, but provides an environment for running it including startup scripts, including all dependencies for both a SQLite or MySQL (requires external MySQL database, for example in another container) setup.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-1-1" class="outline-4"&gt;
+&lt;h4 id="sec-2-1-1"&gt;Setup&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-1-1"&gt;
+&lt;p&gt;
+The image only prepares the base system and provides some support during installation. Read through the setup manual before setting up Seafile.
+&lt;/p&gt;
+
+&lt;p&gt;
+Run the image in a container, exposing ports as needed and making /opt/seafile permanent. For setting seafile up, maintaining its configuration or performing updates, make sure to start a shell. As the image builds on phusion/baseimage, do so by attaching – /bin/bash as parameter.
+&lt;/p&gt;
+
+&lt;p&gt;
+For example, you could use
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir seafile
+$ docker run -t -i \
+   -p 10001:10001 \
+   -p 12001:12001 \
+   -p 8000:8000 \
+   -p 8080:8080 \
+   -p 8082:8082 \
+   -v /seafile:/opt/seafile \
+   jenserat/seafile -- /bin/bash
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+Consider using a reverse proxy for using HTTPs.
+&lt;/p&gt;
+
+&lt;p&gt;
+After the container is started, run
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ download-seafile
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+to download Seafile and prepare setting it up.
+&lt;/p&gt;
+
+&lt;p&gt;
+Once downloaded, run
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/opt/seafile/seafile-server-5.*/setup-seafile.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+, and go through the setup assistant. Do not change the port and storage location defaults, but change the run command appropriately.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/opt/seafile/seafile-server-latest/seafile.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+start to start the seafile controller process.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/opt/seafile/seafile-server-latest/seahub.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+start for configuring the web UI.
+&lt;/p&gt;
+
+&lt;p&gt;
+If you want, do more configuration of Seafile. You can also already try it out.
+Setting up Seafile is finished, exit the container.
+&lt;/p&gt;
+
+&lt;p&gt;
+In case you want to use memcached instead of &lt;i&gt;tmp/seahub&lt;sub&gt;cache&lt;/sub&gt;&lt;/i&gt; add the following to your seahub&lt;sub&gt;settings&lt;/sub&gt;.py
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CACHES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="s1"&gt;'default'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;'BACKEND'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'django.core.cache.backends.memcached.MemcachedCache'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;'LOCATION'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'memcached:11211'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+Link your memcached instance to your seafile container by adding –link memcached&lt;sub&gt;container&lt;/sub&gt;:memcached to your docker run statement.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-1-2" class="outline-4"&gt;
+&lt;h4 id="sec-2-1-2"&gt;Running Seafile&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-2-1-2"&gt;
+&lt;p&gt;
+Run the image again, this time you probably want to give it a name for using some startup scripts. You will not need an interactive shell for normal operation. The image will autostart the seafile and seahub processes if the environment variable autostart=true is set. A reasonable docker command is
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run -d \
+  --name seafile \
+  -p 10001:10001 \
+  -p 12001:12001 \
+  -p 8000:8000 \
+  -p 8080:8080 \
+  -p 8082:8082 \
+  -v seafile:/opt/seafile \
+  -e autostart=true \
+  jenserat/seafile
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+For proxying Seafile using nginx, enable FastCGI by adding -e fastcgi=true.
+&lt;/p&gt;
+
+&lt;p&gt;
+Updates and Maintenance
+The Seafile binaries are stored in the permanent volume /opt/seafile. To update the base system, just stop and drop the container, update the image using docker pull jenserat/seafile and run it again. To update Seafile, follow the normal upgrade process described in the Seafile upgrade manual. download-seafile might help you with the first steps if already updated to the newest version.
+&lt;/p&gt;
+
+&lt;p&gt;
+Workaround for Seafile issue #478
+If used in FastCGI mode, like recommended when proxying WebDAV, seafdav only listens on localhost:8080; with consequence that it cannot be exposed. The image has a workaround built-in, which uses socat listening on 0.0.0.0:8080, forwarding to localhost:8081. To use it, modify /opt/seafile/conf/seafdav.conf and change the port to 8081, and restart the container enabling the workaround using -e workaround478=true.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Shadowsocks&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-3-1" class="outline-3"&gt;
+&lt;h3 id="sec-3-1"&gt;服务端配置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-1"&gt;
 &lt;pre class="example"&gt;
-sudo apt-get install python-pip
-sudo pip install shadowsocks
+sudo apt install shadowsocks
 &lt;/pre&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
@@ -65,7 +204,7 @@ sudo pip install shadowsocks
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;
 启动ss服务：
-&lt;code&gt;ssserver -c /etc/shadowsocks.json -d start&lt;/code&gt;
+&lt;code&gt;ssserver -c /etc/shadowsocks.json&lt;/code&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -79,9 +218,9 @@ ss-server -c /etc/config.json
 
 
 
-&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
-&lt;h3 id="sec-2-2"&gt;Ubuntu 客户端设置&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;div id="outline-container-sec-3-2" class="outline-3"&gt;
+&lt;h3 id="sec-3-2"&gt;Ubuntu 客户端设置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-2"&gt;
 &lt;pre class="example"&gt;
 sudo apt-get install python-pip
 sudo pip install shadowsocks
@@ -130,17 +269,17 @@ method  加密方法 和服务端一样
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
-&lt;h3 id="sec-2-3"&gt;chrome 设置&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-2-3"&gt;
+&lt;div id="outline-container-sec-3-3" class="outline-3"&gt;
+&lt;h3 id="sec-3-3"&gt;chrome 设置&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-3"&gt;
 &lt;p&gt;
 Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:socks 5 地址 127.0.0.1 端口
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-sec-2-3-1" class="outline-4"&gt;
-&lt;h4 id="sec-2-3-1"&gt;自动切换&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-2-3-1"&gt;
+&lt;div id="outline-container-sec-3-3-1" class="outline-4"&gt;
+&lt;h4 id="sec-3-3-1"&gt;自动切换&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-3-3-1"&gt;
 &lt;p&gt;
 规则列表规则 Shadowsocks
 &lt;/p&gt;
@@ -151,9 +290,9 @@ Switch Omega 中新建情景模式 ── 代理服务器 ── 代理协议:so
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-4" class="outline-3"&gt;
-&lt;h3 id="sec-2-4"&gt;后台启动&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-2-4"&gt;
+&lt;div id="outline-container-sec-3-4" class="outline-3"&gt;
+&lt;h3 id="sec-3-4"&gt;后台启动&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-4"&gt;
 &lt;p&gt;
 如果你上面可以代理上网了可以进行这一步，之前我让你不要关掉终端，因为关掉终端的时候代理就随着关闭了，之后你每次开机或者关掉终端之后，下次你再想用代理就要重新在终端输入这样的命令 sslocal  -c /home/mudao/shadowsocks.json ，挺麻烦是不？
 &lt;/p&gt;
@@ -225,16 +364,16 @@ sudo gedit /etc/rc.local
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-5" class="outline-3"&gt;
-&lt;h3 id="sec-2-5"&gt;使用proxychains-ng实现终端代理&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-2-5"&gt;
+&lt;div id="outline-container-sec-3-5" class="outline-3"&gt;
+&lt;h3 id="sec-3-5"&gt;使用proxychains-ng实现终端代理&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-5"&gt;
 &lt;p&gt;
 &lt;code&gt;sudo apt install proxychains&lt;/code&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-5-1" class="outline-4"&gt;
-&lt;h4 id="sec-2-5-1"&gt;配置&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-2-5-1"&gt;
+&lt;div id="outline-container-sec-3-5-1" class="outline-4"&gt;
+&lt;h4 id="sec-3-5-1"&gt;配置&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-3-5-1"&gt;
 &lt;p&gt;
 编辑配置文件 vim /etc/proxychains.conf
 &lt;/p&gt;
@@ -248,9 +387,9 @@ sudo gedit /etc/rc.local
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-5-2" class="outline-4"&gt;
-&lt;h4 id="sec-2-5-2"&gt;测试&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-2-5-2"&gt;
+&lt;div id="outline-container-sec-3-5-2" class="outline-4"&gt;
+&lt;h4 id="sec-3-5-2"&gt;测试&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-3-5-2"&gt;
 &lt;p&gt;
 proxychains4 curl google.com
 &lt;/p&gt;
@@ -260,22 +399,30 @@ proxychains4 curl google.com
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-5-3" class="outline-4"&gt;
-&lt;h4 id="sec-2-5-3"&gt;优化 alias&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-2-5-3"&gt;
+&lt;div id="outline-container-sec-3-5-3" class="outline-4"&gt;
+&lt;h4 id="sec-3-5-3"&gt;优化 alias&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-3-5-3"&gt;
 &lt;p&gt;
 alias pc="proxychains4"
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-2-5-4" class="outline-4"&gt;
-&lt;h4 id="sec-2-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-2-5-4"&gt;
+&lt;div id="outline-container-sec-3-5-4" class="outline-4"&gt;
+&lt;h4 id="sec-3-5-4"&gt;使用 &lt;code&gt;proxychains emacs&lt;/code&gt;&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-3-5-4"&gt;
 &lt;p&gt;
 这样在下面就可以使用 google translate 了
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;seafile&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;p&gt;
+&lt;a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps"&gt;https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps&lt;/a&gt;
+&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/github-xue-sheng-li-bao-zhi-digital-ocean.html</guid><pubDate>Thu, 15 Dec 2016 02:55:07 GMT</pubDate></item><item><title>github 学生礼包</title><link>https://qiwulun.github.io/posts/github-xue-sheng-li-bao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;a href="https://github.com/settings/emails"&gt;https://github.com/settings/emails&lt;/a&gt; 里面设上学校的邮箱
