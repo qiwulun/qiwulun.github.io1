@@ -1,5 +1,498 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Wed, 21 Dec 2016 15:03:57 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用 docker 来打包 spacemacs</title><link>https://qiwulun.github.io/posts/yong-docker-lai-da-bao-spacemacs.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 26 Dec 2016 12:25:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>在 windows 上运行 docker GUI</title><link>https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html#sec-1"&gt;准备工作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html#sec-2"&gt;运行docker&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html#sec-2-1"&gt;Mobaxterm －－ Start Local terminal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+主要参考的这一篇，从第 14 页开始
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href="http://journals.plos.org/plosone/article/file?type=supplementary&amp;amp;id=info:doi/10.1371/journal.pone.0152686.s001"&gt;http://journals.plos.org/plosone/article/file?type=supplementary&amp;amp;id=info:doi/10.1371/journal.pone.0152686.s001&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;准备工作&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;安装 docker toolbox （也就是用virtualbox的那个）
+&lt;/li&gt;
+&lt;li&gt;安装 Mobaxterm 自带 X11 转发协议，开心
+&lt;/li&gt;
+&lt;li&gt;防火墙
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;windows 防火墙──允许应用或功能通过防火墙──把xwin&lt;sub&gt;mobax这种和Mobaxterm有关的全勾上&lt;/sub&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IP
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;打开 Docker QuickStart Terminal
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;docker-machine inspect default&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Docker Machine 的 IP ="IPAddress": "192.168.99.100"=
+&lt;/li&gt;
+&lt;li&gt;Docker Client 的 IP ="HostOnlyCIDR": "192.168.99.1/24"=
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;运行docker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Mobaxterm －－ Start Local terminal&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;SSH with X11 forwarding to Docker host.
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;ssh -X docker@DockerMachineIPAdress&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;这里是 &lt;code&gt;ssh -X docker@192.168.99.100&lt;/code&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Login with password “tcuser”
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;用户名 &lt;code&gt;docker&lt;/code&gt; 密码 &lt;code&gt;tcuser&lt;/code&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pull latest image of GUIdock from repository.
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;docker pull kristiyanto/guidock&lt;/code&gt;  
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the GUIdock image by typing the following command in terminal up.. Once
+loaded, a Cytoscape GUI Window pops 
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;docker run ­ti ­e DISPLAY=WindowsIPAddress:0 kristiyanto/guidock&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;这里是 &lt;code&gt;docker run ­ti ­e DISPLAY=192.168.99.1:0 kristiyanto/guidock&lt;/code&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="example"&gt;
+-ti : To enable docker container in interactive mode.
+-e : To set up the DISPLAY environment variable into the docker container so that the
+GUI can be sent to Windows machine.
+IP address : Windows private address (VirtualBox’s interface), see Preparation Section to check
+IP Address. This address should be reachable by Docker Machine.
+Port Number : Port number of X11 is 0 (zero).
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html</guid><pubDate>Mon, 26 Dec 2016 12:07:43 GMT</pubDate></item><item><title>python 可视化库</title><link>https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html#sec-1"&gt;三维── Mayavi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html#sec-2"&gt;渲染 blender&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html#sec-3"&gt;动画──用Python和MoviePy将数据动态可视化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html#sec-4"&gt;类型定义──Traits 为 python 添加类型定义&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+在这里书写你的文章。
+&lt;/p&gt;
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;三维── Mayavi&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;渲染 blender&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;动画──用Python和MoviePy将数据动态可视化&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt;
+&lt;a href="http://python.jobbole.com/81185/"&gt;http://python.jobbole.com/81185/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;类型定义──Traits 为 python 添加类型定义&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;p&gt;
+&lt;a href="https://www.kancloud.cn/wizardforcel/hyry-studio-scipy/129082"&gt;https://www.kancloud.cn/wizardforcel/hyry-studio-scipy/129082&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html</guid><pubDate>Sun, 25 Dec 2016 04:29:21 GMT</pubDate></item><item><title>effective python 阅读笔记1</title><link>https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-1"&gt;Chapter1: Pythonic Thinking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2"&gt;Chapter        3:        Classes        and        Inheritance&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-1"&gt;Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-2"&gt;Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-3"&gt;Item        1:        Know        Which        Version        of        Python        You’re        Using&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-4"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-3"&gt;Chapter        2: Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-4"&gt;Chapter        3:        Classes        and        Inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-5"&gt;Chapter        4:        Metaclasses        and        Attributes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-6"&gt;Chapter        5:        Concurrency        and        Parallelism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-7"&gt;Chapter        6:        Built-in        Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-8"&gt;Chapter        7:        Collaboration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-9"&gt;Chapter        8:        Production&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;a href="http://www.effectivepython.com"&gt;http://www.effectivepython.com&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Chapter1: Pythonic Thinking&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+The Python community has come to use the adjective Pythonic to describe code
+that follows a particular style. The idioms of Python have emerged over time
+through experience using the language and working with others. This chapter
+covers the best way to do the most common things in Python.
+Item        1:        Know        Which        Version        of        Python        You’re        Using
+Item        2:        Follow        the        PEP        8        Style        Guide
+Item        3:        Know        the        Differences        Between        bytes,        str,        and        unicode
+Item        4:        Write        Helper        Functions        Instead        of        Complex        Expressions
+Item        5:        Know        How        to        Slice        Sequences
+Item        6:        Avoid        Using        start,        end,        and        stride        in        a        Single        Slice
+Item        7:        Use        List        Comprehensions        Instead        of        map        and        filter
+Item        8:        Avoid        More        Than        Two        Expressions        in        List        Comprehensions
+Item        9:        Consider        Generator        Expressions        for        Large        Comprehensions
+Item        10:        Prefer        enumerate        Over        range
+Item        11:        Use        zip        to        Process        Iterators        in        Parallel
+Item        12:        Avoid        else        Blocks        After        for        and        while        Loops
+Item        13:        Take        Advantage        of        Each        Block        in        try/except/else/finally 
+Item        14:        Prefer        Exceptions        to        Returning        None
+Item        15:        Know        How        Closures        Interact        with        Variable        Scope
+Item        16:        Consider        Generators        Instead        of        Returning        Lists
+Item        17:        Be        Defensive        When        Iterating        Over        Arguments
+Item        18:        Reduce        Visual        Noise        with        Variable        Positional        Arguments
+Item        19:        Provide        Optional        Behavior        with        Keyword        Arguments
+Item        20:        Use        None        and        Docstrings        to        Specify        Dynamic        Default        Arguments
+Item        21:        Enforce        Clarity        with        Keyword-Only        Arguments
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Chapter        3:        Classes        and        Inheritance&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Avoid        making        dictionaries        with        values        that        are        other        dictionaries        or        long        tuples.
+&lt;/li&gt;
+&lt;li&gt;Use        namedtuple        for        lightweight,        immutable        data        containers        before        you        need        the
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+flexibility        of        a        full        class.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Move        your        bookkeeping        code        to        use        multiple        helper        classes        when        your        internal        state
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+dictionaries        get        complicated.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;p&gt;
+Item        24:        Use        @classmethod        Polymorphism        to        Construct        Objects        GenericallyItem        25:        Initialize        Parent        Classes        with        super
+Item        26:        Use        Multiple        Inheritance        Only        for        Mix-in        Utility        Classes
+Item        27:        Prefer        Public        Attributes        Over        Private        Ones
+Item        28:        Inherit        from        collections.abc        for        Custom        Container        Types
+Chapter        4:        Metaclasses        and        Attributes
+Item        29:        Use        Plain        Attributes        Instead        of        Get        and        Set        Methods
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Define        new        class        interfaces        using        simple        public        attributes,        and        avoid        set        and        get
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Use        @property        to        define        special        behavior        when        attributes        are        accessed        on        your
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+objects,        if        necessary.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Follow        the        rule        of        least        surprise        and        avoid        weird        side        effects        in        your        @property
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Ensure        that        @property        methods        are        fast;        do        slow        or        complex        work        using        normal
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+Item        30:        Consider        @property        Instead        of        Refactoring        Attributes
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;I        especially        like        @property        because        it        lets        you        make        incremental        progress        toward        a better        data        model        over        time.        Reading        the        Bucket        example        above,        you        may        have        thought to        yourself,        “fill        and        deduct        should        have        been        implemented        as        instance        methods        inthe        first        place.”        Although        you’re        probably        right        (see        Item        22:        “Prefer        Helper        Classes        Over Bookkeeping        with        Dictionaries        and        Tuples”),        in        practice        there        are        many        situations        in which        objects        start        with        poorly        defined        interfaces        or        act        as        dumb        data        containers.        This happens        when        code        grows        over        time,        scope        increases,        multiple        authors        contribute        without anyone        considering        long-term        hygiene,        etc. @property        is        a        tool        to        help        you        address        problems        you’ll        come        across        in        real-world code.        Don’t        overuse        it.        When        you        find        yourself        repeatedly        extending        @property methods,        it’s        probably        time        to        refactor        your        class        instead        of        further        paving        over        your code’s        poor        design.
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Item        31:        Use        Descriptors        for        Reusable        @property        Methods
+Item        32:        Use        &lt;span class="underline"&gt;&lt;span class="underline"&gt;getattr&lt;/span&gt;&lt;/span&gt;,        &lt;span class="underline"&gt;&lt;span class="underline"&gt;getattribute&lt;/span&gt;&lt;/span&gt;,        and        &lt;span class="underline"&gt;&lt;span class="underline"&gt;setattr&lt;/span&gt;&lt;/span&gt; for        Lazy
+Attributes
+Item        33:        Validate        Subclasses        with        Metaclasses
+Item        34:        Register        Class        Existence        with        Metaclasses
+Item        35:        Annotate        Class        Attributes        with        Metaclasses
+Chapter        5:        Concurrency        and        Parallelism
+Item        36:        Use        subprocess        to        Manage        Child        Processes
+Item        37:        Use        Threads        for        Blocking        I/O,        Avoid        for        Parallelism
+Item        38:        Use        Lock        to        Prevent        Data        Races        in        Threads
+Item        39:        Use        Queue        to        Coordinate        Work        Between        Threads
+Item        40:        Consider        Coroutines        to        Run        Many        Functions        Concurrently
+Item        41:        Consider        concurrent.futures        for        True        Parallelism
+Chapter        6:        Built-in        Modules
+Item        42:        Define        Function        Decorators        with        functools.wraps
+Item        43:        Consider        contextlib        and        with        Statements        for        Reusable        try/finally
+Behavior
+Item        44:        Make        pickle        Reliable        with        copyreg
+Item        45:        Use        datetime        Instead        of        time        for        Local        Clocks
+Item        46:        Use        Built-in        Algorithms        and        Data        Structures
+Item        47:        Use        decimal        When        Precision        Is        Paramount
+Item        48:        Know        Where        to        Find        Community-Built        Modules
+Chapter        7:        Collaboration
+Item        49:        Write        Docstrings        for        Every        Function,        Class,        and        Module
+Item        50:        Use        Packages        to        Organize        Modules        and        Provide        Stable        APIsItem        51:        Define        a        Root        Exception        to        Insulate        Callers        from        APIs
+Item        52:        Know        How        to        Break        Circular        Dependencies
+Item        53:        Use        Virtual        Environments        for        Isolated        and        Reproducible        Dependencies
+Chapter        8:        Production
+Item        54:        Consider        Module-Scoped        Code        to        Configure        Deployment        Environments
+Item        55:        Use        repr        Strings        for        Debugging        Output
+Item        56:        Test        Everything        with        unittest
+Item        57:        Consider        Interactive        Debugging        with        pdb
+Item        58:        Profile        Before        Optimizing
+Item        59:        Use        tracemalloc        to        Understand        Memory        Usage        and        Leaks
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
+&lt;h3 id="sec-2-3"&gt;Item        1:        Know        Which        Version        of        Python        You’re        Using&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-4" class="outline-3"&gt;
+&lt;h3 id="sec-2-4"&gt;&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-4"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Python’s syntax makes it all too easy to write single-line expressions that
+are overly complicated and difficult to read.
+&lt;/li&gt;
+&lt;li&gt;Move complex expressions into helper functions, especially if you need to use
+the same logic repeatedly.
+&lt;/li&gt;
+&lt;li&gt;The if/else expression provides a more readable alternative to using Boolean
+operators like or and and in expressions.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Chapter        2: Functions&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt;
+Functions in Python have a variety of extra features that make a programmer’s
+life easier. Some are similar to capabilities in other programming languages,
+but many are unique to Python. This chapter covers how to use functions to
+clarify intention, promote reuse, and reduce bugs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;Chapter        3:        Classes        and        Inheritance&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;p&gt;
+Python is an object-oriented language. Getting things done in Python often
+requires writing new classes and defining how they interact through their
+interfaces and hierarchies. This chapter covers how to use classes and
+inheritance to express your intended behaviors with objects.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-5" class="outline-2"&gt;
+&lt;h2 id="sec-5"&gt;Chapter        4:        Metaclasses        and        Attributes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-5"&gt;
+&lt;p&gt;
+Metaclasses and dynamic attributes are powerful Python features. However, they
+also enable you to implement extremely bizarre and unexpected behaviors. This
+chapter covers the common idioms for using these mechanisms to ensure that you
+follow the rule of least surprise.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-6" class="outline-2"&gt;
+&lt;h2 id="sec-6"&gt;Chapter        5:        Concurrency        and        Parallelism&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-6"&gt;
+&lt;p&gt;
+Python        makes        it        easy        to        write        concurrent        programs        that        do        many        different        things
+seemingly        at        the        same        time.        Python        can        also        be        used        to        do        parallel        work        through        system
+calls,        subprocesses,        and        C-extensions.        This        chapter        covers        how        to        best        utilize        Python        in
+these        subtly        different        situations.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-7" class="outline-2"&gt;
+&lt;h2 id="sec-7"&gt;Chapter        6:        Built-in        Modules&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-7"&gt;
+&lt;p&gt;
+Python        is        installed        with        many        of        the        important        modules        that        you’ll        need        to        write        programs.
+These        standard        packages        are        so        closely        intertwined        with        idiomatic        Python        that        they        may        as
+well        be        part        of        the        language        specification.        This        chapter        covers        the        essential        built-in
+modules.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-8" class="outline-2"&gt;
+&lt;h2 id="sec-8"&gt;Chapter        7:        Collaboration&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-8"&gt;
+&lt;p&gt;
+Collaborating        on        Python        programs        requires        you        to        be        deliberate        about        how        you        write        your
+code.        Even        if        you’re        working        alone,        you’ll        want        to        understand        how        to        use        modules        written
+by        others.        This        chapter        covers        the        standard        tools        and        best        practices        that        enable        people        to
+work        together        on        Python        programs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-9" class="outline-2"&gt;
+&lt;h2 id="sec-9"&gt;Chapter        8:        Production&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-9"&gt;
+&lt;p&gt;
+Python        has        facilities        for        adapting        to        multiple        deployment        environments.        It        also        has        built-in
+modules        that        aid        in        hardening        your        programs        and        making        them        bulletproof.        This        chapter
+covers        how        to        use        Python        to        debug,        optimize,        and        test        your        programs        to        maximize        quality
+and        performance        at        runtime.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>books</category><category>reading</category><guid>https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html</guid><pubDate>Sat, 24 Dec 2016 06:21:19 GMT</pubDate></item><item><title>代码整洁之道──阅读笔记1</title><link>https://qiwulun.github.io/posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html#sec-1"&gt;命名&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+软件质量，不但依赖于架构及项目管理，而且与代码质量紧密相关。这一点，无论是敏捷开发流派还是传统开发流派，都不得不承认。
+&lt;/p&gt;
+
+&lt;p&gt;
+本书提出一种观念：代码质量与其整洁度成正比。干净的代码，既在质量上较为可靠，也为后期维护、升级奠定了良好基础。作为编程领域的佼佼者，本书作者给出了一系列行之有效的整洁代码操作实践。这些实践在本书中体现为一条条规则（或称“启示”），并辅以来自现实项目的正、反两面的范例。只要遵循这些规则，就能编写出干净的代码，从而有效提升代码质量。
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+归置良好的需求就像代码一样正式，也能作为代码的可执行测试来使用
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+勒布朗 (leBlanc) 法则:稍后等于不干 (Later equals never)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;能通过所有测试
+&lt;/li&gt;
+&lt;li&gt;没有重复代码
+&lt;/li&gt;
+&lt;li&gt;体现系统中的全部设计理念
+&lt;/li&gt;
+&lt;li&gt;包括尽量少的实体，比如类、方法、函数等
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+读与写花费时间比例10:1,写新代码时，我们一直在读旧代码
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;命名&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;名副其实
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;不应该用注释来解释变量
+&lt;/li&gt;
+&lt;li&gt;避免魔术数
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;避免误导
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;比如说不要用 List 这种变量
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;做有意义的区分
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;避免这种玩意，这三个有鬼区别？
+&lt;pre class="example"&gt;
+getActiveAccount();
+getActiveAccounts();
+getActiveAccountInfo();
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;使用读的出来的名字
+&lt;/li&gt;
+&lt;li&gt;使用可搜索的名字
+&lt;/li&gt;
+&lt;li&gt;类名应该是名词
+&lt;/li&gt;
+&lt;li&gt;方法名应该是动词或动词短语
+&lt;/li&gt;
+&lt;li&gt;每个概念对应一个词
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html</guid><pubDate>Fri, 23 Dec 2016 03:02:47 GMT</pubDate></item><item><title>用 docker 来打包 spacemacs</title><link>https://qiwulun.github.io/posts/yong-docker-lai-da-bao-spacemacs.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -1047,224 +1540,4 @@ PN + v	FN + z	（伪）Visual 模式（要配合Shift）
 总之,这款键盘很适合折腾
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</guid><pubDate>Tue, 13 Dec 2016 07:09:58 GMT</pubDate></item><item><title>Ubuntu Texlive 2016 安装 asymptote</title><link>https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-1"&gt;Ubuntu texlive 2016&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-2"&gt;还有一些依赖包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-3"&gt;DVIPS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1"&gt;FAQ&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-1"&gt;出现图片是黑的怎么办&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-2"&gt;如何来展示一个3D可旋转的&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-0-1" class="outline-3"&gt;
-&lt;h3 id="sec-0-1"&gt;Ubuntu texlive 2016&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-0-2" class="outline-3"&gt;
-&lt;h3 id="sec-0-2"&gt;还有一些依赖包&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-0-2"&gt;
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;特别地,我们需要freeglut这个基于OpenGL的库,
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;sudo apt-get install freeglut3 freeglut3-dev
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;sudo apt-get install libreadline-gplv2-dev
-&lt;/li&gt;
-&lt;li&gt;sudo rm /usr/bin/kpsewhich 
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-0-3" class="outline-3"&gt;
-&lt;h3 id="sec-0-3"&gt;DVIPS&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-0-3"&gt;
-&lt;pre class="example"&gt;
-$ asy 2.asy 
-dvips: warning: no config file for `download35'
-dvips: ! Couldn't find header file: tex.pro
-GPL Ghostscript 9.18: Unrecoverable error, exit code 1
-中断
-&lt;/pre&gt;
-
-&lt;p&gt;
-是 dvips 的事吗？还真是
-&lt;/p&gt;
-&lt;pre class="example"&gt;
-$ dvips
-This is dvips(k) 5.995 Copyright 2015 Radical Eye Software (www.radicaleye.com)
-dvips: ! Couldn't find header file: tex.pro
-&lt;/pre&gt;
-
-&lt;p&gt;
-那我们看看是不是用的 texlive 2016 的 dvips
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-qiwulun@qiwulun-All-Series:~$ which dvips
-/usr/bin/dvips
-
-$ whereis dvips
-dvips: /usr/bin/dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips /usr/share/man/man1/dvips.1.gz /usr/share/info/dvips.info.gz
-
-$ /usr/local/texlive/2016/bin/x86_64-linux/dvips
-This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
-dvips: Missing DVI file argument (or -f).
-dvips: Try --help for more information.
-&lt;/pre&gt;
-
-&lt;p&gt;
-Texlive 2016 的dvips还挺好的，那把 /usr/bin/dvips 干掉吧
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-$ sudo apt remove dvips
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树       
-正在读取状态信息... 完成       
-软件包 dvips 未安装，所以不会被卸载
-升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
-
-$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
-update-alternatives: 使用 /usr/local/texlive/2016/bin/x86_64-linux/dvips 来在自动模式中提供 /usr/bin/dvips (dvips)
-update-alternatives: 警告: 将不会把 /usr/bin/dvips 替换为链接
-
-$ sudo apt install dvips
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树       
-正在读取状态信息... 完成       
-没有可用的软件包 dvips，但是它被其它的软件包引用了。
-这可能意味着这个缺失的软件包可能已被废弃，
-或者只能在其他发布源中找到
-
-E: 软件包 dvips 没有可安装候选
-$ sudo apt remove dvipsk-ja
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树       
-正在读取状态信息... 完成       
-软件包 dvipsk-ja 未安装，所以不会被卸载
-升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
-$ sudo apt remove dvipsk
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树       
-正在读取状态信息... 完成       
-E: 无法定位软件包 dvipsk
-&lt;/pre&gt;
-
-&lt;p&gt;
-那就强行删除吧…
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-$ sudo rm /usr/bin/dvips 
-$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
-update-alternatives: 警告: 链接组 dvips 已损坏，故强制重新安装候选项 /usr/local/texlive/2016/bin/x86_64-linux/dvips
-
-$ dvips
-This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
-dvips: Missing DVI file argument (or -f).
-dvips: Try --help for more information.
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id="outline-container-sec-1" class="outline-2"&gt;
-&lt;h2 id="sec-1"&gt;FAQ&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-1"&gt;
-&lt;/div&gt;&lt;div id="outline-container-sec-1-1" class="outline-3"&gt;
-&lt;h3 id="sec-1-1"&gt;出现图片是黑的怎么办&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-1-1"&gt;
-&lt;p&gt;
-加上 &lt;code&gt;-render 3&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+BEGIN_SRC asymptote :file [name].png :cmdline -noView -render 3 :exports results
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-1-2" class="outline-3"&gt;
-&lt;h3 id="sec-1-2"&gt;如何来展示一个3D可旋转的&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-1-2"&gt;
-&lt;p&gt;
-不加file
-&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+BEGIN_SRC asymptote
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description><category>ubuntu</category><guid>https://qiwulun.github.io/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html</guid><pubDate>Sat, 10 Dec 2016 01:56:50 GMT</pubDate></item><item><title>Ubuntu 下强制结束程序</title><link>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-ubuntu下强制结束程序 
-&lt;/p&gt;
-
-&lt;p&gt;
-（1）ctrl+alt+t，调出终端，输入 top，显示的全是现在系统的进程，按占用资源从多到
-少排列的──找到要关掉的进程，记下该进程第一列的PID编号，然后输入q，退回终端
-&lt;/p&gt;
-
-&lt;p&gt;
-（2）输入sudo kill pid即可
-&lt;/p&gt;</description><category>ubuntu</category><guid>https://qiwulun.github.io/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html</guid><pubDate>Thu, 08 Dec 2016 13:58:21 GMT</pubDate></item><item><title>git 在每次 Push 时不用重复输入密码</title><link>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;ol class="org-ol"&gt;
-&lt;li&gt;使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
-&lt;/li&gt;
-
-&lt;li&gt;对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）
-内添加 &lt;a href="https://%7Busername%7D:%7Bpasswd%7D@git.coding.net"&gt;https://{username}:{passwd}@git.coding.net&lt;/a&gt; 然后执行配置 Git 命令存储认
-证命令： $git config –global credential.helper store
-&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-执行后在 ~/.gitconfig 文件会多出下面配置项: credential.helper = store
-&lt;/p&gt;
-
-&lt;p&gt;
-详情请参考&lt;a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching"&gt;凭证存储&lt;/a&gt; 。
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-git 通过 ssh 和 https 向服务器提交的速度有没有区别？
-
-现在是用的ssh向阿里云服务器提交，感觉有1秒的延迟，如果换成https，能不能做到接近0延迟的提交？
-
-moliliang   2014-06-01 01:26:39 +08:00
-
-https 快一些，其实没啥太大差别。ssh主要是不用属于密码。当然https也可以免输入密码，只是比ssh设置麻烦。
-
-ferock   2014-06-01 01:50:06 +08:00
-
-ssh key 安全会更好一点
-
-很多https 密码都在url 里，太明文了
-
-ssh key 慢，其他差不多
-&lt;/pre&gt;</description><category>git ssh</category><guid>https://qiwulun.github.io/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html</guid><pubDate>Tue, 06 Dec 2016 12:32:10 GMT</pubDate></item><item><title>用 ssh 来进行 git 免密码传输</title><link>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-SSH keys
-&lt;/p&gt;
-
-&lt;p&gt;
-SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
-&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat ~/.ssh/id_rsa.pub
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;
-如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
-提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
-你可以按如下命令来生成ssh key：
-&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh-keygen -t rsa -C "someone@email.com"
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;
-这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
-用以下命令获取你生成的公钥：
-cat ~/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub
-复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
-&lt;/p&gt;</description><category>git</category><category>ssh</category><guid>https://qiwulun.github.io/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html</guid><pubDate>Tue, 06 Dec 2016 12:23:26 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</guid><pubDate>Tue, 13 Dec 2016 07:09:58 GMT</pubDate></item></channel></rss>

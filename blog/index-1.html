@@ -71,7 +71,292 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html" class="u-url">Ubuntu Texlive 2016 安装 asymptote</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-10T09:56:50+08:00" title="2016-12-10 09:56">2016-12-10 09:56</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-1">Ubuntu texlive 2016</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-2">还有一些依赖包</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-3">DVIPS</a></li>
+</ul>
+<li>
+<a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1">FAQ</a>
+<ul>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-1">出现图片是黑的怎么办</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-2">如何来展示一个3D可旋转的</a></li>
+</ul>
+</li>
+</div>
+</div>
+<div id="outline-container-sec-0-1" class="outline-3">
+<h3 id="sec-0-1">Ubuntu texlive 2016</h3>
+</div>
+<div id="outline-container-sec-0-2" class="outline-3">
+<h3 id="sec-0-2">还有一些依赖包</h3>
+<div class="outline-text-3" id="text-0-2">
+<ul class="org-ul">
+<li>特别地,我们需要freeglut这个基于OpenGL的库,
+<ul class="org-ul">
+<li>sudo apt-get install freeglut3 freeglut3-dev
+</li>
+</ul>
+</li>
+<li>sudo apt-get install libreadline-gplv2-dev
+</li>
+<li>sudo rm /usr/bin/kpsewhich 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-0-3" class="outline-3">
+<h3 id="sec-0-3">DVIPS</h3>
+<div class="outline-text-3" id="text-0-3">
+<pre class="example">
+$ asy 2.asy 
+dvips: warning: no config file for `download35'
+dvips: ! Couldn't find header file: tex.pro
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1
+中断
+</pre>
+
+<p>
+是 dvips 的事吗？还真是
+</p>
+<pre class="example">
+$ dvips
+This is dvips(k) 5.995 Copyright 2015 Radical Eye Software (www.radicaleye.com)
+dvips: ! Couldn't find header file: tex.pro
+</pre>
+
+<p>
+那我们看看是不是用的 texlive 2016 的 dvips
+</p>
+
+<pre class="example">
+qiwulun@qiwulun-All-Series:~$ which dvips
+/usr/bin/dvips
+
+$ whereis dvips
+dvips: /usr/bin/dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips /usr/share/man/man1/dvips.1.gz /usr/share/info/dvips.info.gz
+
+$ /usr/local/texlive/2016/bin/x86_64-linux/dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+</pre>
+
+<p>
+Texlive 2016 的dvips还挺好的，那把 /usr/bin/dvips 干掉吧
+</p>
+
+<pre class="example">
+$ sudo apt remove dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvips 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 使用 /usr/local/texlive/2016/bin/x86_64-linux/dvips 来在自动模式中提供 /usr/bin/dvips (dvips)
+update-alternatives: 警告: 将不会把 /usr/bin/dvips 替换为链接
+
+$ sudo apt install dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+没有可用的软件包 dvips，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 dvips 没有可安装候选
+$ sudo apt remove dvipsk-ja
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvipsk-ja 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+$ sudo apt remove dvipsk
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 dvipsk
+</pre>
+
+<p>
+那就强行删除吧…
+</p>
+
+<pre class="example">
+$ sudo rm /usr/bin/dvips 
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 警告: 链接组 dvips 已损坏，故强制重新安装候选项 /usr/local/texlive/2016/bin/x86_64-linux/dvips
+
+$ dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">FAQ</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">出现图片是黑的怎么办</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+加上 <code>-render 3</code>
+</p>
+
+<div class="highlight"><pre><span></span>#+BEGIN_SRC asymptote :file [name].png :cmdline -noView -render 3 :exports results
+</pre></div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">如何来展示一个3D可旋转的</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+不加file
+</p>
+<div class="highlight"><pre><span></span>#+BEGIN_SRC asymptote
+</pre></div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html" class="u-url">Ubuntu 下强制结束程序</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-08T21:58:21+08:00" title="2016-12-08 21:58">2016-12-08 21:58</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+ubuntu下强制结束程序 
+</p>
+
+<p>
+（1）ctrl+alt+t，调出终端，输入 top，显示的全是现在系统的进程，按占用资源从多到
+少排列的──找到要关掉的进程，记下该进程第一列的PID编号，然后输入q，退回终端
+</p>
+
+<p>
+（2）输入sudo kill pid即可
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" class="u-url">git 在每次 Push 时不用重复输入密码</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:32:10+08:00" title="2016-12-06 20:32">2016-12-06 20:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html#disqus_thread" data-disqus-identifier="cache/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <ol class="org-ol">
+<li>使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
+</li>
+
+<li>对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）
+内添加 <a href="https://%7Busername%7D:%7Bpasswd%7D@git.coding.net">https://{username}:{passwd}@git.coding.net</a> 然后执行配置 Git 命令存储认
+证命令： $git config –global credential.helper store
+</li>
+</ol>
+<p>
+执行后在 ~/.gitconfig 文件会多出下面配置项: credential.helper = store
+</p>
+
+<p>
+详情请参考<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching">凭证存储</a> 。
+</p>
+
+<pre class="example">
+git 通过 ssh 和 https 向服务器提交的速度有没有区别？
+
+现在是用的ssh向阿里云服务器提交，感觉有1秒的延迟，如果换成https，能不能做到接近0延迟的提交？
+
+moliliang   2014-06-01 01:26:39 +08:00
+
+https 快一些，其实没啥太大差别。ssh主要是不用属于密码。当然https也可以免输入密码，只是比ssh设置麻烦。
+
+ferock   2014-06-01 01:50:06 +08:00
+
+ssh key 安全会更好一点
+
+很多https 密码都在url 里，太明文了
+
+ssh key 慢，其他差不多
+</pre>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:23:26+08:00" title="2016-12-06 20:23">2016-12-06 20:23</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html#disqus_thread" data-disqus-identifier="cache/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+SSH keys
+</p>
+
+<p>
+SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
+</p>
+<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub
+</pre></div>
+
+<p>
+如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
+提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
+你可以按如下命令来生成ssh key：
+</p>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa -C "someone@email.com"
+</pre></div>
+
+<p>
+这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
+用以下命令获取你生成的公钥：
+cat ~/.ssh/id<sub>rsa</sub>.pub
+复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -480,142 +765,6 @@ compiling 是让编译器懂你在说什么， reading 是让读者懂你在说�
 <p>
 PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来点拨我一下
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/qiang-hua-xue-xi-rl.html" class="u-url">强化学习 RL</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/qiang-hua-xue-xi-rl.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T17:17:25+08:00" title="2016-11-30 17:17">2016-11-30 17:17</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/qiang-hua-xue-xi-rl.html#disqus_thread" data-disqus-identifier="cache/posts/qiang-hua-xue-xi-rl.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p class="more"><a href="../posts/qiang-hua-xue-xi-rl.html">更多…</a></p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/org-mode-chang-yong-ji-qiao.html" class="u-url">org mode 常用技巧</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/org-mode-chang-yong-ji-qiao.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T16:13:58+08:00" title="2016-11-30 16:13">2016-11-30 16:13</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/org-mode-chang-yong-ji-qiao.html#disqus_thread" data-disqus-identifier="cache/posts/org-mode-chang-yong-ji-qiao.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-1">截图 <code>SPC m i s</code></a></li>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-2">粘贴图片 <code>SPC m i y</code></a></li>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-3">跳回原点 <code>C－o</code></a></li>
-<li>
-<a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-4">latex</a>
-<ul>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-4-1">输出时，只要\begin{document} \end{document}</a></li>
-</ul>
-</li>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-5">增加 file-local variables (through SPC f v f).</a></li>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-6">如何能够 make -j4</a></li>
-<li><a href="../posts/org-mode-chang-yong-ji-qiao.html#sec-7">local Variable</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/org-mode-chang-yong-ji-qiao.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html" class="u-url">Org-mode Agenda 常用命令</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T11:22:27+08:00" title="2016-11-30 11:22">2016-11-30 11:22</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#disqus_thread" data-disqus-identifier="cache/posts/org-mode-agenda-chang-yong-ming-ling.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1">Agenda View</a>
-<ul>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1-1">不常用的</a></li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1-2">Help <code>M-x which-key-show-stardhelp</code></a></li>
-</ul>
-</li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-2">在 org mode 文件中设置任务属性</a></li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-3"><span class="todo TODO">TODO</span> 配置</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html" class="u-url">Ubuntu 重装纪录</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-29T13:57:04+08:00" title="2016-11-29 13:57">2016-11-29 13:57</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-zhong-zhuang-ji-lu.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1">显卡</a>
-<ul>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-1">驱动</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-2">CUDA</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-3">CUDNN</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2">emacs</a>
-<ul>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2-1">配置</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2-2">ag 用于检索</a></li>
-</ul>
-</li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-3">texlive</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-4">anaconda</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-5">git</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-6">pandoc</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-7">五笔 <code>sudo apt install fcitx-table-wubi</code></a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-8">chrome</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-9">tensorflow</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-10">mxnet</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-11">视频软件 gnome-mplayer</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html">更多…</a></p>
-</div>
     </div>
     </article>
 </div>
