@@ -46,3 +46,48 @@ https://github.com/kristiyanto/GUIdock
       IP Address. This address should be reachable by Docker Machine.
       Port Number : Port number of X11 is 0 (zero).
     #+END_EXAMPLE
+* 对于 VirtualBox 共享文件夹
+
+Docker-machine automounts the users directory... link But sometimes that just isn't enough.
+
+I don't know about docker 1.6, but in 1.8 you CAN add an additional mount to docker-machine
+** Add Virtual Machine Mount Point (part 1)
+*** CLI: (Only works when machine is stopped)
+
+  =VBoxManage sharedfolder add <machine name/id> --name <mount_name> --hostpath <host_dir> --automount=
+
+  So an example in windows would be
+
+  =/c/Program\ Files/Oracle/VirtualBox/VBoxManage.exe sharedfolder add default --name e --hostpath 'e:\' --automount=
+*** GUI: (does NOT require the machine be stopped)
+
+#+BEGIN_EXAMPLE
+  Start "Oracle VM VirtualBox Manager"
+  Right-Click <machine name> (default)
+  Settings...
+  Shared Folders
+  The Folder+ Icon on the Right (Add Share)
+  Folder Path: <host dir> (e:)
+  Folder Name: <mount name> (e)
+  Check on "Auto-mount" and "Make Permanent" (Read only if you want...) (The auto-mount is sort of pointless currently...) 
+#+END_EXAMPLE
+** Mounting in boot2docker (part 2)
+*** Manually mount in boot2docker:
+
+  There are various ways to log in, use "Show" in "Oracle VM VirtualBox Manager", or ssh/putty into docker by IP address docker-machine ip default, etc...
+  sudo mkdir -p <local_dir>
+  sudo mount -t vboxsf -o defaults,uid=`id -u docker`,gid=`id -g docker` <mount_name> <local_dir>
+
+  But this is only good until you restart the machine, and then the mount is lost...
+*** Adding an automount to boot2docker:
+
+  While logged into the machine
+
+  1. Edit/create (as root) /mnt/sda1/var/lib/boot2docker/bootlocal.sh, sda1 may be different for you...
+  2. Add
+   #+BEGIN_EXAMPLE
+       mkdir -p <local_dir>
+       mount -t vboxsf -o defaults,uid=`id -u docker`,gid=`id -g docker` <mount_name> <local_dir>
+   #+END_EXAMPLE
+
+  With these changes, you should have a new mount point. This is one of the few files I could find that is called on boot and is persistent. Until there is a better solution, this should work.
