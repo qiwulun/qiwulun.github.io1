@@ -1,0 +1,47 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 在 windows 上运行 docker GUI
+.. slug: zai-windows-shang-yun-xing-docker-gui
+.. date: 2016-12-26 20:07:43 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+主要参考的这一篇，从第 14 页开始
+
+http://journals.plos.org/plosone/article/file?type=supplementary&id=info:doi/10.1371/journal.pone.0152686.s001
+
+* 准备工作
+ + 安装 docker toolbox （也就是用virtualbox的那个）
+ + 安装 Mobaxterm 自带 X11 转发协议，开心
+ + 防火墙
+   - windows 防火墙──允许应用或功能通过防火墙──把xwin_mobax这种和Mobaxterm有关的全勾上
+ + IP
+   - 打开 Docker QuickStart Terminal
+     + =docker-machine inspect default=
+     + Docker Machine 的 IP ="IPAddress": "192.168.99.100"=
+     + Docker Client 的 IP ="HostOnlyCIDR": "192.168.99.1/24"=
+* 运行docker 
+** Mobaxterm －－ Start Local terminal
+ 1. SSH with X11 forwarding to Docker host.
+    - =ssh -X docker@DockerMachineIPAdress=
+    - 这里是 =ssh -X docker@192.168.99.100=
+ 2. Login with password “tcuser”
+    - 用户名 =docker= 密码 =tcuser=
+ 3. Pull latest image of GUIdock from repository.
+    - =docker pull kristiyanto/guidock=  
+ 4. Run the GUIdock image by typing the following command in terminal up.. Once
+    loaded, a Cytoscape GUI Window pops 
+    - =docker run ­ti ­e DISPLAY=WindowsIPAddress:0 kristiyanto/guidock=
+    - 这里是 =docker run ­ti ­e DISPLAY=192.168.99.1:0 kristiyanto/guidock=
+    #+BEGIN_EXAMPLE
+      -ti : To enable docker container in interactive mode.
+      -e : To set up the DISPLAY environment variable into the docker container so that the
+      GUI can be sent to Windows machine.
+      IP address : Windows private address (VirtualBox’s interface), see Preparation Section to check
+      IP Address. This address should be reachable by Docker Machine.
+      Port Number : Port number of X11 is 0 (zero).
+    #+END_EXAMPLE
