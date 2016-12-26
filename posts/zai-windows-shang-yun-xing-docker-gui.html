@@ -30,15 +30,12 @@
 Mobaxterm －－ Start Local terminal
 
 
+对于 VirtualBox 共享文件夹
 
+Add Virtual Machine Mount Point (part 1)
 
-
-
-主要参考的这一篇，从第 14 页开始
-
-
-
-http://journals.plos.org/plosone/article/file?type=supplementary&amp;id=info:doi/10.1371/journal.pone.01526">
+CLI: (Only works when machine is stopped)
+GUI: (does NOT require t">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-12-26T20:07:43+08:00">
 </head>
@@ -118,6 +115,25 @@ http://journals.plos.org/plosone/article/file?type=supplementary&amp;id=info:doi
 <a href="zai-windows-shang-yun-xing-docker-gui.html#sec-2">运行docker</a>
 <ul>
 <li><a href="zai-windows-shang-yun-xing-docker-gui.html#sec-2-1">Mobaxterm －－ Start Local terminal</a></li>
+</ul>
+</li>
+<li>
+<a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3">对于 VirtualBox 共享文件夹</a>
+<ul>
+<li>
+<a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-1">Add Virtual Machine Mount Point (part 1)</a>
+<ul>
+<li><a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-1-1">CLI: (Only works when machine is stopped)</a></li>
+<li><a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-1-2">GUI: (does NOT require the machine be stopped)</a></li>
+</ul>
+</li>
+<li>
+<a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-2">Mounting in boot2docker (part 2)</a>
+<ul>
+<li><a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-2-1">Manually mount in boot2docker:</a></li>
+<li><a href="zai-windows-shang-yun-xing-docker-gui.html#sec-3-2-2">Adding an automount to boot2docker:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -215,6 +231,95 @@ Port Number : Port number of X11 is 0 (zero).
 </pre>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">对于 VirtualBox 共享文件夹</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Docker-machine automounts the users directory… link But sometimes that just isn't enough.
+</p>
+
+<p>
+I don't know about docker 1.6, but in 1.8 you CAN add an additional mount to docker-machine
+</p>
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Add Virtual Machine Mount Point (part 1)</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1">CLI: (Only works when machine is stopped)</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+<code>VBoxManage sharedfolder add &lt;machine name/id&gt; --name &lt;mount_name&gt; --hostpath &lt;host_dir&gt; --automount</code>
+</p>
+
+<p>
+So an example in windows would be
+</p>
+
+<p>
+<code>/c/Program\ Files/Oracle/VirtualBox/VBoxManage.exe sharedfolder add default --name e --hostpath 'e:\' --automount</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2">GUI: (does NOT require the machine be stopped)</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<pre class="example">
+Start "Oracle VM VirtualBox Manager"
+Right-Click &lt;machine name&gt; (default)
+Settings...
+Shared Folders
+The Folder+ Icon on the Right (Add Share)
+Folder Path: &lt;host dir&gt; (e:)
+Folder Name: &lt;mount name&gt; (e)
+Check on "Auto-mount" and "Make Permanent" (Read only if you want...) (The auto-mount is sort of pointless currently...)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Mounting in boot2docker (part 2)</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1">Manually mount in boot2docker:</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+There are various ways to log in, use "Show" in "Oracle VM VirtualBox Manager", or ssh/putty into docker by IP address docker-machine ip default, etc…
+sudo mkdir -p &lt;local<sub>dir</sub>&gt;
+sudo mount -t vboxsf -o defaults,uid=`id -u docker`,gid=`id -g docker` &lt;mount<sub>name</sub>&gt; &lt;local<sub>dir</sub>&gt;
+</p>
+
+<p>
+But this is only good until you restart the machine, and then the mount is lost…
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2">Adding an automount to boot2docker:</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+While logged into the machine
+</p>
+
+<ol class="org-ol">
+<li>Edit/create (as root) /mnt/sda1/var/lib/boot2docker/bootlocal.sh, sda1 may be different for you…
+</li>
+<li>Add
+<pre class="example">
+mkdir -p &lt;local_dir&gt;
+mount -t vboxsf -o defaults,uid=`id -u docker`,gid=`id -g docker` &lt;mount_name&gt; &lt;local_dir&gt;
+</pre>
+</li>
+</ol>
+<p>
+With these changes, you should have a new mount point. This is one of the few files I could find that is called on boot and is persistent. Until there is a better solution, this should work.
+</p>
+</div>
 </div>
 </div>
 </div>
