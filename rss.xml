@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" type="application/rss+xml" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 26 Dec 2016 13:09:06 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>在 windows 上运行 docker GUI</title><link>https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 30 Dec 2016 08:55:06 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Anaconda 调用 MKL Bug</title><link>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+参考这一个
+&lt;a href="https://github.com/ContinuumIO/anaconda-issues/issues/720"&gt;https://github.com/ContinuumIO/anaconda-issues/issues/720&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
+&lt;/pre&gt;
+
+&lt;p&gt;
+It seems to be related to the packages installation order. I reinstalled numpy with
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+conda install  -f  numpy
+&lt;/pre&gt;
+
+&lt;p&gt;
+and the problem was gone.
+&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</guid><pubDate>Wed, 28 Dec 2016 12:33:43 GMT</pubDate></item><item><title>在 windows 上运行 docker GUI</title><link>https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -1395,256 +1414,4 @@ hosted via your account.
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description><guid>https://qiwulun.github.io/posts/github-xue-sheng-li-bao.html</guid><pubDate>Wed, 14 Dec 2016 09:55:18 GMT</pubDate></item><item><title>Poker 升级版机械键盘</title><link>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-1"&gt;标准模式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-2"&gt;指拨开关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-3"&gt;自定义&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-4"&gt;说明书&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html#sec-5"&gt;我的知乎回答&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-先说一句，红轴打起来好舒服，白色看起来好漂亮
-&lt;/p&gt;
-
-&lt;div id="outline-container-sec-1" class="outline-2"&gt;
-&lt;h2 id="sec-1"&gt;标准模式&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-1"&gt;
-&lt;table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
-
-
-&lt;colgroup&gt;
-&lt;col class="left"&gt;
-
-&lt;col class="left"&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class="left"&gt;方向键&lt;/td&gt;
-&lt;td class="left"&gt;Fn+a,s,d,w&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;Home&lt;/td&gt;
-&lt;td class="left"&gt;Fn+;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;END&lt;/td&gt;
-&lt;td class="left"&gt;Fn+.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;
-ctrl+左右方向键,移动单词.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id="outline-container-sec-2" class="outline-2"&gt;
-&lt;h2 id="sec-2"&gt;指拨开关&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-2"&gt;
-
-&lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://qiwulun.github.io/images/%E6%8C%87%E6%8B%A8%E5%BC%80%E5%85%B3/screenshot_2016-12-13_15-23-47.png" alt="screenshot_2016-12-13_15-23-47.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-1 2 3 全部点下去之后
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;CAPS 是 &lt;code&gt;FN&lt;/code&gt;
-&lt;/li&gt;
-&lt;li&gt;左 win 是 &lt;code&gt;CAPS&lt;/code&gt;
-&lt;/li&gt;
-&lt;li&gt;右 CTRL 是 &lt;code&gt;`~&lt;/code&gt;
-&lt;/li&gt;
-&lt;li&gt;这样就没有 &lt;code&gt;win&lt;/code&gt; 键了，我们绑到 &lt;code&gt;PN SPC&lt;/code&gt; 上吧 
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-3" class="outline-2"&gt;
-&lt;h2 id="sec-3"&gt;自定义&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-3"&gt;
-&lt;p&gt;
-Poker 升级版似乎不支持 FN 组合键的直接绑定， 绑的都是 PN+FN，那么绑定FN+A = HOME 
-这种 emacs 绑定似乎就不太合适了
-&lt;/p&gt;
-
-&lt;table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
-
-
-&lt;colgroup&gt;
-&lt;col class="left"&gt;
-
-&lt;col class="left"&gt;
-
-&lt;col class="left"&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th scope="col" class="left"&gt;组合键&lt;/th&gt;
-&lt;th scope="col" class="left"&gt;绑定内容&lt;/th&gt;
-&lt;th scope="col" class="left"&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class="left"&gt;pn + h,j,k,l&lt;/td&gt;
-&lt;td class="left"&gt;四个方向键&lt;/td&gt;
-&lt;td class="left"&gt;光标移动&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + ESC&lt;/td&gt;
-&lt;td class="left"&gt;Win 键&lt;/td&gt;
-&lt;td class="left"&gt;Win&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + 0&lt;/td&gt;
-&lt;td class="left"&gt;Home 键&lt;/td&gt;
-&lt;td class="left"&gt;行首&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + 4&lt;/td&gt;
-&lt;td class="left"&gt;End 键&lt;/td&gt;
-&lt;td class="left"&gt;行尾&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + d&lt;/td&gt;
-&lt;td class="left"&gt;Del 键&lt;/td&gt;
-&lt;td class="left"&gt;删除&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + w&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + -&amp;gt;&lt;/td&gt;
-&lt;td class="left"&gt;按词前进&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + b&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + &amp;lt;-&lt;/td&gt;
-&lt;td class="left"&gt;按词后退&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + x&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + x&lt;/td&gt;
-&lt;td class="left"&gt;剪切&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + p&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + v&lt;/td&gt;
-&lt;td class="left"&gt;粘贴&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + u&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + z&lt;/td&gt;
-&lt;td class="left"&gt;撤消&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + r&lt;/td&gt;
-&lt;td class="left"&gt;Ctrl + y&lt;/td&gt;
-&lt;td class="left"&gt;重做&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td class="left"&gt;PN + v&lt;/td&gt;
-&lt;td class="left"&gt;FN + z&lt;/td&gt;
-&lt;td class="left"&gt;（伪）Visual 模式（要配合Shift）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;
-这就实现了 Toggle 模式下的简单的 Vim 模式
-&lt;/p&gt;
-
-&lt;dl class="org-dl"&gt;
-&lt;dt&gt; Toggle 模式 &lt;/dt&gt;&lt;dd&gt;&lt;code&gt;Fn 右 Shift&lt;/code&gt; 进入 &lt;code&gt;Toggle&lt;/code&gt; 模式，这个时候可以不用按 PN 键了
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-4" class="outline-2"&gt;
-&lt;h2 id="sec-4"&gt;说明书&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-4"&gt;
-
-&lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://qiwulun.github.io/images/screenshot_2016-12-13_16-24-05.png" alt="screenshot_2016-12-13_16-24-05.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-
-
-&lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://qiwulun.github.io/images/screenshot_2016-12-13_16-24-19.png" alt="screenshot_2016-12-13_16-24-19.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="outline-container-sec-5" class="outline-2"&gt;
-&lt;h2 id="sec-5"&gt;我的知乎回答&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-5"&gt;
-&lt;p&gt;
-&lt;a href="https://www.zhihu.com/question/24453206/answer/135706176"&gt;https://www.zhihu.com/question/24453206/answer/135706176&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-入手的 poker 升级版,还是很值得入的. 介绍两个觉得很好玩的地方
-
-1. 灵活的指拨开关
-poker 没有独立的方向键,只能使用FN+ASWD方向键的位置(我们用 Poker 2的图来做示意)
-而FN在右手侧,这样按方向键就要用两只手...如果你还要用鼠标,那是挺崩溃的
-好在 Poker 提供了键盘背面的 4 个拨动开关，他们的功能是控制按键的切换
-开关 1：Caps 与左 Win 切换
-开关 2：右 Ctrl 与 ` ~ 切换
-开关 3：左 Win 与 Fn 切换
-开关 4：键盘写保护，键位编程
-也就是说,我们可以通过把 开关1和3 拨到ON的位置,实现 CAPSLOCK 变成 FN 的功能.而左Win变成 CAPSLOCK,没有 Win 键了. 这就意味着左手一只手就可以在不离开主键盘区的情况下, 输入上下左右,相比全键盘的时候,扭着右手去找方向键是要舒服不少的.
-
-2. 自定义按键
-提到 Poker 怎么能不说自定义按键呢,对吧. 这种硬件层面的绑定可以让你把每个编辑框变成 vim/emacs(的简易版)
-For Emacser:
-FN 换到 CAPS LOCK 之后, 绑定FN+A = 光标到行首, 这种 emacs 绑定是最舒服的.
-然而比较遗憾的是, Poker 升级版默认不支持 FN 组合键的直接绑定， 绑定FN+A, 要使用 PN+FN+A 才能触发，似乎就比较的麻烦.
-所以把PN当成 Ctrl 来绑定可能更合适一点.
-但如果大家和我一样是觉得PN 键的位置用右手外边缘来压有一点点纠结的话,那可以看看下面 VIM 的方法:)
-For Vimers :
-poker 提供了 Toggle 模式 : Fn + 右 Shift 键进入 Toggle 模式后,自设的组合键就可以不用按 PN 键了
-这就相当于提供了一个 Normal 模式ლ(╹◡╹ლ)
-比如我现在设置就是这样,可以四处的hjkl的感觉很奇妙
-组合键	绑定内容	功能
-pn + h,j,k,l	四个方向键	光标移动
-PN + ESC	Win 键	Win
-PN + 0	Home 键	行首
-PN + 4	End 键	行尾
-PN + d	Del 键	删除
-PN + w	Ctrl + -&amp;gt;	按词前进
-PN + b	Ctrl + &amp;lt;-	按词后退
-PN + x	Ctrl + x	剪切
-PN + p	Ctrl + v	粘贴
-PN + u	Ctrl + z	撤消
-PN + r	Ctrl + y	重做
-PN + v	FN + z	（伪）Visual 模式（要配合Shift）
-
-
-总之,这款键盘很适合折腾
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/poker-sheng-ji-ban-ji-jie-jian-pan.html</guid><pubDate>Tue, 13 Dec 2016 07:09:58 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;</description><guid>https://qiwulun.github.io/posts/github-xue-sheng-li-bao.html</guid><pubDate>Wed, 14 Dec 2016 09:55:18 GMT</pubDate></item></channel></rss>

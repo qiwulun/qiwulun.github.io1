@@ -47,7 +47,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/archive.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/</loc>
@@ -55,39 +55,39 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-1.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-2.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-3.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-4.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-5.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-6.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-7.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-8.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-9.html</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/categories/</loc>
@@ -239,7 +239,11 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/</loc>
-  <lastmod>2016-12-05T10:00:00Z</lastmod>
+  <lastmod>2016-12-30T08:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/pages/wiki/bibliography.html</loc>
+  <lastmod>2016-12-30T08:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/docker.html</loc>
@@ -276,6 +280,10 @@
  <url>
   <loc>https://qiwulun.github.io/posts/an-zhuang-mxnet.html</loc>
   <lastmod>2016-12-22T07:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</loc>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/bei-ge-ke-yi-dang-qi-yuan-wang-ke-yi-dang-gui.html</loc>
@@ -615,7 +623,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/zai-windows-shang-yun-xing-docker-gui.html</loc>
-  <lastmod>2016-12-26T13:09:00Z</lastmod>
+  <lastmod>2016-12-28T12:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/zhong-qi-xi-lie-zhi-shi.html</loc>
