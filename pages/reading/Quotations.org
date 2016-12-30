@@ -1,0 +1,19 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: 名言名句
+.. slug: Quotations
+#+END_COMMENT
+
+#+BEGIN_QUOTE
+幼有神童之誉，少怀壮志，长而无闻，终与草木同朽。 
+
+- 冯唐《墓志铭》
+#+END_QUOTE
+
+
+
+#+BEGIN_QUOTE
+在中国，任何超脱飞扬的思想都会砰然坠地——现实的引力实在是太沉重了
+
+──《三体》
+#+END_QUOTE
