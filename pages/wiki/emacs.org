@@ -7,3 +7,14 @@
 * 远程
 
 [[file:~/git/qiwulun.github.io/posts/emacs-shi-yong-ssh.org][emacs 使用 ssh]]
+* 教程
+- 自带的tutorial入门(C-h t),
+- 水木社区的emacs版
+- 电子书
+  - emacs
+    - learnning GNU Emacs,
+    - teach yourself Emacs in 24h.
+  - elisp
+    - 自带的emacs lisp intro
+    - writing emacs extensioins
+    - elisp manual
