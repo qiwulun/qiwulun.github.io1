@@ -6,6 +6,9 @@
 
 #+TAGS: { 想看(t) 借过(j) 下载(d) 已买(b) } { 有笔记(n) 待总结(c) }
 #+SEQ_TODO: TODO(t!) BUY(b!) BORROW(j!) DOWNLOAD(l!) READING(r!) | DONE(d!)
+
+[[file:Quotations.org][名言名句]]
+
 * 推荐的书
 #+BEGIN_HTML
 <div class="book-figure">
