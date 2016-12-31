@@ -1,7 +1,0 @@
-root@qiwulun-All-Series:~/git/qiwulun.github.io/posts# nikola new_post -f orgmode
-[2016-12-30T10:58:39Z] WARNING: Nikola: In order to USE_BUNDLES, you must install the "webassets" Python package.
-[2016-12-30T10:58:39Z] WARNING: bundles: Setting USE_BUNDLES to False.
-Creating New Post
------------------
-
-Title: docker 中 tensorflow 报 libcuda.so.1 找不到
