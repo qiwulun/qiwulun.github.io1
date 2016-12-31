@@ -6,16 +6,37 @@
 * 启动服务
 - [[../../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
 * 报错
+** Cannot connect to the Docker daemon
 Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 
 要把用户加到group中
 
-#+BEGIN_SRC bash
- sudo usermod -aG docker <username>
-#+END_SRC
+ #+BEGIN_SRC bash
+  sudo usermod -aG docker <username>
+ #+END_SRC
 
-操作顺序: 
-1. sudo cat /etc/group | grep docker 
-2. 如果不存在docker组，可以添加sudo groupadd docker 
-3. 添加当前用户到docker组，sudo gpasswd -a ${USER} docker
-4. ssh 登出，再重新登录即可
+ 操作顺序: 
+ 1. sudo cat /etc/group | grep docker 
+ 2. 如果不存在docker组，可以添加sudo groupadd docker 
+ 3. 添加当前用户到docker组，sudo gpasswd -a ${USER} docker
+ 4. ssh 登出，再重新登录即可
+** docker 中 tensorflow 报 libcuda.so.1 找不到
+
+说明你没有用 nvidia-docker 运行
+* 共享文件
+** Windows 下通过 Virtual box
+   共享文件夹mount到Boot2Docker中.通过几个操作是可以做到。
+   http://tuhrig.de/mount-windows-folder-to-boot2docker-vm/ 。
+
+   但是共享进来的目录 在boot2docker中做npm install时会出错，
+   http://askubuntu.com/questions/269727/npm-errors-when-installing-packages-on-windows-share,
+   要打no-bin-links,
+
+   另外，windows不支持太长的目录名，我是用nodejs开发的，有些包的依赖很深 ，整个
+   路径超长，windows容易出错。所以就否决了这个方法。
+** 通过SAMBA共享boot2docker的文件到host上。
+       - 首先在/var/lib/也就是/mnt/sda1/var/lib下，建程序目录
+       - docker pull dperson/samba , 这是一个samba的docker image.可以直接运行一个带samba服务的容器。
+       - docker run -v 要共享的目录：/目录名称 dperson/samba -S “共享名称;共享的目录”
+       - 在host上， 通过\\docker主机ip就可以访问到这个目录。
+       - 在docker里，就把这个目录挂载上去。这样就实现目录的共享。
