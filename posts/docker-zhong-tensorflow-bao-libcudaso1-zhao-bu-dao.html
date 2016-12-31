@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anaconda 调用 MKL Bug | 赵骥's Site</title>
+<title>docker 中 tensorflow 报 libcuda.so.1 找不到 | 赵骥's Site</title>
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
@@ -12,28 +12,19 @@
 <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html">
+<link rel="canonical" href="https://qiwulun.github.io/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="../mycss/tweak.css" rel="stylesheet" type="text/css">
 <base target="_parent">
 <meta name="author" content="Zhao JI">
-<link rel="prev" href="docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html" title="docker 中 tensorflow 报 libcuda.so.1 找不到" type="text/html">
-<link rel="next" href="reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html" title="[Reading Note] 开庭陈述：三分钟让法官理解你的主张" type="text/html">
+<link rel="prev" href="zai-windows-shang-yun-xing-docker-gui.html" title="在 windows 上运行 docker GUI" type="text/html">
+<link rel="next" href="anaconda-diao-yong-MKL-Bug.html" title="Anaconda 调用 MKL Bug" type="text/html">
 <meta property="og:site_name" content="赵骥's Site">
-<meta property="og:title" content="Anaconda 调用 MKL Bug">
-<meta property="og:url" content="https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html">
-<meta property="og:description" content="参考这一个
-https://github.com/ContinuumIO/anaconda-issues/issues/720
-
-
-
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
-
-
-
-It seems to be related to the packages installation order. I re">
+<meta property="og:title" content="docker 中 tensorflow 报 libcuda.so.1 找不到">
+<meta property="og:url" content="https://qiwulun.github.io/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html">
+<meta property="og:description" content="说明你没有用 nvidia-docker 运行">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-12-28T20:33:43+08:00">
+<meta property="article:published_time" content="2016-12-28T20:05:58+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -83,16 +74,16 @@ It seems to be related to the packages installation order. I re">
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Anaconda 调用 MKL Bug</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">docker 中 tensorflow 报 libcuda.so.1 找不到</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-28T20:33:43+08:00" itemprop="datePublished" title="2016-12-28 20:33">2016-12-28 20:33</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-28T20:05:58+08:00" itemprop="datePublished" title="2016-12-28 20:05">2016-12-28 20:05</time></a></p>
                 <p class="commentline">
         
-    <a href="anaconda-diao-yong-MKL-Bug.html#disqus_thread" data-disqus-identifier="cache/posts/anaconda-diao-yong-MKL-bug.html">Comments</a>
+    <a href="docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html#disqus_thread" data-disqus-identifier="cache/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html">Comments</a>
 
 
             
@@ -103,32 +94,15 @@ It seems to be related to the packages installation order. I re">
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>
-参考这一个
-<a href="https://github.com/ContinuumIO/anaconda-issues/issues/720">https://github.com/ContinuumIO/anaconda-issues/issues/720</a>
-</p>
-
-<pre class="example">
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
-</pre>
-
-<p>
-It seems to be related to the packages installation order. I reinstalled numpy with
-</p>
-
-<pre class="example">
-conda install  -f  numpy
-</pre>
-
-<p>
-and the problem was gone.
+说明你没有用 nvidia-docker 运行
 </p>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html" rel="prev" title="docker 中 tensorflow 报 libcuda.so.1 找不到">前一篇</a>
+                <a href="zai-windows-shang-yun-xing-docker-gui.html" rel="prev" title="在 windows 上运行 docker GUI">前一篇</a>
             </li>
             <li class="next">
-                <a href="reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html" rel="next" title="[Reading Note] 开庭陈述：三分钟让法官理解你的主张">后一篇</a>
+                <a href="anaconda-diao-yong-MKL-Bug.html" rel="next" title="Anaconda 调用 MKL Bug">后一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         
@@ -136,9 +110,9 @@ and the problem was gone.
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="qiwulun-github-io",
-            disqus_url="https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html",
-        disqus_title="Anaconda \u8c03\u7528 MKL Bug",
-        disqus_identifier="cache/posts/anaconda-diao-yong-MKL-bug.html",
+            disqus_url="https://qiwulun.github.io/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html",
+        disqus_title="docker \u4e2d tensorflow \u62a5 libcuda.so.1 \u627e\u4e0d\u5230",
+        disqus_identifier="cache/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html",
         disqus_config = function () {
             this.language = "zh_cn";
         };
