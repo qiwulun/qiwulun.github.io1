@@ -1,0 +1,13 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: python
+.. slug: python
+#+END_COMMENT
+
+* Awesome Python
+
+https://github.com/CodementorIO/Python-Learning-Resources
+
+* 在线编程
+- PythonTip
+   http://www.pythontip.com/coding/code_oj
