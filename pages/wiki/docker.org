@@ -3,6 +3,12 @@
 .. title: docker
 .. slug: docker
 #+END_COMMENT
+* 打包
+
+#+BEGIN_SRC bash
+$ docker build -t vieux/apache:2.0 .
+#+END_SRC
+=-t= Tag image 用于声明标签 
 * 启动服务
 - [[../../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
 * 报错
