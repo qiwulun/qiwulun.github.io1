@@ -70,7 +70,116 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html" class="u-url">[Reading Note] 开庭陈述：三分钟让法官理解你的主张</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-shi-yong-shadowsocks.html" class="u-url">docker 中使用 shadowsocks</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/docker-zhong-shi-yong-shadowsocks.html" rel="bookmark"><time class="published dt-published" datetime="2017-01-05T15:11:42+08:00" title="2017-01-05 15:11">2017-01-05 15:11</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/docker-zhong-shi-yong-shadowsocks.html#disqus_thread" data-disqus-identifier="cache/posts/docker-zhong-shi-yong-shadowsocks.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+在这里书写你的文章。
+Docker下载下来就是一个binary，直接运行起来就可以了。
+</p>
+
+<p>
+5分钟科学上网
+</p>
+
+<p>
+服务端配置
+</p>
+
+<p>
+获取Shadowsocks image
+</p>
+
+<pre class="example">
+docker pull oddrationale/docker-shadowsocks
+</pre>
+<p>
+运行shadowsocks服务端
+</p>
+
+<pre class="example">
+docker run -d --name shadowsocks -p 1080:1080 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1080 -k password -m aes-256-cfb
+</pre>
+<p>
+上述命令中得 password 就是等下配置客户端需要的密码，你可以换成你自己的密码。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/fen-ti-shi-jian-pan.html" class="u-url">分体式键盘</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/fen-ti-shi-jian-pan.html" rel="bookmark"><time class="published dt-published" datetime="2017-01-05T14:59:24+08:00" title="2017-01-05 14:59">2017-01-05 14:59</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/fen-ti-shi-jian-pan.html#disqus_thread" data-disqus-identifier="cache/posts/fen-ti-shi-jian-pan.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/fen-ti-shi-jian-pan.html#sec-1">ergodox</a></li>
+<li><a href="../posts/fen-ti-shi-jian-pan.html#sec-2">keymouse</a></li>
+<li><a href="../posts/fen-ti-shi-jian-pan.html#sec-3">Kick Starter</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">ergodox</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://ergodox-ez.com/products/snow-and-shine">https://ergodox-ez.com/products/snow-and-shine</a>
+</p>
+
+
+<div class="figure">
+<p><img src="../images/ergodox/screenshot_2017-01-05_16-15-49.png" alt="screenshot_2017-01-05_16-15-49.png"></p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">keymouse</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="http://www.keymouse.com/">http://www.keymouse.com/</a>
+</p>
+
+
+<div class="figure">
+<p><img src="../images/keymouse/screenshot_2017-01-05_16-55-12.png" alt="screenshot_2017-01-05_16-55-12.png"></p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Kick Starter</h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="../images/Kick%20Starter/screenshot_2017-01-05_16-45-44.png" alt="screenshot_2017-01-05_16-45-44.png"></p>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html" class="u-url">[Reading Note] 开庭陈述：三分钟让法官理解你的主张</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -1171,78 +1280,6 @@ test:在emacs中打开这个pdf,  <code>SPC m n</code> 可以转换成夜间模�
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-yun-xing-gui-app.html" class="u-url">Docker 中运行 GUI APP</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/docker-zhong-yun-xing-gui-app.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-17T22:09:26+08:00" title="2016-12-17 22:09">2016-12-17 22:09</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/docker-zhong-yun-xing-gui-app.html#disqus_thread" data-disqus-identifier="cache/posts/docker-zhong-yun-xing-gui-app.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-在这里书写你的文章。
-</p>
-<div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com/ | sh
-
-$ sudo service docker start
-
-$ xauth list
-
-$ sudo docker run -i -t --net=host -e DISPLAY -v /tmp/.X11-unix ubuntu bash
-
-# Inside container:
-$ apt-get install firefox
-$ apt-get install xauth
-$ xauth add ...
-</pre></div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" class="u-url">docker image 太慢的解决方法之 VPS</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-17T16:31:06+08:00" title="2016-12-17 16:31">2016-12-17 16:31</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html#disqus_thread" data-disqus-identifier="cache/posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-假设我们要下载的 image 是 phusion/baseimage:0.9.19
-</p>
-
-<ul class="org-ul">
-<li>在远端 VPS 上
-<ul class="org-ul">
-<li>
-<code>docker pull phusion/baseimage:0.9.19</code>
-</li>
-<li>
-<code>docker save phusion/baseimage /baseimage.tar</code>
-</li>
-</ul>
-</li>
-<li>在本地
-<ul class="org-ul">
-<li>
-<code>scp root@path_to_vps:/baseimage.tar ~/baseimage.tar</code>
-</li>
-<li>
-<code>sudo docker load &lt; ~/baseimage.tar</code> 
-</li>
-</ul>
-</li>
-</ul>
-</div>
     </article>
 </div>
 
@@ -1255,7 +1292,7 @@ $ xauth add ...
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2016         <a href="mailto:qiwulun08@gmail.com">Zhao JI</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2017         <a href="mailto:qiwulun08@gmail.com">Zhao JI</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

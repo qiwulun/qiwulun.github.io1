@@ -71,7 +71,79 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html" class="u-url">Github 学生礼包之 Digital Ocean</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-yun-xing-gui-app.html" class="u-url">Docker 中运行 GUI APP</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/docker-zhong-yun-xing-gui-app.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-17T22:09:26+08:00" title="2016-12-17 22:09">2016-12-17 22:09</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/docker-zhong-yun-xing-gui-app.html#disqus_thread" data-disqus-identifier="cache/posts/docker-zhong-yun-xing-gui-app.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+在这里书写你的文章。
+</p>
+<div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com/ | sh
+
+$ sudo service docker start
+
+$ xauth list
+
+$ sudo docker run -i -t --net=host -e DISPLAY -v /tmp/.X11-unix ubuntu bash
+
+# Inside container:
+$ apt-get install firefox
+$ apt-get install xauth
+$ xauth add ...
+</pre></div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" class="u-url">docker image 太慢的解决方法之 VPS</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-17T16:31:06+08:00" title="2016-12-17 16:31">2016-12-17 16:31</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html#disqus_thread" data-disqus-identifier="cache/posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+假设我们要下载的 image 是 phusion/baseimage:0.9.19
+</p>
+
+<ul class="org-ul">
+<li>在远端 VPS 上
+<ul class="org-ul">
+<li>
+<code>docker pull phusion/baseimage:0.9.19</code>
+</li>
+<li>
+<code>docker save phusion/baseimage /baseimage.tar</code>
+</li>
+</ul>
+</li>
+<li>在本地
+<ul class="org-ul">
+<li>
+<code>scp root@path_to_vps:/baseimage.tar ~/baseimage.tar</code>
+</li>
+<li>
+<code>sudo docker load &lt; ~/baseimage.tar</code> 
+</li>
+</ul>
+</li>
+</ul>
+</div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/github-xue-sheng-li-bao-zhi-digital-ocean.html" class="u-url">Github 学生礼包之 Digital Ocean</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -1151,53 +1223,6 @@ cat ~/.ssh/id<sub>rsa</sub>.pub
 <code>-v</code> 表示改变音量 <code>.3</code> 表示变为原始音量的0.3倍
 </p>
     </div>
-    </article><article class="h-entry post-micro"><header><h1 class="p-name entry-title"><a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" class="u-url">欲得官，杀人放火受招安。</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T22:27:01+08:00" title="2016-12-05 22:27">2016-12-05 22:27</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html#disqus_thread" data-disqus-identifier="cache/posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-欲得官，杀人放火受招安。
-</p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/wei-shi-yao-yao-xie-zuo.html" class="u-url">为什么要写作</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/wei-shi-yao-yao-xie-zuo.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T22:17:04+08:00" title="2016-12-05 22:17">2016-12-05 22:17</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/wei-shi-yao-yao-xie-zuo.html#disqus_thread" data-disqus-identifier="cache/posts/wei-shi-yao-yao-xie-zuo.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-生命如此短暂，为什么总要将青春浪费在不断的选择之中呢？罚你，回头阅读心理学家施瓦茨（Barry Schwartz）的TED演讲：选择之困惑——为何多即是少，1百遍啊1百遍。请记住施瓦茨的演讲要点：
-</p>
-
-<ul class="org-ul">
-<li>更多的选择不代表更多的自由；
-</li>
-
-<li>更多的选择导致决策的延迟和降低的满意感；
-</li>
-
-<li>快乐之秘诀，在于降低自己的期望值。
-</li>
-</ul>
-</div>
     </article>
 </div>
 
@@ -1213,7 +1238,7 @@ cat ~/.ssh/id<sub>rsa</sub>.pub
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2016         <a href="mailto:qiwulun08@gmail.com">Zhao JI</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2017         <a href="mailto:qiwulun08@gmail.com">Zhao JI</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>
