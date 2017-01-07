@@ -18,23 +18,28 @@
     - 自带的emacs lisp intro
     - writing emacs extensioins
     - elisp manual
-* 目录
+* 功能
+** 目录
 
-| =SPC a r=	 | launch ranger                                        |
-| =SPC a d=	 | deer (minimal ranger window in current directory)    |
-| =C-p=	     | (ranger) toggle ranger in dired buffer               |
-| yy	        | (ranger) copy                                        |
-| pp	        | (ranger) paste                                       |
-| R	         | (ranger) rename                                      |
-| D	         | (ranger) delete                                      |
-| C-j         | 	(ranger) scroll preview window down                |
-| C-k         | 	(ranger) scroll preview window up                  |
-| C-SPC       | 	(ranger) mark current file                         |
-| i	         | (ranger) show preview of current file                |
-| zi	        | (ranger) toggle showing literal / full-text previews |
-| zh	        | (ranger) toggle showing dotfiles                     |
-| h	         | (ranger) go up directory                             |
-| l	         | (ranger) find file / enter directory                 |
-| S	         | (ranger) enter shell                                 |
-| ;C	        | (ranger) copy directory / copy and move directory    |
-| ;+	        | (ranger) create directory                            |
+ | =SPC a r=	 | launch ranger                                        |
+ | =SPC a d=	 | deer (minimal ranger window in current directory)    |
+ | =C-p=	     | (ranger) toggle ranger in dired buffer               |
+ | yy	        | (ranger) copy                                        |
+ | pp	        | (ranger) paste                                       |
+ | R	         | (ranger) rename                                      |
+ | D	         | (ranger) delete                                      |
+ | C-j         | 	(ranger) scroll preview window down                |
+ | C-k         | 	(ranger) scroll preview window up                  |
+ | C-SPC       | 	(ranger) mark current file                         |
+ | i	         | (ranger) show preview of current file                |
+ | zi	        | (ranger) toggle showing literal / full-text previews |
+ | zh	        | (ranger) toggle showing dotfiles                     |
+ | h	         | (ranger) go up directory                             |
+ | l	         | (ranger) find file / enter directory                 |
+ | S	         | (ranger) enter shell                                 |
+ | ;C	        | (ranger) copy directory / copy and move directory    |
+ | ;+	        | (ranger) create directory                            |
+** Buffer
+
+
+ | =SPC b .=	 | 切换buffer                                |
