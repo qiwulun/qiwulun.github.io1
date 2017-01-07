@@ -3,12 +3,20 @@
 .. title: docker
 .. slug: docker
 #+END_COMMENT
-* 打包
+* 编译
 
 #+BEGIN_SRC bash
 $ docker build -t vieux/apache:2.0 .
 #+END_SRC
 =-t= Tag image 用于声明标签 
+* 打包
+- 打包
+  - =docker save phusion/baseimage -o ~/baseimage.tar=
+- 解包
+  - =sudo docker load < ~/baseimage.tar= 
+
+ 
+
 * 启动服务
 - [[../../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.org][在 docker 中启动 ssh]]
 * 报错
@@ -46,3 +54,9 @@ Cannot connect to the Docker daemon. Is the docker daemon running on this host?
        - docker run -v 要共享的目录：/目录名称 dperson/samba -S “共享名称;共享的目录”
        - 在host上， 通过\\docker主机ip就可以访问到这个目录。
        - 在docker里，就把这个目录挂载上去。这样就实现目录的共享。
+* nvidia docker
+** 控制使用显卡数
+
+#+BEGIN_SRC bash
+ NV_GPU=0,1 nvidia-docker run --rm -it compute.nvidia/nvidia/cuda bash
+#+END_SRC 
