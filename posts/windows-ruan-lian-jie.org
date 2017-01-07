@@ -1,0 +1,22 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Windows 软链接
+.. slug: windows-ruan-lian-jie
+.. date: 2017-01-07 22:50:55 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+具体示例如下：
+
+1.建立举例
+
+#+BEGIN_EXAMPLE
+建立d:\develop链接目录，指向远程的目标服务器上的e盘的对应目录
+
+mklink /d d:\develop \\138.20.1.141\e$\develop
+#+END_EXAMPLE
