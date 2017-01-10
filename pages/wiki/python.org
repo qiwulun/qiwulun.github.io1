@@ -7,7 +7,14 @@
 * Awesome Python
 
 https://github.com/CodementorIO/Python-Learning-Resources
-
 * 在线编程
 - PythonTip
    http://www.pythontip.com/coding/code_oj
+
+* comic
+
+#+DOWNLOADED: http://sophai.github.io/arch_2013/files_2013/Coding/python_comic/02_img.jpg @ 2017-01-10 10:53:23
+[[file:../../images/comic/02_img_2017-01-10_10-53-23.jpg]]
+
+#+DOWNLOADED: http://sophai.github.io/arch_2013/files_2013/Coding/python_comic/01_python.png @ 2017-01-10 10:55:35
+[[file:../../images/comic/01_python_2017-01-10_10-55-35.png]]
