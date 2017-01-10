@@ -9,6 +9,8 @@
 
 [[file:Quotations.org][名言名句]]
 
+[[file:poems.org][诗词骈文]]
+
 * 推荐的书
 #+BEGIN_HTML
 <div class="book-figure">
