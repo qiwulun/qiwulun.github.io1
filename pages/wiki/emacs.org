@@ -43,3 +43,42 @@
 
 
  | =SPC b .=	 | 切换buffer                                |
+** org-mode
+https://github.com/fniessen/refcard-org-mode
+*** 文献
+https://github.com/jkitchin/org-ref
+
+设置
+#+BEGIN_EXAMPLE
+  # Local Variables:
+  # org-ref-default-bibliography: bibliography.bib
+  # End:
+#+END_EXAMPLE
+
+或者是
+#+BEGIN_EXAMPLE
+  bibliographystyle:unsrtnat
+  bibliography:bibliography.bib
+#+END_EXAMPLE
+
+
+- =SPC m i c= 插入 link. Insert a citation link with `helm-bibtex'.
+- =SPC u SPC m i c= insert a ref link.
+- =SPC u SPC u SPC m i c= insert a label link.
+
+- 在link上 =SPC m l= 可以点开链接操作
+*** latex
+**** 插入图片 
+***** 位置
+ To modify the placement option of any floating environment, set the placement attribute.
+ #+BEGIN_SRC org
+   ,#+ATTR_LATEX: :float wrap :width 0.38\textwidth :placement {r}{0.4\textwidth}
+     [[./img/hst.png]]
+ #+END_SRC
+
+  If the :comment-include attribute is set to a non-nil value, the LaTeX \includegraphics macro will be commented out.
+
+
+
+** 通用
+one could always set file-local variables (through =SPC f v f= )
