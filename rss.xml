@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Wed, 11 Jan 2017 16:13:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>睡不着滴时候，是发神经滴时候</title><link>https://qiwulun.github.io/posts/shui-bu-zhao-di-shi-hou-shi-fa-shen-jing-di-shi-hou.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-【睡不着滴时候，是发神经滴时候】二流的积累，三流的论点，四流的语言，不入流的操作，以及同样不入流的人际关系——回想我所谓的辩论经历。在其中穿插着被各种旧日相识花式打脸，我宁愿去听萍水相逢的寒暄，温暖的一bi(当然这些话听完就得了，当不得真，殷鉴不远，在夏后之世。)我果然不适合与人群待在一起。不过我同样讨厌与自己待在一起
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/shui-bu-zhao-di-shi-hou-shi-fa-shen-jing-di-shi-hou.html</guid><pubDate>Wed, 11 Jan 2017 16:12:53 GMT</pubDate></item><item><title>[Reading note]活着的意义</title><link>https://qiwulun.github.io/posts/reading-notehuo-zhao-de-yi-yi.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Wed, 11 Jan 2017 16:24:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>[Reading note]活着的意义</title><link>https://qiwulun.github.io/posts/reading-notehuo-zhao-de-yi-yi.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 那最终答案是什么？\
 如果你已经问到这里了，就只剩最后一个可能性了。
 &lt;/p&gt;
@@ -425,4 +423,275 @@ With these changes, you should have a new mount point. This is one of the few fi
 &lt;a href="https://www.kancloud.cn/wizardforcel/hyry-studio-scipy/129082"&gt;https://www.kancloud.cn/wizardforcel/hyry-studio-scipy/129082&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html</guid><pubDate>Sun, 25 Dec 2016 04:29:21 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/python-ke-shi-hua-ku.html</guid><pubDate>Sun, 25 Dec 2016 04:29:21 GMT</pubDate></item><item><title>effective python 阅读笔记1</title><link>https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-1"&gt;Chapter1: Pythonic Thinking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2"&gt;Chapter        3:        Classes        and        Inheritance&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-1"&gt;Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-2"&gt;Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-3"&gt;Item        1:        Know        Which        Version        of        Python        You’re        Using&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-2-4"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-3"&gt;Chapter        2: Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-4"&gt;Chapter        3:        Classes        and        Inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-5"&gt;Chapter        4:        Metaclasses        and        Attributes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-6"&gt;Chapter        5:        Concurrency        and        Parallelism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-7"&gt;Chapter        6:        Built-in        Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-8"&gt;Chapter        7:        Collaboration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html#sec-9"&gt;Chapter        8:        Production&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;a href="http://www.effectivepython.com"&gt;http://www.effectivepython.com&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Chapter1: Pythonic Thinking&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+The Python community has come to use the adjective Pythonic to describe code
+that follows a particular style. The idioms of Python have emerged over time
+through experience using the language and working with others. This chapter
+covers the best way to do the most common things in Python.
+Item        1:        Know        Which        Version        of        Python        You’re        Using
+Item        2:        Follow        the        PEP        8        Style        Guide
+Item        3:        Know        the        Differences        Between        bytes,        str,        and        unicode
+Item        4:        Write        Helper        Functions        Instead        of        Complex        Expressions
+Item        5:        Know        How        to        Slice        Sequences
+Item        6:        Avoid        Using        start,        end,        and        stride        in        a        Single        Slice
+Item        7:        Use        List        Comprehensions        Instead        of        map        and        filter
+Item        8:        Avoid        More        Than        Two        Expressions        in        List        Comprehensions
+Item        9:        Consider        Generator        Expressions        for        Large        Comprehensions
+Item        10:        Prefer        enumerate        Over        range
+Item        11:        Use        zip        to        Process        Iterators        in        Parallel
+Item        12:        Avoid        else        Blocks        After        for        and        while        Loops
+Item        13:        Take        Advantage        of        Each        Block        in        try/except/else/finally 
+Item        14:        Prefer        Exceptions        to        Returning        None
+Item        15:        Know        How        Closures        Interact        with        Variable        Scope
+Item        16:        Consider        Generators        Instead        of        Returning        Lists
+Item        17:        Be        Defensive        When        Iterating        Over        Arguments
+Item        18:        Reduce        Visual        Noise        with        Variable        Positional        Arguments
+Item        19:        Provide        Optional        Behavior        with        Keyword        Arguments
+Item        20:        Use        None        and        Docstrings        to        Specify        Dynamic        Default        Arguments
+Item        21:        Enforce        Clarity        with        Keyword-Only        Arguments
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Chapter        3:        Classes        and        Inheritance&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Avoid        making        dictionaries        with        values        that        are        other        dictionaries        or        long        tuples.
+&lt;/li&gt;
+&lt;li&gt;Use        namedtuple        for        lightweight,        immutable        data        containers        before        you        need        the
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+flexibility        of        a        full        class.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Move        your        bookkeeping        code        to        use        multiple        helper        classes        when        your        internal        state
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+dictionaries        get        complicated.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;p&gt;
+Item        24:        Use        @classmethod        Polymorphism        to        Construct        Objects        GenericallyItem        25:        Initialize        Parent        Classes        with        super
+Item        26:        Use        Multiple        Inheritance        Only        for        Mix-in        Utility        Classes
+Item        27:        Prefer        Public        Attributes        Over        Private        Ones
+Item        28:        Inherit        from        collections.abc        for        Custom        Container        Types
+Chapter        4:        Metaclasses        and        Attributes
+Item        29:        Use        Plain        Attributes        Instead        of        Get        and        Set        Methods
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Define        new        class        interfaces        using        simple        public        attributes,        and        avoid        set        and        get
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Use        @property        to        define        special        behavior        when        attributes        are        accessed        on        your
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+objects,        if        necessary.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Follow        the        rule        of        least        surprise        and        avoid        weird        side        effects        in        your        @property
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Ensure        that        @property        methods        are        fast;        do        slow        or        complex        work        using        normal
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+methods.
+Item        30:        Consider        @property        Instead        of        Refactoring        Attributes
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;I        especially        like        @property        because        it        lets        you        make        incremental        progress        toward        a better        data        model        over        time.        Reading        the        Bucket        example        above,        you        may        have        thought to        yourself,        “fill        and        deduct        should        have        been        implemented        as        instance        methods        inthe        first        place.”        Although        you’re        probably        right        (see        Item        22:        “Prefer        Helper        Classes        Over Bookkeeping        with        Dictionaries        and        Tuples”),        in        practice        there        are        many        situations        in which        objects        start        with        poorly        defined        interfaces        or        act        as        dumb        data        containers.        This happens        when        code        grows        over        time,        scope        increases,        multiple        authors        contribute        without anyone        considering        long-term        hygiene,        etc. @property        is        a        tool        to        help        you        address        problems        you’ll        come        across        in        real-world code.        Don’t        overuse        it.        When        you        find        yourself        repeatedly        extending        @property methods,        it’s        probably        time        to        refactor        your        class        instead        of        further        paving        over        your code’s        poor        design.
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Item        31:        Use        Descriptors        for        Reusable        @property        Methods
+Item        32:        Use        &lt;span class="underline"&gt;&lt;span class="underline"&gt;getattr&lt;/span&gt;&lt;/span&gt;,        &lt;span class="underline"&gt;&lt;span class="underline"&gt;getattribute&lt;/span&gt;&lt;/span&gt;,        and        &lt;span class="underline"&gt;&lt;span class="underline"&gt;setattr&lt;/span&gt;&lt;/span&gt; for        Lazy
+Attributes
+Item        33:        Validate        Subclasses        with        Metaclasses
+Item        34:        Register        Class        Existence        with        Metaclasses
+Item        35:        Annotate        Class        Attributes        with        Metaclasses
+Chapter        5:        Concurrency        and        Parallelism
+Item        36:        Use        subprocess        to        Manage        Child        Processes
+Item        37:        Use        Threads        for        Blocking        I/O,        Avoid        for        Parallelism
+Item        38:        Use        Lock        to        Prevent        Data        Races        in        Threads
+Item        39:        Use        Queue        to        Coordinate        Work        Between        Threads
+Item        40:        Consider        Coroutines        to        Run        Many        Functions        Concurrently
+Item        41:        Consider        concurrent.futures        for        True        Parallelism
+Chapter        6:        Built-in        Modules
+Item        42:        Define        Function        Decorators        with        functools.wraps
+Item        43:        Consider        contextlib        and        with        Statements        for        Reusable        try/finally
+Behavior
+Item        44:        Make        pickle        Reliable        with        copyreg
+Item        45:        Use        datetime        Instead        of        time        for        Local        Clocks
+Item        46:        Use        Built-in        Algorithms        and        Data        Structures
+Item        47:        Use        decimal        When        Precision        Is        Paramount
+Item        48:        Know        Where        to        Find        Community-Built        Modules
+Chapter        7:        Collaboration
+Item        49:        Write        Docstrings        for        Every        Function,        Class,        and        Module
+Item        50:        Use        Packages        to        Organize        Modules        and        Provide        Stable        APIsItem        51:        Define        a        Root        Exception        to        Insulate        Callers        from        APIs
+Item        52:        Know        How        to        Break        Circular        Dependencies
+Item        53:        Use        Virtual        Environments        for        Isolated        and        Reproducible        Dependencies
+Chapter        8:        Production
+Item        54:        Consider        Module-Scoped        Code        to        Configure        Deployment        Environments
+Item        55:        Use        repr        Strings        for        Debugging        Output
+Item        56:        Test        Everything        with        unittest
+Item        57:        Consider        Interactive        Debugging        with        pdb
+Item        58:        Profile        Before        Optimizing
+Item        59:        Use        tracemalloc        to        Understand        Memory        Usage        and        Leaks
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
+&lt;h3 id="sec-2-3"&gt;Item        1:        Know        Which        Version        of        Python        You’re        Using&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-4" class="outline-3"&gt;
+&lt;h3 id="sec-2-4"&gt;&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-4"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Python’s syntax makes it all too easy to write single-line expressions that
+are overly complicated and difficult to read.
+&lt;/li&gt;
+&lt;li&gt;Move complex expressions into helper functions, especially if you need to use
+the same logic repeatedly.
+&lt;/li&gt;
+&lt;li&gt;The if/else expression provides a more readable alternative to using Boolean
+operators like or and and in expressions.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Chapter        2: Functions&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt;
+Functions in Python have a variety of extra features that make a programmer’s
+life easier. Some are similar to capabilities in other programming languages,
+but many are unique to Python. This chapter covers how to use functions to
+clarify intention, promote reuse, and reduce bugs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;Chapter        3:        Classes        and        Inheritance&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;p&gt;
+Python is an object-oriented language. Getting things done in Python often
+requires writing new classes and defining how they interact through their
+interfaces and hierarchies. This chapter covers how to use classes and
+inheritance to express your intended behaviors with objects.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-5" class="outline-2"&gt;
+&lt;h2 id="sec-5"&gt;Chapter        4:        Metaclasses        and        Attributes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-5"&gt;
+&lt;p&gt;
+Metaclasses and dynamic attributes are powerful Python features. However, they
+also enable you to implement extremely bizarre and unexpected behaviors. This
+chapter covers the common idioms for using these mechanisms to ensure that you
+follow the rule of least surprise.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-6" class="outline-2"&gt;
+&lt;h2 id="sec-6"&gt;Chapter        5:        Concurrency        and        Parallelism&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-6"&gt;
+&lt;p&gt;
+Python        makes        it        easy        to        write        concurrent        programs        that        do        many        different        things
+seemingly        at        the        same        time.        Python        can        also        be        used        to        do        parallel        work        through        system
+calls,        subprocesses,        and        C-extensions.        This        chapter        covers        how        to        best        utilize        Python        in
+these        subtly        different        situations.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-7" class="outline-2"&gt;
+&lt;h2 id="sec-7"&gt;Chapter        6:        Built-in        Modules&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-7"&gt;
+&lt;p&gt;
+Python        is        installed        with        many        of        the        important        modules        that        you’ll        need        to        write        programs.
+These        standard        packages        are        so        closely        intertwined        with        idiomatic        Python        that        they        may        as
+well        be        part        of        the        language        specification.        This        chapter        covers        the        essential        built-in
+modules.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-8" class="outline-2"&gt;
+&lt;h2 id="sec-8"&gt;Chapter        7:        Collaboration&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-8"&gt;
+&lt;p&gt;
+Collaborating        on        Python        programs        requires        you        to        be        deliberate        about        how        you        write        your
+code.        Even        if        you’re        working        alone,        you’ll        want        to        understand        how        to        use        modules        written
+by        others.        This        chapter        covers        the        standard        tools        and        best        practices        that        enable        people        to
+work        together        on        Python        programs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-9" class="outline-2"&gt;
+&lt;h2 id="sec-9"&gt;Chapter        8:        Production&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-9"&gt;
+&lt;p&gt;
+Python        has        facilities        for        adapting        to        multiple        deployment        environments.        It        also        has        built-in
+modules        that        aid        in        hardening        your        programs        and        making        them        bulletproof.        This        chapter
+covers        how        to        use        Python        to        debug,        optimize,        and        test        your        programs        to        maximize        quality
+and        performance        at        runtime.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>books</category><category>reading</category><guid>https://qiwulun.github.io/posts/effective-python-yue-du-bi-ji-1.html</guid><pubDate>Sat, 24 Dec 2016 06:21:19 GMT</pubDate></item></channel></rss>
