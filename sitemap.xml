@@ -51,7 +51,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/archive.html</loc>
-  <lastmod>2017-01-11T16:24:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/</loc>
@@ -87,19 +87,23 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-8.html</loc>
-  <lastmod>2017-01-11T16:13:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/blog/index-9.html</loc>
-  <lastmod>2017-01-11T16:13:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/categories/</loc>
-  <lastmod>2016-12-26T12:25:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/categories/bian-cheng.html</loc>
   <lastmod>2017-01-05T09:22:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://qiwulun.github.io/categories/bian-lun-gan-wu.html</loc>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/categories/bian-lun.html</loc>
@@ -247,7 +251,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/reading/poems.html</loc>
-  <lastmod>2017-01-10T06:28:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/pages/wiki/</loc>
@@ -378,8 +382,12 @@
   <lastmod>2017-01-05T09:22:00Z</lastmod>
  </url>
  <url>
+  <loc>https://qiwulun.github.io/posts/gan-wu-yi-qian-wo-xiang-qiang.html</loc>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://qiwulun.github.io/posts/ge-xing-hao-xiang-ye-shi-ge-pian-ju.html</loc>
-  <lastmod>2017-01-05T09:22:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/git-shi-yong-ji-qiao.html</loc>
@@ -431,7 +439,7 @@
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/lun-si-zhi-er.html</loc>
-  <lastmod>2017-01-05T09:22:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://qiwulun.github.io/posts/ming-yan.html</loc>

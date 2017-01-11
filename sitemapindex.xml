@@ -10,6 +10,10 @@
   <lastmod>2016-12-02T13:35:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://qiwulun.github.io/categories/bian-lun-gan-wu.xml</loc>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://qiwulun.github.io/categories/bian-lun.xml</loc>
   <lastmod>2016-12-02T13:35:00Z</lastmod>
  </sitemap>
@@ -135,10 +139,10 @@
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/rss.xml</loc>
-  <lastmod>2017-01-11T16:24:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://qiwulun.github.io/sitemap.xml</loc>
-  <lastmod>2017-01-11T16:24:00Z</lastmod>
+  <lastmod>2017-01-11T16:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>
