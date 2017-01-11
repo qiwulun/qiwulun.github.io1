@@ -81,4 +81,8 @@ https://github.com/jkitchin/org-ref
 
 
 ** 通用
-one could always set file-local variables (through =SPC f v f= )
+
+*** 本地变量
+ one could always set file-local variables (through =SPC f v f= )
+*** 字数统计
+选中文字，然后 `SPC x c'
