@@ -7,10 +7,13 @@
 * Awesome Python
 
 https://github.com/CodementorIO/Python-Learning-Resources
+* IDE
+ pycharm
 * 在线编程
 - PythonTip
    http://www.pythontip.com/coding/code_oj
-
+- lintcode
+   http://www.lintcode.com/zh-cn/problem/
 * comic
 
 #+DOWNLOADED: http://sophai.github.io/arch_2013/files_2013/Coding/python_comic/02_img.jpg @ 2017-01-10 10:53:23
