@@ -11,7 +11,8 @@
 <link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="https://qiwulun.github.io/blog/index-2.html">
 <link rel="prev" href="index-1.html" type="text/html">
@@ -71,7 +72,46 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:23:26+08:00" title="2016-12-06 20:23">2016-12-06 20:23</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html#disqus_thread" data-disqus-identifier="cache/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+SSH keys
+</p>
+
+<p>
+SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
+</p>
+<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub
+</pre></div>
+
+<p>
+如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
+提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
+你可以按如下命令来生成ssh key：
+</p>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa -C "someone@email.com"
+</pre></div>
+
+<p>
+这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
+用以下命令获取你生成的公钥：
+cat ~/.ssh/id<sub>rsa</sub>.pub
+复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -566,55 +606,6 @@ PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来�
 </div>
 </div>
 <p class="more"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html" class="u-url">Ubuntu 重装纪录</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-29T13:57:04+08:00" title="2016-11-29 13:57">2016-11-29 13:57</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-zhong-zhuang-ji-lu.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1">显卡</a>
-<ul>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-1">驱动</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-2">CUDA</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-1-3">CUDNN</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2">emacs</a>
-<ul>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2-1">配置</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-2-2">ag 用于检索</a></li>
-</ul>
-</li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-3">texlive</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-4">anaconda</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-5">git</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-6">pandoc</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-7">五笔 <code>sudo apt install fcitx-table-wubi</code></a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-8">chrome</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-9">tensorflow</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-10">mxnet</a></li>
-<li><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html#sec-11">视频软件 gnome-mplayer</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/ubuntu-zhong-zhuang-ji-lu.html">更多…</a></p>
 </div>
     </div>
     </article>
