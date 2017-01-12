@@ -1,0 +1,7 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: 笑话
+.. slug: joke
+#+END_COMMENT
+* 白字
+《论语》中的“郁郁乎文哉”，讹作“都都平丈我”

@@ -21,3 +21,7 @@ https://github.com/CodementorIO/Python-Learning-Resources
 
 #+DOWNLOADED: http://sophai.github.io/arch_2013/files_2013/Coding/python_comic/01_python.png @ 2017-01-10 10:55:35
 [[file:../../images/comic/01_python_2017-01-10_10-55-35.png]]
+* 应用
+** Python HTTP 服务
+
+=python -m http.server=

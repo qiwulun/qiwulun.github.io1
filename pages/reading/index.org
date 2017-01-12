@@ -11,6 +11,7 @@
 
 [[file:poems.org][诗词骈文]]
 
+[[file:joke.org][笑话]]
 * 推荐的书
 #+BEGIN_HTML
 <div class="book-figure">
