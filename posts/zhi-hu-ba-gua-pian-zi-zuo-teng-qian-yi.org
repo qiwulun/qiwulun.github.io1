@@ -1,0 +1,13 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 知乎八卦──骗子佐藤谦一
+.. slug: zhi-hu-ba-gua-pian-zi-zuo-teng-qian-yi
+.. date: 2017-01-13 13:35:01 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+[[file:../images/%E7%9F%A5%E4%B9%8E%E5%85%AB%E5%8D%A6/%E9%AA%97%E5%AD%90%E4%BD%90%E8%97%A4%E8%B0%A6%E4%B8%80.jpg]]
