@@ -45,3 +45,24 @@ finally:
 
 
 如果在try子句执行时没有发生异常，python将执行else语句后的语句（如果有else的话），然后控制流通过整个try语句。
+* python 风格规范 google 开源项目
+** 字符串
+
+
+ 即使参数都是字符串, 使用%操作符或者格式化方法格式化字符串. 不过也不能一概而论, 你需要在+和%之间好好判定.
+
+ Yes:
+#+BEGIN_SRC python
+  x = a + b
+  x = '%s, %s!' % (imperative, expletive)
+  x = '{}, {}!'.format(imperative, expletive)
+  x = 'name: %s; score: %d' % (name, n)
+  x = 'name: {}; score: {}'.format(name, n) 
+#+END_SRC
+ No:
+#+BEGIN_SRC python
+  x = '%s%s' % (a, b)  # use + in this case
+  x = '{}{}'.format(a, b)  # use + in this case
+  x = imperative + ', ' + expletive + '!'
+  x = 'name: ' + name + '; score: ' + str(n)
+#+END_SRC
