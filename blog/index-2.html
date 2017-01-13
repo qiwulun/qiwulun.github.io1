@@ -72,7 +72,56 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" class="u-url">git 在每次 Push 时不用重复输入密码</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:32:10+08:00" title="2016-12-06 20:32">2016-12-06 20:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html#disqus_thread" data-disqus-identifier="cache/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <ol class="org-ol">
+<li>使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
+</li>
+
+<li>对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）
+内添加 <a href="https://%7Busername%7D:%7Bpasswd%7D@git.coding.net">https://{username}:{passwd}@git.coding.net</a> 然后执行配置 Git 命令存储认
+证命令： $git config –global credential.helper store
+</li>
+</ol>
+<p>
+执行后在 ~/.gitconfig 文件会多出下面配置项: credential.helper = store
+</p>
+
+<p>
+详情请参考<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching">凭证存储</a> 。
+</p>
+
+<pre class="example">
+git 通过 ssh 和 https 向服务器提交的速度有没有区别？
+
+现在是用的ssh向阿里云服务器提交，感觉有1秒的延迟，如果换成https，能不能做到接近0延迟的提交？
+
+moliliang   2014-06-01 01:26:39 +08:00
+
+https 快一些，其实没啥太大差别。ssh主要是不用属于密码。当然https也可以免输入密码，只是比ssh设置麻烦。
+
+ferock   2014-06-01 01:50:06 +08:00
+
+ssh key 安全会更好一点
+
+很多https 密码都在url 里，太明文了
+
+ssh key 慢，其他差不多
+</pre>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -572,40 +621,6 @@ PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来�
 </div>
 </div>
 <p class="more"><a href="../posts/org-mode-chang-yong-ji-qiao.html">更多…</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html" class="u-url">Org-mode Agenda 常用命令</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T11:22:27+08:00" title="2016-11-30 11:22">2016-11-30 11:22</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#disqus_thread" data-disqus-identifier="cache/posts/org-mode-agenda-chang-yong-ming-ling.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1">Agenda View</a>
-<ul>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1-1">不常用的</a></li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-1-2">Help <code>M-x which-key-show-stardhelp</code></a></li>
-</ul>
-</li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-2">在 org mode 文件中设置任务属性</a></li>
-<li><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html#sec-3"><span class="todo TODO">TODO</span> 配置</a></li>
-</ul>
-</div>
-</div>
-<p class="more"><a href="../posts/org-mode-agenda-chang-yong-ming-ling.html">更多…</a></p>
 </div>
     </div>
     </article>
