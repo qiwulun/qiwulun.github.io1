@@ -20,3 +20,9 @@ sudo apt-get install wine
 #+BEGIN_SRC bash
 wine D2Loader.exe -w
 #+END_SRC
+
+如果要是想运行大箱子补丁
+
+#+BEGIN_SRC bash
+wine Plugy.exe -w
+#+END_SRC
