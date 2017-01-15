@@ -1,0 +1,22 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 在 Ubuntu 16.04 下运行暗黑破坏神2
+.. slug: zai-ubuntu-1604-xia-yun-xing-an-hei-po-pi-shen-2
+.. date: 2017-01-15 15:29:00 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+安装 wine
+
+#+BEGIN_SRC bash
+sudo apt-get install wine
+#+END_SRC
+
+切换到 Diablo II 的安装目录下
+#+BEGIN_SRC bash
+wine D2Loader.exe -w
+#+END_SRC
