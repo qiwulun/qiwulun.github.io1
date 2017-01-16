@@ -25,6 +25,26 @@ https://github.com/CodementorIO/Python-Learning-Resources
 ** Python HTTP 服务
 
 =python -m http.server=
+** 文件 IO
+*** Numpy
+You can use seek with a file object in the normal way, and then use this file object in fromfile. Here's a full example:
+
+#+BEGIN_SRC python
+
+import numpy as np
+import os
+
+data = np.arange(100, dtype=np.int)
+data.tofile("temp")  # save the data
+
+f = open("temp", "rb")  # reopen the file
+f.seek(256, os.SEEK_SET)  # seek
+
+x = np.fromfile(f, dtype=np.int)  # read the data into numpy
+print x 
+# [64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88
+# 89 90 91 92 93 94 95 96 97 98 99]
+#+END_SRC
 * 异常处理
 捕捉异常可以使用try/except语句。
 try/except语句用来检测try语句块中的错误，从而让except语句捕获异常信息并处理。
