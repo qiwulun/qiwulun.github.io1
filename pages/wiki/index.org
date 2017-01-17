@@ -66,7 +66,69 @@ Firefox直接预览，两边都不需要鼠标。而窗口和显示器相关的�
 
 回国后发现了一个新的Linux发行版：Manjaro，而它居然有直接基于i3的社区发行版（Manjaro i3 16.10），所以我建议题主可以直接安装这个，连Arch Linux安装过程中的诸多手动配置过程都可以省略了。可谓省心省力。
 **** i3wm 
-=sudo apt install i3=
+=sudo apt install i3 feh network-manager- xfce4-panel=
+#+BEGIN_EXAMPLE
+# Startups 
+exec --no-startup-id feh --bg-scale $HOME/git/oh-my-i3/wallpaper.jpg
+exec --no-startup-id nm-applet
+exec --no-startup-id compton -cGbf
+# xfce 面
+exec --no-startup-id xfce4-panel --disable-wm-check
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+#+END_EXAMPLE
+
+~/.compton.conf
+#+BEGIN_EXAMPLE
+# Shadow
+shadow = true;
+no-dnd-shadow = true;
+no-dock-shadow = true;
+clear-shadow = true;
+shadow-radius = 6;
+shadow-offset-x = -9;
+shadow-offset-y = -9;
+shadow-opacity = 0.4;
+# shadow-red = 0.0;
+# shadow-green = 0.0;
+# shadow-blue = 0.0;
+shadow-exclude = [ "n:e:Notification" ];
+# shadow-exclude = "n:e:Notification";
+shadow-ignore-shaped = false;
+
+# Opacity
+menu-opacity = 0.9;
+inactive-opacity = 0.8;
+frame-opacity = 0.9;
+inactive-opacity-override = false;
+alpha-step = 0.06;
+
+# Fading
+fading = true;
+# fade-delta = 30;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+# no-fading-openclose = true;
+
+# Other
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+use-ewmh-active-win = false;
+detect-rounded-corners = true;
+detect-client-opacity = true;
+refresh-rate = 0;
+vsync = "none";
+dbe = false;
+paint-on-overlay = false;
+sw-opti = false;
+
+# Window type settings
+wintypes:
+{
+  tooltip = { fade = true; shadow = false; opacity = 0.75; };
+};
+#+END_EXAMPLE
+
 **** awesome 
 =sudo apt install awesome=
 
