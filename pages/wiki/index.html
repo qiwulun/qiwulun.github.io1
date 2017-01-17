@@ -73,7 +73,7 @@ VSO Downloader
 
 能够截取">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-01-17T15:44:03+08:00">
+<meta property="article:published_time" content="2017-01-17T22:24:55+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -129,7 +129,7 @@ VSO Downloader
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-01-17T15:44:03+08:00" itemprop="datePublished" title="2017-01-17 15:44">2017-01-17 15:44</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-01-17T22:24:55+08:00" itemprop="datePublished" title="2017-01-17 22:24">2017-01-17 22:24</time></a></p>
                 <p class="commentline">
         
     <a href="#disqus_thread" data-disqus-identifier="cache/pages/wiki/index.html">Comments</a>
@@ -325,10 +325,74 @@ Firefox直接预览，两边都不需要鼠标。而窗口和显示器相关的�
 <li>
 <a id="sec-5-2-2-1" name="sec-5-2-2-1"></a>i3wm<br><div class="outline-text-5" id="text-5-2-2-1">
 <p>
-<code>sudo apt install i3</code>
+<code>sudo apt install i3 feh network-manager- xfce4-panel</code>
 </p>
+<pre class="example">
+# Startups 
+exec --no-startup-id feh --bg-scale $HOME/git/oh-my-i3/wallpaper.jpg
+exec --no-startup-id nm-applet
+exec --no-startup-id compton -cGbf
+# xfce 面
+exec --no-startup-id xfce4-panel --disable-wm-check
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+</pre>
+
+<p>
+~/.compton.conf
+</p>
+<pre class="example">
+# Shadow
+shadow = true;
+no-dnd-shadow = true;
+no-dock-shadow = true;
+clear-shadow = true;
+shadow-radius = 6;
+shadow-offset-x = -9;
+shadow-offset-y = -9;
+shadow-opacity = 0.4;
+# shadow-red = 0.0;
+# shadow-green = 0.0;
+# shadow-blue = 0.0;
+shadow-exclude = [ "n:e:Notification" ];
+# shadow-exclude = "n:e:Notification";
+shadow-ignore-shaped = false;
+
+# Opacity
+menu-opacity = 0.9;
+inactive-opacity = 0.8;
+frame-opacity = 0.9;
+inactive-opacity-override = false;
+alpha-step = 0.06;
+
+# Fading
+fading = true;
+# fade-delta = 30;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+# no-fading-openclose = true;
+
+# Other
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+use-ewmh-active-win = false;
+detect-rounded-corners = true;
+detect-client-opacity = true;
+refresh-rate = 0;
+vsync = "none";
+dbe = false;
+paint-on-overlay = false;
+sw-opti = false;
+
+# Window type settings
+wintypes:
+{
+  tooltip = { fade = true; shadow = false; opacity = 0.75; };
+};
+</pre>
 </div>
 </li>
+
 <li>
 <a id="sec-5-2-2-2" name="sec-5-2-2-2"></a>awesome<br><div class="outline-text-5" id="text-5-2-2-2">
 <p>
