@@ -41,11 +41,32 @@
  - CTRL+TAB：切换到多文档界面 (MDI) 程序的下一个子窗口
  - CTRL+F4：关闭当前多文档界面 (MDI) 窗口
  - ALT+F6：在同一程序的多个窗口之间切换（例如，当显示记事本的查找对话框时，按 ALT+F6 可在"查找"对话框和记事本主窗口之间切换）
+** linux 发行版
+*** arch linux
+自用的话推荐manjaro，我个人推荐manjaro的bspwm和i3wm版本，i3和bspwm是轻量级并具有高度可定制性的窗口管理器，配合conky食用更佳。似乎bspwm和i3都只能工作在xerver上。
 
+bspwm是manjaro社区的一个大神做的，这个版本的目标是极致的轻量化和高效的图形界面体验，这个版本似乎应该说是面向技术人员power user的，不过这位大神对bspwm做了很多魔改让他更易用。另外技术支持很给力，在论坛上发帖回得很快，而且解释很详细。另外，bspwm版本没有使用display manager，因此开机登录会有一种神奇的体验，这个好处是从initcpio和内核被载入内存之后，到显示登录窗口，这个过程可以在10秒以内完成，当然，这依赖于自己编译的内核和自己生成的initpio，嗯……实际上initcpio也可以不存在。
 
+相比之下，i3wm版本使用了lightdm，一个图形化display manager。i3wm版本开箱即用的体验比bspwm版本更好，首先是因为i3本身比bspwm更健全，另外i3wm的默认安装带的软件更多。
 
+作者：云天明
+链接：https://www.zhihu.com/question/48954561/answer/113953764
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+*** 脱离鼠标操作计算机
 
+Chrome的话，也可以用chrome Vim插件
 
+把系统换成了Arch Linux，为了节约资源，窗口管理器使用了i3，这下不仅运行速度快了，
+还彻底摆脱了鼠标。
 
+我还在Macbook上外接了一台显示器，一边用Gvim写代码，另一边用
+Firefox直接预览，两边都不需要鼠标。而窗口和显示器相关的操作，也都使用i3的快捷键
+完成。这样不仅是效率提高的问题，因为避免了使用鼠标，所以手臂疲劳的问题也解决了。
 
+回国后发现了一个新的Linux发行版：Manjaro，而它居然有直接基于i3的社区发行版（Manjaro i3 16.10），所以我建议题主可以直接安装这个，连Arch Linux安装过程中的诸多手动配置过程都可以省略了。可谓省心省力。
+**** i3wm 
+=sudo apt install i3=
+**** awesome 
+=sudo apt install awesome=
 

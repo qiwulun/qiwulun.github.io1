@@ -6,83 +6,84 @@
 
 * 远程
 
-[[file:~/git/qiwulun.github.io/posts/emacs-shi-yong-ssh.org][emacs 使用 ssh]]
+  [[file:~/git/qiwulun.github.io/posts/emacs-shi-yong-ssh.org][emacs 使用 ssh]]
 * 教程
-- 自带的tutorial入门(C-h t),
-- 水木社区的emacs版
-- 电子书
-  - emacs
-    - learnning GNU Emacs,
-    - teach yourself Emacs in 24h.
-  - elisp
-    - 自带的emacs lisp intro
-    - writing emacs extensioins
-    - elisp manual
+  - 自带的tutorial入门(C-h t),
+  - 水木社区的emacs版
+  - 电子书
+    - emacs
+      - learnning GNU Emacs,
+      - teach yourself Emacs in 24h.
+    - elisp
+      - 自带的emacs lisp intro
+      - writing emacs extensioins
+      - elisp manual
 * 功能
 ** 目录
 
- | =SPC a r=	 | launch ranger                                        |
- | =SPC a d=	 | deer (minimal ranger window in current directory)    |
- | =C-p=	     | (ranger) toggle ranger in dired buffer               |
- | yy	        | (ranger) copy                                        |
- | pp	        | (ranger) paste                                       |
- | R	         | (ranger) rename                                      |
- | D	         | (ranger) delete                                      |
- | C-j         | 	(ranger) scroll preview window down                |
- | C-k         | 	(ranger) scroll preview window up                  |
- | C-SPC       | 	(ranger) mark current file                         |
- | i	         | (ranger) show preview of current file                |
- | zi	        | (ranger) toggle showing literal / full-text previews |
- | zh	        | (ranger) toggle showing dotfiles                     |
- | h	         | (ranger) go up directory                             |
- | l	         | (ranger) find file / enter directory                 |
- | S	         | (ranger) enter shell                                 |
- | ;C	        | (ranger) copy directory / copy and move directory    |
- | ;+	        | (ranger) create directory                            |
+   | =SPC a r=   | launch ranger                                        |
+   | =SPC a d=   | deer (minimal ranger window in current directory)    |
+   | =C-p=       | (ranger) toggle ranger in dired buffer               |
+   | yy         | (ranger) copy                                        |
+   | pp         | (ranger) paste                                       |
+   | R           | (ranger) rename                                      |
+   | D           | (ranger) delete                                      |
+   | C-j         |  (ranger) scroll preview window down                |
+   | C-k         |  (ranger) scroll preview window up                  |
+   | C-SPC       |  (ranger) mark current file                         |
+   | i           | (ranger) show preview of current file                |
+   | zi         | (ranger) toggle showing literal / full-text previews |
+   | zh         | (ranger) toggle showing dotfiles                     |
+   | h           | (ranger) go up directory                             |
+   | l           | (ranger) find file / enter directory                 |
+   | S           | (ranger) enter shell                                 |
+   | ;C         | (ranger) copy directory / copy and move directory    |
+   | ;+         | (ranger) create directory                            |
 ** Buffer
 
 
- | =SPC b .=	 | 切换buffer                                |
+   | =SPC b .=   | 切换buffer                                |
 ** org-mode
-https://github.com/fniessen/refcard-org-mode
+   https://github.com/fniessen/refcard-org-mode
 *** 文献
-https://github.com/jkitchin/org-ref
+    https://github.com/jkitchin/org-ref
 
-设置
-#+BEGIN_EXAMPLE
+    设置
+    #+BEGIN_EXAMPLE
   # Local Variables:
   # org-ref-default-bibliography: bibliography.bib
   # End:
-#+END_EXAMPLE
+    #+END_EXAMPLE
 
-或者是
-#+BEGIN_EXAMPLE
+    或者是
+    #+BEGIN_EXAMPLE
   bibliographystyle:unsrtnat
   bibliography:bibliography.bib
-#+END_EXAMPLE
+    #+END_EXAMPLE
 
 
-- =SPC m i c= 插入 link. Insert a citation link with `helm-bibtex'.
-- =SPC u SPC m i c= insert a ref link.
-- =SPC u SPC u SPC m i c= insert a label link.
+    - =SPC m i c= 插入 link. Insert a citation link with `helm-bibtex'.
+    - =SPC u SPC m i c= insert a ref link.
+    - =SPC u SPC u SPC m i c= insert a label link.
 
-- 在link上 =SPC m l= 可以点开链接操作
+    - 在link上 =SPC m l= 可以点开链接操作
 *** latex
-**** 插入图片 
+**** 插入图片
 ***** 位置
- To modify the placement option of any floating environment, set the placement attribute.
- #+BEGIN_SRC org
-   ,#+ATTR_LATEX: :float wrap :width 0.38\textwidth :placement {r}{0.4\textwidth}
-     [[./img/hst.png]]
- #+END_SRC
+      To modify the placement option of any floating environment, set the placement attribute.
+      #+BEGIN_SRC org
+        ,#+ATTR_LATEX: :float wrap :width 0.38\textwidth :placement {r}{0.4\textwidth}
+        [[./img/hst.png]]
+      #+END_SRC
 
-  If the :comment-include attribute is set to a non-nil value, the LaTeX \includegraphics macro will be commented out.
-
-
+      If the :comment-include attribute is set to a non-nil value, the LaTeX \includegraphics macro will be commented out.
+** python
+*** 缩进
+    =SPC m == 用于python mode
 
 ** 通用
 
 *** 本地变量
- one could always set file-local variables (through =SPC f v f= )
+    one could always set file-local variables (through =SPC f v f= )
 *** 字数统计
-选中文字，然后 `SPC x c'
+    选中文字，然后 `SPC x c'
