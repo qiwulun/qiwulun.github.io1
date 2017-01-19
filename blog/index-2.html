@@ -72,7 +72,177 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html" class="u-url">Ubuntu 下强制结束程序</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html" class="u-url">Ubuntu Texlive 2016 安装 asymptote</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-10T09:56:50+08:00" title="2016-12-10 09:56">2016-12-10 09:56</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-texlive-2016-an-zhuang-asymptote.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-1">Ubuntu texlive 2016</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-2">还有一些依赖包</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-0-3">DVIPS</a></li>
+</ul>
+<li>
+<a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1">FAQ</a>
+<ul>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-1">出现图片是黑的怎么办</a></li>
+<li><a href="../posts/ubuntu-texlive-2016-an-zhuang-asymptote.html#sec-1-2">如何来展示一个3D可旋转的</a></li>
+</ul>
+</li>
+</div>
+</div>
+<div id="outline-container-sec-0-1" class="outline-3">
+<h3 id="sec-0-1">Ubuntu texlive 2016</h3>
+</div>
+<div id="outline-container-sec-0-2" class="outline-3">
+<h3 id="sec-0-2">还有一些依赖包</h3>
+<div class="outline-text-3" id="text-0-2">
+<ul class="org-ul">
+<li>特别地,我们需要freeglut这个基于OpenGL的库,
+<ul class="org-ul">
+<li>sudo apt-get install freeglut3 freeglut3-dev
+</li>
+</ul>
+</li>
+<li>sudo apt-get install libreadline-gplv2-dev
+</li>
+<li>sudo rm /usr/bin/kpsewhich 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-0-3" class="outline-3">
+<h3 id="sec-0-3">DVIPS</h3>
+<div class="outline-text-3" id="text-0-3">
+<pre class="example">
+$ asy 2.asy 
+dvips: warning: no config file for `download35'
+dvips: ! Couldn't find header file: tex.pro
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1
+中断
+</pre>
+
+<p>
+是 dvips 的事吗？还真是
+</p>
+<pre class="example">
+$ dvips
+This is dvips(k) 5.995 Copyright 2015 Radical Eye Software (www.radicaleye.com)
+dvips: ! Couldn't find header file: tex.pro
+</pre>
+
+<p>
+那我们看看是不是用的 texlive 2016 的 dvips
+</p>
+
+<pre class="example">
+qiwulun@qiwulun-All-Series:~$ which dvips
+/usr/bin/dvips
+
+$ whereis dvips
+dvips: /usr/bin/dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips /usr/share/man/man1/dvips.1.gz /usr/share/info/dvips.info.gz
+
+$ /usr/local/texlive/2016/bin/x86_64-linux/dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+</pre>
+
+<p>
+Texlive 2016 的dvips还挺好的，那把 /usr/bin/dvips 干掉吧
+</p>
+
+<pre class="example">
+$ sudo apt remove dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvips 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 使用 /usr/local/texlive/2016/bin/x86_64-linux/dvips 来在自动模式中提供 /usr/bin/dvips (dvips)
+update-alternatives: 警告: 将不会把 /usr/bin/dvips 替换为链接
+
+$ sudo apt install dvips
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+没有可用的软件包 dvips，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 dvips 没有可安装候选
+$ sudo apt remove dvipsk-ja
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+软件包 dvipsk-ja 未安装，所以不会被卸载
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 310 个软件包未被升级。
+$ sudo apt remove dvipsk
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 无法定位软件包 dvipsk
+</pre>
+
+<p>
+那就强行删除吧…
+</p>
+
+<pre class="example">
+$ sudo rm /usr/bin/dvips 
+$ sudo update-alternatives --install /usr/bin/dvips dvips /usr/local/texlive/2016/bin/x86_64-linux/dvips 20
+update-alternatives: 警告: 链接组 dvips 已损坏，故强制重新安装候选项 /usr/local/texlive/2016/bin/x86_64-linux/dvips
+
+$ dvips
+This is dvips(k) 5.996 Copyright 2016 Radical Eye Software (www.radicaleye.com)
+dvips: Missing DVI file argument (or -f).
+dvips: Try --help for more information.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">FAQ</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">出现图片是黑的怎么办</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+加上 <code>-render 3</code>
+</p>
+
+<div class="highlight"><pre><span></span>#+BEGIN_SRC asymptote :file [name].png :cmdline -noView -render 3 :exports results
+</pre></div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">如何来展示一个3D可旋转的</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+不加file
+</p>
+<div class="highlight"><pre><span></span>#+BEGIN_SRC asymptote
+</pre></div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ubuntu-xia-qiang-zhi-jie-shu-cheng-xu.html" class="u-url">Ubuntu 下强制结束程序</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -596,22 +766,6 @@ compiling 是让编译器懂你在说什么， reading 是让读者懂你在说�
 <p>
 PS： 上文提到的金刚经的矛盾我解不开。。。谁证道了请来点拨我一下
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/qiang-hua-xue-xi-rl.html" class="u-url">强化学习 RL</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/qiang-hua-xue-xi-rl.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-30T17:17:25+08:00" title="2016-11-30 17:17">2016-11-30 17:17</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/qiang-hua-xue-xi-rl.html#disqus_thread" data-disqus-identifier="cache/posts/qiang-hua-xue-xi-rl.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p class="more"><a href="../posts/qiang-hua-xue-xi-rl.html">更多…</a></p>
     </div>
     </article>
 </div>
