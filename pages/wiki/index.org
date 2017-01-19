@@ -128,7 +128,7 @@ wintypes:
   tooltip = { fade = true; shadow = false; opacity = 0.75; };
 };
 #+END_EXAMPLE
-
 **** awesome 
 =sudo apt install awesome=
-
+*** linux 下设置键位 setxkbmap
+=setxkbmap -option caps:super= Caps Lock becomes an additional Super (aka Win key).
