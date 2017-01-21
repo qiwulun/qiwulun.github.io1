@@ -1,5 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" href="https://qiwulun.github.io/rss.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 19 Jan 2017 10:41:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 下设置键位 setxkbmap</title><link>https://qiwulun.github.io/posts/linux-xia-she-zhi-jian-wei.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" href="https://qiwulun.github.io/rss.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Sat, 21 Jan 2017 15:24:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ssh 反向代理实现内网穿透</title><link>https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-1"&gt;目标&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-1-1"&gt;首先在B上执行&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-1-2"&gt;这时在A主机上sshd会listen本地1234端口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-1-3"&gt;像平时一样连接到A主机的1234端口就可以控制内网B主机了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-2"&gt;断线重连&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-2-1"&gt;使用ssh-keygen和ssh-copy-id三步实现SSH无密码登录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-2-2"&gt;2.3.再来看看Autossh的用法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#sec-3"&gt;外网想要连接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+SSH反向连接及Autossh 
+&lt;/p&gt;
+
+&lt;p&gt;
+稍懂一点网络的童鞋会明白，Internet上去主动连接一台内网是不可能的，一般的解决方案分两种，一种是端口映射（Port Forwarding），将内网主机的某个端口Open出防火墙，相当于两个外网主机通信；另一种是内网主机主动连接到外网主机，又被称作反向连接（Reverse Connection），这样NAT路由/防火墙就会在内网主机和外网主机之间建立映射，自然可以相互通信了。但是，这种映射是NAT路由自动维持的，不会持续下去，如果连接断开或者网络不稳定都会导致通信失败，这时内网主机需要再次主动连接到外网主机，建立连接。
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;目标&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+A要控制B
+&lt;/p&gt;
+
+&lt;p&gt;
+A主机：外网，ip：123.123.123.123，sshd端口：2221
+&lt;/p&gt;
+
+&lt;p&gt;
+B主机：内网，sshd端口：2223
+&lt;/p&gt;
+
+&lt;p&gt;
+无论是外网主机A，还是内网主机B都需要跑ssh daemon
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-sec-1-1" class="outline-3"&gt;
+&lt;h3 id="sec-1-1"&gt;首先在B上执行&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-1"&gt;
+&lt;pre class="example"&gt;
+$ ssh -NfR 1234:localhost:2223 user1@123.123.123.123 -p 2221
+&lt;/pre&gt;
+
+&lt;p&gt;
+这句话的意思是将A主机的1234端口和B主机的2223端口绑定，相当于远程端口映射（Remote Port Forwarding）。
+&lt;/p&gt;
+
+&lt;p&gt;
+这里每次需要输入A主机user1的登陆密码，后面会讲到解决办法。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-sec-1-2" class="outline-3"&gt;
+&lt;h3 id="sec-1-2"&gt;这时在A主机上sshd会listen本地1234端口&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-2"&gt;
+&lt;p&gt;
+$ ss -ant
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+State      Recv-Q Send-Q        Local Address:Port          Peer Address:Port
+LISTEN     0      128               127.0.0.1:1234                     *:*
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-1-3" class="outline-3"&gt;
+&lt;h3 id="sec-1-3"&gt;像平时一样连接到A主机的1234端口就可以控制内网B主机了&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-3"&gt;
+&lt;p&gt;
+$ ssh localhost -p1234
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;断线重连&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;p&gt;
+一开始提到，这种反向连接（Reverse Connection）不稳定，可能随时断开，需要内网主机B再次向外网A发起连接，这时需要个“朋友”帮你在内网B主机执行这条命令。它就是Autossh。
+&lt;/p&gt;
+
+&lt;p&gt;
+在此之前还要解决之前的一个问题，那就是每次内网主机B连接外网主机A时都需要输入密码，这个问题ssh本身是提供另外一种验证方式——通过密钥验证用户身份，实现自动登录。
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;使用ssh-keygen和ssh-copy-id三步实现SSH无密码登录&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;p&gt;
+ssh-keygen  产生公钥与私钥对.
+&lt;/p&gt;
+
+&lt;p&gt;
+ssh-copy-id 将本机的公钥复制到远程机器的authorized&lt;sub&gt;keys文件中，ssh&lt;/sub&gt;-copy-id也能让你有到远程机器的home, ~./ssh , 和 ~/.ssh/authorized&lt;sub&gt;keys的权利&lt;/sub&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+第一步:在本地机器上使用ssh-keygen产生公钥私钥对
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+jsmith@local-host$ [Note: You are on local-host here]
+jsmith@local-host$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/jsmith/.ssh/id_rsa):[Enter key]
+Enter passphrase (empty for no passphrase): [Press enter key]
+Enter same passphrase again: [Pess enter key]
+Your identification has been saved in /home/jsmith/.ssh/id_rsa.
+Your public key has been saved in /home/jsmith/.ssh/id_rsa.pub.
+The key fingerprint is:
+33:b3:fe:af:95:95:18:11:31:d5:de:96:2f:f2:35:f9 jsmith@local-host
+&lt;/pre&gt;
+&lt;p&gt;
+第二步:用ssh-copy-id将公钥复制到远程机器中
+&lt;/p&gt;
+&lt;pre class="example"&gt;
+jsmith@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub name@remote-host
+jsmith@remote-host's password:
+Now try logging into the machine, with "ssh 'remote-host'", and check in:
+.ssh/authorized_keys
+to make sure we haven't added extra keys that you weren't expecting.
+&lt;/pre&gt;
+&lt;p&gt;
+注意: ssh-copy-id 将key写到远程机器的 ~/ .ssh/authorized&lt;sub&gt;key&lt;/sub&gt;.文件中
+第三步: 登录到远程机器不用输入密码
+&lt;/p&gt;
+&lt;pre class="example"&gt;
+jsmith@local-host$ ssh name@remote-host
+Last login: Sun Nov 16 17:22:33 2008 from 192.168.1.2
+[Note: SSH did not ask for password.]
+jsmith@remote-host$ [Note: You are on remote-host here]
+&lt;/pre&gt;
+
+&lt;p&gt;
+常见问题：
+&lt;/p&gt;
+
+&lt;p&gt;
+ssh-copy-id -u eucalyptus -i ~eucalyptus/.ssh/id&lt;sub&gt;rsa&lt;/sub&gt;.pub eucalyptus@remote&lt;sub&gt;host&lt;/sub&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+上述是给eucalyptus用户赋予无密码登陆的权利
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;sup&gt;&lt;a id="fnr.1" name="fnr.1" class="footref" href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; /usr/bin/ssh-copy-id: ERROR: No identities found
+&lt;/p&gt;
+
+&lt;p&gt;
+使用选项 -i ，当没有值传递的时候或者 如果 ~/.ssh/identity.pub 文件不可访问（不存在）, ssh-copy-id 将显示上述的错误信息  （ -i选项会优先使用将ssh-add -L的内容）
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+jsmith@local-host$ ssh-agent $SHELL
+jsmith@local-host$ ssh-add -L
+The agent has no identities.
+jsmith@local-host$ ssh-add
+Identity added: /home/jsmith/.ssh/id_rsa (/home/jsmith/.ssh/id_rsa)
+jsmith@local-host$ ssh-add -L
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsJIEILxftj8aSxMa3d8t6JvM79DyBV
+aHrtPhTYpq7kIEMUNzApnyxsHpH1tQ/Ow== /home/jsmith/.ssh/id_rsa
+jsmith@local-host$ ssh-copy-id -i remote-host
+jsmith@remote-host's password:
+Now try logging into the machine, with "ssh 'remote-host'", and check in:
+.ssh/authorized_keys
+to make sure we haven't added extra keys that you weren't expecting.
+[Note: This has added the key displayed by ssh-add -L]
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;sup&gt;&lt;a id="fnr.2" name="fnr.2" class="footref" href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#fn.2"&gt;2&lt;/a&gt;&lt;/sup&gt; ssh-copy-id应注意的三个小地方
+&lt;/p&gt;
+
+&lt;p&gt;
+Default public key: ssh-copy-id uses ~/.ssh/identity.pub as the default public key file (i.e when no value is passed to option -i). Instead, I wish it uses id&lt;sub&gt;dsa&lt;/sub&gt;.pub, or id&lt;sub&gt;rsa&lt;/sub&gt;.pub, or identity.pub as default keys. i.e If any one of them exist, it should copy that to the remote-host. If two or three of them exist, it should copy identity.pub as default.
+&lt;/p&gt;
+
+&lt;p&gt;
+The agent has no identities: When the ssh-agent is running and the ssh-add -L returns “The agent has no identities” (i.e no keys are added to the ssh-agent), the ssh-copy-id will still copy the message “The agent has no identities” to the remote-host’s authorized&lt;sub&gt;keys&lt;/sub&gt; entry.
+&lt;/p&gt;
+
+&lt;p&gt;
+Duplicate entry in authorized&lt;sub&gt;keys&lt;/sub&gt;: I wish ssh-copy-id validates duplicate entry on the remote-host’s authorized&lt;sub&gt;keys&lt;/sub&gt;. If you execute ssh-copy-id multiple times on the local-host, it will keep appending the same key on the remote-host’s authorized&lt;sub&gt;keys&lt;/sub&gt; file without checking for duplicates. Even with duplicate entries everything works as expected. But, I would like to have my authorized&lt;sub&gt;keys&lt;/sub&gt; file clutter free.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;2.3.再来看看Autossh的用法&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;p&gt;
+$ autossh -M 5678 -NR 1234:localhost:2223 user1@123.123.123.123 -p2221
+比之前的命令添加的一个-M 5678参数，负责通过5678端口监视连接状态，连接有问题时就会自动重连，去掉了一个-f参数，因为autossh本身就会在background运行。
+&lt;/p&gt;
+
+
+
+&lt;p&gt;
+3.终极方案：当重启内网B主机，谁来自动Autossh呢，加入daemon吧
+&lt;/p&gt;
+
+&lt;p&gt;
+以daemon方式执行，相当于root去执行autossh, ssh，这时刚才普通用户目录下的.ssh/authorized&lt;sub&gt;keys文件会不起效。有两种办法解决，一种是用autossh的参数指定&lt;/sub&gt;.ssh路径；另外一种是以普通用户身份执行daemon，下面是第二种方式。
+&lt;/p&gt;
+
+&lt;p&gt;
+/bin/su -c '/usr/bin/autossh -M 5678 -NR 1234:localhost:2223 user1@123.123.123.123 -p2221' - user1
+&lt;/p&gt;
+
+&lt;p&gt;
+autossh还有很多参数，用来设置重连间隔等等。
+&lt;/p&gt;
+
+&lt;p&gt;
+将上面命令放入下面各启动方式中，根据自己系统自己配置：
+&lt;/p&gt;
+
+&lt;p&gt;
+SysV：/etc/inid.d/autossh
+&lt;/p&gt;
+
+&lt;p&gt;
+Upstart: /etc/init/autossh.conf
+&lt;/p&gt;
+
+&lt;p&gt;
+systemd: /usr/lib/systemd/system/autossh.service
+&lt;/p&gt;
+
+
+
+
+
+&lt;p&gt;
+P.S.
+&lt;/p&gt;
+
+&lt;p&gt;
+1.家里是ADSL的话，用DDNS，解决ip问题
+&lt;/p&gt;
+
+&lt;p&gt;
+2.外网有路由的可设下端口映射
+&lt;/p&gt;
+
+&lt;p&gt;
+3.虽然有密钥和密码保护，但还请小心使用
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;外网想要连接&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt;
+建立 A 机器到 B 机器的反向代理【A 机器上操作】
+&lt;/p&gt;
+
+&lt;p&gt;
+ssh -fCNR &amp;lt;port&lt;sub&gt;b1&lt;/sub&gt;&amp;gt;:localhost:22 usr&lt;sub&gt;b&lt;/sub&gt;@B.B.B.B
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;lt;port&lt;sub&gt;b1&lt;/sub&gt;&amp;gt; 为 B 机器上端口，用来与 A 机器上的22端口绑定。
+&lt;/p&gt;
+
+&lt;p&gt;
+建立 B 机器上的正向代理，用作本地转发。做这一步是因为绑定后的 端口只支持本地访问【B 机器上操作】
+&lt;/p&gt;
+
+&lt;p&gt;
+ssh -fCNL "*:&amp;lt;port&lt;sub&gt;b2&lt;/sub&gt;&amp;gt;:localhost:&amp;lt;port&lt;sub&gt;b1&lt;/sub&gt;&amp;gt;' localhost
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;lt;port&lt;sub&gt;b2&lt;/sub&gt;&amp;gt; 为本地转发端口，用以和外网通信，并将数据转发到 &amp;lt;port&lt;sub&gt;b1&lt;/sub&gt;&amp;gt;，实现可以从其他机器访问。
+&lt;/p&gt;
+
+&lt;p&gt;
+其中的*表示接受来自任意机器的访问。
+&lt;/p&gt;
+
+&lt;p&gt;
+现在在 C 机器上可以通过 B 机器 ssh 到 A 机器
+&lt;/p&gt;
+
+&lt;p&gt;
+ssh -p &amp;lt;portb2&amp;gt; usra@B.B.B.B 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footnotes"&gt;
+&lt;h2 class="footnotes"&gt;Footnotes: &lt;/h2&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" name="fn.1" class="footnum" href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;p&gt;DEFINITION NOT FOUND.&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.2" name="fn.2" class="footnum" href="https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html#fnr.2"&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;p&gt;DEFINITION NOT FOUND.&lt;/p&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html</guid><pubDate>Sat, 21 Jan 2017 12:12:52 GMT</pubDate></item><item><title>linux 下设置键位 setxkbmap</title><link>https://qiwulun.github.io/posts/linux-xia-she-zhi-jian-wei.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -278,6 +605,4 @@ conda install  -f  numpy
 
 &lt;p&gt;
 and the problem was gone.
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</guid><pubDate>Wed, 28 Dec 2016 12:33:43 GMT</pubDate></item><item><title>docker 中 tensorflow 报 libcuda.so.1 找不到</title><link>https://qiwulun.github.io/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-说明你没有用 nvidia-docker 运行
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html</guid><pubDate>Wed, 28 Dec 2016 12:05:58 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</guid><pubDate>Wed, 28 Dec 2016 12:33:43 GMT</pubDate></item></channel></rss>
