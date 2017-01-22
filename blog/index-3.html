@@ -72,7 +72,120 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" class="u-url">日知录－－好的编译器与好的读者</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html" class="u-url">在 docker 中增加 ssh 服务</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T14:00:31+08:00" title="2016-12-05 14:00">2016-12-05 14:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html#disqus_thread" data-disqus-identifier="cache/posts/zai-docker-zhong-zeng-jia-ssh-fu-wu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+安装 docker
+</p>
+
+<p>
+参考 <a href="http://www.linuxdiyf.com/linux/15472.html">http://www.linuxdiyf.com/linux/15472.html</a>
+</p>
+
+<div class="highlight"><pre><span></span># 1 先在宿主机上运行一个已有的镜像 
+docker run -it ubuntu bash
+# 如果已经有其它的基础镜像也可以代替上面的ubuntu
+
+# 2 在container上运行下列命令
+# 2.1 安装ssh服务
+apt-get update #更新源
+apt-get install ssh
+
+# 2.2 配置密码
+# 使用 passwd 来配置 ssh 登录时需要的密码
+passwd
+# 按提示进行修改
+
+# 2.3 修改sshd_config配置文件
+vi /etc/ssh/sshd_config
+# 将PermitRootLogin 改为 yes，将UsePAM 改为 no。
+
+# 2.4 退出 container
+exit
+
+# 3. [可选] 在宿主机上把此镜像保存一下：
+# 3.1 把容器保存成镜像
+docker commit [container-id] [image-id]
+# 3.2 把刚刚的容器干掉：
+docker stop [container-id] #停用
+docker rm [container-id]   #删除
+
+# 4 在宿主机上启动container 并挂载端口：
+docker run --name [container-name] -i -t -p 50001:22 [image-id]
+# 把 ssh 默认端口22 挂载到宿主机的 50001 端口上
+
+# 5 在container上启动ssh服务：
+/etc/init.d/ssh start
+# C-p C-q 组合键退出会话，不关闭container
+
+# 6 在其他电脑上使用ssh登录即可
+ssh [rootname]@[hostip] -p 50001
+# 输入 rootpasscode
+</pre></div>
+
+<p>
+想要以后台方式启动的话，要写一个自启动 ssh 的脚本
+<code>docker run -d -p 22:22 -t centos6.5:sshd /root/run.sh</code>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">
+<span class="todo TODO">TODO</span> 其它的设置</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Docker网络管理及容器跨主机通信（四）
+<a href="http://lizhenliang.blog.51cto.com/7876557/1731898">http://lizhenliang.blog.51cto.com/7876557/1731898</a>
+</p>
+
+<p>
+docker高级应用之赋予容器独立外网ip
+<a href="http://dl528888.blog.51cto.com/2382721/1604167">http://dl528888.blog.51cto.com/2382721/1604167</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">报错</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+</p>
+
+<p>
+要把用户加到group中
+</p>
+
+<div class="highlight"><pre><span></span>sudo usermod -aG docker &lt;username&gt;
+</pre></div>
+
+<p>
+操作顺序: 
+</p>
+<ol class="org-ol">
+<li>sudo cat /etc/group | grep docker 
+</li>
+<li>如果不存在docker组，可以添加sudo groupadd docker 
+</li>
+<li>添加当前用户到docker组，sudo gpasswd -a ${USER} docker
+</li>
+<li>ssh 登出，再重新登录即可
+</li>
+</ol>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe.html" class="u-url">日知录－－好的编译器与好的读者</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -571,28 +684,6 @@ USE<sub>BLAS</sub> = atlas 或者 openblas
 make -j4
 注意：如果没有CUDA支持的显卡（比如Intel的Iris显卡或者AMD的R系列显卡）或者没有显卡，安装和编译GPU版本的mxnet会出错。解决方法是，把USE<sub>CUDA</sub> = 1改回USE<sub>CUDA</sub> = 0，并确保USE<sub>OPENMP</sub> = 1，mxnet会自动编译CPU版本并使用OpenMP进行多核CPU计算。根据问题的不同，GPU版本对比CPU版一般会有20-30倍左右的加速。
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yue-xia-chan.html" class="u-url">月下蝉</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yue-xia-chan.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-18T21:08:19+08:00" title="2016-11-18 21:08">2016-11-18 21:08</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yue-xia-chan.html#disqus_thread" data-disqus-identifier="cache/posts/yue-xia-chan.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>
-网易云地址 <a href="http://music.163.com/#/song?id=432430697">http://music.163.com/#/song?id=432430697</a>
-</p>
-
-<p class="more"><a href="../posts/yue-xia-chan.html">更多…</a></p>
-</div>
     </div>
     </article>
 </div>

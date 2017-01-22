@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" href="https://qiwulun.github.io/rss.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Sat, 21 Jan 2017 15:24:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ssh 反向代理实现内网穿透</title><link>https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Sun, 22 Jan 2017 06:36:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>配置 Manjaro 纪录</title><link>https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-1"&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-2"&gt;docker&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-2-1"&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-2-2"&gt;Starting Docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;配置&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加： Server = &lt;a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/%24repo/os/%24arch"&gt;https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+更新软件包缓存： sudo pacman -Syy
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;docker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Installation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;p&gt;
+For the normal package a simple
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;$ sudo pacman -S docker&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+ is all that is needed.
+rtu
+ For the AUR package execute:
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;$ yaourt -S docker-git&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+The instructions here assume yaourt is installed. See Arch User Repository for information on building and installing packages from the AUR if you have not done so before.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Starting Docker&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;p&gt;
+There is a systemd service unit created for docker. To start the docker service:
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;$ sudo systemctl start docker&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+To start on system boot:
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;$ sudo systemctl enable docker&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html</guid><pubDate>Sun, 22 Jan 2017 06:08:43 GMT</pubDate></item><item><title>ssh 反向代理实现内网穿透</title><link>https://qiwulun.github.io/posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -586,23 +663,4 @@ docker run -d --name shadowsocks -p 1080:1080 oddrationale/docker-shadowsocks -s
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html</guid><pubDate>Fri, 30 Dec 2016 09:22:37 GMT</pubDate></item><item><title>Anaconda 调用 MKL Bug</title><link>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-参考这一个
-&lt;a href="https://github.com/ContinuumIO/anaconda-issues/issues/720"&gt;https://github.com/ContinuumIO/anaconda-issues/issues/720&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
-&lt;/pre&gt;
-
-&lt;p&gt;
-It seems to be related to the packages installation order. I reinstalled numpy with
-&lt;/p&gt;
-
-&lt;pre class="example"&gt;
-conda install  -f  numpy
-&lt;/pre&gt;
-
-&lt;p&gt;
-and the problem was gone.
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/anaconda-diao-yong-MKL-Bug.html</guid><pubDate>Wed, 28 Dec 2016 12:33:43 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang.html</guid><pubDate>Fri, 30 Dec 2016 09:22:37 GMT</pubDate></item></channel></rss>

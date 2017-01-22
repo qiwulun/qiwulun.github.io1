@@ -71,7 +71,102 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html" class="u-url">ssh 反向代理实现内网穿透</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/pei-zhi-manjaro-ji-lu.html" class="u-url">配置 Manjaro 纪录</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/pei-zhi-manjaro-ji-lu.html" rel="bookmark"><time class="published dt-published" datetime="2017-01-22T14:08:43+08:00" title="2017-01-22 14:08">2017-01-22 14:08</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/pei-zhi-manjaro-ji-lu.html#disqus_thread" data-disqus-identifier="cache/posts/pei-zhi-manjaro-ji-lu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/pei-zhi-manjaro-ji-lu.html#sec-1">配置</a></li>
+<li>
+<a href="../posts/pei-zhi-manjaro-ji-lu.html#sec-2">docker</a>
+<ul>
+<li><a href="../posts/pei-zhi-manjaro-ji-lu.html#sec-2-1">Installation</a></li>
+<li><a href="../posts/pei-zhi-manjaro-ji-lu.html#sec-2-2">Starting Docker</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">配置</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加： Server = <a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/%24repo/os/%24arch">https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</a>
+</p>
+
+<p>
+更新软件包缓存： sudo pacman -Syy
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">docker</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Installation</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+For the normal package a simple
+</p>
+
+<p>
+<code>$ sudo pacman -S docker</code>
+</p>
+
+<p>
+ is all that is needed.
+rtu
+ For the AUR package execute:
+</p>
+
+<p>
+<code>$ yaourt -S docker-git</code>
+</p>
+
+<p>
+The instructions here assume yaourt is installed. See Arch User Repository for information on building and installing packages from the AUR if you have not done so before.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Starting Docker</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+There is a systemd service unit created for docker. To start the docker service:
+</p>
+
+<p>
+<code>$ sudo systemctl start docker</code>
+</p>
+
+<p>
+To start on system boot:
+</p>
+
+<p>
+<code>$ sudo systemctl enable docker</code>
+</p>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html" class="u-url">ssh 反向代理实现内网穿透</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -797,41 +892,6 @@ docker run -d --name shadowsocks -p 1080:1080 oddrationale/docker-shadowsocks -s
 </ol>
 </div>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/anaconda-diao-yong-MKL-Bug.html" class="u-url">Anaconda 调用 MKL Bug</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/anaconda-diao-yong-MKL-Bug.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-28T20:33:43+08:00" title="2016-12-28 20:33">2016-12-28 20:33</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/anaconda-diao-yong-MKL-Bug.html#disqus_thread" data-disqus-identifier="cache/posts/anaconda-diao-yong-MKL-bug.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-参考这一个
-<a href="https://github.com/ContinuumIO/anaconda-issues/issues/720">https://github.com/ContinuumIO/anaconda-issues/issues/720</a>
-</p>
-
-<pre class="example">
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
-</pre>
-
-<p>
-It seems to be related to the packages installation order. I reinstalled numpy with
-</p>
-
-<pre class="example">
-conda install  -f  numpy
-</pre>
-
-<p>
-and the problem was gone.
-</p>
     </div>
     </article>
 </div>
