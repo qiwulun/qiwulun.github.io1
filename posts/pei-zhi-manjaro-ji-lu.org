@@ -1,0 +1,38 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 配置 Manjaro 纪录
+.. slug: pei-zhi-manjaro-ji-lu
+.. date: 2017-01-22 14:08:43 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+* 配置
+编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加： Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+
+更新软件包缓存： sudo pacman -Syy
+* docker
+** Installation
+ For the normal package a simple
+
+ =$ sudo pacman -S docker=
+
+ is all that is needed.
+rtu
+ For the AUR package execute:
+
+ =$ yaourt -S docker-git=
+
+ The instructions here assume yaourt is installed. See Arch User Repository for information on building and installing packages from the AUR if you have not done so before.
+** Starting Docker
+ There is a systemd service unit created for docker. To start the docker service:
+
+ =$ sudo systemctl start docker=
+
+ To start on system boot:
+
+ =$ sudo systemctl enable docker=
