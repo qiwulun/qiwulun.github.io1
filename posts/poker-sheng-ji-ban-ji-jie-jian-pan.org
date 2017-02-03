@@ -40,6 +40,8 @@ Poker 升级版似乎不支持 FN 组合键的直接绑定， 绑的都是 PN+FN
 | pn + h,j,k,l | 四个方向键 | 光标移动                             |
 | PN + ESC     | Win 键     | Win                                  |
 | PN + CAPS    | Win 键     | Win，在开关切换后会回到Win键原始位置 |
+| PN + Fn + Q  | Alt + F4   | 关闭窗口                             |
+| PN + \       | Alt + F4   | 在Toggle层下用于右手关闭窗口         |
 | PN + 0       | Home 键    | 行首                                 |
 | PN + 4       | End 键     | 行尾                                 |
 | PN + d       | Del 键     | 删除                                 |
