@@ -1,0 +1,23 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 电脑外设──MX master 双模无线鼠标
+.. slug: dian-nao-wai-she-mx-master-shuang-mo-wu-xian-shu-biao
+.. date: 2017-02-03 19:49:34 UTC+08:00
+.. tags: 好物
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+Logitech/罗技 MX Master 双模无线鼠标 | 参考价格：649 元
+
+既想要鼠标的精准、快速、不易疲劳，又想要 Mac 触控板丰富的手势功能，MX Master 是唯一的选择。
+
+相比普通的无线办公鼠标，MX Master 体型魁梧，配合顺滑的胶贴移动却十分轻松，特别设计的人体工程学外形，握起来自然舒适，用久了甚至会觉得“长在手上”一般。
+
+为拇指提供休息区的菱格纹理“侧翼”另有玄机，下方隐藏的按键配合手势操作，可以实现 Mac 触控板的所有功能，比如最常用的桌面切换，拇指按下向左右滑就行，和用触控板时几乎一模一样。
+
+而通过滑动力度自动切换逐级滚动与连续滚动的滑轮、可以适应几乎所有表面的无界技术、同时支持 2.4G 与蓝牙两种无线连接方式、可以连接 3 个设备并一键切换功能、可连续使用 40 天的内置锂电池等黑科技，让这只鼠标成为当之无愧的 Master。
+
