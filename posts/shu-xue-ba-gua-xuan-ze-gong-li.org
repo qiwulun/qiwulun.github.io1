@@ -1,0 +1,14 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 数学八卦──选择公理
+.. slug: shu-xue-ba-gua-xuan-ze-gong-li
+.. date: 2017-02-03 21:11:07 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+
