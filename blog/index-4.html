@@ -72,7 +72,102 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yue-xia-chan.html" class="u-url">月下蝉</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/ji-jie-jian-pan.html" class="u-url">机械键盘</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/ji-jie-jian-pan.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-23T13:23:59+08:00" title="2016-11-23 13:23">2016-11-23 13:23</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/ji-jie-jian-pan.html#disqus_thread" data-disqus-identifier="cache/posts/ji-jie-jian-pan.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-1">轴</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-2">键帽</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-3">xx 无冲</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-4">正刻、同刻、侧刻、无刻</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-5">钢板</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-6">104、87、84、82</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-7">手托</a></li>
+<li><a href="../posts/ji-jie-jian-pan.html#sec-8">MX-BOARD 2.0C G80-3802机械键盘 黑色 青轴 键帽 ABS</a></li>
+</ul>
+</div>
+</div>
+<p class="more"><a href="../posts/ji-jie-jian-pan.html">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/an-zhuang-mxnet.html" class="u-url">安装 mxnet</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/an-zhuang-mxnet.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-21T14:22:53+08:00" title="2016-11-21 14:22">2016-11-21 14:22</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/an-zhuang-mxnet.html#disqus_thread" data-disqus-identifier="cache/posts/an-zhuang-mxnet.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+使用 gcc 4.9 会编译不通过
+</p>
+
+<pre class="example">
+/tmp/ccl4BojP.o：在函数‘main’中：
+im2rec.cc:(.text.startup+0x2b24)：对‘cv::imencode(std::string const&amp;, cv::_InputArray const&amp;, std::vector&lt;unsigned char, std::allocator&lt;unsigned char&gt; &gt;&amp;, std::vector&lt;int, std::allocator&lt;int&gt; &gt; const&amp;)’未定义的引用
+collect2: error: ld returned 1 exit status
+Makefile:233: recipe for target 'bin/im2rec' failed
+make: *** [bin/im2rec] Error 1
+</pre>
+
+
+<p>
+把 gcc 和 g++ 设成 5
+</p>
+
+<div class="highlight"><pre><span></span>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 20
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 10
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10
+</pre></div>
+
+<p>
+编译支持GPU的MXnet
+MXnet需要打开一个编译和链接选项来支持CUDA。在前一步git clone得到的mxnet/目录里找到mxnet/make/子目录，把该目录下的config.mk复制到mxnet/目录，用文本编辑器打开，找到并修改以下几行：
+</p>
+
+<p>
+USE<sub>CUDA</sub> = 1
+USE<sub>CUDA</sub><sub>PATH</sub> = /usr/local/cuda
+其中第二行是CUDA的安装目录。如果选择默认安装方式，它会在/usr/local/cuda或者是类似/usr/local/cuda-7.5这样的原始安装目录，如果是自定义目录的安装，请自行修改本条。
+</p>
+
+<p>
+如果用户选择安装atlas或者openblas等其他BLAS的实现，需要额外的修改。如果ubuntu的atlas实现（sudo apt-get install libatlas-base-dev或者sudo apt-get install libopenblas-dev），需要修改为：
+</p>
+
+<p>
+USE<sub>BLAS</sub> = atlas 或者 openblas
+修改之后，在mxnet/目录下编译（-j4是可选参数表示用4线程编译）：
+</p>
+
+<p>
+make -j4
+注意：如果没有CUDA支持的显卡（比如Intel的Iris显卡或者AMD的R系列显卡）或者没有显卡，安装和编译GPU版本的mxnet会出错。解决方法是，把USE<sub>CUDA</sub> = 1改回USE<sub>CUDA</sub> = 0，并确保USE<sub>OPENMP</sub> = 1，mxnet会自动编译CPU版本并使用OpenMP进行多核CPU计算。根据问题的不同，GPU版本对比CPU版一般会有20-30倍左右的加速。
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yue-xia-chan.html" class="u-url">月下蝉</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -311,95 +406,6 @@ Ubuntu 16.04 要安装 32-bit 的teamviewer，在这里下载
 </div>
 </div>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/shu-dan.html" class="u-url">书单</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/shu-dan.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-14T15:21:21+08:00" title="2016-11-14 15:21">2016-11-14 15:21</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/shu-dan.html#disqus_thread" data-disqus-identifier="cache/posts/shu-dan.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <ul class="org-ul">
-<li>
-<code>[ ]</code> 制服下的名器
-</li>
-<li>
-<code>[ ]</code> 重构：改善既有代码的设计
-</li>
-<li>
-<code>[ ]</code> 版本控制之道
-</li>
-<li>
-<code>[ ]</code> 把你的英语用起来
-</li>
-<li>
-<code>[ ]</code> 秦谜：秦始皇的秘密
-</li>
-<li>
-<code>[ ]</code> 中国历史研究法
-</li>
-<li>
-<code>[ ]</code> 妙不可言
-</li>
-<li>
-<code>[ ]</code> 7天治愈拖延症
-</li>
-<li>
-<code>[ ]</code> 线性代数应该这样学
-</li>
-<li>
-<code>[ ]</code> Code Complete 代码大全
-</li>
-<li>
-<code>[ ]</code> 双能物品CT 高分辨率图像重建与处理方法
-</li>
-</ul>
-<p>
-波利亚用三本书来试图阐明人类解决问题的一般性的思维方法：
-</p>
-
-<ul class="org-ul">
-<li>
-<code>[ ]</code> 《How To Solve It》
-</li>
-<li>
-<code>[ ]</code> 《数学的发现》
-</li>
-<li>
-<code>[ ]</code> 《数学与猜想》
-</li>
-</ul>
-</div>
-    </article><article class="h-entry post-micro"><header><h1 class="p-name entry-title"><a href="../posts/xin-jing.html" class="u-url">心经</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/xin-jing.html" rel="bookmark"><time class="published dt-published" datetime="2016-11-14T13:13:56+08:00" title="2016-11-14 13:13">2016-11-14 13:13</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/xin-jing.html#disqus_thread" data-disqus-identifier="cache/posts/xin-jing.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-Youtube 快速念诵《心经》
-<a href="https://www.youtube.com/watch?v=fwtKTMMb0RM">https://www.youtube.com/watch?v=fwtKTMMb0RM</a>
-</p>
-
-<p>
-《心经》唱诵下载
-<a href="http://www.fodizi.com/fofa/down/2254.htm">http://www.fodizi.com/fofa/down/2254.htm</a>
-</p>
     </div>
     </article>
 </div>
