@@ -72,7 +72,741 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" class="u-url">docker image 太慢的解决方法之 VPS</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/effective-python-yue-du-bi-ji-1.html" class="u-url">effective python 阅读笔记1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/effective-python-yue-du-bi-ji-1.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-24T14:21:19+08:00" title="2016-12-24 14:21">2016-12-24 14:21</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/effective-python-yue-du-bi-ji-1.html#disqus_thread" data-disqus-identifier="cache/posts/effective-python-yue-du-bi-ji-1.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-1">Chapter1: Pythonic Thinking</a></li>
+<li>
+<a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-2">Chapter        3:        Classes        and        Inheritance</a>
+<ul>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-2-1">Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-2-2">Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-2-3">Item        1:        Know        Which        Version        of        Python        You’re        Using</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-2-4"></a></li>
+</ul>
+</li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-3">Chapter        2: Functions</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-4">Chapter        3:        Classes        and        Inheritance</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-5">Chapter        4:        Metaclasses        and        Attributes</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-6">Chapter        5:        Concurrency        and        Parallelism</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-7">Chapter        6:        Built-in        Modules</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-8">Chapter        7:        Collaboration</a></li>
+<li><a href="../posts/effective-python-yue-du-bi-ji-1.html#sec-9">Chapter        8:        Production</a></li>
+</ul>
+</div>
+</div>
+<p>
+<a href="http://www.effectivepython.com">http://www.effectivepython.com</a>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Chapter1: Pythonic Thinking</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The Python community has come to use the adjective Pythonic to describe code
+that follows a particular style. The idioms of Python have emerged over time
+through experience using the language and working with others. This chapter
+covers the best way to do the most common things in Python.
+Item        1:        Know        Which        Version        of        Python        You’re        Using
+Item        2:        Follow        the        PEP        8        Style        Guide
+Item        3:        Know        the        Differences        Between        bytes,        str,        and        unicode
+Item        4:        Write        Helper        Functions        Instead        of        Complex        Expressions
+Item        5:        Know        How        to        Slice        Sequences
+Item        6:        Avoid        Using        start,        end,        and        stride        in        a        Single        Slice
+Item        7:        Use        List        Comprehensions        Instead        of        map        and        filter
+Item        8:        Avoid        More        Than        Two        Expressions        in        List        Comprehensions
+Item        9:        Consider        Generator        Expressions        for        Large        Comprehensions
+Item        10:        Prefer        enumerate        Over        range
+Item        11:        Use        zip        to        Process        Iterators        in        Parallel
+Item        12:        Avoid        else        Blocks        After        for        and        while        Loops
+Item        13:        Take        Advantage        of        Each        Block        in        try/except/else/finally 
+Item        14:        Prefer        Exceptions        to        Returning        None
+Item        15:        Know        How        Closures        Interact        with        Variable        Scope
+Item        16:        Consider        Generators        Instead        of        Returning        Lists
+Item        17:        Be        Defensive        When        Iterating        Over        Arguments
+Item        18:        Reduce        Visual        Noise        with        Variable        Positional        Arguments
+Item        19:        Provide        Optional        Behavior        with        Keyword        Arguments
+Item        20:        Use        None        and        Docstrings        to        Specify        Dynamic        Default        Arguments
+Item        21:        Enforce        Clarity        with        Keyword-Only        Arguments
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Chapter        3:        Classes        and        Inheritance</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Item        22:        Prefer        Helper        Classes        Over        Bookkeeping        with        Dictionaries        and        Tuples</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Avoid        making        dictionaries        with        values        that        are        other        dictionaries        or        long        tuples.
+</li>
+<li>Use        namedtuple        for        lightweight,        immutable        data        containers        before        you        need        the
+</li>
+</ul>
+<p>
+flexibility        of        a        full        class.
+</p>
+<ul class="org-ul">
+<li>Move        your        bookkeeping        code        to        use        multiple        helper        classes        when        your        internal        state
+</li>
+</ul>
+<p>
+dictionaries        get        complicated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Item        23:        Accept        Functions        for        Simple        Interfaces        Instead        of        Classes</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Item        24:        Use        @classmethod        Polymorphism        to        Construct        Objects        GenericallyItem        25:        Initialize        Parent        Classes        with        super
+Item        26:        Use        Multiple        Inheritance        Only        for        Mix-in        Utility        Classes
+Item        27:        Prefer        Public        Attributes        Over        Private        Ones
+Item        28:        Inherit        from        collections.abc        for        Custom        Container        Types
+Chapter        4:        Metaclasses        and        Attributes
+Item        29:        Use        Plain        Attributes        Instead        of        Get        and        Set        Methods
+</p>
+<ul class="org-ul">
+<li>Define        new        class        interfaces        using        simple        public        attributes,        and        avoid        set        and        get
+</li>
+</ul>
+<p>
+methods.
+</p>
+<ul class="org-ul">
+<li>Use        @property        to        define        special        behavior        when        attributes        are        accessed        on        your
+</li>
+</ul>
+<p>
+objects,        if        necessary.
+</p>
+<ul class="org-ul">
+<li>Follow        the        rule        of        least        surprise        and        avoid        weird        side        effects        in        your        @property
+</li>
+</ul>
+<p>
+methods.
+</p>
+<ul class="org-ul">
+<li>Ensure        that        @property        methods        are        fast;        do        slow        or        complex        work        using        normal
+</li>
+</ul>
+<p>
+methods.
+Item        30:        Consider        @property        Instead        of        Refactoring        Attributes
+</p>
+<ul class="org-ul">
+<li>I        especially        like        @property        because        it        lets        you        make        incremental        progress        toward        a better        data        model        over        time.        Reading        the        Bucket        example        above,        you        may        have        thought to        yourself,        “fill        and        deduct        should        have        been        implemented        as        instance        methods        inthe        first        place.”        Although        you’re        probably        right        (see        Item        22:        “Prefer        Helper        Classes        Over Bookkeeping        with        Dictionaries        and        Tuples”),        in        practice        there        are        many        situations        in which        objects        start        with        poorly        defined        interfaces        or        act        as        dumb        data        containers.        This happens        when        code        grows        over        time,        scope        increases,        multiple        authors        contribute        without anyone        considering        long-term        hygiene,        etc. @property        is        a        tool        to        help        you        address        problems        you’ll        come        across        in        real-world code.        Don’t        overuse        it.        When        you        find        yourself        repeatedly        extending        @property methods,        it’s        probably        time        to        refactor        your        class        instead        of        further        paving        over        your code’s        poor        design.
+</li>
+</ul>
+<p>
+Item        31:        Use        Descriptors        for        Reusable        @property        Methods
+Item        32:        Use        <span class="underline"><span class="underline">getattr</span></span>,        <span class="underline"><span class="underline">getattribute</span></span>,        and        <span class="underline"><span class="underline">setattr</span></span> for        Lazy
+Attributes
+Item        33:        Validate        Subclasses        with        Metaclasses
+Item        34:        Register        Class        Existence        with        Metaclasses
+Item        35:        Annotate        Class        Attributes        with        Metaclasses
+Chapter        5:        Concurrency        and        Parallelism
+Item        36:        Use        subprocess        to        Manage        Child        Processes
+Item        37:        Use        Threads        for        Blocking        I/O,        Avoid        for        Parallelism
+Item        38:        Use        Lock        to        Prevent        Data        Races        in        Threads
+Item        39:        Use        Queue        to        Coordinate        Work        Between        Threads
+Item        40:        Consider        Coroutines        to        Run        Many        Functions        Concurrently
+Item        41:        Consider        concurrent.futures        for        True        Parallelism
+Chapter        6:        Built-in        Modules
+Item        42:        Define        Function        Decorators        with        functools.wraps
+Item        43:        Consider        contextlib        and        with        Statements        for        Reusable        try/finally
+Behavior
+Item        44:        Make        pickle        Reliable        with        copyreg
+Item        45:        Use        datetime        Instead        of        time        for        Local        Clocks
+Item        46:        Use        Built-in        Algorithms        and        Data        Structures
+Item        47:        Use        decimal        When        Precision        Is        Paramount
+Item        48:        Know        Where        to        Find        Community-Built        Modules
+Chapter        7:        Collaboration
+Item        49:        Write        Docstrings        for        Every        Function,        Class,        and        Module
+Item        50:        Use        Packages        to        Organize        Modules        and        Provide        Stable        APIsItem        51:        Define        a        Root        Exception        to        Insulate        Callers        from        APIs
+Item        52:        Know        How        to        Break        Circular        Dependencies
+Item        53:        Use        Virtual        Environments        for        Isolated        and        Reproducible        Dependencies
+Chapter        8:        Production
+Item        54:        Consider        Module-Scoped        Code        to        Configure        Deployment        Environments
+Item        55:        Use        repr        Strings        for        Debugging        Output
+Item        56:        Test        Everything        with        unittest
+Item        57:        Consider        Interactive        Debugging        with        pdb
+Item        58:        Profile        Before        Optimizing
+Item        59:        Use        tracemalloc        to        Understand        Memory        Usage        and        Leaks
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">Item        1:        Know        Which        Version        of        Python        You’re        Using</h3>
+</div>
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"></h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Python’s syntax makes it all too easy to write single-line expressions that
+are overly complicated and difficult to read.
+</li>
+<li>Move complex expressions into helper functions, especially if you need to use
+the same logic repeatedly.
+</li>
+<li>The if/else expression provides a more readable alternative to using Boolean
+operators like or and and in expressions.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Chapter        2: Functions</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Functions in Python have a variety of extra features that make a programmer’s
+life easier. Some are similar to capabilities in other programming languages,
+but many are unique to Python. This chapter covers how to use functions to
+clarify intention, promote reuse, and reduce bugs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Chapter        3:        Classes        and        Inheritance</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Python is an object-oriented language. Getting things done in Python often
+requires writing new classes and defining how they interact through their
+interfaces and hierarchies. This chapter covers how to use classes and
+inheritance to express your intended behaviors with objects.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Chapter        4:        Metaclasses        and        Attributes</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Metaclasses and dynamic attributes are powerful Python features. However, they
+also enable you to implement extremely bizarre and unexpected behaviors. This
+chapter covers the common idioms for using these mechanisms to ensure that you
+follow the rule of least surprise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Chapter        5:        Concurrency        and        Parallelism</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Python        makes        it        easy        to        write        concurrent        programs        that        do        many        different        things
+seemingly        at        the        same        time.        Python        can        also        be        used        to        do        parallel        work        through        system
+calls,        subprocesses,        and        C-extensions.        This        chapter        covers        how        to        best        utilize        Python        in
+these        subtly        different        situations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Chapter        6:        Built-in        Modules</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Python        is        installed        with        many        of        the        important        modules        that        you’ll        need        to        write        programs.
+These        standard        packages        are        so        closely        intertwined        with        idiomatic        Python        that        they        may        as
+well        be        part        of        the        language        specification.        This        chapter        covers        the        essential        built-in
+modules.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Chapter        7:        Collaboration</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Collaborating        on        Python        programs        requires        you        to        be        deliberate        about        how        you        write        your
+code.        Even        if        you’re        working        alone,        you’ll        want        to        understand        how        to        use        modules        written
+by        others.        This        chapter        covers        the        standard        tools        and        best        practices        that        enable        people        to
+work        together        on        Python        programs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">Chapter        8:        Production</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Python        has        facilities        for        adapting        to        multiple        deployment        environments.        It        also        has        built-in
+modules        that        aid        in        hardening        your        programs        and        making        them        bulletproof.        This        chapter
+covers        how        to        use        Python        to        debug,        optimize,        and        test        your        programs        to        maximize        quality
+and        performance        at        runtime.
+</p>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html" class="u-url">代码整洁之道──阅读笔记1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-23T11:02:47+08:00" title="2016-12-23 11:02">2016-12-23 11:02</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html#disqus_thread" data-disqus-identifier="cache/posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../posts/dai-ma-zheng-ji-zhi-dao-yue-du-bi-ji-1.html#sec-1">命名</a></li>
+</ul>
+</div>
+</div>
+<p>
+软件质量，不但依赖于架构及项目管理，而且与代码质量紧密相关。这一点，无论是敏捷开发流派还是传统开发流派，都不得不承认。
+</p>
+
+<p>
+本书提出一种观念：代码质量与其整洁度成正比。干净的代码，既在质量上较为可靠，也为后期维护、升级奠定了良好基础。作为编程领域的佼佼者，本书作者给出了一系列行之有效的整洁代码操作实践。这些实践在本书中体现为一条条规则（或称“启示”），并辅以来自现实项目的正、反两面的范例。只要遵循这些规则，就能编写出干净的代码，从而有效提升代码质量。
+</p>
+
+<blockquote>
+<p>
+归置良好的需求就像代码一样正式，也能作为代码的可执行测试来使用
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+勒布朗 (leBlanc) 法则:稍后等于不干 (Later equals never)
+</p>
+</blockquote>
+
+<blockquote>
+<ul class="org-ul">
+<li>能通过所有测试
+</li>
+<li>没有重复代码
+</li>
+<li>体现系统中的全部设计理念
+</li>
+<li>包括尽量少的实体，比如类、方法、函数等
+</li>
+</ul>
+</blockquote>
+
+<blockquote>
+<p>
+读与写花费时间比例10:1,写新代码时，我们一直在读旧代码
+</p>
+</blockquote>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">命名</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>名副其实
+<ul class="org-ul">
+<li>不应该用注释来解释变量
+</li>
+<li>避免魔术数
+</li>
+</ul>
+</li>
+<li>避免误导
+<ul class="org-ul">
+<li>比如说不要用 List 这种变量
+</li>
+</ul>
+</li>
+<li>做有意义的区分
+<ul class="org-ul">
+<li>避免这种玩意，这三个有鬼区别？
+<pre class="example">
+getActiveAccount();
+getActiveAccounts();
+getActiveAccountInfo();
+</pre>
+</li>
+<li>使用读的出来的名字
+</li>
+<li>使用可搜索的名字
+</li>
+<li>类名应该是名词
+</li>
+<li>方法名应该是动词或动词短语
+</li>
+<li>每个概念对应一个词
+</li>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-docker-lai-da-bao-spacemacs.html" class="u-url">用 docker 来打包 spacemacs</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/yong-docker-lai-da-bao-spacemacs.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-21T22:41:18+08:00" title="2016-12-21 22:41">2016-12-21 22:41</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/yong-docker-lai-da-bao-spacemacs.html#disqus_thread" data-disqus-identifier="cache/posts/yong-docker-lai-da-bao-spacemacs.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li>
+<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1">org-mode</a>
+<ul>
+<li>
+<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1">figure</a>
+<ul>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-1">ditaa</a></li>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-2">graphviz</a></li>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-3">plantuml</a></li>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-4">asymptote</a></li>
+</ul>
+</li>
+<li>
+<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2">pdf</a>
+<ul>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2-1">export</a></li>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2-2">view</a></li>
+</ul>
+</li>
+<li>
+<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-3">html-blog</a>
+<ul>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-3-1"><span class="done DONE">DONE</span> nikola</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-2"><span class="done DONE">DONE</span> 翻墙</a>
+<ul>
+<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-2-1">google translate</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">org-mode</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">figure</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">ditaa</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<div class="highlight"><pre><span></span>    +-----------+        +---------+  
+    |    PLC    |        |         |                
+    |  Network  +&lt;------&gt;+   PLC   +&lt;---=---------+ 
+    |    cRED   |        |  c707   |              | 
+    +-----------+        +----+----+              | 
+			      ^                   | 
+			      |                   | 
+			      |  +----------------|-----------------+
+			      |  |                |                 |
+			      v  v                v                 v
+      +----------+       +----+--+--+      +-------+---+      +-----+-----+       Windows clients
+      |          |       |          |      |           |      |           |      +----+      +----+
+      | Database +&lt;-----&gt;+  Shared  +&lt;----&gt;+ Executive +&lt;-=--&gt;+ Operator  +&lt;----&gt;|cYEL| . . .|cYEL|
+      |   c707   |       |  Memory  |      |   c707    |      | Server    |      |    |      |    |
+      +--+----+--+       |{d} cGRE  |      +------+----+      |   c707    |      +----+      +----+
+	 ^    ^          +----------+             ^           +-------+---+
+	 |    |                                   |                        
+	 |    +--------=--------------------------+                    
+	 v                                                             
++--------+--------+                                                         
+|                 |                                                         
+| Millwide System |            -------- Data ---------                      
+| cBLU            |            --=----- Signals ---=--                      
++-----------------+
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">graphviz</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<div class="highlight"><pre><span></span>digraph G {
+  size="8,6"
+  ratio=expand
+  edge [dir=both]
+  plcnet [shape=box, label="PLC Network"]
+  subgraph cluster_wrapline {
+    label="Wrapline Control System"
+    color=purple
+    subgraph {
+    rank=same
+    exec
+    sharedmem [style=filled, fillcolor=lightgrey, shape=box]
+    }
+    edge[style=dotted, dir=none]
+    exec -&gt; opserver
+    exec -&gt; db
+    plc -&gt; exec
+    edge [style=line, dir=both]
+    exec -&gt; sharedmem
+    sharedmem -&gt; db
+    plc -&gt; sharedmem
+    sharedmem -&gt; opserver
+  }
+  plcnet -&gt; plc [constraint=false]
+  millwide [shape=box, label="Millwide System"]
+  db -&gt; millwide
+
+  subgraph cluster_opclients {
+    color=blue
+    label="Operator Clients 示例"
+    rankdir=LR
+    labelloc=b
+    node[label=client]
+    opserver -&gt; client1
+    opserver -&gt; client2
+    opserver -&gt; client3
+  }
+}
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3">plantuml</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+test
+</p>
+
+<div class="highlight"><pre><span></span>Alice -&gt; Bob: synchronous call
+Alice -&gt;&gt; Bob: asynchronous call
+Alice -&gt;&gt; Bob: asynchronous call
+</pre></div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4">asymptote</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2016-12-21 三 01:30]</span></span> 
+</p>
+</div>
+
+<ul class="org-ul">
+<li>
+<a id="sec-1-1-4-1" name="sec-1-1-4-1"></a>三维，记得要带 <code>:cmdline -render=0</code><br><div class="outline-text-5" id="text-1-1-4-1">
+<p>
+不然要用显卡，不适合docker
+</p>
+
+<p>
+test 
+</p>
+
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">three</span><span class="p">;</span>
+
+<span class="nf">size</span><span class="p">(</span><span class="mi">560</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="nv">IgnoreAspect</span><span class="p">);</span>
+<span class="nf">size3</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
+<span class="nv">currentprojection</span><span class="o">=</span><span class="n">perspective</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="nv">up</span><span class="o">=</span><span class="nf">Y</span><span class="p">);</span>
+<span class="nv">currentlight</span><span class="o">=</span><span class="nv">White</span><span class="p">;</span>
+
+<span class="kt">real</span> <span class="n">a</span><span class="o">=-</span><span class="mf">0.4</span><span class="p">;</span>
+<span class="kt">real</span> <span class="n">b</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span>
+<span class="kt">real</span> <span class="n">y1</span><span class="o">=-</span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">real</span> <span class="n">y2</span><span class="o">=-</span><span class="mi">3</span><span class="n">y1</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">path</span> <span class="n">A</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span><span class="o">::</span><span class="p">{</span><span class="nf">dir</span><span class="p">(</span><span class="mf">89.5</span><span class="p">)}(</span><span class="mi">0</span><span class="p">,</span><span class="n">y2</span><span class="p">);</span>
+<span class="kt">path</span> <span class="n">B</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">y1</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="mf">88.3</span><span class="p">)}</span><span class="o">::</span><span class="p">{</span><span class="nf">dir</span><span class="p">(</span><span class="mi">20</span><span class="p">)}(</span><span class="n">b</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">real</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+<span class="kt">pair</span> <span class="n">z</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">);</span>
+<span class="kt">transform</span> <span class="n">t</span><span class="o">=</span><span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
+<span class="kt">transform</span> <span class="n">T</span><span class="o">=</span><span class="nf">inverse</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">yy</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">xx</span><span class="p">));</span>
+<span class="nf">path</span><span class="p">[]</span> <span class="n">g</span><span class="o">=</span><span class="nf">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.979</span><span class="p">)</span><span class="o">*</span><span class="nf">scale</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">*</span>
+  <span class="nf">texpath</span><span class="p">(</span><span class="nf">Label</span><span class="p">(</span><span class="s">"{\it symptote}"</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="mf">0.25</span><span class="o">*</span><span class="nv">E</span><span class="o">+</span><span class="mf">0.169</span><span class="nv">S</span><span class="p">,</span><span class="nf">fontsize</span><span class="p">(</span><span class="mi">24</span><span class="nv">pt</span><span class="p">)));</span>
+<span class="kt">pair</span> <span class="n">w</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.7</span><span class="p">);</span>
+<span class="kt">pair</span> <span class="n">u</span><span class="o">=</span><span class="nf">intersectionpoint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="o">--</span><span class="n">w</span><span class="p">);</span>
+
+<span class="kt">real</span> <span class="n">h</span><span class="o">=</span><span class="mf">0.25</span><span class="o">*</span><span class="nf">linewidth</span><span class="p">();</span>
+<span class="kt">real</span> <span class="n">hy</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">h</span><span class="p">)).</span><span class="n">x</span><span class="p">;</span>
+<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">hy</span><span class="p">)..(</span><span class="n">b</span><span class="o">+</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..(</span><span class="n">b</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)..(</span><span class="n">a</span><span class="o">-</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
+<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">((</span><span class="n">h</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">y2</span><span class="p">)..(</span><span class="mi">0</span><span class="p">,</span><span class="n">y2</span><span class="o">+</span><span class="n">h</span><span class="p">)..(</span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="n">y1</span><span class="p">)..(</span><span class="mi">0</span><span class="p">,</span><span class="n">y1</span><span class="o">-</span><span class="n">h</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
+<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="p">((</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">hy</span><span class="p">)..(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="o">+</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)..(</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="o">-</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
+<span class="kt">real</span> <span class="n">f</span><span class="o">=</span><span class="mf">0.75</span><span class="p">;</span>
+<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">point</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">--</span><span class="nf">point</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="nf">reverse</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">--</span><span class="k">cycle</span><span class="p">);</span>
+<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">point</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="n">B</span><span class="o">--</span><span class="nf">point</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="nf">reverse</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">--</span><span class="k">cycle</span><span class="p">);</span>
+
+<span class="kt">triple</span> <span class="n">H</span><span class="o">=-</span><span class="mf">0.1</span><span class="nf">Z</span><span class="p">;</span>
+<span class="n">material</span> <span class="n">m</span><span class="o">=</span><span class="n">material</span><span class="p">(</span><span class="nv">lightgray</span><span class="p">,</span><span class="n">shininess</span><span class="o">=</span><span class="mf">1.0</span><span class="p">);</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">path</span> <span class="n">p</span> <span class="o">:</span> <span class="n">g</span><span class="p">)</span>
+  <span class="nf">draw</span><span class="p">(</span><span class="n">extrude</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">H</span><span class="p">),</span><span class="n">m</span><span class="p">);</span>
+
+<span class="kt">surface</span> <span class="n">s</span><span class="o">=</span><span class="nf">surface</span><span class="p">(</span><span class="n">g</span><span class="p">);</span>
+<span class="nf">draw</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="nv">red</span><span class="p">,</span><span class="n">nolight</span><span class="p">);</span>
+<span class="nf">draw</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-4-2" name="sec-1-1-4-2"></a>二维 带变量<br><div class="outline-text-5" id="text-1-1-4-2">
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">geometry</span><span class="p">;</span> 
+
+<span class="nf">size</span><span class="p">(</span><span class="mi">7</span><span class="nv">cm</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="kt">picture</span> <span class="n">pic</span><span class="p">;</span>
+<span class="c">// on définit une courbe reliant les points (0,1) et (1,0)</span>
+<span class="kt">path</span> <span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)}..{</span><span class="nf">dir</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)}(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="c">// à l'aide de trois rotations, on définit </span>
+<span class="c">// le motif (dans un carré de 2 sur 2) ...</span>
+<span class="kt">path</span> <span class="n">motif</span><span class="o">=</span><span class="nf">buildcycle</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="nf">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span>
+		      <span class="nf">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="nf">rotate</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">);</span>
+<span class="nf">filldraw</span><span class="p">(</span><span class="n">pic</span><span class="p">,</span><span class="n">motif</span><span class="p">,</span><span class="nv">lightred</span><span class="o">+</span><span class="nv">white</span><span class="p">,</span><span class="nv">black</span><span class="p">);</span>
+<span class="c">// ... et une double boucle pour "paver" </span>
+<span class="c">// suivant (Ox) et suivant (Oy)</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+      <span class="p">{</span>
+	<span class="nf">add</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">pic</span><span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">pdf</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">export</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+test:直接输出这个 pdf
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">view</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2016-12-20 二 23:54]</span></span> 
+</p>
+
+<p>
+test:在emacs中打开这个pdf,  <code>SPC m n</code> 可以转换成夜间模式
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">html-blog</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">
+<span class="done DONE">DONE</span> nikola</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+在 dockerfile 中定义了 LANG 等 local 就可以用了
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">
+<span class="done DONE">DONE</span> 翻墙</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">google translate</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<code>SPC x g l</code> 选择 en 到 zh-CN
+</p>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-yun-xing-gui-app.html" class="u-url">Docker 中运行 GUI APP</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/docker-zhong-yun-xing-gui-app.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-17T22:09:26+08:00" title="2016-12-17 22:09">2016-12-17 22:09</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/docker-zhong-yun-xing-gui-app.html#disqus_thread" data-disqus-identifier="cache/posts/docker-zhong-yun-xing-gui-app.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+在这里书写你的文章。
+</p>
+<div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com/ | sh
+
+$ sudo service docker start
+
+$ xauth list
+
+$ sudo docker run -i -t --net=host -e DISPLAY -v /tmp/.X11-unix ubuntu bash
+
+# Inside container:
+$ apt-get install firefox
+$ apt-get install xauth
+$ xauth add ...
+</pre></div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps.html" class="u-url">docker image 太慢的解决方法之 VPS</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -1097,133 +1831,6 @@ ubuntu下强制结束程序
 
 <p>
 （2）输入sudo kill pid即可
-</p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" class="u-url">git 在每次 Push 时不用重复输入密码</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:32:10+08:00" title="2016-12-06 20:32">2016-12-06 20:32</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html#disqus_thread" data-disqus-identifier="cache/posts/git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <ol class="org-ol">
-<li>使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档
-</li>
-
-<li>对于 Https 协议: 首先在全局配置保存你的密码， ~/.git-credentials （没有就创建）
-内添加 <a href="https://%7Busername%7D:%7Bpasswd%7D@git.coding.net">https://{username}:{passwd}@git.coding.net</a> 然后执行配置 Git 命令存储认
-证命令： $git config –global credential.helper store
-</li>
-</ol>
-<p>
-执行后在 ~/.gitconfig 文件会多出下面配置项: credential.helper = store
-</p>
-
-<p>
-详情请参考<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching">凭证存储</a> 。
-</p>
-
-<pre class="example">
-git 通过 ssh 和 https 向服务器提交的速度有没有区别？
-
-现在是用的ssh向阿里云服务器提交，感觉有1秒的延迟，如果换成https，能不能做到接近0延迟的提交？
-
-moliliang   2014-06-01 01:26:39 +08:00
-
-https 快一些，其实没啥太大差别。ssh主要是不用属于密码。当然https也可以免输入密码，只是比ssh设置麻烦。
-
-ferock   2014-06-01 01:50:06 +08:00
-
-ssh key 安全会更好一点
-
-很多https 密码都在url 里，太明文了
-
-ssh key 慢，其他差不多
-</pre>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" class="u-url">用 ssh 来进行 git 免密码传输</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T20:23:26+08:00" title="2016-12-06 20:23">2016-12-06 20:23</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html#disqus_thread" data-disqus-identifier="cache/posts/yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-SSH keys
-</p>
-
-<p>
-SSH key 可以让你在你的电脑和Code服务器之间建立安全的加密连接。 先执行以下语句来判断是否已经存在本地公钥：
-</p>
-<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub
-</pre></div>
-
-<p>
-如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。
-提示: 最好的情况是一个密码对应一个ssh key，但是那不是必须的。你完全可以跳过创建密码这个步骤。请记住设置的密码并不能被修改或获取。
-你可以按如下命令来生成ssh key：
-</p>
-<div class="highlight"><pre><span></span>ssh-keygen -t rsa -C "someone@email.com"
-</pre></div>
-
-<p>
-这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。
-用以下命令获取你生成的公钥：
-cat ~/.ssh/id<sub>rsa</sub>.pub
-复制这个公钥放到你的个人设置中的SSH/My SSH Keys下，请完整拷贝从ssh-开始直到你的用户名和主机名为止的内容。
-</p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" class="u-url">用 sox 改变 wav 文件的音量</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-06T13:30:03+08:00" title="2016-12-06 13:30">2016-12-06 13:30</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html#disqus_thread" data-disqus-identifier="cache/posts/yong-sox-gai-bian-wav-wen-jian-de-yin-liang.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div class="highlight"><pre><span></span>sox -v .3 input.wav output.wav
-</pre></div>
-
-<p>
-<code>-v</code> 表示改变音量 <code>.3</code> 表示变为原始音量的0.3倍
-</p>
-    </div>
-    </article><article class="h-entry post-micro"><header><h1 class="p-name entry-title"><a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" class="u-url">欲得官，杀人放火受招安。</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T22:27:01+08:00" title="2016-12-05 22:27">2016-12-05 22:27</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html#disqus_thread" data-disqus-identifier="cache/posts/yu-de-guan-sha-ren-fang-huo-shou-zhao-an.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <p>
-欲得官，杀人放火受招安。
 </p>
     </div>
     </article>
