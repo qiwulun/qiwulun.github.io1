@@ -19,8 +19,14 @@
 - [[file:docker.org][Docker]]
 - [[file:bibliography.org][bibliography 文献整理]]
 - 
+* 哲学
+** 福柯
+  - 知识型
+  - 知识考古学
+  - 谱系学
 * 网络服务
 - https://zoom.us/ 远程会议
+- http://en.booksee.org/ 电子书下载
 * 软件
 
 - VSO Downloader

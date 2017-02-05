@@ -9,6 +9,14 @@
 .. description: 
 .. type: text
 #+END_COMMENT
+* Manjaro 优点
+“虽然装的是16.06预览版，但是非常稳定，没有ubuntu和openSuSE在我本子上的闪屏bug，
+也没有其他莫名其妙的bug。驱动完善，设置里一键就安装好了。中文支持也非常好，字体
+好看和ubuntu不相上下，konsole里默认配置也不会出现中文显示不全的bug（号称稳定、
+kde支持最好的openSuSE都有这个问题），chrome里中文字体也不虚，无需配置。aur里只要
+你想要的软件都有，什么搜狗、wineqq-intl、微信，FeelUOwn，ss-qt5（这貌似是arch的
+优点），直接一条命令就装上了，笑看其他发行版找PPA找源找二进制包。真是太好用了，
+为什么国内用户这么少呢，感觉是很有前途的发行版，我要传教！”
 
 
 * 配置
