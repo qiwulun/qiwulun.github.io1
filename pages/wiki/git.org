@@ -1,0 +1,58 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: git
+.. slug: git
+#+END_COMMENT
+
+* 分支管理
+
+** 情况1:远程仓库有 master 和 dev 分支
+查看分支
+
+#+BEGIN_SRC shell
+git branch --all 
+#+END_SRC
+
+创建关联origin/dev的本地分支
+
+#+BEGIN_SRC shell
+git checkout -b dev origin/dev
+#+END_SRC
+
+切换到本地 dev 分支
+#+BEGIN_SRC shell
+git checkout dev
+#+END_SRC
+** 情况2:远程仓库只有 master 分支
+创建分支
+
+#+BEGIN_SRC shell
+git branch dev
+#+END_SRC
+
+发布 dev 分支
+
+#+BEGIN_SRC shell
+git push origin dev:dev
+#+END_SRC
+
+切换到本地 dev 分支
+#+BEGIN_SRC shell
+git checkout dev
+#+END_SRC
+
+
+** github 上管理页面可以更改默认分支
+
+** 删除分支
+
+删除远端分支
+#+BEGIN_SRC shell
+git push origin :dev
+#+END_SRC
+
+删除本地分支
+#+BEGIN_SRC shell
+git checkout master
+git branch -d dev
+#+END_SRC

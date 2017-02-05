@@ -1,0 +1,20 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: scrapy 爬虫
+.. slug: scrapy-pa-chong
+.. date: 2017-02-05 19:57:58 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+
+*  scrapy shell调试
+有个好的调试工具对于提升开发效率是非常必要的，Scrapy shell就是很不错的调试工具。常用的情景是：不确定某些xpath、xcss的写法是否正确，程序运行出现问题时等。命令如下：
+#在cmd中输入如下命令：
+[python] view plain copy 在CODE上查看代码片派生到我的代码片
+scrapy shell<url>  
+scrapy shellhttp://douban.movie.com  
