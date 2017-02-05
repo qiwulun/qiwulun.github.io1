@@ -12,6 +12,9 @@
 [[file:poems.org][诗词骈文]]
 
 [[file:joke.org][笑话]]
+
+[[file:translation.org][翻译]]
+
 * 推荐的书
 #+BEGIN_HTML
 <div class="book-figure">
