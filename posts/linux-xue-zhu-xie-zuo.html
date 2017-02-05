@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>配置 Manjaro 纪录 | 赵骥's Site</title>
+<title>linux 学术写作 | 赵骥's Site</title>
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
@@ -13,39 +13,48 @@
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html">
+<link rel="canonical" href="https://qiwulun.github.io/posts/linux-xue-zhu-xie-zuo.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="../mycss/tweak.css" rel="stylesheet" type="text/css">
 <base target="_parent">
 <meta name="author" content="Zhao JI">
-<link rel="prev" href="ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html" title="ssh 反向代理实现内网穿透" type="text/html">
-<link rel="next" href="wu-zhen-mi-ni-ding-shu-ji.html" title="无针迷你订书机" type="text/html">
+<link rel="prev" href="scrapy-pa-chong.html" title="scrapy 爬虫" type="text/html">
 <meta property="og:site_name" content="赵骥's Site">
-<meta property="og:title" content="配置 Manjaro 纪录">
-<meta property="og:url" content="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html">
-<meta property="og:description" content="Table of Contents
+<meta property="og:title" content="linux 学术写作">
+<meta property="og:url" content="https://qiwulun.github.io/posts/linux-xue-zhu-xie-zuo.html">
+<meta property="og:description" content='Table of Contents
 
 
-Manjaro 优点
-配置
-docker
+平台软件
+目录树结构
 
-Installation
-Starting Docker
-
-
-
+使用论文模板
+设置图片路径
+使用参考文献
 
 
 
-Manjaro 优点
 
 
-“虽然装的是16.06预览版，但是非常稳定，没有ubuntu和openSuSE在我本子上的闪屏bug，
-也没有其他莫名其妙的bug。驱动完善，设置里一键就安装好了。中文支持也非常好，字体
-好看和ubuntu不相上下，ko">
+
+
+平台软件
+
+
+zotero + livetex + texmaker + "Daum Equation Editor"
+
+
+
+zotero 文献管理工具
+
+
+texlive latex文档编译工具
+
+
+Daum Equation Editor 编辑数学公式的chrome插件
+你用'>
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-01-22T14:08:43+08:00">
+<meta property="article:published_time" content="2017-02-05T23:04:17+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -95,16 +104,16 @@ Manjaro 优点
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">配置 Manjaro 纪录</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">linux 学术写作</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-01-22T14:08:43+08:00" itemprop="datePublished" title="2017-01-22 14:08">2017-01-22 14:08</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-05T23:04:17+08:00" itemprop="datePublished" title="2017-02-05 23:04">2017-02-05 23:04</time></a></p>
                 <p class="commentline">
         
-    <a href="pei-zhi-manjaro-ji-lu.html#disqus_thread" data-disqus-identifier="cache/posts/pei-zhi-manjaro-ji-lu.html">Comments</a>
+    <a href="linux-xue-zhu-xie-zuo.html#disqus_thread" data-disqus-identifier="cache/posts/linux-xue-zhu-xie-zuo.html">Comments</a>
 
 
             
@@ -118,104 +127,90 @@ Manjaro 优点
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="pei-zhi-manjaro-ji-lu.html#sec-1">Manjaro 优点</a></li>
-<li><a href="pei-zhi-manjaro-ji-lu.html#sec-2">配置</a></li>
+<li><a href="linux-xue-zhu-xie-zuo.html#sec-1">平台软件</a></li>
 <li>
-<a href="pei-zhi-manjaro-ji-lu.html#sec-3">docker</a>
+<a href="linux-xue-zhu-xie-zuo.html#sec-2">目录树结构</a>
 <ul>
-<li><a href="pei-zhi-manjaro-ji-lu.html#sec-3-1">Installation</a></li>
-<li><a href="pei-zhi-manjaro-ji-lu.html#sec-3-2">Starting Docker</a></li>
+<li><a href="linux-xue-zhu-xie-zuo.html#sec-2-1">使用论文模板</a></li>
+<li><a href="linux-xue-zhu-xie-zuo.html#sec-2-2">设置图片路径</a></li>
+<li><a href="linux-xue-zhu-xie-zuo.html#sec-2-3">使用参考文献</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Manjaro 优点</h2>
+<h2 id="sec-1">平台软件</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-“虽然装的是16.06预览版，但是非常稳定，没有ubuntu和openSuSE在我本子上的闪屏bug，
-也没有其他莫名其妙的bug。驱动完善，设置里一键就安装好了。中文支持也非常好，字体
-好看和ubuntu不相上下，konsole里默认配置也不会出现中文显示不全的bug（号称稳定、
-kde支持最好的openSuSE都有这个问题），chrome里中文字体也不虚，无需配置。aur里只要
-你想要的软件都有，什么搜狗、wineqq-intl、微信，FeelUOwn，ss-qt5（这貌似是arch的
-优点），直接一条命令就装上了，笑看其他发行版找PPA找源找二进制包。真是太好用了，
-为什么国内用户这么少呢，感觉是很有前途的发行版，我要传教！”
+zotero + livetex + texmaker + "Daum Equation Editor"
 </p>
-</div>
-</div>
 
+<ol class="org-ol">
+<li>
+<code>zotero</code> 文献管理工具
+</li>
+
+<li>
+<code>texlive</code> latex文档编译工具
+</li>
+
+<li>
+<code>Daum Equation Editor</code> 编辑数学公式的chrome插件
+你用图形化的方法来编辑公式，它帮你产生latex表达式。感觉比texmake提供的公式编辑环境好用且不容易出错，所以我推荐了。
+</li>
+</ol>
+</div>
+</div>
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">配置</h2>
+<h2 id="sec-2">目录树结构</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加： Server = <a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/%24repo/os/%24arch">https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</a>
+–texdoc    %latex文档用到的所有资源文件所在的父目录
+-—ref       %参考文件目录，eg. sigproc.bib
+-—pic       %图片文件目录  eg. fly.eps
+-—src       %latex源文件所在目录 eg. sigproc-sp.tex
+-—fmt      %论文模板所在目录，eg. acm<sub>proc</sub><sub>article</sub>-sp.cls
 </p>
+</div>
 
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">使用论文模板</h3>
+<div class="outline-text-3" id="text-2-1">
+<pre class="example">
+\documentclass{../fmt/acm_proc_article-sp}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">设置图片路径</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
-更新软件包缓存： sudo pacman -Syy
+在\begin{document}命令前加上一行，\graphicspath{{../pic//}}，记得是双括号、双斜杠结尾哦。
 </p>
 </div>
 </div>
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">docker</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">Installation</h3>
-<div class="outline-text-3" id="text-3-1">
-<p>
-For the normal package a simple
-</p>
 
-<p>
-<code>$ sudo pacman -S docker</code>
-</p>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">使用参考文献</h3>
+<div class="outline-text-3" id="text-2-3">
+<pre class="example">
+\bibliography{../ref/sigproc} 因为用相对路径，所以只能有一个bib文件
 
-<p>
- is all that is needed.
-rtu
- For the AUR package execute:
-</p>
+or
 
-<p>
-<code>$ yaourt -S docker-git</code>
-</p>
-
-<p>
-The instructions here assume yaourt is installed. See Arch User Repository for information on building and installing packages from the AUR if you have not done so before.
-</p>
-</div>
-</div>
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2">Starting Docker</h3>
-<div class="outline-text-3" id="text-3-2">
-<p>
-There is a systemd service unit created for docker. To start the docker service:
-</p>
-
-<p>
-<code>$ sudo systemctl start docker</code>
-</p>
-
-<p>
-To start on system boot:
-</p>
-
-<p>
-<code>$ sudo systemctl enable docker</code>
-</p>
+\bibliography{/home/p-a-t-h/texdoc/ref/sigproc, /home/p-a-t-h/texdoc/ref/YourLib} 用使用多个bib文件，就要用绝对路径了。
+</pre>
 </div>
 </div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou.html" rel="prev" title="ssh 反向代理实现内网穿透">前一篇</a>
-            </li>
-            <li class="next">
-                <a href="wu-zhen-mi-ni-ding-shu-ji.html" rel="next" title="无针迷你订书机">后一篇</a>
+                <a href="scrapy-pa-chong.html" rel="prev" title="scrapy 爬虫">前一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         
@@ -223,9 +218,9 @@ To start on system boot:
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="qiwulun-github-io",
-            disqus_url="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html",
-        disqus_title="\u914d\u7f6e Manjaro \u7eaa\u5f55",
-        disqus_identifier="cache/posts/pei-zhi-manjaro-ji-lu.html",
+            disqus_url="https://qiwulun.github.io/posts/linux-xue-zhu-xie-zuo.html",
+        disqus_title="linux \u5b66\u672f\u5199\u4f5c",
+        disqus_identifier="cache/posts/linux-xue-zhu-xie-zuo.html",
         disqus_config = function () {
             this.language = "zh_cn";
         };
