@@ -14,7 +14,18 @@ $ docker build -t vieux/apache:2.0 .
   - =docker save phusion/baseimage -o ~/baseimage.tar=
 - 解包
   - =sudo docker load < ~/baseimage.tar= 
+* 把用户加入 docker group
+Add the user to the docker group
 
+- Add the docker group if it doesn't already exist ::
+  =sudo groupadd docker=
+
+- Add the connected user "${USER}" to the docker group ::
+  =sudo gpasswd -a $(whoami) docker=
+- Restart the Docker daemon ::
+  =sudo service docker restart=
+
+- Either do a newgrp docker or log out/in to activate the changes to groups.
  
 
 * 启动服务
