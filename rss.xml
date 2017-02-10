@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" href="https://qiwulun.github.io/rss.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 06 Feb 2017 12:18:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 学术写作</title><link>https://qiwulun.github.io/posts/linux-xue-zhu-xie-zuo.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link rel="self" href="https://qiwulun.github.io/rss.xml" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 10 Feb 2017 07:29:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 学术写作</title><link>https://qiwulun.github.io/posts/linux-xue-zhu-xie-zuo.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -587,23 +587,24 @@ KOKUYO/国誉 无针迷你订书机 参考价格：38 元
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-1"&gt;Manjaro 优点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-2"&gt;配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-3"&gt;docker&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-2"&gt;安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-3"&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4"&gt;docker&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-3-1"&gt;Installation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-3-2"&gt;Starting Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-1"&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2"&gt;Starting Docker&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4"&gt;自行配置桌面环境&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5"&gt;自行配置桌面环境&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-1"&gt;选择窗口管理器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2"&gt;面板、文件管理器和额外组件&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-1"&gt;选择窗口管理器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2"&gt;面板、文件管理器和额外组件&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2-1"&gt;漂亮的面板（用于启动和管理程序）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2-2"&gt;文件管理器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2-3"&gt;合成器和背景&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2-4"&gt;把一切组件连接起来&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-4-2-5"&gt;登录管理器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2-1"&gt;漂亮的面板（用于启动和管理程序）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2-2"&gt;文件管理器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2-3"&gt;合成器和背景&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2-4"&gt;把一切组件连接起来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.html#sec-5-2-5"&gt;登录管理器&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -639,15 +640,27 @@ conky食用更佳。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-
-
-
-
-
 &lt;div id="outline-container-sec-2" class="outline-2"&gt;
-&lt;h2 id="sec-2"&gt;配置&lt;/h2&gt;
+&lt;h2 id="sec-2"&gt;安装&lt;/h2&gt;
 &lt;div class="outline-text-2" id="text-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;使用 rufus 来生成安装 U 盘
+&lt;/li&gt;
+
+&lt;li&gt;安装界面选择 Install Manjaro (Non-free Driver)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;配置&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
 &lt;p&gt;
 编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加： Server = &lt;a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/%24repo/os/%24arch"&gt;https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch&lt;/a&gt;
 &lt;/p&gt;
@@ -657,12 +670,12 @@ conky食用更佳。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-3" class="outline-2"&gt;
-&lt;h2 id="sec-3"&gt;docker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-3"&gt;
-&lt;/div&gt;&lt;div id="outline-container-sec-3-1" class="outline-3"&gt;
-&lt;h3 id="sec-3-1"&gt;Installation&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-3-1"&gt;
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;docker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-4-1" class="outline-3"&gt;
+&lt;h3 id="sec-4-1"&gt;Installation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-1"&gt;
 &lt;p&gt;
 For the normal package a simple
 &lt;/p&gt;
@@ -686,9 +699,9 @@ The instructions here assume yaourt is installed. See Arch User Repository for i
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-3-2" class="outline-3"&gt;
-&lt;h3 id="sec-3-2"&gt;Starting Docker&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-3-2"&gt;
+&lt;div id="outline-container-sec-4-2" class="outline-3"&gt;
+&lt;h3 id="sec-4-2"&gt;Starting Docker&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-2"&gt;
 &lt;p&gt;
 There is a systemd service unit created for docker. To start the docker service:
 &lt;/p&gt;
@@ -707,16 +720,16 @@ To start on system boot:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4" class="outline-2"&gt;
-&lt;h2 id="sec-4"&gt;自行配置桌面环境&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;div id="outline-container-sec-5" class="outline-2"&gt;
+&lt;h2 id="sec-5"&gt;自行配置桌面环境&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-5"&gt;
 &lt;p&gt;
 选择小巧的、占用内存少的独立式组件，它们不依赖其他东西，但是可以顺利地协同运行。
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-1" class="outline-3"&gt;
-&lt;h3 id="sec-4-1"&gt;选择窗口管理器&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-4-1"&gt;
+&lt;div id="outline-container-sec-5-1" class="outline-3"&gt;
+&lt;h3 id="sec-5-1"&gt;选择窗口管理器&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-1"&gt;
 &lt;p&gt;
 尽管我们要使用单个的独立式程序来打造定制的桌面环境，但是 X Windows System（桌面的基本图形层）里面还是有一些标准，可以确保它们能够顺利地协同运行。首先，不妨看一看窗口管理器方面的几个选择。
 &lt;/p&gt;
@@ -737,12 +750,12 @@ JWM 是用普通 C 编写而成的，使用基本的 X 库，所以它的依赖�
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-2" class="outline-3"&gt;
-&lt;h3 id="sec-4-2"&gt;面板、文件管理器和额外组件&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-4-2"&gt;
-&lt;/div&gt;&lt;div id="outline-container-sec-4-2-1" class="outline-4"&gt;
-&lt;h4 id="sec-4-2-1"&gt;漂亮的面板（用于启动和管理程序）&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-4-2-1"&gt;
+&lt;div id="outline-container-sec-5-2" class="outline-3"&gt;
+&lt;h3 id="sec-5-2"&gt;面板、文件管理器和额外组件&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-5-2-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-2-1"&gt;漂亮的面板（用于启动和管理程序）&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-2-1"&gt;
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;Cairo-Dock ::  Cairo-Dock 提供的面板在外观上酷似 Mac OS X 的停靠栏――网址： &lt;a href="http://glx-dock.org"&gt;http://glx-dock.org&lt;/a&gt; 首次启动后，Cairo-Dock 会询问你是否想使用 OpenGL。这在物理硬件上很有用，让停靠栏的效果显得更流畅，但是在 VirtualBox 里面，它会带来问题，所以这种情况下最好还是让它处于被禁用的状态。
 &lt;/li&gt;
@@ -761,9 +774,9 @@ Docky 非常类似 Cairo-Dock，不过它使用 Mono，因此增添了一点额�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-2-2" class="outline-4"&gt;
-&lt;h4 id="sec-4-2-2"&gt;文件管理器&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-4-2-2"&gt;
+&lt;div id="outline-container-sec-5-2-2" class="outline-4"&gt;
+&lt;h4 id="sec-5-2-2"&gt;文件管理器&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-2-2"&gt;
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;PCManFM ::
 网址： &lt;a href="http://wiki.lxde.org/en/PCManFM"&gt;http://wiki.lxde.org/en/PCManFM&lt;/a&gt;
@@ -789,9 +802,9 @@ XFE是一款结实又小巧的文件管理器，外观并不特别出彩，但�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-2-3" class="outline-4"&gt;
-&lt;h4 id="sec-4-2-3"&gt;合成器和背景&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-4-2-3"&gt;
+&lt;div id="outline-container-sec-5-2-3" class="outline-4"&gt;
+&lt;h4 id="sec-5-2-3"&gt;合成器和背景&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-2-3"&gt;
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;合成管理器 :: 这样一来，窗口出现时，就能够获得阴影和微妙动画之类的效果。最出色的一个合成管理器就是 Compton。它还非常易于使用：只要启动你的窗口管理器，然后启动 Compton，即可开始使用特效。
 &lt;/li&gt;
@@ -801,9 +814,9 @@ XFE是一款结实又小巧的文件管理器，外观并不特别出彩，但�
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-2-4" class="outline-4"&gt;
-&lt;h4 id="sec-4-2-4"&gt;把一切组件连接起来&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-4-2-4"&gt;
+&lt;div id="outline-container-sec-5-2-4" class="outline-4"&gt;
+&lt;h4 id="sec-5-2-4"&gt;把一切组件连接起来&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-2-4"&gt;
 &lt;p&gt;
 好了，不妨开始做有意思的部分！我们现在要把这一堆组件变成一个完全实用的桌面环境。在这里，我们将使用 Openbox 作为窗口管理器、Docky 作为面板、PCManFM 作为文件管理器，然后添加 Compton 和 Feh，让桌面环境看起来可爱、漂亮。
 &lt;/p&gt;
@@ -841,9 +854,9 @@ XFE是一款结实又小巧的文件管理器，外观并不特别出彩，但�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-sec-4-2-5" class="outline-4"&gt;
-&lt;h4 id="sec-4-2-5"&gt;登录管理器&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-4-2-5"&gt;
+&lt;div id="outline-container-sec-5-2-5" class="outline-4"&gt;
+&lt;h4 id="sec-5-2-5"&gt;登录管理器&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-2-5"&gt;
 &lt;p&gt;
 登录管理器（输入用户名和密码的那个屏幕）启动其我们自己的桌面环境，我们称之为 MyDesk。
 &lt;/p&gt;
