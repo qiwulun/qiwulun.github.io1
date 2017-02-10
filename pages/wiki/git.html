@@ -50,12 +50,11 @@ git branch --all
 
 
 
-创建关联origin/dev的本地分支
+如果你只需查看分支，你可以直接切换到那个分支： 
 
-
-git checko">
+$ git ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-02-09T17:37:18+08:00">
+<meta property="article:published_time" content="2017-02-10T16:02:53+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -111,7 +110,7 @@ git checko">
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-09T17:37:18+08:00" itemprop="datePublished" title="2017-02-09 17:37">2017-02-09 17:37</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-10T16:02:53+08:00" itemprop="datePublished" title="2017-02-10 16:02">2017-02-10 16:02</time></a></p>
                 <p class="commentline">
         
     <a href="git.html#disqus_thread" data-disqus-identifier="cache/pages/wiki/git.html">Comments</a>
@@ -156,9 +155,14 @@ git checko">
 </pre></div>
 
 <p>
-创建关联origin/dev的本地分支
+如果你只需查看分支，你可以直接切换到那个分支： 
 </p>
+<div class="highlight"><pre><span></span>$ git checkout origin/experimental
+</pre></div>
 
+<p>
+但是，如果你想在那个分支工作的话，你就需要创建一个本地分支──创建关联origin/dev的本地分支 
+</p>
 <div class="highlight"><pre><span></span>git checkout -b dev origin/dev
 </pre></div>
 
