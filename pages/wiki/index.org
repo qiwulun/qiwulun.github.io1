@@ -1,3 +1,4 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
 #+BEGIN_COMMENT
 .. title: 维基入口
 .. slug: index
@@ -185,3 +186,8 @@ wintypes:
 =sudo apt install awesome=
 *** linux 下设置键位 setxkbmap
 =setxkbmap -option caps:super= Caps Lock becomes an additional Super (aka Win key).
+
+* 狄德罗和达朗贝尔之树
+
+#+DOWNLOADED: http://quod.lib.umich.edu/d/did/graphics/tree.png @ 2017-02-10 15:24:49
+[[file:../../images/tree.png]]

@@ -24,6 +24,10 @@ display manager。i3wm版本开箱即用的体验比bspwm版本更好，首先�
 此外还有一个bspwm版本，是manjaro社区的一个大神做的，这个版本的目标是极致的轻量化
 和高效的图形界面体验。i3和bspwm都是轻量级并具有高度可定制性的窗口管理器，配合
 conky食用更佳。
+* 安装
+- 使用 rufus 来生成安装 U 盘
+
+- 安装界面选择 Install Manjaro (Non-free Driver)
 
 
 
