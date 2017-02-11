@@ -494,7 +494,6 @@
   - qbittorrent，Linux 下的 µTorrent
         
   - poppler，简单实用的 PDF 处理工具
-
     - poppler 提供了一套操作 PDF 文件的终端命令集，弥补了 Linux 上没有 Acrobat 的不足，虽然功能简单，但基本能满足日常需求了。几个主要的命令工具包括：
 
       - pdfdetach 提取 PDF 中嵌入的文件
@@ -645,6 +644,8 @@
   - 知识型
   - 知识考古学
   - 谱系学
+* 文学
+** [[../reading/%E5%8F%A4%E5%85%B8%E5%B0%8F%E8%AF%B4/%E8%A5%BF%E6%B8%B8%E8%AE%B0.org][西游记]] 
 * 手机
  - 阅读 多看
  - 
