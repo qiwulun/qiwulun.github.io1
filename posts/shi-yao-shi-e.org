@@ -97,7 +97,7 @@ $$growth = e^{rate}$$
 
 回到上面的例子，如果银行的利息率是5%的复利，请问100元存款翻倍需要多少时间？
 
-$$ 100 \cdot e ^{5/%t} = 200$$
+$$ 100 \cdot e ^{5\%t} = 200$$
 
 #+BEGIN_SRC python :results output :exports both
   from math import log
