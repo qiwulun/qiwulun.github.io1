@@ -623,7 +623,7 @@
 **** linux 下设置键位 setxkbmap
  =setxkbmap -option caps:super= Caps Lock becomes an additional Super (aka Win key).
 * 数学
-- [[file:~/git/qiwulun.github.io/posts/shi-yao-shi-e.org][什么是 e]] 
+- [[../../../posts/shi-yao-shi-e.org][什么是 e]] 
 * 哲学
 ** 福柯
   - 知识型
