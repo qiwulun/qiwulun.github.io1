@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>graphviz 做图示例 | 赵骥's Site</title>
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://qiwulun.github.io/pages/wiki/graphviz.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="../../mycss/tweak.css" rel="stylesheet" type="text/css">
+<base target="_parent">
+<meta name="author" content="Zhao JI">
+<meta property="og:site_name" content="赵骥's Site">
+<meta property="og:title" content="graphviz 做图示例">
+<meta property="og:url" content="https://qiwulun.github.io/pages/wiki/graphviz.html">
+<meta property="og:description" content="Table of Contents
+
+
+基础例子
+
+简单图例
+一样的图，不一样的布局
+简单有向图
+带标签的简单有向图
+同样的图，不同的形状和颜色
+总结
+
+
+高级
+
+节省时间的技巧
+HTML 记录
+
+
+例子
+
+有限状态机
+数据流示意图
+数据流示意图2
+
+
+参考
+
+图像属性
+
+
+配置 emacs
+
+将Dot嵌入 Org Mode
+
+
+
+
+
+
+
+
+基础例子
+
+
+简单图例
+
+graph graphname">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-02-11T23:43:26+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://qiwulun.github.io/">
+
+                <span id="blog-title">赵骥's Site</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../galleries/">图库</a>
+                </li>
+<li>
+<a href="../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS 源</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">graphviz 做图示例</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Zhao JI
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-11T23:43:26+08:00" itemprop="datePublished" title="2017-02-11 23:43">2017-02-11 23:43</time></a></p>
+                <p class="commentline">
+        
+    <a href="graphviz.html#disqus_thread" data-disqus-identifier="cache/pages/wiki/graphviz.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li>
+<a href="graphviz.html#sec-1">基础例子</a>
+<ul>
+<li><a href="graphviz.html#sec-1-1">简单图例</a></li>
+<li><a href="graphviz.html#sec-1-2">一样的图，不一样的布局</a></li>
+<li><a href="graphviz.html#sec-1-3">简单有向图</a></li>
+<li><a href="graphviz.html#sec-1-4">带标签的简单有向图</a></li>
+<li><a href="graphviz.html#sec-1-5">同样的图，不同的形状和颜色</a></li>
+<li><a href="graphviz.html#sec-1-6">总结</a></li>
+</ul>
+</li>
+<li>
+<a href="graphviz.html#sec-2">高级</a>
+<ul>
+<li><a href="graphviz.html#sec-2-1">节省时间的技巧</a></li>
+<li><a href="graphviz.html#sec-2-2">HTML 记录</a></li>
+</ul>
+</li>
+<li>
+<a href="graphviz.html#sec-3">例子</a>
+<ul>
+<li><a href="graphviz.html#sec-3-1">有限状态机</a></li>
+<li><a href="graphviz.html#sec-3-2">数据流示意图</a></li>
+<li><a href="graphviz.html#sec-3-3">数据流示意图2</a></li>
+</ul>
+</li>
+<li>
+<a href="graphviz.html#sec-4">参考</a>
+<ul>
+<li><a href="graphviz.html#sec-4-1">图像属性</a></li>
+</ul>
+</li>
+<li>
+<a href="graphviz.html#sec-5">配置 emacs</a>
+<ul>
+<li><a href="graphviz.html#sec-5-1">将Dot嵌入 Org Mode</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">基础例子</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">简单图例</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="highlight"><pre><span></span>graph graphname { 
+    a -- b; 
+    b -- c;
+    b -- d;
+    d -- a;
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/1.png" alt="1.png"></p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">一样的图，不一样的布局</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="highlight"><pre><span></span>graph graphname {
+    rankdir=LR;  //Rank Direction Left to Right
+    a -- b; 
+    b -- c;
+    b -- d;
+    d -- a;
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/2.png" alt="2.png"></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">简单有向图</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="highlight"><pre><span></span>digraph graphname{
+    a -&gt; b;
+    b -&gt; c;
+    a -&gt; c;
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/3.png" alt="3.png"></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4">带标签的简单有向图</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="highlight"><pre><span></span>digraph graphname{
+
+    T [label="Teacher"]      // node T
+    P [label="Pupil"]  // node P
+
+    T-&gt;P [label="Instructions", fontcolor=darkgreen] // edge T-&gt;P
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/4.png" alt="4.png"></p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5">同样的图，不同的形状和颜色</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="highlight"><pre><span></span>digraph graphname {
+    T [label="Teacher" color=Blue, fontcolor=Red, fontsize=24, shape=box]      // node T
+    P [label="Pupil" color=Blue, fontcolor=Red, fontsize=24, shape=box]  // node P
+
+    T-&gt;P [label="Instructions", fontcolor=darkgreen] // edge T-&gt;P
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/5.png" alt="5.png"></p>
+</div>
+
+
+
+<p>
+这儿你可以选择的形状有: box, polygon, ellipse, oval, circle, point, egg, triangle, plaintext, diamond, trapezium, parallelogram, house, pentagon, hexagon, septagon, octagon, doublecircle, doubleoctagon, tripleoctagon 更多的形状看<a href="http://www.graphviz.org/content/node-shapes">这里</a>
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6">总结</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="highlight"><pre><span></span>digraph summary{
+    start [label="Start with a Node"]
+    next [label="Choose your shape", shape=box]
+    warning [label="Don't go overboard", color=Blue, fontcolor=Red,fontsize=24,style=filled, fillcolor=green,shape=octagon]
+    end [label="Draw your graph!", shape=box, style=filled, fillcolor=yellow]
+
+    start-&gt;next
+    start-&gt;warning 
+    next-&gt;end [label="Getting Better...", fontcolor=darkblue]
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/6.png" alt="6.png"></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">高级</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">节省时间的技巧</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+单独地去定义每一个节点其实很浪费时间的，下面这个技巧能够让你快点儿。
+</p>
+
+<div class="highlight"><pre><span></span>digraph hierarchy {
+
+    nodesep=1.0 // increases the separation between nodes
+
+    node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
+    edge [color=Blue, style=dashed] //All the lines look like this
+
+    Headteacher-&gt;{Deputy1 Deputy2 BusinessManager}
+    Deputy1-&gt;{Teacher1 Teacher2}
+    BusinessManager-&gt;ITManager
+    {rank=same;ITManager Teacher1 Teacher2}  // Put them on the same level
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/7.png" alt="7.png"></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">HTML 记录</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+你现在可以用HTML来定义这一类节点了，这里有更多相关信息。
+</p>
+
+<div class="highlight"><pre><span></span>digraph structs {
+    node[shape=record]
+    struct1 [label="&lt;f0&gt; left|&lt;f1&gt; mid\ dle|&lt;f2&gt; right"];
+    struct2 [label="{&lt;f0&gt; one|&lt;f1&gt; two\n\n\n}" shape=Mrecord];
+    struct3 [label="hello\nworld |{ b |{c|&lt;here&gt; d|e}| f}| g | h"];
+    struct1:f1 -&gt; struct2:f0;
+    struct1:f0 -&gt; struct3:f1;
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/8.png" alt="8.png"></p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">例子</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">有限状态机</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="highlight"><pre><span></span>digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+    node [shape = circle];
+    S0 -&gt; S1 [ label = "Lift Nozzle" ]
+    S1 -&gt; S0 [ label = "Replace Nozzle" ]
+    S1 -&gt; S2 [ label = "Authorize Pump" ]
+    S2 -&gt; S0 [ label = "Replace Nozzle" ]
+    S2 -&gt; S3 [ label = "Pull Trigger" ]
+    S3 -&gt; S2 [ label = "Release Trigger" ]
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/9.png" alt="9.png"></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">数据流示意图</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="highlight"><pre><span></span>digraph dfd{    
+    node[shape=record]
+    store1 [label="&lt;f0&gt; left|&lt;f1&gt; Some data store"];
+    proc1 [label="{&lt;f0&gt; 1.0|&lt;f1&gt; Some process here\n\n\n}" shape=Mrecord];
+    enti1 [label="Customer" shape=box];
+    store1:f1 -&gt; proc1:f0;
+    enti1-&gt; proc1:f0;
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/10.png" alt="10.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">数据流示意图2</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="highlight"><pre><span></span>digraph dfd2{
+    node[shape=record]
+    subgraph level0{
+    enti1 [label="Customer" shape=box];
+    enti2 [label="Manager" shape=box];
+    }
+    subgraph cluster_level1{
+		    label ="Level 1";
+		    proc1 [label="{&lt;f0&gt; 1.0|&lt;f1&gt; One process here\n\n\n}" shape=Mrecord];
+		    proc2 [label="{&lt;f0&gt; 2.0|&lt;f1&gt; Other process here\n\n\n}" shape=Mrecord];
+		    store1 [label="&lt;f0&gt;    |&lt;f1&gt; Data store one"];
+		    store2 [label="&lt;f0&gt;  |&lt;f1&gt; Data store two"];
+		    {rank=same; store1, store2}
+
+    }
+    enti1 -&gt; proc1
+    enti2 -&gt; proc2
+    store1 -&gt; proc1
+    store2 -&gt; proc2
+    proc1 -&gt; store2
+    store2 -&gt; proc1 
+}
+</pre></div>
+
+
+<div class="figure">
+<p><img src="../../images/graphviz/11.png" alt="11.png"></p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">参考</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+以下可能是你在画图时候最有用的一些属性，完整的列表可以在这里看。
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">图像属性</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="highlight"><pre><span></span>label="My Graph";      # 给图像设置标签
+
+rankdir=LR;            # 将图片由原来的从上到下布局变成从左到右布局
+
+{rank=same; a, b, c }  # 将一组元素放到同一个level
+
+splines="line";        # 让边框变为直线，没有曲线和锐角
+
+K=0.6;                  # 用来在布局中影响spring属性，spring属性可以用于将节点往外推，这个在twopi和sfdp布局中很有用。
+</pre></div>
+
+
+<p>
+译注：暂时还没明白这个spring属性应该怎么翻，初步猜测是弹性。胡克定律里面的常量名也叫K。
+</p>
+
+<p>
+7.2 交点属性
+</p>
+
+<div class="highlight"><pre><span></span>[label="Some Label"]    # 给交点打标签
+
+[color="red"]          # 给交点上色
+
+[fillcolor="blue"]      # 设置交点的填充色
+</pre></div>
+
+
+<p>
+7.3 边的属性
+</p>
+
+<div class="highlight"><pre><span></span>[label="Some Label"]    # 给边设置标签 (设置路径权重的时候很有用)
+
+[color="red"]          # 给交点上色 (标示路径的时候很有用)
+
+[penwidth=2.0]          # 给边适配厚度，标示路径的时候很有用。
+</pre></div>
+
+
+<p>
+7.4 尺寸, 背景颜色
+</p>
+
+<div class="highlight"><pre><span></span>fixedsize=true;
+size="1,1";
+resolution=72;
+bgcolor="#C6CFD532";
+
+# 不是我偷懒不翻译哦，原文就没有解释。
+</pre></div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">配置 emacs</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+下载并安装Graphviz，然后把相关路径加到exec-path这个变量里去。
+</p>
+
+<p>
+你也要把你的.emacs文件更新成能够把DOT作为babel语言加载，下面这个配置可以很容易的设置DOT为babel语言，其他语言也可以类似操作
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">org-babel-do-load-languages</span>
+    <span class="p">(</span><span class="k">quote </span><span class="nv">org-babel-load-languages</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">quote</span>
+	<span class="p">(</span>
+	    <span class="p">(</span><span class="nf">emacs-lisp</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">java</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">dot</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">ditaa</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">R</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">python</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">ruby</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">gnuplot</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">clojure</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">sh</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">ledger</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">org</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">plantuml</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">latex</span> <span class="o">.</span> <span class="nv">t</span><span class="p">)</span>
+	<span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+
+
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">将Dot嵌入 Org Mode</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+用begin<sub>src和end</sub><sub>src标签把你的dot代码想下面这样包含进去。你也需要在包裹的时候像下面那样添加一些命令行参数。</sub></p>
+
+<p>
+用&lt;s[TAB]快捷键可以快速生成一个begin<sub>src代码块。</sub></p>
+
+<pre class="example">
+#+begin_src dot :file ./img/example1.png :cmdline -Kdot -Tpng
+graph graphname { 
+                a -- b; 
+                b -- c;
+                b -- d;
+                d -- a;
+        } 
+#+end_src 
+
+
+#+begin_ src dot :file ./img/example1.png :cmdline -Kdot -Tpng
+里的:cmdline -Kdot -Tpng就是命令行参数. 他们告诉dot如何渲染和展示。
+- -Kdot 使用dot布局方式. 你也可以尝试其他的布局方式，比如Kneato, Kcirco, Ktwopi, Kfdp, Ksfdp
+- -Tpng 渲染成png格式
+</pre>
+
+<p>
+ 完整的命令行参数可以看这里
+<a href="http://graphviz.org/content/command-line-invocation">http://graphviz.org/content/command-line-invocation</a>
+</p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="qiwulun-github-io",
+            disqus_url="https://qiwulun.github.io/pages/wiki/graphviz.html",
+        disqus_title="graphviz \u505a\u56fe\u793a\u4f8b",
+        disqus_identifier="cache/pages/wiki/graphviz.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="qiwulun-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:qiwulun08@gmail.com">Zhao JI</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
