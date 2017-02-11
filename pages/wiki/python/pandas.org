@@ -1,4 +1,4 @@
-# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+# -*- mode: Org; org-download-image-dir: "../../../images"; -*-
 #+BEGIN_COMMENT
 .. title: pandas
 .. slug: pandas

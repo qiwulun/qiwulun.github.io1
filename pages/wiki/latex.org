@@ -1,0 +1,10 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: latex
+.. slug: latex
+#+END_COMMENT
+
+
+* beamer
+- 一页里有多张图片 ::
+   要想摆得好看一点非常费劲-_-# 试试minipage环境，要是还不行的话就避免这种情况吧

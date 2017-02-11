@@ -464,169 +464,171 @@
 - [[file:python.org][python]]
   - [[file:python/pandas.org][pandas]]
 - [[file:C.org][C]] 
+** 网络服务
+ - https://zoom.us/ 远程会议
+ - http://en.booksee.org/ 电子书下载
+** 软件
+
+ - VSO Downloader
+   - 能够截取网页播放视频的流量，然后转换为视频，完全免费，没有广告
+
+*** linux 
+  - briss，可以很便捷地完成 PDF 文件去白边的操作。在 Kindle 上看 PDF 的折衷办法
+  - mpv， 如果还在用 mplayer，赶快换成 mpv 吧。
+  - minidlna，实现家庭视频点播 ::
+       现在不少智能电视和安卓盒子都支持 DLNA 的多媒体分享方式。minidlna 是一个 DLNA 伺服器程序。在 PC 上运行后，可以让播放终端（智能电视、手机、电视盒子等）很方便地浏览和点播 PC 硬盘上的媒体文件。相比之下，Windows 自带的 DLNA 功能似乎必须手动在 PC 上推送，一点也不方便。（Windows 上推荐 PS3 Media Server 作为 DLNA 伺服器，十分强大，甚至支持外挂字幕的推送）
+
+        minidlna 唯一的遗憾是不支持外挂字幕，搞得我每次需要把视频和字幕文件重新封装成一个 mkv 文件之后再到电视上点播。
+
+  - qbittorrent，Linux 下的 µTorrent
+
+  - poppler，简单实用的 PDF 处理工具
+
+    - poppler 提供了一套操作 PDF 文件的终端命令集，弥补了 Linux 上没有 Acrobat 的不足，虽然功能简单，但基本能满足日常需求了。几个主要的命令工具包括：
+
+      - pdfdetach 提取 PDF 中嵌入的文件
+      - pdffonts 查看 PDF 中的字体信息
+      - pdfimages 提取 PDF 中的图片
+      - pdfseparate 提取 PDF 中的指定页面
+      - pdftocairo 将 PDF 转换为图片文件
+      - pdftohtml 将 PDF 文件转为 HTML 文件
+      - pdftotext 将 PDF 文件转为纯文本
+      - pdfunite 将多个 PDF 文件合并为一个 PDF 文件
+
+** 系统
+*** windows 快捷键
+  - CTRL+ESC：打开"开始"菜单
+  - F3：查找所有文件
+  - F4：选择"转到不同的文件夹"框并沿框中的项向下移动（如果工具栏在 Windows 资源管理器中是活动的）
+  - F6：在 Windows 资源管理器中的窗格之间移动
+  - F10：激活菜单栏选项
+  - CTRL+TAB/CTRL+SHIFT+TAB：在属性选项卡中移动
+  - Win + C：打开控制面板
+  - Win + K：打开"键盘属性"对话框
+  - Win + I：打开"鼠标属性"对话框
+  - SHIFT+右键单击：显示包含可选命令的快捷菜单
+  - SHIFT+双击：运行备用的默认命令（菜单上的第二个项目）
+  - ALT+ENTER：打开选定对象的属性
+  - SHIFT+F10 打开对应于选定项目的快捷菜单（这与右键单击对象等效）
+  - ALT+-（ALT+短划线）：显示多文档界面 (MDI) 子窗口的系统菜单（从 MDI 子窗口的"系统"菜单中，您可以还原、移动、最大化、最小化或关闭子窗口）
+  - CTRL+TAB：切换到多文档界面 (MDI) 程序的下一个子窗口
+  - CTRL+F4：关闭当前多文档界面 (MDI) 窗口
+  - ALT+F6：在同一程序的多个窗口之间切换（例如，当显示记事本的查找对话框时，按 ALT+F6 可在"查找"对话框和记事本主窗口之间切换）
+  - Ctrl+W：关闭当前窗口。
+  - Ctrl+L：定位到地址栏并选中其中的文本，有个替代按键是Alt+D
+  - F11： 最大化和最小化窗口切换。
+  - Alt+向左键：查看上一个文件夹。
+  - Alt+向右键：查看下一个文件夹
+  - Alt+向上键：查看父文件夹
+  - Ctrl+shift+左键：以管理员身份运行”了。
+  - Shift键+右键：右键菜单中看到了“在此处打开命令行窗口”，“发送到”菜单吧，多出来了十余个我们可以发送到的地方。
+  - Win+T：切换不同程序的预览窗口
+  - Win+P 投影仪
+  - Win+Break 快速查看“系统属性”
+  - 任务管理器──Ctrl+shift+Esc
+  - Win+B ── 右下角系统状态栏
+**** 窗口管理
+
+  - Windows 徽标+M：全部最小化
+  - SHIFT+Windows 徽标+M：撤消全部最小化
+  - Windows 徽标+D：最小化所有打开的窗口并显示桌面 
+  - Win+左、右、上、下：移动到屏幕边缘
+  - Win+Shift+左箭头：移动到左边屏幕。Win+Shift+右箭头：移动到右边屏幕。
+  - Shift + 点击任务栏图标──另打开新窗口
+**** 文件管理
+  - 拖曳
+    - Ctrl键+拖曳──拷贝
+    - Shift键+拖曳──剪切
+    - Alt键+拖曳──创建快捷方式
+
+*** linux 发行版
+ - [[file:~/git/qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.org][基于 archlinux 的 manajaro]] 
+**** 脱离鼠标操作计算机
+
+ Chrome的话，也可以用chrome Vim插件
+
+ 把系统换成了Arch Linux，为了节约资源，窗口管理器使用了i3，这下不仅运行速度快了，
+ 还彻底摆脱了鼠标。
+
+ 我还在Macbook上外接了一台显示器，一边用Gvim写代码，另一边用
+ Firefox直接预览，两边都不需要鼠标。而窗口和显示器相关的操作，也都使用i3的快捷键
+ 完成。这样不仅是效率提高的问题，因为避免了使用鼠标，所以手臂疲劳的问题也解决了。
+
+ 回国后发现了一个新的Linux发行版：Manjaro，而它居然有直接基于i3的社区发行版（Manjaro i3 16.10），所以我建议题主可以直接安装这个，连Arch Linux安装过程中的诸多手动配置过程都可以省略了。可谓省心省力。
+***** i3wm 
+ =sudo apt install i3 feh network-manager- xfce4-panel=
+ #+BEGIN_EXAMPLE
+ # Startups 
+ exec --no-startup-id feh --bg-scale $HOME/git/oh-my-i3/wallpaper.jpg
+ exec --no-startup-id nm-applet
+ exec --no-startup-id compton -cGbf
+ # xfce 面
+ exec --no-startup-id xfce4-panel --disable-wm-check
+ # start dmenu (a program launcher)
+ bindsym $mod+d exec dmenu_run
+ #+END_EXAMPLE
+
+ ~/.compton.conf
+ #+BEGIN_EXAMPLE
+ # Shadow
+ shadow = true;
+ no-dnd-shadow = true;
+ no-dock-shadow = true;
+ clear-shadow = true;
+ shadow-radius = 6;
+ shadow-offset-x = -9;
+ shadow-offset-y = -9;
+ shadow-opacity = 0.4;
+ # shadow-red = 0.0;
+ # shadow-green = 0.0;
+ # shadow-blue = 0.0;
+ shadow-exclude = [ "n:e:Notification" ];
+ # shadow-exclude = "n:e:Notification";
+ shadow-ignore-shaped = false;
+
+ # Opacity
+ menu-opacity = 0.9;
+ inactive-opacity = 0.8;
+ frame-opacity = 0.9;
+ inactive-opacity-override = false;
+ alpha-step = 0.06;
+
+ # Fading
+ fading = true;
+ # fade-delta = 30;
+ fade-in-step = 0.03;
+ fade-out-step = 0.03;
+ # no-fading-openclose = true;
+
+ # Other
+ mark-wmwin-focused = true;
+ mark-ovredir-focused = true;
+ use-ewmh-active-win = false;
+ detect-rounded-corners = true;
+ detect-client-opacity = true;
+ refresh-rate = 0;
+ vsync = "none";
+ dbe = false;
+ paint-on-overlay = false;
+ sw-opti = false;
+
+ # Window type settings
+ wintypes:
+ {
+   tooltip = { fade = true; shadow = false; opacity = 0.75; };
+ };
+ #+END_EXAMPLE
+***** awesome 
+ =sudo apt install awesome=
+**** linux 下设置键位 setxkbmap
+ =setxkbmap -option caps:super= Caps Lock becomes an additional Super (aka Win key).
+* 数学
+- 什么是e
 * 哲学
 ** 福柯
   - 知识型
   - 知识考古学
   - 谱系学
-* 网络服务
-- https://zoom.us/ 远程会议
-- http://en.booksee.org/ 电子书下载
-* 软件
-
-- VSO Downloader
-  - 能够截取网页播放视频的流量，然后转换为视频，完全免费，没有广告
-
-** linux 
- - briss，可以很便捷地完成 PDF 文件去白边的操作。在 Kindle 上看 PDF 的折衷办法
- - mpv， 如果还在用 mplayer，赶快换成 mpv 吧。
- - minidlna，实现家庭视频点播 ::
-      现在不少智能电视和安卓盒子都支持 DLNA 的多媒体分享方式。minidlna 是一个 DLNA 伺服器程序。在 PC 上运行后，可以让播放终端（智能电视、手机、电视盒子等）很方便地浏览和点播 PC 硬盘上的媒体文件。相比之下，Windows 自带的 DLNA 功能似乎必须手动在 PC 上推送，一点也不方便。（Windows 上推荐 PS3 Media Server 作为 DLNA 伺服器，十分强大，甚至支持外挂字幕的推送）
-
-       minidlna 唯一的遗憾是不支持外挂字幕，搞得我每次需要把视频和字幕文件重新封装成一个 mkv 文件之后再到电视上点播。
-
- - qbittorrent，Linux 下的 µTorrent
-
- - poppler，简单实用的 PDF 处理工具
-
-   - poppler 提供了一套操作 PDF 文件的终端命令集，弥补了 Linux 上没有 Acrobat 的不足，虽然功能简单，但基本能满足日常需求了。几个主要的命令工具包括：
-
-     - pdfdetach 提取 PDF 中嵌入的文件
-     - pdffonts 查看 PDF 中的字体信息
-     - pdfimages 提取 PDF 中的图片
-     - pdfseparate 提取 PDF 中的指定页面
-     - pdftocairo 将 PDF 转换为图片文件
-     - pdftohtml 将 PDF 文件转为 HTML 文件
-     - pdftotext 将 PDF 文件转为纯文本
-     - pdfunite 将多个 PDF 文件合并为一个 PDF 文件
 * 手机
  - 阅读 多看
  - 
-
-* 系统
-** windows 快捷键
- - CTRL+ESC：打开"开始"菜单
- - F3：查找所有文件
- - F4：选择"转到不同的文件夹"框并沿框中的项向下移动（如果工具栏在 Windows 资源管理器中是活动的）
- - F6：在 Windows 资源管理器中的窗格之间移动
- - F10：激活菜单栏选项
- - CTRL+TAB/CTRL+SHIFT+TAB：在属性选项卡中移动
- - Win + C：打开控制面板
- - Win + K：打开"键盘属性"对话框
- - Win + I：打开"鼠标属性"对话框
- - SHIFT+右键单击：显示包含可选命令的快捷菜单
- - SHIFT+双击：运行备用的默认命令（菜单上的第二个项目）
- - ALT+ENTER：打开选定对象的属性
- - SHIFT+F10 打开对应于选定项目的快捷菜单（这与右键单击对象等效）
- - ALT+-（ALT+短划线）：显示多文档界面 (MDI) 子窗口的系统菜单（从 MDI 子窗口的"系统"菜单中，您可以还原、移动、最大化、最小化或关闭子窗口）
- - CTRL+TAB：切换到多文档界面 (MDI) 程序的下一个子窗口
- - CTRL+F4：关闭当前多文档界面 (MDI) 窗口
- - ALT+F6：在同一程序的多个窗口之间切换（例如，当显示记事本的查找对话框时，按 ALT+F6 可在"查找"对话框和记事本主窗口之间切换）
- - Ctrl+W：关闭当前窗口。
- - Ctrl+L：定位到地址栏并选中其中的文本，有个替代按键是Alt+D
- - F11： 最大化和最小化窗口切换。
- - Alt+向左键：查看上一个文件夹。
- - Alt+向右键：查看下一个文件夹
- - Alt+向上键：查看父文件夹
- - Ctrl+shift+左键：以管理员身份运行”了。
- - Shift键+右键：右键菜单中看到了“在此处打开命令行窗口”，“发送到”菜单吧，多出来了十余个我们可以发送到的地方。
- - Win+T：切换不同程序的预览窗口
- - Win+P 投影仪
- - Win+Break 快速查看“系统属性”
- - 任务管理器──Ctrl+shift+Esc
- - Win+B ── 右下角系统状态栏
-*** 窗口管理
-
- - Windows 徽标+M：全部最小化
- - SHIFT+Windows 徽标+M：撤消全部最小化
- - Windows 徽标+D：最小化所有打开的窗口并显示桌面 
- - Win+左、右、上、下：移动到屏幕边缘
- - Win+Shift+左箭头：移动到左边屏幕。Win+Shift+右箭头：移动到右边屏幕。
- - Shift + 点击任务栏图标──另打开新窗口
-*** 文件管理
- - 拖曳
-   - Ctrl键+拖曳──拷贝
-   - Shift键+拖曳──剪切
-   - Alt键+拖曳──创建快捷方式
-
-** linux 发行版
-- [[file:~/git/qiwulun.github.io/posts/pei-zhi-manjaro-ji-lu.org][基于 archlinux 的 manajaro]] 
-*** 脱离鼠标操作计算机
-
-Chrome的话，也可以用chrome Vim插件
-
-把系统换成了Arch Linux，为了节约资源，窗口管理器使用了i3，这下不仅运行速度快了，
-还彻底摆脱了鼠标。
-
-我还在Macbook上外接了一台显示器，一边用Gvim写代码，另一边用
-Firefox直接预览，两边都不需要鼠标。而窗口和显示器相关的操作，也都使用i3的快捷键
-完成。这样不仅是效率提高的问题，因为避免了使用鼠标，所以手臂疲劳的问题也解决了。
-
-回国后发现了一个新的Linux发行版：Manjaro，而它居然有直接基于i3的社区发行版（Manjaro i3 16.10），所以我建议题主可以直接安装这个，连Arch Linux安装过程中的诸多手动配置过程都可以省略了。可谓省心省力。
-**** i3wm 
-=sudo apt install i3 feh network-manager- xfce4-panel=
-#+BEGIN_EXAMPLE
-# Startups 
-exec --no-startup-id feh --bg-scale $HOME/git/oh-my-i3/wallpaper.jpg
-exec --no-startup-id nm-applet
-exec --no-startup-id compton -cGbf
-# xfce 面
-exec --no-startup-id xfce4-panel --disable-wm-check
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-#+END_EXAMPLE
-
-~/.compton.conf
-#+BEGIN_EXAMPLE
-# Shadow
-shadow = true;
-no-dnd-shadow = true;
-no-dock-shadow = true;
-clear-shadow = true;
-shadow-radius = 6;
-shadow-offset-x = -9;
-shadow-offset-y = -9;
-shadow-opacity = 0.4;
-# shadow-red = 0.0;
-# shadow-green = 0.0;
-# shadow-blue = 0.0;
-shadow-exclude = [ "n:e:Notification" ];
-# shadow-exclude = "n:e:Notification";
-shadow-ignore-shaped = false;
-
-# Opacity
-menu-opacity = 0.9;
-inactive-opacity = 0.8;
-frame-opacity = 0.9;
-inactive-opacity-override = false;
-alpha-step = 0.06;
-
-# Fading
-fading = true;
-# fade-delta = 30;
-fade-in-step = 0.03;
-fade-out-step = 0.03;
-# no-fading-openclose = true;
-
-# Other
-mark-wmwin-focused = true;
-mark-ovredir-focused = true;
-use-ewmh-active-win = false;
-detect-rounded-corners = true;
-detect-client-opacity = true;
-refresh-rate = 0;
-vsync = "none";
-dbe = false;
-paint-on-overlay = false;
-sw-opti = false;
-
-# Window type settings
-wintypes:
-{
-  tooltip = { fade = true; shadow = false; opacity = 0.75; };
-};
-#+END_EXAMPLE
-**** awesome 
-=sudo apt install awesome=
-*** linux 下设置键位 setxkbmap
-=setxkbmap -option caps:super= Caps Lock becomes an additional Super (aka Win key).
