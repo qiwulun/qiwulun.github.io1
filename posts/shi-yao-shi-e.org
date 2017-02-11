@@ -1,7 +1,13 @@
-# -*- mode: Org; org-download-image-dir: "../../../images"; -*-
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+BEGIN_COMMENT
-.. title: 什么是e
-.. slug: shen-me-shi-e
+.. title: 什么是 e
+.. slug: shi-yao-shi-e
+.. date: 2017-02-11 15:52:25 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
 #+END_COMMENT
 
 什么是e？简单说，e就是 *增长的极限* 
