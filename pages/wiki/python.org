@@ -165,6 +165,137 @@ from multiprocessing.dummy import Pool
 10. threading。多线程模块，重要性也不必说。
 
 
+* 与 C 进行交互
+
+** Python调用C/C++（使用SWIG）
+作者：Jerry Jho
+链接：https://www.zhihu.com/question/23003213/answer/56121859
+来源：知乎
+
+除了SWIG，市面上还有若干用于Python扩展的工具包，比较知名的还有Boost.Python、SIP等，此外，Cython由于可以直接集成C/C++代码，并方便的生成Python模块，故也可以完成扩展Python的任务。
+
+SWIG的一个优势，它不仅可以用于Python，也可以用于其他语言。如今SWIG已经支持C/C++的好基友Java，主流脚本语言Python、Perl、Ruby、PHP、JavaScript、tcl、Lua，还有Go、C#，以及R。SWIG是基于配置的，也就是说，原则上一套配置改变不同的编译方法就能适用各种语言（当然，这是理想情况了……）
+
+用SWIG扩展Python，你需要有一个待扩展的C/C++库。这个库有可能是你自己写的，也有可能是某个项目提供的。这里举一个不浮夸的例子：希望在Python中用到SSE4指令集的CRC32指令。
+
+ 首先打开指令集的文档：https://software.intel.com/en-us/node/514245
+
+ 可以看到有6个函数。分析6个函数的原型，其参数和返回值都是简单的整数。于是书写SWIG的配置文件（为了简化起见，未包含2个64位函数）：
+#+BEGIN_EXAMPLE
+ /* File: mymodule.i */
+ %module mymodule
+
+ %{
+ #include "nmmintrin.h"
+ %}
+
+ int _mm_popcnt_u32(unsigned int v);
+ unsigned int _mm_crc32_u8 (unsigned int crc, unsigned char v);
+ unsigned int _mm_crc32_u16(unsigned int crc, unsigned short v);
+ unsigned int _mm_crc32_u32(unsigned int crc, unsigned int v); 
+#+END_EXAMPLE
+
+接下来使用SWIG将这个配置文件编译为所谓Python Module Wrapper
+
+=swig -python mymodule.i=
+
+ 得到一个 mymodule_wrap.c和一个mymodule.py。把它编译为Python扩展：
+
+#+BEGIN_EXAMPLE
+ Windows：
+
+ cl /LD mymodule_wrap.c /o _mymodule.pyd -IC:\Python27\include C:\Python27\libs\python27.lib
+
+ Linux：
+
+ gcc -fPIC -shared mymodule_wrap.c -o _mymodule.so -I/usr/include/python2.7/ -lpython2.7
+#+END_EXAMPLE
+ 注意输出文件名前面要加一个下划线。
+
+ 现在可以立即在Python下使用这个module了：
+
+#+BEGIN_SRC python
+ >>> import mymodule
+ >>> mymodule._mm_popcnt_u32(10)
+ 2 
+#+END_SRC
+ 回顾这个配置文件分为3个部分：
+ - 定义module名称mymodule，通常，module名称要和文件名保持一致。
+ - %{ %} 包裹的部分是C语言的代码，这段代码会原封不动的复制到mymodule_wrap.c
+ - 欲导出的函数签名列表。直接从头文件里复制过来即可。
+
+ 还记得本文第2节的那个great_function吗？有了SWIG，事情就会变得如此简单：
+
+#+BEGIN_SRC c
+ /* great_module.i */
+ %module great_module
+ %{
+ int great_function(int a) {
+     return a + 1;
+ }
+ %}
+ int great_function(int a); 
+#+END_SRC
+
+换句话说，SWIG自动完成了诸如Python类型转换、module初始化、导出代码表生成的诸多工作。
+
+
+ 对于C++，SWIG也可以应对。例如以下代码有C++类的定义：
+
+#+BEGIN_SRC c
+ //great_class.h
+ #ifndef GREAT_CLASS
+ #define GREAT_CLASS
+ class Great {
+     private:
+         int s;
+     public:
+         void setWall (int _s) {s = _s;};
+         int getWall () {return s;};
+ };
+ #endif // GREAT_CLASS 
+#+END_SRC
+对应的SWIG配置文件
+
+#+BEGIN_EXAMPLE
+ /* great_class.i */
+ %module great_class
+ %{
+ #include "great_class.h"
+ %}
+ %include "great_class.h" 
+#+END_EXAMPLE
+这里不再重新敲一遍class的定义了，直接使用SWIG的%include指令
+
+ SWIG编译时要加-c++这个选项，生成的扩展名为cxx
+
+#+BEGIN_EXAMPLE
+ swig -c++ -python great_class.i 
+
+ Windows下编译：
+ cl /LD great_class_wrap.cxx /o _great_class.pyd -IC:\Python27\include C:\Python27\libs\python27.lib
+ Linux，使用C++的编译器
+
+ g++ -fPIC -shared great_class_wrap.cxx -o _great_class.so  -I/usr/include/python2.7/ -lpython2.7 
+#+END_EXAMPLE
+
+在Python交互模式下测试：
+#+BEGIN_SRC python
+ >>> import great_class
+ >>> c = great_class.Great()
+ >>> c.setWall(5)
+ >>> c.getWall()
+ 5 
+#+END_SRC
+
+也就是说C++的class会直接映射到Python class
+
+ SWIG非常强大，对于Python接口而言，简单类型，甚至指针，都无需人工干涉即可自动转换，而复杂类型，尤其是自定义类型，SWIG提供了typemap供转换。而一旦使用了typemap，配置文件将不再在各个语言当中通用。
+
+
+ 写在最后：
+ 由于CPython自身的结构设计合理，使得Python的C/C++扩展非常容易。如果打算快速完成任务，Cython（C/C++调用Python）和SWIG（Python调用C/C++）是很不错的选择。但是，一旦涉及到比较复杂的转换任务，无论是继续使用Cython还是SWIG，仍然需要学习Python源代码。
+
 
 * python 风格规范 google 开源项目
 ** 字符串

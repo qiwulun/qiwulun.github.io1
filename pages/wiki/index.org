@@ -461,7 +461,9 @@
 - [[file:emacs.org][emacs]] 
 - [[file:docker.org][Docker]]
 - [[file:bibliography.org][bibliography 文献整理]]
-- 
+- [[file:python.org][python]]
+  - [[file:python/pandas.org][pandas]]
+- [[file:C.org][C]] 
 * 哲学
 ** 福柯
   - 知识型
