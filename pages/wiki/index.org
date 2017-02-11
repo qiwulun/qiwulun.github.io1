@@ -645,7 +645,7 @@
   - 知识考古学
   - 谱系学
 * 文学
-** [[../reading/%E5%8F%A4%E5%85%B8%E5%B0%8F%E8%AF%B4/%E8%A5%BF%E6%B8%B8%E8%AE%B0.org][西游记]] 
+** [[../reading/ancient-novel/xi-you-ji.org][西游记]] 
 * 手机
  - 阅读 多看
  - 
