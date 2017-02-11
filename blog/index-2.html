@@ -72,7 +72,42 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html" class="u-url">docker 中 tensorflow 报 libcuda.so.1 找不到</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/anaconda-diao-yong-MKL-Bug.html" class="u-url">Anaconda 调用 MKL Bug</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/anaconda-diao-yong-MKL-Bug.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-28T20:33:43+08:00" title="2016-12-28 20:33">2016-12-28 20:33</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/anaconda-diao-yong-MKL-Bug.html#disqus_thread" data-disqus-identifier="cache/posts/anaconda-diao-yong-MKL-bug.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+参考这一个
+<a href="https://github.com/ContinuumIO/anaconda-issues/issues/720">https://github.com/ContinuumIO/anaconda-issues/issues/720</a>
+</p>
+
+<pre class="example">
+Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so
+</pre>
+
+<p>
+It seems to be related to the packages installation order. I reinstalled numpy with
+</p>
+
+<pre class="example">
+conda install  -f  numpy
+</pre>
+
+<p>
+and the problem was gone.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao.html" class="u-url">docker 中 tensorflow 报 libcuda.so.1 找不到</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -1642,43 +1677,6 @@ alias pc="proxychains4"
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/github-xue-sheng-li-bao.html" class="u-url">github 学生礼包</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/github-xue-sheng-li-bao.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-14T17:55:18+08:00" title="2016-12-14 17:55">2016-12-14 17:55</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/github-xue-sheng-li-bao.html#disqus_thread" data-disqus-identifier="cache/posts/github-xue-sheng-li-bao.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <ol class="org-ol">
-<li>
-<a href="https://github.com/settings/emails">https://github.com/settings/emails</a> 里面设上学校的邮箱
-</li>
-<li>
-<a href="https://education.github.com/">https://education.github.com/</a> 开始申请
-</li>
-<li>福利如下：
-<dl class="org-dl">
-<dt> We've upgraded you to a plan with unlimited free private repositories </dt>
-<dd>        which will be free for the next two years. After that, you'll get an
-email saying that your coupon is expiring. You can reapply for another
-coupon if you still have academic status. We don't have any
-collaboration limits, so any group projects you may encounter can be
-hosted via your account.
-</dd>
-<dt> Student Developer Pack </dt>
-<dd>        available at: <a href="https://education.github.com/pack">https://education.github.com/pack</a>
-</dd>
-</dl>
-</li>
-</ol>
-</div>
     </article>
 </div>
 
