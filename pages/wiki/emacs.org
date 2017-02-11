@@ -120,6 +120,8 @@ Here are some workarounds:
 - You can use inline tasks to create non-folding subsections. See the documentation in org-inlinetask.el, which is part of the org-mode distribution.
 - You can create a temporary heading, such as "** Continue main section" and then remove it when you are ready to export.
 - You can create a separate outline heading (e.g., * ACTIONS), creating TODOs there with links to the relevant sections of your main text.
+*** 强行换行
+   orgmode 新加入的宏 =@@latex:\\ @@=
 ** python
 *** 缩进
     =SPC m == 用于python mode

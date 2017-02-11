@@ -71,6 +71,24 @@ def load_data(path, height=128, width=128, dtype=np.uint16):
 *** 遍历
 
 4. glob。 文件名的shell模式匹配，你不用遍历整个目录判断每个文件是不是符合，使用glob一句话就解决。
+*** 判断文件编码(gbk,utf-8)── chardet库
+看到Python的一个chardet库，瞬感Python做这些小处理还是真强大。
+
+#+BEGIN_SRC python
+import chardet
+
+f = open('/path/file.txt',r)
+data = f.read()
+print chardet.detect(data) 
+#+END_SRC
+
+返回值会是类似这样的
+
+一个是检测的可信度，另外一个就是检测到的编码。
+
+#+BEGIN_SRC python
+{'confidence': 0.99, 'encoding': 'utf-8'} 
+#+END_SRC
 ** 任务调度
 你可能接触过定时任务（crontab）
 
@@ -85,8 +103,46 @@ In : os.environ.get('PYTHONPATH')
 读完源码之后我学了一招：
 os.getenv('PYTHONPATH')
 好吧，省了5个字符。
+** 正则表达式
+*** 移除换行符
+  python按行读取文件，如何去掉换行符"\\n"
+
+ 试试 rstrip 方法:
+
+#+BEGIN_SRC python
+ >>> 'test string\n'.rstrip()
+ 'test string'
+#+END_SRC
+ 
+
+ 注意Python的 rstrip 方法将会默认去掉所有的空白符,而在Perl里只是删除换行符.如果只是删除换行符:
+
+#+BEGIN_SRC python
+ >>> 'test string \n'.rstrip('\n')
+ 'test string '
+#+END_SRC
+ 
+
+ 同样也有 lstrip 和 strip 方法:
+
+#+BEGIN_SRC python
+ >>> s = " \n  abc  def  "
+ >>> s.strip()
+ 'abc  def'
+ >>> s.rstrip()
+ ' \n  abc  def'
+ >>> s.lstrip()
+ 'abc  def  ' 
+#+END_SRC
+*** 匹配任意字符（包括换行符）
+获取一段文本中的任意字符,写出如下匹配规则：
+=(.*)=
+
+结果运行之后才发现，无法获得换行之后的文本。于是查了一下手册，才发现正则表达式中， =.= (点符号)匹配的是除了换行符 =\n= 以外的所有字符。
 
 
+以下为正确的正则表达式匹配规则： =([\s\S]*)= 
+同时，也可以用 =([\d\D]*)= 、 =([\w\W]*)= 来表示。
 * 数据类型 
 2. collections。 包含了一些额外的数据类型。其中的OrderedDict（有序列的字典）、defaultdict（带有默认值的字典）、namedtuple（通过创建带有字段属性的元组子类）和deque（高效实现插入和删除操作的双向列表）非常常用。
 

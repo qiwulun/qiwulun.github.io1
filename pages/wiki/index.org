@@ -477,7 +477,7 @@
    - shadowsocks + VPS 最好用且稳定
 ** 软件
 
- - VSO Downloader
+ - [ ] VSO Downloader
    - 能够截取网页播放视频的流量，然后转换为视频，完全免费，没有广告
 
 *** linux 
@@ -506,7 +506,25 @@
       - pdfunite 将多个 PDF 文件合并为一个 PDF 文件
 *************** TODO 虚拟机
 *************** END
- 
+*** Pandoc 一个用 Haskell 写成的文档格式转换软件
+
+输入格式可以是： markdown ,Textile, reStructuredText, HTML,  LaTeX;
+
+输出语言非常丰富，包括： markdown, reStructuredText, XHTML, HTML 5, LaTeX , ConTeXt,RTF, DocBook XML, OpenDocument XML, ODT, Word docx, GNU Texinfo, MediaWiki markup, EPUB, Textile, groff man, Emacs Org-Mode, AsciiDoc, Slidy, DZSlides, S5 HTML slide shows. 如果安装了 LaTeX ,甚至还可以输出为 PDF 格式！
+
+pandoc 常用参数::
+  - -f 输入格式（如果没有制定格式，则根据后缀名判断，如果没后缀名，则默认为markdown）
+  - -t 输出格式（默认为html）
+  - -o 如果没有的话（默认是STDOUT）
+
+=pandoc -f markdown -t html in.txt -o out.html=
+
+就是把md格式的in.txt转成out.html
+
+=pandoc in.tex -o out.doc=
+
+根据后缀名，由latex格式转换为doc格式
+
 ** 系统
 *** windows 快捷键
   - CTRL+ESC：打开"开始"菜单
