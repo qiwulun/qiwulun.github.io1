@@ -77,6 +77,49 @@
       #+END_SRC
 
       If the :comment-include attribute is set to a non-nil value, the LaTeX \includegraphics macro will be commented out.
+*** 结构 FAQ
+**** Can I close an outline section without starting a new section?
+
+ Can I have nested, closed outline sections, similar to xml? This question comes up quite frequently on the mailing list.
+
+ See the following threads:
+
+ - http://permalink.gmane.org/gmane.emacs.orgmode/40182
+
+ - http://permalink.gmane.org/gmane.emacs.orgmode/36719
+
+ - http://permalink.gmane.org/gmane.emacs.orgmode/24092
+
+ - http://permalink.gmane.org/gmane.emacs.orgmode/12425
+
+ The desired behavior looks something like this:
+
+#+BEGIN_SRC org
+  ,* Section one
+
+  Some text
+
+  ,** Subsection one
+
+  Some text
+
+  ,** Subsection two
+
+  Some text
+
+  ,# end Subsection Two
+
+  Continue text in section one.
+
+#+END_SRC
+
+The short answer to the question is no. Org-mode adheres to the cascading logic of outlines, in which a section is closed only by another section that occupies an equal or greater level.
+
+Here are some workarounds:
+
+- You can use inline tasks to create non-folding subsections. See the documentation in org-inlinetask.el, which is part of the org-mode distribution.
+- You can create a temporary heading, such as "** Continue main section" and then remove it when you are ready to export.
+- You can create a separate outline heading (e.g., * ACTIONS), creating TODOs there with links to the relevant sections of your main text.
 ** python
 *** 缩进
     =SPC m == 用于python mode
@@ -87,3 +130,11 @@
     one could always set file-local variables (through =SPC f v f= )
 *** 字数统计
     选中文字，然后 `SPC x c'
+* elisp
+** 判断系统
+#+BEGIN_SRC emacs-lisp
+(cond ((eq system-type 'gnu/linux)
+         (spacemacs//set-monospaced-font "Monaco" "Source Han Sans SC Normal" 18 22))
+        ((eq system-type 'windows-nt)
+         (spacemacs//set-monospaced-font "Monaco" "Microsoft Yahei" 18 20)))
+#+END_SRC
