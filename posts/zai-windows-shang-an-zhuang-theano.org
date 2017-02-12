@@ -1,0 +1,19 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 在 windows 上安装 theano
+.. slug: zai-windows-shang-an-zhuang-theano
+.. date: 2017-02-12 13:55:44 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+* 基本配置
+核心一点，编译器要用 =TDM GCC x64=
+
+安装 Anaconda2 
+
+
