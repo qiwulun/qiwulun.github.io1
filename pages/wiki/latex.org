@@ -8,3 +8,22 @@
 * beamer
 - 一页里有多张图片 ::
    要想摆得好看一点非常费劲-_-# 试试minipage环境，要是还不行的话就避免这种情况吧
+* 公式
+** 距离
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2017-02-13 16:32:27
+[[file:../../images/公式/screenshot_2017-02-13_16-32-27.png]]
+
+何时需要用这些间距来调节公式呢，我们从“The TEXBook” 中摘取如下公式的调节实例：
+
+| =$\sqrt{2}\,x$=                         | $\sqrt{2}\,x$                         |
+| =$\sqrt{\,\lg x}$=                      | $\sqrt{\,\lg x}$                      |
+| =$O\bigl(1/\sqrt{n}\,\bigr)$=           | $O\bigl(1/\sqrt{n}\,\bigr)$           |
+| =$[\,0,1)$=                             | $[\,0,1)$                             |
+| =$\lg n\,(\lg\lg n)^2$=                 | $\lg n\,(\lg\lg n)^2$                 |
+| =$x^2\!/2$=                             | $x^2\!/2$                             |
+| =$n/\!\lg n$=                           | $n/\!\lg n$                           |
+| =$\Gamma_{\!2}+\Delta^{\!2}$=           | $\Gamma_{\!2}+\Delta^{\!2}$           |
+| =$R_i{}^j{}_{\!kl}$=                    | $R_i{}^j{}_{\!kl}$                    |
+| =$\int_0^x\!\int_0^y\, {\rm d} F(u,v)$= | $\int_0^x\!\int_0^y\, {\rm d} F(u,v)$ |
+| =$(2n)!/\bigl(n!\,(n+1)!\bigr)$=        | $(2n)!/\bigl(n!\,(n+1)!\bigr)$        |
