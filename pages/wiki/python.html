@@ -36,10 +36,17 @@ Python HTTP 服务
 Numpy
 tar 打包
 遍历
+判断文件编码(gbk,utf-8)── chardet库
 
 
 任务调度
 系统交互
+正则表达式
+
+移除换行符
+匹配任意字符（包括换行符）
+
+
 
 
 数据类型
@@ -52,18 +59,9 @@ tar 打包
 
 多进程多线程
 
-通用写法
-相关模块
-
-
-与 C 进行交互
-
-Python调用C/C++（使用SWIG）
-
-
-python 风格规范 go">
+通用">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-02-11T15:13:22+08:00">
+<meta property="article:published_time" content="2017-02-11T23:54:53+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -119,7 +117,7 @@ python 风格规范 go">
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-11T15:13:22+08:00" itemprop="datePublished" title="2017-02-11 15:13">2017-02-11 15:13</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-11T23:54:53+08:00" itemprop="datePublished" title="2017-02-11 23:54">2017-02-11 23:54</time></a></p>
                 <p class="commentline">
         
     <a href="python.html#disqus_thread" data-disqus-identifier="cache/pages/wiki/python.html">Comments</a>
@@ -150,10 +148,18 @@ python 风格规范 go">
 <li><a href="python.html#sec-5-2-1">Numpy</a></li>
 <li><a href="python.html#sec-5-2-2">tar 打包</a></li>
 <li><a href="python.html#sec-5-2-3">遍历</a></li>
+<li><a href="python.html#sec-5-2-4">判断文件编码(gbk,utf-8)── chardet库</a></li>
 </ul>
 </li>
 <li><a href="python.html#sec-5-3">任务调度</a></li>
 <li><a href="python.html#sec-5-4">系统交互</a></li>
+<li>
+<a href="python.html#sec-5-5">正则表达式</a>
+<ul>
+<li><a href="python.html#sec-5-5-1">移除换行符</a></li>
+<li><a href="python.html#sec-5-5-2">匹配任意字符（包括换行符）</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="python.html#sec-6">数据类型</a></li>
@@ -309,6 +315,32 @@ You can use seek with a file object in the normal way, and then use this file ob
 </ol>
 </div>
 </div>
+<div id="outline-container-sec-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4">判断文件编码(gbk,utf-8)── chardet库</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<p>
+看到Python的一个chardet库，瞬感Python做这些小处理还是真强大。
+</p>
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">chardet</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/path/file.txt'</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+<p>
+返回值会是类似这样的
+</p>
+
+<p>
+一个是检测的可信度，另外一个就是检测到的编码。
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">'confidence'</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">,</span> <span class="s1">'encoding'</span><span class="p">:</span> <span class="s1">'utf-8'</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div id="outline-container-sec-5-3" class="outline-3">
 <h3 id="sec-5-3">任务调度</h3>
@@ -343,9 +375,70 @@ os.getenv('PYTHONPATH')
 </p>
 </div>
 </div>
+<div id="outline-container-sec-5-5" class="outline-3">
+<h3 id="sec-5-5">正则表达式</h3>
+<div class="outline-text-3" id="text-5-5">
 </div>
+<div id="outline-container-sec-5-5-1" class="outline-4">
+<h4 id="sec-5-5-1">移除换行符</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<p>
+python按行读取文件，如何去掉换行符"\\n"
+</p>
+
+<p>
+试试 rstrip 方法:
+</p>
+
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">'test string</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="s1">'test string'</span>
+</pre></div>
 
 
+<p>
+注意Python的 rstrip 方法将会默认去掉所有的空白符,而在Perl里只是删除换行符.如果只是删除换行符:
+</p>
+
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">'test string </span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+<span class="s1">'test string '</span>
+</pre></div>
+
+
+<p>
+同样也有 lstrip 和 strip 方法:
+</p>
+
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">" </span><span class="se">\n</span><span class="s2">  abc  def  "</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="s1">'abc  def'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="s1">' </span><span class="se">\n</span><span class="s1">  abc  def'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+<span class="s1">'abc  def  '</span>
+</pre></div>
+</div>
+</div>
+<div id="outline-container-sec-5-5-2" class="outline-4">
+<h4 id="sec-5-5-2">匹配任意字符（包括换行符）</h4>
+<div class="outline-text-4" id="text-5-5-2">
+<p>
+获取一段文本中的任意字符,写出如下匹配规则：
+<code>(.*)</code>
+</p>
+
+<p>
+结果运行之后才发现，无法获得换行之后的文本。于是查了一下手册，才发现正则表达式中， <code>.</code> (点符号)匹配的是除了换行符 <code>\n</code> 以外的所有字符。
+</p>
+
+
+<p>
+以下为正确的正则表达式匹配规则： <code>([\s\S]*)</code> 
+同时，也可以用 <code>([\d\D]*)</code> 、 <code>([\w\W]*)</code> 来表示。
+</p>
+</div>
+</div>
+</div>
+</div>
 <div id="outline-container-sec-6" class="outline-2">
 <h2 id="sec-6">数据类型</h2>
 <div class="outline-text-2" id="text-6">

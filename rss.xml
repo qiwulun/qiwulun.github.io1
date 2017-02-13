@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link type="application/rss+xml" rel="self" href="https://qiwulun.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Sat, 11 Feb 2017 09:42:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>摘抄──记忆力 VS 文字、书籍、互联网</title><link>https://qiwulun.github.io/posts/zhai-chao-ji-yi-li-vs-wen-zi-shu-ji-hu-lian-wang.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵骥's Site</title><link>https://qiwulun.github.io/</link><description>This is Zhao Ji's blog site.</description><atom:link href="https://qiwulun.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 13 Feb 2017 03:41:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>在Linux操作系统下如何正确查看NFS与Raid信息</title><link>https://qiwulun.github.io/posts/zai-linuxcao-zuo-xi-tong-xia-ru-he-zheng-que-cha-kan-nfsyu-raidxin-xi.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-linuxcao-zuo-xi-tong-xia-ru-he-zheng-que-cha-kan-nfsyu-raidxin-xi.html#sec-1"&gt;Raid 信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-linuxcao-zuo-xi-tong-xia-ru-he-zheng-que-cha-kan-nfsyu-raidxin-xi.html#sec-2"&gt;查看自动挂载的NFS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Raid 信息&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+有些情况下系统不是自己装的，raid也不是自己配置的，远程登录系统后可能就不知道系统是否有做raid，raid级别？因此稍微总结一下Linux下查看软、硬raid信息的方法。
+&lt;/p&gt;
+
+&lt;p&gt;
+软件raid：只能通过Linux系统本身来查看
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;cat /proc/mdstat&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+可以看到raid级别，状态等信息。
+&lt;/p&gt;
+
+&lt;p&gt;
+硬件raid： 最佳的办法是通过已安装的raid厂商的管理工具来查看，有cmdline，也有图形界面。如Adaptec公司的硬件卡就可以通过下面的命令进行查看：
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;# /usr/dpt/raidutil -L all&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+可以看到非常详细的信息。
+&lt;/p&gt;
+
+&lt;p&gt;
+当然更多情况是没有安装相应的管理工具，只能依靠Linux本身的话一般我知道的是两种方式：
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;# dmesg |grep -i raid&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;# cat /proc/scsi/scsi&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+显示的信息差不多，raid的厂商，型号，级别，但无法查看各块硬盘的信息。
+&lt;/p&gt;
+
+&lt;p&gt;
+另外经过实际测试，Dell的服务器可以通过命令来显示，而HP、IBM等的服务器通过上面的命令是显示不出的。只能够通过装硬件厂商的管理工具来查看。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;查看自动挂载的NFS&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;p&gt;
+cat /etc/fstab
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/zai-linuxcao-zuo-xi-tong-xia-ru-he-zheng-que-cha-kan-nfsyu-raidxin-xi.html</guid><pubDate>Mon, 13 Feb 2017 03:09:46 GMT</pubDate></item><item><title>在 windows 上安装 theano</title><link>https://qiwulun.github.io/posts/zai-windows-shang-an-zhuang-theano.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiwulun.github.io/posts/zai-windows-shang-an-zhuang-theano.html#sec-1"&gt;基本配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;基本配置&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+核心一点，编译器要用 &lt;code&gt;TDM GCC x64&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+安装 Anaconda2 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/zai-windows-shang-an-zhuang-theano.html</guid><pubDate>Sun, 12 Feb 2017 05:55:44 GMT</pubDate></item><item><title>摘抄──记忆力 VS 文字、书籍、互联网</title><link>https://qiwulun.github.io/posts/zhai-chao-ji-yi-li-vs-wen-zi-shu-ji-hu-lian-wang.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
 &lt;a href="http://zhuanlan.zhihu.com/outofbox/19619572"&gt;http://zhuanlan.zhihu.com/outofbox/19619572&lt;/a&gt;
 &lt;/p&gt;
 
@@ -855,28 +946,4 @@ scrapy shellhttp://douban.movie.com
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/li-yong-tp-link-wu-xian-lu-you-qi-de-zhuan-fa-gong-neng-lai-zeng-qiang-xin-hao.html</guid><pubDate>Sat, 04 Feb 2017 04:34:58 GMT</pubDate></item><item><title>数学八卦──选择公理</title><link>https://qiwulun.github.io/posts/shu-xue-ba-gua-xuan-ze-gong-li.html</link><dc:creator>Zhao JI</dc:creator><description></description><guid>https://qiwulun.github.io/posts/shu-xue-ba-gua-xuan-ze-gong-li.html</guid><pubDate>Fri, 03 Feb 2017 13:11:07 GMT</pubDate></item><item><title>wget 用作爬虫</title><link>https://qiwulun.github.io/posts/wget-yong-zuo-pa-chong.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-&lt;code&gt;wget -r -p -np -k &amp;lt;网址&amp;gt;&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;wget -r -np -l0 -nd &amp;lt;网址&amp;gt;&lt;/code&gt;
-&lt;/p&gt;</description><guid>https://qiwulun.github.io/posts/wget-yong-zuo-pa-chong.html</guid><pubDate>Fri, 03 Feb 2017 12:25:24 GMT</pubDate></item><item><title>电脑外设──MX master 双模无线鼠标</title><link>https://qiwulun.github.io/posts/dian-nao-wai-she-mx-master-shuang-mo-wu-xian-shu-biao.html</link><dc:creator>Zhao JI</dc:creator><description>&lt;p&gt;
-Logitech/罗技 MX Master 双模无线鼠标 | 参考价格：649 元
-&lt;/p&gt;
-
-&lt;p&gt;
-既想要鼠标的精准、快速、不易疲劳，又想要 Mac 触控板丰富的手势功能，MX Master 是唯一的选择。
-&lt;/p&gt;
-
-&lt;p&gt;
-相比普通的无线办公鼠标，MX Master 体型魁梧，配合顺滑的胶贴移动却十分轻松，特别设计的人体工程学外形，握起来自然舒适，用久了甚至会觉得“长在手上”一般。
-&lt;/p&gt;
-
-&lt;p&gt;
-为拇指提供休息区的菱格纹理“侧翼”另有玄机，下方隐藏的按键配合手势操作，可以实现 Mac 触控板的所有功能，比如最常用的桌面切换，拇指按下向左右滑就行，和用触控板时几乎一模一样。
-&lt;/p&gt;
-
-&lt;p&gt;
-而通过滑动力度自动切换逐级滚动与连续滚动的滑轮、可以适应几乎所有表面的无界技术、同时支持 2.4G 与蓝牙两种无线连接方式、可以连接 3 个设备并一键切换功能、可连续使用 40 天的内置锂电池等黑科技，让这只鼠标成为当之无愧的 Master。
-&lt;/p&gt;</description><category>好物</category><guid>https://qiwulun.github.io/posts/dian-nao-wai-she-mx-master-shuang-mo-wu-xian-shu-biao.html</guid><pubDate>Fri, 03 Feb 2017 11:49:34 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><guid>https://qiwulun.github.io/posts/li-yong-tp-link-wu-xian-lu-you-qi-de-zhuan-fa-gong-neng-lai-zeng-qiang-xin-hao.html</guid><pubDate>Sat, 04 Feb 2017 04:34:58 GMT</pubDate></item><item><title>数学八卦──选择公理</title><link>https://qiwulun.github.io/posts/shu-xue-ba-gua-xuan-ze-gong-li.html</link><dc:creator>Zhao JI</dc:creator><description></description><guid>https://qiwulun.github.io/posts/shu-xue-ba-gua-xuan-ze-gong-li.html</guid><pubDate>Fri, 03 Feb 2017 13:11:07 GMT</pubDate></item></channel></rss>
