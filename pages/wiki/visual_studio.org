@@ -1,3 +1,10 @@
+# -*- mode: Org; org-download-image-dir: "../../images"; -*-
+#+BEGIN_COMMENT
+.. title: Visual Studio
+.. slug: visual-studio
+#+END_COMMENT
+
+* 快捷键
 F6: 生成解决方案
 Ctrl+F6: 生成当前项目
 F7: 查看代码
@@ -84,4 +91,6 @@ Shift+Alt+箭头键: 选择矩形文本
 Alt+鼠标左按钮: 选择矩形文本
 Ctrl+Shift+U: 全部变为大写
 Ctrl+U: 全部变为小写
+* 小技巧
+** TODO 整理代码
 
