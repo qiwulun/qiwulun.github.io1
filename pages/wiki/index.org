@@ -537,6 +537,8 @@ pandoc 常用参数::
 - vs
 - pycharm
 - clion
+- eclipse
+  - 太缓慢，已经弃用
 
 ** 系统
 *** windows 快捷键

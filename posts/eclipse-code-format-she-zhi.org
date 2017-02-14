@@ -1,0 +1,19 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Eclipse Code Format 设置
+.. slug: eclipse-code-format-she-zhi
+.. date: 2013-05-08 20:12:53 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+
+1. preferences->Java->Code Style->Code Formatter->Show... ，打开之后，选择“Line Wrapping”选项卡:在“Maximun line width”指定大于多少列时换行。
+
+2. 还是在“Line Wrapping”选项卡中，能过选择"Line Wrapping policy"可以指定构造函数、方法体等的换行情况。
+
+   不过，SUN推荐的编码风格默认是80列换行。将文件导入，之后就可以使用Edit改变！
