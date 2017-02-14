@@ -375,3 +375,9 @@ SWIG的一个优势，它不仅可以用于Python，也可以用于其他语言�
   x = 'name: ' + name + '; score: ' + str(n)
 #+END_SRC
 
+* 精选库
+** 科学计算
+- numpy
+- scipy
+** 爬虫
+- scrapy

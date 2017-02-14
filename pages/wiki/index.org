@@ -532,7 +532,11 @@ pandoc 常用参数::
 - atom
 - vs code
 - sublime text
-  - 个人开发更新太慢
+  - 个人开发的软件，所以更新太慢
+*** IDE
+- vs
+- pycharm
+- clion
 
 ** 系统
 *** windows 快捷键
