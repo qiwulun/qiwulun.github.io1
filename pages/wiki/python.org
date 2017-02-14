@@ -89,6 +89,20 @@ print chardet.detect(data)
 #+BEGIN_SRC python
 {'confidence': 0.99, 'encoding': 'utf-8'} 
 #+END_SRC
+** 数据
+*** 去重
+**** 不保持顺序
+#+BEGIN_SRC python
+def unique(a): return list(set(a))
+#+END_SRC
+**** 保持顺序
+#+BEGIN_SRC python
+  >>> from collections import OrderedDict
+  >>> items = [1, 2, 3, 'a', 2, 4, 'a']
+  >>> OrderedDict.fromkeys(items).keys()
+  [1, 2, 3, 'a', 4]
+#+END_SRC
+
 ** 任务调度
 你可能接触过定时任务（crontab）
 
