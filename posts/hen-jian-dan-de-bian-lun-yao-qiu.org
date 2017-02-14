@@ -1,0 +1,32 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: 很简单的辩论要求
+.. slug: hen-jian-dan-de-bian-lun-yao-qiu
+.. date: 2014-10-12 10:35:11 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+现在的文章很简单
+
+1. 初级，摞论点，给我把逻辑砸实
+
+   - 对错不好定所以看利弊
+
+   - ？？？利弊无善恶所以看对错？？？
+
+2. 中级，切受众，给我把辩题审好
+
+   - 对错是原则，利弊是权衡
+
+   - 利弊是个人，对错是共识
+
+3. 高级，砸哲学，给我把眼界打开
+
+   - 叔本华 && 佛教，有情皆苦，要有大智慧，要看内心的无可奈何
+
+   - 福柯，对错是权力意志的反映
+
+   - 存天理 灭人欲
