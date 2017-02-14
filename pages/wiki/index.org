@@ -525,6 +525,14 @@ pandoc 常用参数::
 =pandoc in.tex -o out.doc=
 
 根据后缀名，由latex格式转换为doc格式
+*** 编辑器
+- [[file:emacs.org][emacs]]
+  - 我的主力编辑器
+- vim
+- atom
+- vs code
+- sublime text
+  - 个人开发更新太慢
 
 ** 系统
 *** windows 快捷键
