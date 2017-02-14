@@ -472,6 +472,7 @@
  - https://zoom.us/ 远程会议
  - http://en.booksee.org/ 电子书下载
  - =Cmd Markdown= markdown 在线编辑器
+ - http://www.tmxmall.com/ 翻译、语料
  - 翻墙
    - goagent 已弃用
    - xx-Net 安装方便
