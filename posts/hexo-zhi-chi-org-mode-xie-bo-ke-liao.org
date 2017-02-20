@@ -1,0 +1,36 @@
+# -*- mode: Org; org-download-image-dir: "../images"; -*-
+#+BEGIN_COMMENT
+.. title: Hexo 支持 org-mode 写博客了
+.. slug: hexo-zhi-chi-org-mode-xie-bo-ke-liao
+.. date: 2017-02-20 20:07:10 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+http://blog.hourglasslab.com/2016/11/04/How%20to%20Setup%20and%20Write%20Blogs%20Using%20Org%20Mode%20and%20Hexo/
+* hexo 介绍
+http://ibruce.info/2013/11/22/hexo-your-blog/
+* Hexo 支持 org-mode 的插件
+https://github.com/CodeFalling/hexo-renderer-org
+
+
+** 安装流程
+
+http://www.mmtun.com/2016/07/27/Creating-Blog-with-Hexo-1/
+
+http://www.mmtun.com/2016/07/28/Remove-Footer-Exported-from-Orgmode/
+
+
+** 图片
+CodeFalling 大神写了个插件，安装后可以插入 absolute image path
+
+
+hexo-asset-image - Give asset image in hexo a absolutely path automatically
+
+具体关于插件如何使用可以看我的 blog
+
+http://blog.hourglasslab.com
