@@ -72,7 +72,35 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-shi-yong-shadowsocks.html" class="u-url">docker 中使用 shadowsocks</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/windows-ruan-lian-jie.html" class="u-url">Windows 软链接</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Zhao JI
+            </span></p>
+            <p class="dateline"><a href="../posts/windows-ruan-lian-jie.html" rel="bookmark"><time class="published dt-published" datetime="2017-01-07T22:50:55+08:00" title="2017-01-07 22:50">2017-01-07 22:50</time></a></p>
+                <p class="commentline">
+        
+    <a href="../posts/windows-ruan-lian-jie.html#disqus_thread" data-disqus-identifier="cache/posts/windows-ruan-lian-jie.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+具体示例如下：
+</p>
+
+<p>
+1.建立举例
+</p>
+
+<pre class="example">
+建立d:\develop链接目录，指向远程的目标服务器上的e盘的对应目录
+
+mklink /d d:\develop \\138.20.1.141\e$\develop
+</pre>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/docker-zhong-shi-yong-shadowsocks.html" class="u-url">docker 中使用 shadowsocks</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Zhao JI
@@ -969,316 +997,6 @@ getActiveAccountInfo();
 </ul>
 </li>
 </ul>
-</div>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="../posts/yong-docker-lai-da-bao-spacemacs.html" class="u-url">用 docker 来打包 spacemacs</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Zhao JI
-            </span></p>
-            <p class="dateline"><a href="../posts/yong-docker-lai-da-bao-spacemacs.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-21T22:41:18+08:00" title="2016-12-21 22:41">2016-12-21 22:41</time></a></p>
-                <p class="commentline">
-        
-    <a href="../posts/yong-docker-lai-da-bao-spacemacs.html#disqus_thread" data-disqus-identifier="cache/posts/yong-docker-lai-da-bao-spacemacs.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li>
-<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1">org-mode</a>
-<ul>
-<li>
-<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1">figure</a>
-<ul>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-1">ditaa</a></li>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-2">graphviz</a></li>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-3">plantuml</a></li>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-1-4">asymptote</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2">pdf</a>
-<ul>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2-1">export</a></li>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-2-2">view</a></li>
-</ul>
-</li>
-<li>
-<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-3">html-blog</a>
-<ul>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-1-3-1"><span class="done DONE">DONE</span> nikola</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-2"><span class="done DONE">DONE</span> 翻墙</a>
-<ul>
-<li><a href="../posts/yong-docker-lai-da-bao-spacemacs.html#sec-2-1">google translate</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">org-mode</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">figure</h3>
-<div class="outline-text-3" id="text-1-1">
-</div>
-<div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">ditaa</h4>
-<div class="outline-text-4" id="text-1-1-1">
-<div class="highlight"><pre><span></span>    +-----------+        +---------+  
-    |    PLC    |        |         |                
-    |  Network  +&lt;------&gt;+   PLC   +&lt;---=---------+ 
-    |    cRED   |        |  c707   |              | 
-    +-----------+        +----+----+              | 
-			      ^                   | 
-			      |                   | 
-			      |  +----------------|-----------------+
-			      |  |                |                 |
-			      v  v                v                 v
-      +----------+       +----+--+--+      +-------+---+      +-----+-----+       Windows clients
-      |          |       |          |      |           |      |           |      +----+      +----+
-      | Database +&lt;-----&gt;+  Shared  +&lt;----&gt;+ Executive +&lt;-=--&gt;+ Operator  +&lt;----&gt;|cYEL| . . .|cYEL|
-      |   c707   |       |  Memory  |      |   c707    |      | Server    |      |    |      |    |
-      +--+----+--+       |{d} cGRE  |      +------+----+      |   c707    |      +----+      +----+
-	 ^    ^          +----------+             ^           +-------+---+
-	 |    |                                   |                        
-	 |    +--------=--------------------------+                    
-	 v                                                             
-+--------+--------+                                                         
-|                 |                                                         
-| Millwide System |            -------- Data ---------                      
-| cBLU            |            --=----- Signals ---=--                      
-+-----------------+
-</pre></div>
-</div>
-</div>
-
-
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">graphviz</h4>
-<div class="outline-text-4" id="text-1-1-2">
-<div class="highlight"><pre><span></span>digraph G {
-  size="8,6"
-  ratio=expand
-  edge [dir=both]
-  plcnet [shape=box, label="PLC Network"]
-  subgraph cluster_wrapline {
-    label="Wrapline Control System"
-    color=purple
-    subgraph {
-    rank=same
-    exec
-    sharedmem [style=filled, fillcolor=lightgrey, shape=box]
-    }
-    edge[style=dotted, dir=none]
-    exec -&gt; opserver
-    exec -&gt; db
-    plc -&gt; exec
-    edge [style=line, dir=both]
-    exec -&gt; sharedmem
-    sharedmem -&gt; db
-    plc -&gt; sharedmem
-    sharedmem -&gt; opserver
-  }
-  plcnet -&gt; plc [constraint=false]
-  millwide [shape=box, label="Millwide System"]
-  db -&gt; millwide
-
-  subgraph cluster_opclients {
-    color=blue
-    label="Operator Clients 示例"
-    rankdir=LR
-    labelloc=b
-    node[label=client]
-    opserver -&gt; client1
-    opserver -&gt; client2
-    opserver -&gt; client3
-  }
-}
-</pre></div>
-</div>
-</div>
-
-
-<div id="outline-container-sec-1-1-3" class="outline-4">
-<h4 id="sec-1-1-3">plantuml</h4>
-<div class="outline-text-4" id="text-1-1-3">
-<p>
-test
-</p>
-
-<div class="highlight"><pre><span></span>Alice -&gt; Bob: synchronous call
-Alice -&gt;&gt; Bob: asynchronous call
-Alice -&gt;&gt; Bob: asynchronous call
-</pre></div>
-</div>
-</div>
-
-
-
-<div id="outline-container-sec-1-1-4" class="outline-4">
-<h4 id="sec-1-1-4">asymptote</h4>
-<div class="outline-text-4" id="text-1-1-4">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2016-12-21 三 01:30]</span></span> 
-</p>
-</div>
-
-<ul class="org-ul">
-<li>
-<a id="sec-1-1-4-1" name="sec-1-1-4-1"></a>三维，记得要带 <code>:cmdline -render=0</code><br><div class="outline-text-5" id="text-1-1-4-1">
-<p>
-不然要用显卡，不适合docker
-</p>
-
-<p>
-test 
-</p>
-
-<div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">three</span><span class="p">;</span>
-
-<span class="nf">size</span><span class="p">(</span><span class="mi">560</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="nv">IgnoreAspect</span><span class="p">);</span>
-<span class="nf">size3</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
-<span class="nv">currentprojection</span><span class="o">=</span><span class="n">perspective</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="nv">up</span><span class="o">=</span><span class="nf">Y</span><span class="p">);</span>
-<span class="nv">currentlight</span><span class="o">=</span><span class="nv">White</span><span class="p">;</span>
-
-<span class="kt">real</span> <span class="n">a</span><span class="o">=-</span><span class="mf">0.4</span><span class="p">;</span>
-<span class="kt">real</span> <span class="n">b</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span>
-<span class="kt">real</span> <span class="n">y1</span><span class="o">=-</span><span class="mi">5</span><span class="p">;</span>
-<span class="kt">real</span> <span class="n">y2</span><span class="o">=-</span><span class="mi">3</span><span class="n">y1</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="kt">path</span> <span class="n">A</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span><span class="o">::</span><span class="p">{</span><span class="nf">dir</span><span class="p">(</span><span class="mf">89.5</span><span class="p">)}(</span><span class="mi">0</span><span class="p">,</span><span class="n">y2</span><span class="p">);</span>
-<span class="kt">path</span> <span class="n">B</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">y1</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="mf">88.3</span><span class="p">)}</span><span class="o">::</span><span class="p">{</span><span class="nf">dir</span><span class="p">(</span><span class="mi">20</span><span class="p">)}(</span><span class="n">b</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<span class="kt">real</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
-<span class="kt">pair</span> <span class="n">z</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">);</span>
-<span class="kt">transform</span> <span class="n">t</span><span class="o">=</span><span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
-<span class="kt">transform</span> <span class="n">T</span><span class="o">=</span><span class="nf">inverse</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">yy</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">xx</span><span class="p">));</span>
-<span class="nf">path</span><span class="p">[]</span> <span class="n">g</span><span class="o">=</span><span class="nf">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.979</span><span class="p">)</span><span class="o">*</span><span class="nf">scale</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">*</span>
-  <span class="nf">texpath</span><span class="p">(</span><span class="nf">Label</span><span class="p">(</span><span class="s">"{\it symptote}"</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="mf">0.25</span><span class="o">*</span><span class="nv">E</span><span class="o">+</span><span class="mf">0.169</span><span class="nv">S</span><span class="p">,</span><span class="nf">fontsize</span><span class="p">(</span><span class="mi">24</span><span class="nv">pt</span><span class="p">)));</span>
-<span class="kt">pair</span> <span class="n">w</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.7</span><span class="p">);</span>
-<span class="kt">pair</span> <span class="n">u</span><span class="o">=</span><span class="nf">intersectionpoint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="o">--</span><span class="n">w</span><span class="p">);</span>
-
-<span class="kt">real</span> <span class="n">h</span><span class="o">=</span><span class="mf">0.25</span><span class="o">*</span><span class="nf">linewidth</span><span class="p">();</span>
-<span class="kt">real</span> <span class="n">hy</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">h</span><span class="p">)).</span><span class="n">x</span><span class="p">;</span>
-<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">hy</span><span class="p">)..(</span><span class="n">b</span><span class="o">+</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..(</span><span class="n">b</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)..(</span><span class="n">a</span><span class="o">-</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
-<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">((</span><span class="n">h</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">y2</span><span class="p">)..(</span><span class="mi">0</span><span class="p">,</span><span class="n">y2</span><span class="o">+</span><span class="n">h</span><span class="p">)..(</span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="n">y1</span><span class="p">)..(</span><span class="mi">0</span><span class="p">,</span><span class="n">y1</span><span class="o">-</span><span class="n">h</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
-<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="p">((</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">hy</span><span class="p">)..(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="o">+</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..(</span><span class="n">w</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)</span><span class="o">--</span><span class="p">(</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">hy</span><span class="p">)..(</span><span class="n">u</span><span class="p">.</span><span class="n">x</span><span class="o">-</span><span class="n">hy</span><span class="p">,</span><span class="mi">0</span><span class="p">)..</span><span class="k">cycle</span><span class="p">));</span>
-<span class="kt">real</span> <span class="n">f</span><span class="o">=</span><span class="mf">0.75</span><span class="p">;</span>
-<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">point</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">--</span><span class="nf">point</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="nf">reverse</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">--</span><span class="k">cycle</span><span class="p">);</span>
-<span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="nf">point</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="n">B</span><span class="o">--</span><span class="nf">point</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">--</span><span class="nf">shift</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="o">*</span><span class="n">hy</span><span class="p">,</span><span class="n">f</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="nf">reverse</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">--</span><span class="k">cycle</span><span class="p">);</span>
-
-<span class="kt">triple</span> <span class="n">H</span><span class="o">=-</span><span class="mf">0.1</span><span class="nf">Z</span><span class="p">;</span>
-<span class="n">material</span> <span class="n">m</span><span class="o">=</span><span class="n">material</span><span class="p">(</span><span class="nv">lightgray</span><span class="p">,</span><span class="n">shininess</span><span class="o">=</span><span class="mf">1.0</span><span class="p">);</span>
-
-<span class="k">for</span><span class="p">(</span><span class="kt">path</span> <span class="n">p</span> <span class="o">:</span> <span class="n">g</span><span class="p">)</span>
-  <span class="nf">draw</span><span class="p">(</span><span class="n">extrude</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">H</span><span class="p">),</span><span class="n">m</span><span class="p">);</span>
-
-<span class="kt">surface</span> <span class="n">s</span><span class="o">=</span><span class="nf">surface</span><span class="p">(</span><span class="n">g</span><span class="p">);</span>
-<span class="nf">draw</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="nv">red</span><span class="p">,</span><span class="n">nolight</span><span class="p">);</span>
-<span class="nf">draw</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
-</pre></div>
-</div>
-</li>
-
-<li>
-<a id="sec-1-1-4-2" name="sec-1-1-4-2"></a>二维 带变量<br><div class="outline-text-5" id="text-1-1-4-2">
-<div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">geometry</span><span class="p">;</span> 
-
-<span class="nf">size</span><span class="p">(</span><span class="mi">7</span><span class="nv">cm</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-
-<span class="kt">picture</span> <span class="n">pic</span><span class="p">;</span>
-<span class="c">// on définit une courbe reliant les points (0,1) et (1,0)</span>
-<span class="kt">path</span> <span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">){</span><span class="nf">dir</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)}..{</span><span class="nf">dir</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)}(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<span class="c">// à l'aide de trois rotations, on définit </span>
-<span class="c">// le motif (dans un carré de 2 sur 2) ...</span>
-<span class="kt">path</span> <span class="n">motif</span><span class="o">=</span><span class="nf">buildcycle</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="nf">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span>
-		      <span class="nf">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="nf">rotate</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">);</span>
-<span class="nf">filldraw</span><span class="p">(</span><span class="n">pic</span><span class="p">,</span><span class="n">motif</span><span class="p">,</span><span class="nv">lightred</span><span class="o">+</span><span class="nv">white</span><span class="p">,</span><span class="nv">black</span><span class="p">);</span>
-<span class="c">// ... et une double boucle pour "paver" </span>
-<span class="c">// suivant (Ox) et suivant (Oy)</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-      <span class="p">{</span>
-	<span class="nf">add</span><span class="p">(</span><span class="nf">shift</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">pic</span><span class="p">);</span>
-      <span class="p">}</span>
-  <span class="p">}</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">pdf</h3>
-<div class="outline-text-3" id="text-1-2">
-</div>
-<div id="outline-container-sec-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1">export</h4>
-<div class="outline-text-4" id="text-1-2-1">
-<p>
-test:直接输出这个 pdf
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2">view</h4>
-<div class="outline-text-4" id="text-1-2-2">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2016-12-20 二 23:54]</span></span> 
-</p>
-
-<p>
-test:在emacs中打开这个pdf,  <code>SPC m n</code> 可以转换成夜间模式
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">html-blog</h3>
-<div class="outline-text-3" id="text-1-3">
-</div>
-<div id="outline-container-sec-1-3-1" class="outline-4">
-<h4 id="sec-1-3-1">
-<span class="done DONE">DONE</span> nikola</h4>
-<div class="outline-text-4" id="text-1-3-1">
-<p>
-在 dockerfile 中定义了 LANG 等 local 就可以用了
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">
-<span class="done DONE">DONE</span> 翻墙</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">google translate</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-<code>SPC x g l</code> 选择 en 到 zh-CN
-</p>
-</div>
 </div>
 </div>
     </div>
