@@ -24,6 +24,16 @@
 <meta property="og:description" content="Table of Contents
 
 
+语法
+
+header
+变量
+
+存储持续性、作用域与链接性：
+
+
+
+
 IDE
 
 CLion
@@ -33,15 +43,26 @@ CLion
 
 
 
-IDE
+语法
 
 
- CLion            在Linux上开发的话强烈推荐。在使用开源工具链的场景下，CLion是第一个让我有理由
-考虑代替vim的C/C++ IDE. 智能补全、Refactor、代码导航与分析、代码自动
-生成、与VCS集成等功能个个顺手。实在不是什么editor+plugin所能比拟的。
-这些功能以前">
+header
+
+
+#include 如果用“”来包含文件名，则编译器先在当前的工作目录或源代码目录，用&lt;&gt;则先在存储标准头文件的文件夹中找，
+
+
+
+
+变量
+
+
+存储持续性、作用域与链接性：
+
+
+1、自动存储持续性：函数或代码块中的变量（包括函数参数">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-02-11T14:49:20+08:00">
+<meta property="article:published_time" content="2017-02-14T14:35:58+08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -97,7 +118,7 @@ IDE
             <p class="byline author vcard"><span class="byline-name fn">
                     Zhao JI
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-11T14:49:20+08:00" itemprop="datePublished" title="2017-02-11 14:49">2017-02-11 14:49</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-02-14T14:35:58+08:00" itemprop="datePublished" title="2017-02-14 14:35">2017-02-14 14:35</time></a></p>
                 <p class="commentline">
         
     <a href="C.html#disqus_thread" data-disqus-identifier="cache/pages/wiki/C.html">Comments</a>
@@ -115,17 +136,63 @@ IDE
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="C.html#sec-1">IDE</a>
+<a href="C.html#sec-1">语法</a>
 <ul>
-<li><a href="C.html#sec-1-1">CLion</a></li>
+<li><a href="C.html#sec-1-1">header</a></li>
+<li>
+<a href="C.html#sec-1-2">变量</a>
+<ul>
+<li><a href="C.html#sec-1-2-1">存储持续性、作用域与链接性：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="C.html#sec-2">IDE</a>
+<ul>
+<li><a href="C.html#sec-2-1">CLion</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">IDE</h2>
+<h2 id="sec-1">语法</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">header</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+#include 如果用“”来包含文件名，则编译器先在当前的工作目录或源代码目录，用&lt;&gt;则先在存储标准头文件的文件夹中找，
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">变量</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">存储持续性、作用域与链接性：</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+1、自动存储持续性：函数或代码块中的变量（包括函数参数），进入时创建，执行完释放，（包括常规局部变量，auto声明的局部变量，使用register声明的局部变量）
+</p>
+
+<p>
+2、静态存储持续性：外部定义或 static，整个程序运行过程中都存在
+</p>
+
+<p>
+3、动态存储持续性：new创建，delete删除
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">IDE</h2>
+<div class="outline-text-2" id="text-2">
 <dl class="org-dl">
 <dt> CLion </dt>
 <dd>           在Linux上开发的话强烈推荐。在使用开源工具链的场景下，CLion是第一个让我有理由
@@ -203,9 +270,9 @@ IDE
 </p>
 </div>
 
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">CLion</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">CLion</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 <a href="http://www.jetbrains.com/clion/">http://www.jetbrains.com/clion/</a> 跨平台，Arch Linux 下就用他
 </p>
