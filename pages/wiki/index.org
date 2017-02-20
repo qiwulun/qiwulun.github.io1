@@ -471,6 +471,7 @@
 - [[file:bibliography.org][bibliography 文献整理]]
 - [[file:python.org][python]]
   - [[file:python/pandas.org][pandas]]
+- [[file:matlab.org][matlab]] 
 - [[file:C.org][C]] 
 ** 网络服务
  - https://zoom.us/ 远程会议
