@@ -35,12 +35,19 @@ file:Hexo_Org_Mode_Post/screenshot_2017-03-02_21-49-50.png
  - npm install hexo-asset-image --save
    - 用来显示本地的图片
 
+#+BEGIN_SRC bash
+git clone https://github.com/*/demo.git
+cd demo && hexo init && npm install hexo-deployer-git --save && npm install hexo-renderer-org --save && npm install hexo-asset-image --save 
+#+END_SRC
+
 _config.yml
 
 #+BEGIN_EXAMPLE
+post_asset_folder: true
+
 deploy:
   type: git
-  repo: https://github.com/dxjia/dxjia.github.io.git
+  repo: https://github.com/qiwulun/hexo_demo.git
   branch: master 
 
 org:
