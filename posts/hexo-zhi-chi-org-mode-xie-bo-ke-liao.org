@@ -10,10 +10,168 @@
 .. type: text
 #+END_COMMENT
 
-
 http://blog.hourglasslab.com/2016/11/04/How%20to%20Setup%20and%20Write%20Blogs%20Using%20Org%20Mode%20and%20Hexo/
 * hexo 介绍
 http://ibruce.info/2013/11/22/hexo-your-blog/
+
+
+* Hexo利用Github分支在不同电脑上写博客
+
+** 新建hexo分支
+   在 github 选择分支的地方新建 source 分支，并在 settings 设置 source 为默认分支
+
+#+ATTR_HTML:  :alt 命令被输入法堵住
+file:Hexo_Org_Mode_Post/screenshot_2017-03-02_21-49-50.png
+
+
+** 初始化
+在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行
+ - npm install hexo
+ - hexo init 
+ - npm install hexo-deployer-git --save
+   - 用来deploy git
+ - npm install hexo-renderer-org --save
+   - 用来渲染 org
+ - npm install hexo-asset-image --save
+   - 用来显示本地的图片
+
+_config.yml
+
+#+BEGIN_EXAMPLE
+deploy:
+  type: git
+  repo: https://github.com/dxjia/dxjia.github.io.git
+  branch: master 
+
+org:
+  emacs: '/usr/bin/emacs'
+  common: |
+          #+OPTIONS: toc:nil
+          #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
+  cachedir: './hexo-org-cache/' 
+#+END_EXAMPLE
+** 配置hexo deploy参数
+
+为了保证hexo d命令可以正确部署到master分支，在hexo 的配置文件 _config.yml文件中配置参数如下：
+#+BEGIN_EXAMPLE
+deploy:
+  type: git
+  repo: https://github.com/dxjia/dxjia.github.io.git
+  branch: master 
+#+END_EXAMPLE
+
+命令 =hexo g -d=
+
+hexo 3.0之后 deploy type，将github改为了git，这样适用性更广了，如果你发现无法hexo g -d，使用下面的命令安装git deployer插件后重试即可。
+
+#+BEGIN_SRC bash
+npm install hexo-deployer-git --save
+#+END_SRC
+
+
+
+** 修改推送到hexo分支
+
+上一步的deploy参数正确配置后，文章写完使用hexo g -d命令就可以直接部署了，生成的博客静态文件会自动部署到 username.github.io仓库的master分支上，这时候通过浏览器访问http://username.github.io就可以看到你的博客页面里。
+
+网站页面是保存了，但这时候我们还没有保存我们的hexo原始文件，包括我们的文章md文件，我们千辛万苦修改的主题配置等。。。接下来使用下面的步骤将他们都统统推送到hexo分支上去
+
+#+BEGIN_EXAMPLE
+git add .
+git commit -m “change description”
+git push origin hexo
+#+END_EXAMPLE
+
+** 配置 org-mode
+
+ #+BEGIN_SRC bash
+ npm install hexo-renderer-org --save 
+ #+END_SRC
+
+ 然后在你的hexo配置文件:```_config.yml```中添加如下代码：
+
+ #+BEGIN_EXAMPLE
+ org:
+   emacs: '/usr/bin/emacs'
+   common: |
+           #+OPTIONS: toc:nil
+           #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
+   cachedir: './hexo-org-cache/'
+ #+END_EXAMPLE
+
+ 其中的OPTIONS 选项是针对org导出为HTML所做的一些选项约束，toc的意思是导出时为每个标题编序号。 BIND是导出的最底层显示的东西，上述的代码的将一段html代码赋值给org-html-postamble变量。
+
+ https://github.com/CodeFalling/hexo-renderer-org
+
+*** 新建文件
+
+ Create balbala.org in source/_posts/,there is a template:
+
+ #+BEGIN_SRC org
+   ,#+TITLE: Hello,orgmode
+   ,#+DATE: <2015-11-15 Sun 17:00>
+   ,#+TAGS: emacs, orgmode, hexo
+   ,#+LAYOUT: post
+   ,#+CATEGORIES: orgmode
+   ,* Orgmode
+   ,** Why org
+   ,#+BEGIN_SRC js
+   console.log('hello');
+   ,#+END_SRC
+   我编不下去了。。
+ #+END_SRC
+*** read more
+ read more 标签：将下述的代码放置在你的org文件中，将在你的blog中显示为<阅读更多>。
+
+ #+BEGIN_EXAMPLE
+   ,#+BEGIN_HTML
+   ,<!--more-->
+   ,#+END_HTML
+ #+END_EXAMPLE
+** 日常写博客
+
+ 有时候我们可能会在不同的电脑上写博客，那在不同的电脑上配置 hexo、git、node.js，以及配置git ssh key等都要折腾一下的，这是免不了的，也是比wordpress等其他博客框架麻烦的一点。
+
+*** 已有环境
+
+ 如果在电脑上已经写过博客，那么可以在已有的工作目录下同步之前写的博客。
+
+ 在你的仓库目录下右键’git bash shell’，起来bash命令行，然后
+
+ git pull
+
+ 这样你的状态就更新了，之后就是 hexo命令写文章啦。。。
+
+1. 写完hexo g -d部署好后，使用
+
+ git add .
+ git commit -m “change description”
+ git push origin hexo
+
+ 推送上去。
+
+2. 然后才执行hexo g -d发布网站到master分支上。
+
+虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催....的情况，调转顺序就有问题了）。
+
+
+*** 新的环境
+
+ 到了新的电脑上时，我们需要将项目先下载到本地，然后再进行hexo初始化。
+
+ git clone https://github.com/dxjia/dxjia.github.io.git
+ cd dxjia.github.io
+ npm install hexo
+ npm install
+ npm install hexo-deployer-git -–save
+ npm install hexo-renderer-org --save
+
+ - 记得，不需要hexo init这条指令
+ - 之后开始写博客，写好部署好之后，别忘记 git add , ….git push origin hexo…推上去。。。
+* TODO 配置主题
+* hexo 命令
+hexo g 生成网站
+hexo s 网站本地预览
 * Hexo 支持 org-mode 的插件
 https://github.com/CodeFalling/hexo-renderer-org
 
@@ -23,14 +181,114 @@ https://github.com/CodeFalling/hexo-renderer-org
 http://www.mmtun.com/2016/07/27/Creating-Blog-with-Hexo-1/
 
 http://www.mmtun.com/2016/07/28/Remove-Footer-Exported-from-Orgmode/
-
-
 ** 图片
 CodeFalling 大神写了个插件，安装后可以插入 absolute image path
 
+安装hexo-asset-image, Make sure =post_asset_folder: true= in your _config.yml.
 
-hexo-asset-image - Give asset image in hexo a absolutely path automatically
+改变图片大小，位置，加入图片说明可增加以下代码
 
-具体关于插件如何使用可以看我的 blog
+#+BEGIN_EXAMPLE
+  ,#+CAPTION: title with figure number
+  ,#+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number
+#+END_EXAMPLE
+*** org-download的配置
+https://github.com/abo-abo/org-download/issues/46
 
-http://blog.hourglasslab.com
+**** 放在模板里的默认值
+ #+BEGIN_EXAMPLE
+ ,# -*- mode: Org;  org-download-heading-lvl: nil;eval: (setq org-download-image-dir (file-name-sans-extension buffer-file-name)); -*-
+ #+END_EXAMPLE
+
+**** 复杂版
+ #+BEGIN_SRC emacs-lisp
+
+ ;; For example, when drag-and-dropped foo.jpg to bar.org, I would like to have ./bar-img directory to be created, and have foo.jpg in there.)
+ (defun my-org-download-method (link)
+   (let ((filename
+          (file-name-nondirectory
+           (car (url-path-and-query
+                 (url-generic-parse-url link)))))
+         (dirname (concat (file-name-sans-extension (buffer-name)) "-img")))
+     (make-directory dirname)
+     (expand-file-name filename dirname)))
+ (setq org-download-method 'my-org-download-method)
+ #+END_SRC
+
+**** 简单版
+ #+BEGIN_SRC emacs-lisp
+ (defun org-download--dir-1 ()
+   (or org-download-image-dir (concat (file-name-sans-extension (buffer-file-name)) "-img")))
+ #+END_SRC
+* blog-admin 管理日志
+
+https://github.com/CodeFalling/blog-admin
+
+
+** Spacemacs
+
+spacemacs 中安装 =blog-admin=
+
+ #+BEGIN_SRC emacs-lisp
+(defun org-page/init-blog-admin ()
+  (use-package blog-admin
+    :config (progn (setq blog-admin-backend-type 'hexo   ;; 后台类型
+			 blog-admin-backend-path "~/org/blog"                ;; hexo 博客所在路径
+			 blog-admin-backend-new-post-in-drafts t             ;; 默认在drafts创建文章
+			 blog-admin-backend-new-post-with-same-name-dir nil  ;; 默认不创建相应的目录，因为我目前没有发现这个目录的作用，先干掉 
+			 ;; blog-admin-backend-org-page-drafts "_drafts"     ;;
+			 blog-admin-backend-hexo-config-file "_config.yml"   ;; hexo 配置文件
+			 )
+		   ;; (evilified-state-evilify-map blog-admin-mode-map :mode blog-admin-mode)
+		   (spacemacs/set-leader-keys
+		     "abb" 'blog-admin-start)                    ;; 绑定space快捷键
+		   (add-hook 'blog-admin-backend-after-new-post-hook 'find-file) ;; Open post after create new post
+		   (setq blog-admin-backend-hexo-template-org-post  ;; post模板
+			 "#+TITLE: %s
+			 #+AUTHOR: weychen
+			 #+EMAIL: weychen@163.com
+			 #+DATE: %s
+			 #+LAYOUT: post
+			 #+TAGS:
+			 #+CATEGORIES:
+			 #+DESCRIPTON:
+			 ")
+			 )))
+ #+END_SRC
+
+新建 Post 后直接打开
+
+** Usage
+
+ - M-x blog-admin-start to start this.
+ - d to delete current post
+ - w to write new post
+ - s to switch between draft and categories
+
+
+
+* Front-matter not work?
+
+#+BEGIN_EXAMPLE
+Orgmode has its own way to describe meta info of post,such as title,date etc.
+
+Front-matter	Orgmode	Value
+layout	#+LAYOUT	post/page
+title	#+TITLE	string
+date	#+DATE	<2015-11-16 Mon 20:45>, you can use M-x org-time-stamp in emacs
+comments	#+COMMENTS	yes/no
+tags	#+TAGS	tag1, tag2, tag3
+categories	#+CATEGORIES	
+How to enable line number?
+
+Config in your _config.yml
+
+highlight:
+  enable: true
+  number: false
+Disable number of outline
+
+org:
+  common: |
+          #+OPTIONS: num: nil
+#+END_EXAMPLE
