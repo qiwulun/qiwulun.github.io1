@@ -27,6 +27,7 @@ file:Hexo_Org_Mode_Post/screenshot_2017-03-02_21-49-50.png
 ** 初始化
 在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行
  - npm install hexo
+ - npm install 
  - hexo init 
  - npm install hexo-deployer-git --save
    - 用来deploy git
@@ -37,7 +38,7 @@ file:Hexo_Org_Mode_Post/screenshot_2017-03-02_21-49-50.png
 
 #+BEGIN_SRC bash
 git clone https://github.com/*/demo.git
-cd demo && hexo init && npm install hexo-deployer-git --save && npm install hexo-renderer-org --save && npm install hexo-asset-image --save 
+cd demo && hexo init && npm install && npm install hexo-deployer-git --save && npm install hexo-renderer-org --save && npm install hexo-asset-image --save 
 #+END_SRC
 
 _config.yml
