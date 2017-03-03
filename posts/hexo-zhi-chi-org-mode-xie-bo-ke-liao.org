@@ -35,11 +35,19 @@ file:Hexo_Org_Mode_Post/screenshot_2017-03-02_21-49-50.png
    - 用来渲染 org
  - npm install hexo-asset-image --save
    - 用来显示本地的图片
+ - npm install hexo-generator-search --save
+   - 用来检索
 
 #+BEGIN_SRC bash
 git clone https://github.com/*/demo.git
 cd demo && hexo init && npm install && npm install hexo-deployer-git --save && npm install hexo-renderer-org --save && npm install hexo-asset-image --save 
 #+END_SRC
+
+path - file path. Default is search.xml .
+field - the search scope you want to search, you can chose:
+post (Default) - will only covers all the posts of your blog.
+page - will only covers all the pages of your blog.
+all - will covers all the posts and pages of your blog.
 
 _config.yml
 
@@ -300,3 +308,31 @@ org:
   common: |
           #+OPTIONS: num: nil
 #+END_EXAMPLE
+
+* 插件
+添加云标签的时候，每次在主页点击标签按钮时，都是显示0.0.0.0/#，我在主题的_config.yml文件下面配置了tags: /tags为什么就是没有标签云呢，结果是我没有执行
+
+hexo new page tags
+添加Rss订阅，当你执行hexo g -d会生成一个atom.xml文件到你github跟目录，这个就是你也文章列表文件，提供给被人订阅
+
+//执行如下命令
+npm install hexo-generator-sitemap
+npm install hexo-generator-feed
+#在站点_config.yml添加
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+说说hexo-generator-sitemap这个插件的用法，有了这个插件后，当你执行hexo g -d命令后会在你github仓库的根目录下生成sitemap.xml文件，这个文件的作用是你提交个google和baidu，让这2个搜索引擎可以搜索到你的网站，来提高你网站的曝光率，这个sitemap.xml格式百度是不接受的，百度接受的是baidusitemap.xml，因为它自己定义了规则(真另类！fuck),如何生成baidusitemap.xml我会在另一篇文章说
+
+
+http://www.jianshu.com/p/05289a4bc8b2 如何搭建一个独立博客——简明Github Pages与Hexo教程
+http://www.jianshu.com/p/35e197cb1273 Hexo搭建Github-Pages博客填坑教程
+https://github.com/iissnan/hexo-theme-next/wiki hexo-theme-next主题使用教程
+http://theme-next.iissnan.com/theme-settings.html next主题配置
+https://hexo.io/zh-cn/docs/ hexo官方文档
