@@ -1,7 +1,0 @@
-# -*- mode: Org; org-download-image-dir: "../../images"; -*-
-#+BEGIN_COMMENT
-.. title: MxNet
-.. slug: mxnet
-#+END_COMMENT
-
-* MxNet
