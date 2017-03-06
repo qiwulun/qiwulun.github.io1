@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 我的清锋明辩反思录（2）——辩风和立论之辩风（太长了，分两篇发）
 #+DATE: 2010-01-31 02:24:17 
 #+TAGS: 

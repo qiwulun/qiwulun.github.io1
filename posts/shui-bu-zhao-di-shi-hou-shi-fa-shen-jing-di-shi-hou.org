@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 睡不着滴时候，是发神经滴时候
 #+DATE: 2015-03-29 00:46:53 
 #+TAGS: 

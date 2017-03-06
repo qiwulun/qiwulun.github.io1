@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: docker image 太慢的解决方法之 VPS
 #+DATE: 2016-12-17 16:31:06 
 #+TAGS: 

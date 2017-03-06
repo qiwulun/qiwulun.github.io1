@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 分体式键盘
 #+DATE: 2017-01-05 14:59:24 
 #+TAGS: 
@@ -11,13 +10,13 @@ https://ergodox-ez.com/products/snow-and-shine
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-01-05 16:15:49
 #+ATTR_inline: :width 600px
-[[file:../images/ergodox/screenshot_2017-01-05_16-15-49.png]]
+[[file:images/ergodox/screenshot_2017-01-05_16-15-49.png]]
 * keymouse
 http://www.keymouse.com/
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-01-05 16:55:12
 #+ATTR_inline: :width 600px
-[[file:../images/keymouse/screenshot_2017-01-05_16-55-12.png]]
+[[file:images/keymouse/screenshot_2017-01-05_16-55-12.png]]
 
 
 
@@ -26,6 +25,6 @@ http://www.keymouse.com/
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-01-05 16:45:44
 #+ATTR_inline: :width 600px
-[[file:../images/Kick Starter/screenshot_2017-01-05_16-45-44.png]]
+[[file:images/Kick Starter/screenshot_2017-01-05_16-45-44.png]]
 
 

@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 在 Ubuntu 16.04 下运行暗黑破坏神2
 #+DATE: 2017-01-15 15:29:00 
 #+TAGS: 

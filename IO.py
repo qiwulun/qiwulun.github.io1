@@ -3,7 +3,7 @@ import os
 inputPath = './posts/*.org'
 outputPath = r'~/git/hexo_demo/source/_posts/'
 
-a = glob.glob(inputPath)[:10]
+a = glob.glob(inputPath)
 
 for iname in a:
     filename = ""
@@ -23,7 +23,7 @@ for iname in a:
                 line=line.replace(".. description:","#+DESCRIPTION:")
                 line=line.replace(".. type: text","#+LAYOUT : post")
                 line=line.replace(".. type: micro","#+LAYOUT : post") 
-                line=line.replace("../images","images") 
+                line=line.replace("[[file:../images","[[file:images") 
                 filecontent=filecontent+line
             if "../images" in line:
                 print(line)

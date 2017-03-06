@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 利用 TP-LINK 无线路由器的转发功能来增强信号
 #+DATE: 2017-02-04 12:34:58 
 #+TAGS: 
@@ -22,11 +21,11 @@
 
 3. 初次进入，会要求你设置密码
    #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 12:54:41
-   [[file:../images/如果遗忘了无线路由器 B 的密码/screenshot_2017-02-04_12-54-41.png]]
+   [[file:images/如果遗忘了无线路由器 B 的密码/screenshot_2017-02-04_12-54-41.png]]
 
 4. 输入密码后，进入这个页面
    #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:00:05  
-   [[file:../images/如果遗忘了无线路由器的密码/screenshot_2017-02-04_13-00-05.png]]
+   [[file:images/如果遗忘了无线路由器的密码/screenshot_2017-02-04_13-00-05.png]]
 
 ** 更改路由器管理页面的 IP
 这里的更改是为了与路由器 A 的地址相区别，不然转发网络之后就找不到路由器B 的管理页面了
@@ -34,7 +33,7 @@
 在网页左侧选择“网络参数”──“LAN口设置”，修改为与路由器 A 不同的地址。因为我们这里路由器 A 没有修改过，默认值为 192.168.1.1, 我们把路由器 B 设置成 192.168.1.2
 
   #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:06:52
-  [[file:../images/如果遗忘了无线路由器的密码/screenshot_2017-02-04_13-06-52.png]] 
+  [[file:images/如果遗忘了无线路由器的密码/screenshot_2017-02-04_13-06-52.png]] 
    
 7. 保存后会自动重启 
 
@@ -47,50 +46,50 @@
 我们这里是刚才设置的 192.168.1.2
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:11:22
-[[file:../images/设置 WDS/screenshot_2017-02-04_13-11-22.png]]
+[[file:images/设置 WDS/screenshot_2017-02-04_13-11-22.png]]
 ** 设置WDS
 
 在网页左侧选择“无线设置”──“基本设置”
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:16:34
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-16-34.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-16-34.png]]
 
 点击 “开启WDS”
 
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:20:50
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-20-50.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-20-50.png]]
 
 点击“(桥接的)BSSID” 下面的 “扫描” 按钮，
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:23:39
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-23-39.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-23-39.png]]
 
 从列表中选择路由器A对应的网络，点击后面的 “连接” 按钮，回到前面的页面并输入密码
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:27:44
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-27-44.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-27-44.png]]
 
 
 点击保存，提示 =您已经更改了无线设置，重启后生效=
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:31:05
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-31-05.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-31-05.png]]
 
 点击 “重启”，进入下面的页面，再点击“重启路由器”
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:31:43
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-31-43.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-31-43.png]]
 
 重新连接无线网，进入管理页面 192.168.1.2,在默认的“运行状态”页面，等待“无线状态”中的“WDS状态”显示“成功”，
 
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 13:48:25
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-48-25.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_13-48-25.png]]
 
 在网页左侧选择“DHCP服务器”──“DHCP服务”，设置成不启用
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2017-02-04 14:20:13
-[[file:../images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_14-20-13.png]]
+[[file:images/设置无线路由器 B 转发网络信号/screenshot_2017-02-04_14-20-13.png]]
 
 此时应该可以在地址栏输入 192.168.1.1,看到路由器A的管理界面了
 

@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 霜高风定独凭栏——苏樱《王国维点评<红楼梦>》
 #+DATE: 2013-09-08 22:29 
 #+TAGS: 人人网

@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 感悟──以前我想强
 #+DATE: 2013-04-18 02:54:17 
 #+TAGS: 辩论感悟

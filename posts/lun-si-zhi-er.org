@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 论死之二
 #+DATE: 2013-06-19 12:14 
 #+TAGS: 人人网
