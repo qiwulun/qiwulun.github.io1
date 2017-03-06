@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: Docker 中运行 GUI APP
 #+DATE: 2016-12-17 22:09:26 
 #+TAGS: 

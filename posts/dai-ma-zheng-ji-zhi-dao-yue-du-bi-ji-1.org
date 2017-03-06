@@ -1,4 +1,3 @@
-# -*- mode: Org; org-download-image-dir: "../images"; -*-
 #+TITLE: 代码整洁之道──阅读笔记1
 #+DATE: 2016-12-23 11:02:47 
 #+TAGS: 
