@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 用 ssh 来进行 git 免密码传输
-.. slug: yong-ssh-lai-jin-xing-git-mian-mi-ma-chuan-shu
-.. date: 2016-12-06 20:23:26 UTC+08:00
-.. tags: ssh, git
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 用 ssh 来进行 git 免密码传输
+#+DATE: 2016-12-06 20:23:26 
+#+TAGS: ssh, git
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 SSH keys
 

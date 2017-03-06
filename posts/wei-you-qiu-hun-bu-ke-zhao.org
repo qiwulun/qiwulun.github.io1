@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 惟有秋魂不可招
-.. slug: wei-you-qiu-hun-bu-ke-zhao
-.. date: 2014-05-19 00:52 UTC+08:00
-.. tags: 人人网, 辩论
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 惟有秋魂不可招
+#+DATE: 2014-05-19 00:52 
+#+TAGS: 人人网, 辩论
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

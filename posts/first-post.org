@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Linux 软件整理
-.. slug: first-post
-.. date: 2016-10-21 22:17:12 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Linux 软件整理
+#+DATE: 2016-10-21 22:17:12 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 

@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 吾将醉兮发狂吟
-.. slug: wu-jiang-zui-xi-fa-kuang-yin
-.. date: 2014-04-07 20:30 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 吾将醉兮发狂吟
+#+DATE: 2014-04-07 20:30 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

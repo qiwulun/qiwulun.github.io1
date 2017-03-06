@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Hexo 支持 org-mode 写博客了
-.. slug: hexo-zhi-chi-org-mode-xie-bo-ke-liao
-.. date: 2017-02-20 20:07:10 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Hexo 支持 org-mode 写博客了
+#+DATE: 2017-02-20 20:07:10 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 http://blog.hourglasslab.com/2016/11/04/How%20to%20Setup%20and%20Write%20Blogs%20Using%20Org%20Mode%20and%20Hexo/
 * hexo 介绍

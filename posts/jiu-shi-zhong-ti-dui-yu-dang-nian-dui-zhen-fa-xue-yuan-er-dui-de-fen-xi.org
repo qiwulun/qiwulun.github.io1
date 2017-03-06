@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 旧事重提，对于当年对阵法学院二队的分析
-.. slug: jiu-shi-zhong-ti-dui-yu-dang-nian-dui-zhen-fa-xue-yuan-er-dui-de-fen-xi
-.. date: 2009-08-08 01:35:25 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 旧事重提，对于当年对阵法学院二队的分析
+#+DATE: 2009-08-08 01:35:25 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+TITLE:     旧事重提，对于当年对阵法学院二队的分析
 #+AUTHOR:    赵骥

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Python 相关的内容
-.. slug: python-xiang-guan-de-nei-rong
-.. date: 2016-10-23 14:37:52 UTC+08:00
-.. tags: 
-.. link: 
-.. category: python
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Python 相关的内容
+#+DATE: 2016-10-23 14:37:52 
+#+TAGS: 
+#+LINK: 
+#+CATEGORY: python
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+TITLE:     Python 相关的内容
 #+AUTHOR:    赵骥

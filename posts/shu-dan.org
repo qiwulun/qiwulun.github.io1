@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 书单
-.. slug: shu-dan
-.. date: 2016-11-14 15:21:21 UTC+08:00
-.. tags: 清单
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 书单
+#+DATE: 2016-11-14 15:21:21 
+#+TAGS: 清单
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 - [ ] 制服下的名器

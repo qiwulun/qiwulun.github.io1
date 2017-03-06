@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Ubuntu Texlive 2016 安装 asymptote
-.. slug: ubuntu-texlive-2016-an-zhuang-asymptote
-.. date: 2016-12-10 09:56:50 UTC+08:00
-.. tags: ubuntu
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu Texlive 2016 安装 asymptote
+#+DATE: 2016-12-10 09:56:50 
+#+TAGS: ubuntu
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 ** Ubuntu texlive 2016
 ** 还有一些依赖包
  - 特别地,我们需要freeglut这个基于OpenGL的库,

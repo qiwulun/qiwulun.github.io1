@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 为什么要写作
-.. slug: wei-shi-yao-yao-xie-zuo
-.. date: 2016-12-05 22:17:04 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 为什么要写作
+#+DATE: 2016-12-05 22:17:04 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 生命如此短暂，为什么总要将青春浪费在不断的选择之中呢？罚你，回头阅读心理学家施瓦茨（Barry Schwartz）的TED演讲：选择之困惑——为何多即是少，1百遍啊1百遍。请记住施瓦茨的演讲要点：

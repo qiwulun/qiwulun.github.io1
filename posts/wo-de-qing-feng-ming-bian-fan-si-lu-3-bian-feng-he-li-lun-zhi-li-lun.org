@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 我的清锋明辩反思录（3） ——辩风和立论之立论
-.. slug: wo-de-qing-feng-ming-bian-fan-si-lu-3-bian-feng-he-li-lun-zhi-li-lun
-.. date: 2010-01-31 02:27:00 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 我的清锋明辩反思录（3） ——辩风和立论之立论
+#+DATE: 2010-01-31 02:27:00 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 第二章 辩风和立论(2)——立论

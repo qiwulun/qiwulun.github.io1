@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: [Reading Note] 开庭陈述：三分钟让法官理解你的主张
-.. slug: reading-note-kai-ting-chen-shu-san-fen-zhong-rang-fa-guan-li-jie-ni-de-zhu-zhang
-.. date: 2016-12-30 17:22:37 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: [Reading Note] 开庭陈述：三分钟让法官理解你的主张
+#+DATE: 2016-12-30 17:22:37 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 http://mp.weixin.qq.com/s?__biz=MjM5MDA2MTEwMA==&amp;mid=209687180&amp;idx=1&amp;sn=27dc2806494f406fcf8f11b03745365d&amp;scene=1&amp;srcid=0918zMEbum78RRj7QxlCARoH#rd
 

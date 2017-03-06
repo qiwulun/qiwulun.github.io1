@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: [Reading note]活着的意义
-.. slug: reading-notehuo-zhao-de-yi-yi
-.. date: 2017-01-10 10:44:15 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: [Reading note]活着的意义
+#+DATE: 2017-01-10 10:44:15 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 那最终答案是什么？\

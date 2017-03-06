@@ -1,12 +1,9 @@
-#+BEGIN_COMMENT
-.. title: 深度学习的相关内容
-.. slug: shen-du-xue-xi-de-xiang-guan-nei-rong
-.. date: 2016-10-24 14:09:16 UTC+08:00
-.. tags: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 深度学习的相关内容
+#+DATE: 2016-10-24 14:09:16 
+#+TAGS: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+TITLE:     深度学习
 #+AUTHOR:    赵骥

@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 配置 Manjaro 纪录
-.. slug: pei-zhi-manjaro-ji-lu
-.. date: 2017-01-22 14:08:43 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 配置 Manjaro 纪录
+#+DATE: 2017-01-22 14:08:43 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 * Manjaro 优点
 
 - 非常稳定，没有ubuntu和openSuSE在我本子上的闪屏bug，也没有其他莫名其妙的bug。

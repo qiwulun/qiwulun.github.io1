@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: ssh 反向代理实现内网穿透
-.. slug: ssh-fan-xiang-dai-li-shi-xian-nei-wang-chuan-tou
-.. date: 2017-01-21 20:12:52 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: ssh 反向代理实现内网穿透
+#+DATE: 2017-01-21 20:12:52 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 SSH反向连接及Autossh 

@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: linux 下设置键位 setxkbmap
-.. slug: linux-xia-she-zhi-jian-wei
-.. date: 2017-01-19 17:00:12 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: linux 下设置键位 setxkbmap
+#+DATE: 2017-01-19 17:00:12 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 How do I remap the caps lock key?

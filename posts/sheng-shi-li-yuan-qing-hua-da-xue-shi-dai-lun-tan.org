@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 盛世梨园──清华大学时代论坛
-.. slug: sheng-shi-li-yuan-qing-hua-da-xue-shi-dai-lun-tan
-.. date: 2015-05-15 17:28:51 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 盛世梨园──清华大学时代论坛
+#+DATE: 2015-05-15 17:28:51 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+DOWNLOADED: http://fmn.rrimg.com/fmn075/20150515/1635/original_PzYx_94d30004c9071e83.jpg @ 2016-11-30 17:29:08

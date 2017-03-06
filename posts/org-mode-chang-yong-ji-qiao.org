@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: org mode 常用技巧
-.. slug: org-mode-chang-yong-ji-qiao
-.. date: 2016-11-30 16:13:58 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: org mode 常用技巧
+#+DATE: 2016-11-30 16:13:58 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 * 截图 =SPC m i s=

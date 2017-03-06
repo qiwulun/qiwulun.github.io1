@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 我的清锋明辩反思录（2）——辩风和立论之辩风（太长了，分两篇发）
-.. slug: wo-de-qing-feng-ming-bian-fan-si-lu-2-bian-feng-he-li-lun-zhi-bian-feng-tai-chang-liao-fen-liang-pian-fa
-.. date: 2010-01-31 02:24:17 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 我的清锋明辩反思录（2）——辩风和立论之辩风（太长了，分两篇发）
+#+DATE: 2010-01-31 02:24:17 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 第二章 辩风和立论(1)——辩风
 ----------------------------------------------------------- 

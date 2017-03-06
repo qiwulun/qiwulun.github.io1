@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 京剧：孤独的崇高
-.. slug: jing-ju-gu-du-de-chong-gao
-.. date: 2008-06-28 19:16 UTC+08:00
-.. tags: QQ空间
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 京剧：孤独的崇高
+#+DATE: 2008-06-28 19:16 
+#+TAGS: QQ空间
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_EXAMPLE

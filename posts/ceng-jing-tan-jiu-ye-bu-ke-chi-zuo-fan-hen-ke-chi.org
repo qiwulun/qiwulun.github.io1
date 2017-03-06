@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 曾经，谈就业不可耻，做饭很可耻
-.. slug: ceng-jing-tan-jiu-ye-bu-ke-chi-zuo-fan-hen-ke-chi
-.. date: 2014-11-15 14:37:39 UTC+08:00
-.. tags: 人人网, 抽风
-.. category: 抽风
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 曾经，谈就业不可耻，做饭很可耻
+#+DATE: 2014-11-15 14:37:39 
+#+TAGS: 人人网, 抽风
+#+CATEGORY: 抽风
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

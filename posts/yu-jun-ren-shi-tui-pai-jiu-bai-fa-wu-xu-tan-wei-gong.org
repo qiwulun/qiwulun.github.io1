@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 与君人世推排久，白发无须叹未公
-.. slug: yu-jun-ren-shi-tui-pai-jiu-bai-fa-wu-xu-tan-wei-gong
-.. date: 2013-09-22 23:27:33 UTC+08:00
-.. tags: 人人网, 抽风
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 与君人世推排久，白发无须叹未公
+#+DATE: 2013-09-22 23:27:33 
+#+TAGS: 人人网, 抽风
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

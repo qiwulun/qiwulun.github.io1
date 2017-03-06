@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 风雨忆同舟——我的清锋明辩反思录（1）
-.. slug: feng-yu-yi-tong-zhou-wo-de-qing-feng-ming-bian-fan-si-lu-1
-.. date: 2010-01-27 02:32:18
-.. tags: 人人网, 辩论
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 风雨忆同舟——我的清锋明辩反思录（1）
+#+DATE: 2010-01-27 02:32:18
+#+TAGS: 人人网, 辩论
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+TITLE:     风雨忆同舟——我的清锋明辩反思录（1）

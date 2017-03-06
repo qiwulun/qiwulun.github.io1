@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: GitHub 的使用技巧
-.. slug: github-de-shi-yong-ji-qiao
-.. date: 2016-10-24 14:57:45 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: GitHub 的使用技巧
+#+DATE: 2016-10-24 14:57:45 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 #+TITLE:     GitHub 的使用技巧
 #+AUTHOR:    赵骥
 #+EMAIL:     zhaoji-001@163.com.cn

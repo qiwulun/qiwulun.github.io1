@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 歧路叹
-.. slug: qi-lu-tan
-.. date: 2008-11-24 14:07:37 UTC+08:00
-.. tags: 顺口溜, 人人网
-.. category: 顺口溜
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 歧路叹
+#+DATE: 2008-11-24 14:07:37 
+#+TAGS: 顺口溜, 人人网
+#+CATEGORY: 顺口溜
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_QUOTE

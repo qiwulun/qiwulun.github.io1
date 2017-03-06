@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 在 Geforce 1080 上搭建 TensorFlow GPU 版本
-.. slug: zai-geforce-1080-shang-da-jian-tensorflow-gpu-ban-ben
-.. date: 2016-11-10 17:39:02 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 在 Geforce 1080 上搭建 TensorFlow GPU 版本
+#+DATE: 2016-11-10 17:39:02 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 ----------
 
 #+BEGIN_HTML

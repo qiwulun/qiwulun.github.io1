@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 立此存照（这一阶段最后一篇有关辩论文章）
-.. slug: li-ci-cun-zhao-zhe-yi-jie-duan-zui-hou-yi-pian-you-guan-bian-lun-wen-zhang
-.. date: 2009-05-21 01:22:46 UTC+08:00
-.. tags: 人人网, 辩论
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 立此存照（这一阶段最后一篇有关辩论文章）
+#+DATE: 2009-05-21 01:22:46 
+#+TAGS: 人人网, 辩论
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

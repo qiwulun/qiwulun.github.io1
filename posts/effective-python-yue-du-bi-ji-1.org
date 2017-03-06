@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: effective python 阅读笔记1
-.. slug: effective-python-yue-du-bi-ji-1
-.. date: 2016-12-24 14:21:19 UTC+08:00
-.. tags: reading, books
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: effective python 阅读笔记1
+#+DATE: 2016-12-24 14:21:19 
+#+TAGS: reading, books
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 http://www.effectivepython.com
 

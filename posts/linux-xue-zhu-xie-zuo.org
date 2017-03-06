@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: linux 学术写作
-.. slug: linux-xue-zhu-xie-zuo
-.. date: 2017-02-05 23:04:17 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: linux 学术写作
+#+DATE: 2017-02-05 23:04:17 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 * 平台软件
 

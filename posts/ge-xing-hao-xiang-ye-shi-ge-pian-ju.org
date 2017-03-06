@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 个性，好像也是个骗局
-.. slug: ge-xing-hao-xiang-ye-shi-ge-pian-ju
-.. date: 2011-10-08 22:15 UTC+08:00
-.. tags: 人人网
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 个性，好像也是个骗局
+#+DATE: 2011-10-08 22:15 
+#+TAGS: 人人网
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 “一生负气成今日,四海无人对夕阳。”
 

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 月下蝉
-.. slug: yue-xia-chan
-.. date: 2016-11-18 21:08:19 UTC+08:00
-.. tags: 歌曲
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 月下蝉
+#+DATE: 2016-11-18 21:08:19 
+#+TAGS: 歌曲
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 网易云地址 http://music.163.com/#/song?id=432430697

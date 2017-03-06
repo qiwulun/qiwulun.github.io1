@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 安装 mxnet
-.. slug: an-zhuang-mxnet
-.. date: 2016-11-21 14:22:53 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 安装 mxnet
+#+DATE: 2016-11-21 14:22:53 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 使用 gcc 4.9 会编译不通过
 

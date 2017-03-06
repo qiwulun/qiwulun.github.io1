@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 机械键盘
-.. slug: ji-jie-jian-pan
-.. date: 2016-11-23 13:23:59 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 机械键盘
+#+DATE: 2016-11-23 13:23:59 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 

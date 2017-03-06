@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 分体式键盘
-.. slug: fen-ti-shi-jian-pan
-.. date: 2017-01-05 14:59:24 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 分体式键盘
+#+DATE: 2017-01-05 14:59:24 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 * ergodox
 https://ergodox-ez.com/products/snow-and-shine
 

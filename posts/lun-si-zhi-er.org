@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 论死之二
-.. slug: lun-si-zhi-er
-.. date: 2013-06-19 12:14 UTC+08:00
-.. tags: 人人网
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 论死之二
+#+DATE: 2013-06-19 12:14 
+#+TAGS: 人人网
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 （最近决定把烂尾的序列收拾收拾。这个系列的一，已经是若干年前了。重读发现，冗长且华而不实，这一篇试着短一点，争取能有内容）
 

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 仪式与教育
-.. slug: yi-shi-yu-jiao-yu
-.. date: 2013-10-31 11:29:25 UTC+08:00
-.. tags: 人人网
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 仪式与教育
+#+DATE: 2013-10-31 11:29:25 
+#+TAGS: 人人网
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 失路吟
-.. slug: shi-lu-yin
-.. date: 2008-11-24 14:05:44 UTC+08:00
-.. tags: 顺口溜, 人人网
-.. category: 顺口溜
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 失路吟
+#+DATE: 2008-11-24 14:05:44 
+#+TAGS: 顺口溜, 人人网
+#+CATEGORY: 顺口溜
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 接着假期般的心志颓废

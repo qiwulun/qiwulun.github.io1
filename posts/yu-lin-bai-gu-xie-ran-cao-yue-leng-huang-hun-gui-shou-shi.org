@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 雨淋白骨血染草，月冷黄昏鬼守尸
-.. slug: yu-lin-bai-gu-xie-ran-cao-yue-leng-huang-hun-gui-shou-shi
-.. date: 2014-06-26 02:08 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 雨淋白骨血染草，月冷黄昏鬼守尸
+#+DATE: 2014-06-26 02:08 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

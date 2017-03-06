@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Github 学生礼包之 Digital Ocean
-.. slug: github-xue-sheng-li-bao-zhi-digital-ocean
-.. date: 2016-12-15 10:55:07 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Github 学生礼包之 Digital Ocean
+#+DATE: 2016-12-15 10:55:07 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 * 初次登录

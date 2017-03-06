@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT 
-.. title: Poker 升级版机械键盘
-.. slug: poker-sheng-ji-ban-ji-jie-jian-pan
-.. date: 2016-12-13 15:09:58 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Poker 升级版机械键盘
+#+DATE: 2016-12-13 15:09:58 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 先说一句，红轴打起来好舒服，白色看起来好漂亮
 

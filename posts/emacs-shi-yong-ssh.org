@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: emacs 使用 ssh
-.. slug: emacs-shi-yong-ssh
-.. date: 2016-12-05 14:38:02 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: emacs 使用 ssh
+#+DATE: 2016-12-05 14:38:02 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 参考这一篇
 http://lifegoo.pluskid.org/wiki/EmacsTRAMP.html

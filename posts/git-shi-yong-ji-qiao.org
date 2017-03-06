@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: git 使用技巧
-.. slug: git-shi-yong-ji-qiao
-.. date: 2016-11-10 18:01:24 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: git 使用技巧
+#+DATE: 2016-11-10 18:01:24 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 #+OPTIONS: toc:nil
 -----------------------
 

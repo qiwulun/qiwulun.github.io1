@@ -1,13 +1,10 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: docker 中 tensorflow 报 libcuda.so.1 找不到
-.. slug: docker-zhong-tensorflow-bao-libcudaso1-zhao-bu-dao
-.. date: 2016-12-28 20:05:58 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: docker 中 tensorflow 报 libcuda.so.1 找不到
+#+DATE: 2016-12-28 20:05:58 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 说明你没有用 nvidia-docker 运行

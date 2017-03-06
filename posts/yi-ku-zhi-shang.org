@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 抑苦之殇
-.. slug: yi-ku-zhi-shang
-.. date: 2008-06-28 19:28 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 抑苦之殇
+#+DATE: 2008-06-28 19:28 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+BEGIN_VERSE
 还我河山路未通，雾锁风悚待引弓。

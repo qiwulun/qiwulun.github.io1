@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Ubuntu 16.04 安装纪录二 ── Chrome, xx-Net, IPv6
-.. slug: ubuntu-1604-an-zhuang-ji-lu-er-chrome
-.. date: 2016-11-10 19:21:39 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu 16.04 安装纪录二 ── Chrome, xx-Net, IPv6
+#+DATE: 2016-11-10 19:21:39 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_HTML

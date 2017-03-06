@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 时代发展，人类本就应当越来越脆弱
-.. slug: shi-dai-fa-zhan-ren-lei-ben-jiu-ying-dang-yue-lai-yue-cui-ruo
-.. date: 2014-05-26 00:47:36 UTC+08:00
-.. tags: 清锋明辩, 人人网 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 时代发展，人类本就应当越来越脆弱
+#+DATE: 2014-05-26 00:47:36 
+#+TAGS: 清锋明辩, 人人网 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

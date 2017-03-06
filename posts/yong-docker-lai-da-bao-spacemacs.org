@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 用 docker 来打包 spacemacs
-.. slug: yong-docker-lai-da-bao-spacemacs
-.. date: 2016-12-21 22:41:18 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 用 docker 来打包 spacemacs
+#+DATE: 2016-12-21 22:41:18 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 * org-mode

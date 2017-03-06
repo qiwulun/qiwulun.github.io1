@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Ubuntu 重装纪录
-.. slug: ubuntu-zhong-zhuang-ji-lu
-.. date: 2016-11-29 13:57:04 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu 重装纪录
+#+DATE: 2016-11-29 13:57:04 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 

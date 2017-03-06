@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 人文：暴雨中的呐喊（一）
-.. slug: ren-wen-bao-yu-zhong-de-ne-han-yi
-.. date: 2008-06-30 11:23 UTC+08:00
-.. tags: QQ空间
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 人文：暴雨中的呐喊（一）
+#+DATE: 2008-06-30 11:23 
+#+TAGS: QQ空间
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

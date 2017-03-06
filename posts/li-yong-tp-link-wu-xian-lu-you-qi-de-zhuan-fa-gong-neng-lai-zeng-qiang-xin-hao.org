@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 利用 TP-LINK 无线路由器的转发功能来增强信号
-.. slug: li-yong-tp-link-wu-xian-lu-you-qi-de-zhuan-fa-gong-neng-lai-zeng-qiang-xin-hao
-.. date: 2017-02-04 12:34:58 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 利用 TP-LINK 无线路由器的转发功能来增强信号
+#+DATE: 2017-02-04 12:34:58 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 以TP-LINK 300M 无线路由器(TL_WR842N)为例，假设已经连接网络的路由器为A，用于桥接的路由器为B。
 

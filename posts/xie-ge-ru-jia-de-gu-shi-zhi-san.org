@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 写个儒家的故事之三
-.. slug: xie-ge-ru-jia-de-gu-shi-zhi-san
-.. date: 2013-08-16 20:39 UTC+08:00
-.. tags: 人人网, 读书, 故事
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 写个儒家的故事之三
+#+DATE: 2013-08-16 20:39 
+#+TAGS: 人人网, 读书, 故事
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

@@ -1,12 +1,9 @@
-#+BEGIN_COMMENT
-.. title: 用 Nikola 在 GitHub 上写博客
-.. slug: yong-nikola-zai-github-shang-xie-bo-ke
-.. date: 2016-10-21 22:36:11 UTC+08:00
-.. tags: mathjax
-.. link: 
-.. description: 
-.. type: text 
-#+END_COMMENT
+#+TITLE: 用 Nikola 在 GitHub 上写博客
+#+DATE: 2016-10-21 22:36:11 
+#+TAGS: mathjax
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post 
 
 #+TITLE:     用 Nikola 写博客
 #+AUTHOR:    赵骥

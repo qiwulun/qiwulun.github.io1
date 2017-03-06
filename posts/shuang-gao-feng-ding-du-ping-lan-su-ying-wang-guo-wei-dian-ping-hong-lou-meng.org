@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 霜高风定独凭栏——苏樱《王国维点评<红楼梦>》
-.. slug: shuang-gao-feng-ding-du-ping-lan-su-ying-wang-guo-wei-dian-ping-hong-lou-meng
-.. date: 2013-09-08 22:29 UTC+08:00
-.. tags: 人人网
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 霜高风定独凭栏——苏樱《王国维点评<红楼梦>》
+#+DATE: 2013-09-08 22:29 
+#+TAGS: 人人网
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 #+OPTIONS: toc:nil
 -----------------
 #+BEGIN_QUOTE

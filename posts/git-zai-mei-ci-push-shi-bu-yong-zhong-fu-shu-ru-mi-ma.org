@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: git 在每次 Push 时不用重复输入密码
-.. slug: git-zai-mei-ci-push-shi-bu-yong-zhong-fu-shu-ru-mi-ma
-.. date: 2016-12-06 20:32:10 UTC+08:00
-.. tags: git ssh
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: git 在每次 Push 时不用重复输入密码
+#+DATE: 2016-12-06 20:32:10 
+#+TAGS: git ssh
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 1. 使用 SSH 方式进行推送，您需要配置 SSH 公钥后进行操作，详情请阅读 SSH 公钥配置文档

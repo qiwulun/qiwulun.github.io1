@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Ubuntu 安装之字体
-.. slug: ubuntu-an-zhuang-zhi-zi-ti
-.. date: 2016-11-27 15:10:59 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu 安装之字体
+#+DATE: 2016-11-27 15:10:59 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 I assume you have mounted the =C:/Windows= partition at =/Windowsdrive= directory in linux.

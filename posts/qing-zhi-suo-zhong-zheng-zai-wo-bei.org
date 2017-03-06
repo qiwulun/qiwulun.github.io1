@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 情之所钟，正在我辈
-.. slug: qing-zhi-suo-zhong-zheng-zai-wo-bei
-.. date: 2015-11-23 12:08 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 情之所钟，正在我辈
+#+DATE: 2015-11-23 12:08 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+BEGIN_EXAMPLE
 辩协微信平台约的稿 

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: nikola 自定义 css
-.. slug: nikola-zi-ding-yi-css
-.. date: 2016-11-16 17:42:53 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: nikola 自定义 css
+#+DATE: 2016-11-16 17:42:53 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 如果希望 zero 文件转换而成的网页能够美观一些，并且希望代码片段能够高亮显示，那么

@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 日知录－－好的编译器与好的读者
-.. slug: ri-zhi-lu-hao-de-bian-yi-qi-yu-hao-de-du-zhe
-.. date: 2016-12-04 16:51:59 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 日知录－－好的编译器与好的读者
+#+DATE: 2016-12-04 16:51:59 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 每个写过 C 语言的人，恐怕都至少有过一次漏写分号导致编译不通过的经历──特别是 C 和 python 混着来的人。

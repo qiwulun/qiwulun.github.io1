@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Org-mode Agenda 常用命令
-.. slug: org-mode-agenda-chang-yong-ming-ling
-.. date: 2016-11-30 11:22:27 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Org-mode Agenda 常用命令
+#+DATE: 2016-11-30 11:22:27 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 在使用之前，先按照 [[*配置][配置]] 里面的内容进行一些配置

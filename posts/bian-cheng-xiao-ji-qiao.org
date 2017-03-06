@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 编程小技巧
-.. slug: bian-cheng-xiao-ji-qiao
-.. date: 2016-11-15 16:14:08 UTC+08:00
-.. tags: 编程
-.. category: 编程 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 编程小技巧
+#+DATE: 2016-11-15 16:14:08 
+#+TAGS: 编程
+#+CATEGORY: 编程 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 * Stackoverflow
 系统化的开发过程中遇到的大部分问题，都可以通过邮件列表解决。
 

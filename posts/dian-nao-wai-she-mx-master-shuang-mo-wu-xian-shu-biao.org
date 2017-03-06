@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 电脑外设──MX master 双模无线鼠标
-.. slug: dian-nao-wai-she-mx-master-shuang-mo-wu-xian-shu-biao
-.. date: 2017-02-03 19:49:34 UTC+08:00
-.. tags: 好物
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 电脑外设──MX master 双模无线鼠标
+#+DATE: 2017-02-03 19:49:34 
+#+TAGS: 好物
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 Logitech/罗技 MX Master 双模无线鼠标 | 参考价格：649 元

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: Ubuntu 安装 TeamViewer
-.. slug: ubuntu-an-zhuang-teamviewer
-.. date: 2016-11-16 17:27:06 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu 安装 TeamViewer
+#+DATE: 2016-11-16 17:27:06 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 Ubuntu 16.04 要安装 32-bit 的teamviewer，在这里下载

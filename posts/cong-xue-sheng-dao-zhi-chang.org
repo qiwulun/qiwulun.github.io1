@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 从学生到职场
-.. slug: cong-xue-sheng-dao-zhi-chang
-.. date: 2016-10-24 21:19:45 UTC+08:00
-.. tags: 人生经验
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 从学生到职场
+#+DATE: 2016-10-24 21:19:45 
+#+TAGS: 人生经验
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

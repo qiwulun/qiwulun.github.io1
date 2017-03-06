@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: python 运行时间分析
-.. slug: python-yun-xing-shi-jian-fen-xi
-.. date: 2016-11-15 17:00:43 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: python 运行时间分析
+#+DATE: 2016-11-15 17:00:43 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 谁快谁慢

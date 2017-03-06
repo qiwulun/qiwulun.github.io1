@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 写个京剧的故事
-.. slug: xie-ge-jing-ju-de-gu-shi
-.. date: 2013-10-10 02:37:46 UTC+08:00
-.. tags: 人人网, 故事
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 写个京剧的故事
+#+DATE: 2013-10-10 02:37:46 
+#+TAGS: 人人网, 故事
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

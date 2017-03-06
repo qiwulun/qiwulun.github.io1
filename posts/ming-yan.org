@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 名言
-.. slug: ming-yan
-.. date: 2016-10-24 17:32:51 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 名言
+#+DATE: 2016-10-24 17:32:51 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

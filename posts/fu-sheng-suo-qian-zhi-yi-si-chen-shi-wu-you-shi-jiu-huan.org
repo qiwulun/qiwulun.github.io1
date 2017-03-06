@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 浮生所欠止一死，尘世无由识九还
-.. slug: fu-sheng-suo-qian-zhi-yi-si-chen-shi-wu-you-shi-jiu-huan
-.. date: 2013-11-12 00:19:00 UTC+08:00
-.. tags: 人人网, 故事 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 浮生所欠止一死，尘世无由识九还
+#+DATE: 2013-11-12 00:19:00 
+#+TAGS: 人人网, 故事 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+BEGIN_EXAMPLE
 这是两天前的旧文小修改重发，出于好玩儿的心态想看看，如果一篇文章的核心意象被删掉的话，文意会有怎样的变化

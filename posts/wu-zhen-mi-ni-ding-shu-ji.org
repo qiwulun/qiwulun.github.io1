@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 无针迷你订书机
-.. slug: wu-zhen-mi-ni-ding-shu-ji
-.. date: 2017-02-03 19:35:43 UTC+08:00
-.. tags: 好物
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 无针迷你订书机
+#+DATE: 2017-02-03 19:35:43 
+#+TAGS: 好物
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 KOKUYO/国誉 无针迷你订书机 参考价格：38 元
 

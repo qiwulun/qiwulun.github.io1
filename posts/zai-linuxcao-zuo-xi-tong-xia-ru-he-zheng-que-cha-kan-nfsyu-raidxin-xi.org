@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 在Linux操作系统下如何正确查看NFS与Raid信息
-.. slug: zai-linuxcao-zuo-xi-tong-xia-ru-he-zheng-que-cha-kan-nfsyu-raidxin-xi
-.. date: 2017-02-13 11:09:46 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 在Linux操作系统下如何正确查看NFS与Raid信息
+#+DATE: 2017-02-13 11:09:46 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 * Raid 信息
 有些情况下系统不是自己装的，raid也不是自己配置的，远程登录系统后可能就不知道系统是否有做raid，raid级别？因此稍微总结一下Linux下查看软、硬raid信息的方法。

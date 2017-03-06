@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: docker image 太慢的解决方法之 VPS
-.. slug: docker-image-tai-man-de-jie-jue-fang-fa-zhi-vps
-.. date: 2016-12-17 16:31:06 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: docker image 太慢的解决方法之 VPS
+#+DATE: 2016-12-17 16:31:06 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 假设我们要下载的 image 是 phusion/baseimage:0.9.19
 

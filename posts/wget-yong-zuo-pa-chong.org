@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: wget 用作爬虫
-.. slug: wget-yong-zuo-pa-chong
-.. date: 2017-02-03 20:25:24 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: wget 用作爬虫
+#+DATE: 2017-02-03 20:25:24 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 =wget -r -p -np -k <网址>=
 

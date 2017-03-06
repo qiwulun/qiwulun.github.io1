@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 很简单的辩论要求
-.. slug: hen-jian-dan-de-bian-lun-yao-qiu
-.. date: 2014-10-12 10:35:11 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 很简单的辩论要求
+#+DATE: 2014-10-12 10:35:11 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 现在的文章很简单
 
 1. 初级，摞论点，给我把逻辑砸实

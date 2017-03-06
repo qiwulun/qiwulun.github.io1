@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 刘大杰两首
-.. slug: liu-da-jie-liang-shou
-.. date: 2009-01-21 13:48:56 UTC+08:00
-.. tags: 人人网, 二十世纪古体诗
-.. category: 摘抄
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 刘大杰两首
+#+DATE: 2009-01-21 13:48:56 
+#+TAGS: 人人网, 二十世纪古体诗
+#+CATEGORY: 摘抄
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

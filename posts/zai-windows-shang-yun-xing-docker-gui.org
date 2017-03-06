@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 在 windows 上运行 docker GUI
-.. slug: zai-windows-shang-yun-xing-docker-gui
-.. date: 2016-12-26 20:07:43 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 在 windows 上运行 docker GUI
+#+DATE: 2016-12-26 20:07:43 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 主要参考的这一篇，从第 14 页开始
 

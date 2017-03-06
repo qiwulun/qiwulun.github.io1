@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Eclipse Code Format 设置
-.. slug: eclipse-code-format-she-zhi
-.. date: 2013-05-08 20:12:53 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Eclipse Code Format 设置
+#+DATE: 2013-05-08 20:12:53 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 感悟──以前我想强
-.. slug: gan-wu-yi-qian-wo-xiang-qiang
-.. date: 2013-04-18 02:54:17 UTC+08:00
-.. tags: 辩论感悟
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 感悟──以前我想强
+#+DATE: 2013-04-18 02:54:17 
+#+TAGS: 辩论感悟
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 以前我想强，

@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 学位论文答辩技巧
-.. slug: xue-wei-lun-wen-da-bian-ji-qiao
-.. date: 2016-11-15 19:27:22 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 学位论文答辩技巧
+#+DATE: 2016-11-15 19:27:22 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 1 战略目的(PPT要达到的目标)
 ——————————————————————

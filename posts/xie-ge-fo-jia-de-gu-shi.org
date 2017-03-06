@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 写个佛家的故事
-.. slug: xie-ge-fo-jia-de-gu-shi
-.. date: 2013-08-14 00:07 UTC+08:00
-.. tags: 人人网, 读书, 故事
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 写个佛家的故事
+#+DATE: 2013-08-14 00:07 
+#+TAGS: 人人网, 读书, 故事
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_EXAMPLE

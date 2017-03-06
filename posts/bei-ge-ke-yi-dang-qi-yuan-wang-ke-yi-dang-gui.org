@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 悲歌可以当泣，远望可以当归
-.. slug: bei-ge-ke-yi-dang-qi-yuan-wang-ke-yi-dang-gui
-.. date: 2014-09-27 03:25:56 UTC+08:00
-.. tags: 人人网, 抽风 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 悲歌可以当泣，远望可以当归
+#+DATE: 2014-09-27 03:25:56 
+#+TAGS: 人人网, 抽风 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 * 一

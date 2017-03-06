@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 心流
-.. slug: xin-liu
-.. date: 2016-11-10 22:27:16 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 心流
+#+DATE: 2016-11-10 22:27:16 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+HTML: <!--TEASER_END-->
 

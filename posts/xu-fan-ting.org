@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 续范亭
-.. slug: xu-fan-ting
-.. date: 2009-01-21 14:08:20 UTC+08:00
-.. tags:  人人网, 二十世纪古体诗
-.. category: 摘抄
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 续范亭
+#+DATE: 2009-01-21 14:08:20 
+#+TAGS:  人人网, 二十世纪古体诗
+#+CATEGORY: 摘抄
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_QUOTE

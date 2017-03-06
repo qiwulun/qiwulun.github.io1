@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Ubuntu 下强制结束程序
-.. slug: ubuntu-xia-qiang-zhi-jie-shu-cheng-xu
-.. date: 2016-12-08 21:58:21 UTC+08:00
-.. tags: ubuntu
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Ubuntu 下强制结束程序
+#+DATE: 2016-12-08 21:58:21 
+#+TAGS: ubuntu
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 ubuntu下强制结束程序 

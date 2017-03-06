@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: Anaconda 调用 MKL Bug
-.. slug: anaconda-diao-yong-MKL-Bug
-.. date: 2016-12-28 20:33:43 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: Anaconda 调用 MKL Bug
+#+DATE: 2016-12-28 20:33:43 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 参考这一个
 https://github.com/ContinuumIO/anaconda-issues/issues/720

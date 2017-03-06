@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 用 sox 改变 wav 文件的音量
-.. slug: yong-sox-gai-bian-wav-wen-jian-de-yin-liang
-.. date: 2016-12-06 13:30:03 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 用 sox 改变 wav 文件的音量
+#+DATE: 2016-12-06 13:30:03 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 #+BEGIN_SRC bash

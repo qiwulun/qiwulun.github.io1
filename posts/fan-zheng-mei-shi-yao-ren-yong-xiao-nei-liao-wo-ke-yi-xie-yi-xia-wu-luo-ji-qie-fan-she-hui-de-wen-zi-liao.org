@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 反正没什么人用校内了，我可以写一下无逻辑且反社会的文字了
-.. slug: fan-zheng-mei-shi-yao-ren-yong-xiao-nei-liao-wo-ke-yi-xie-yi-xia-wu-luo-ji-qie-fan-she-hui-de-wen-zi-liao
-.. date: 2015-04-03 14:25:53 UTC+08:00
-.. tags: 人人网, 抽风
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 反正没什么人用校内了，我可以写一下无逻辑且反社会的文字了
+#+DATE: 2015-04-03 14:25:53 
+#+TAGS: 人人网, 抽风
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 这里面没有任何有价值的信息，也没有任何有意义的思考，如果还有人点进来，那请做好浪费时间的准备。

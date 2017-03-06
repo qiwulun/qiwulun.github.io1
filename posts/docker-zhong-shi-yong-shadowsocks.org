@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: docker 中使用 shadowsocks
-.. slug: docker-zhong-shi-yong-shadowsocks
-.. date: 2017-01-05 15:11:42 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: docker 中使用 shadowsocks
+#+DATE: 2017-01-05 15:11:42 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 在这里书写你的文章。

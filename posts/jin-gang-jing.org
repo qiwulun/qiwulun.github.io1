@@ -1,13 +1,10 @@
-#+BEGIN_COMMENT
-.. title: 金刚经
-.. slug: jin-gang-jing
-.. date: 2016-11-14 11:39:07 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 金刚经
+#+DATE: 2016-11-14 11:39:07 
+#+TAGS: 
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+OPTIONS: toc:nil
 

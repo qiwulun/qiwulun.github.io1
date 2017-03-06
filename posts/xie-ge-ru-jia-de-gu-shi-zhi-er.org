@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 写个儒家的故事之二
-.. slug: xie-ge-ru-jia-de-gu-shi-zhi-er
-.. date: 2013-08-16 12:44 UTC+08:00
-.. tags: 人人网, 读书, 故事
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 写个儒家的故事之二
+#+DATE: 2013-08-16 12:44 
+#+TAGS: 人人网, 读书, 故事
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 #+BEGIN_QUOTE
        我播下的是龙种，收获的却是跳蚤 

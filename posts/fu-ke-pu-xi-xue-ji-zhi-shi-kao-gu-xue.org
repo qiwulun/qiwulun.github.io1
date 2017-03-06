@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 福柯“谱系学”及《知识考古学》
-.. slug: fu-ke-pu-xi-xue-ji-zhi-shi-kao-gu-xue
-.. date: 2017-02-05 19:39:17 UTC+08:00
-.. tags:  reading
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 福柯“谱系学”及《知识考古学》
+#+DATE: 2017-02-05 19:39:17 
+#+TAGS:  reading
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 

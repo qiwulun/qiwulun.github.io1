@@ -1,14 +1,11 @@
 # -*- mode: Org; org-download-image-dir: "../images"; -*-
-#+BEGIN_COMMENT
-.. title: 第二届“翔宇征婚”杯语言风采大赛参赛作品
-.. slug: di-er-jie-xiang-yu-zheng-hun-bei-yu-yan-feng-cai-da-sai-can-sai-zuo-pin
-.. date: 2013-08-09 02:41 UTC+08:00
-.. tags: 人人网
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-#+END_COMMENT
+#+TITLE: 第二届“翔宇征婚”杯语言风采大赛参赛作品
+#+DATE: 2013-08-09 02:41 
+#+TAGS: 人人网
+#+CATEGORY: 
+#+LINK: 
+#+DESCRIPTION: 
+#+LAYOUT : post
 
 
 /（2013年8月9日12：06修改：杨女神说要有图，于是有了图）/
