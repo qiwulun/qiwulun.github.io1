@@ -29,7 +29,7 @@ for iname in a:
                 print(line)
             if "#+TITLE" in line:
                 filename = line.replace("#+TITLE:","").strip()
-    # os.renames(iname, "./posts/"+filename+".org")
+    os.renames(iname, "./posts/"+filename+".org")
 
-    with open(iname,"w") as f:
-        f.writelines(filecontent)
+    # with open(iname,"w") as f:
+    #     f.writelines(filecontent)
